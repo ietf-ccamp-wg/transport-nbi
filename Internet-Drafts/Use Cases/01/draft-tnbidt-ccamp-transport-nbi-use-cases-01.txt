@@ -1,0 +1,615 @@
+CCAMP Working Group                                        I. Busi (Ed.)
+Internet-Draft                                                    Huawei
+Intended status: Informational                             D. King (Ed.)
+Expires: 								Lancaster University
+                                                      
+
+    A Service YANG Model for Connection-oriented Transport Networks
+              draft-tnbidt-ccamp-transport-nbi-use-cases-01
+
+Abstract
+
+   Transport network domains, including Optical Transport Network (OTN) 
+   and Wavelength Division Multiplexing (WDM) networks, are typically 
+   deployed based on a single vendor or technology platforms. They are 
+   often managed using proprietary interfaces to dedicated Element 
+   Management Systems (EMS), Network Management Systems (NMS) and 
+   increasingly Software Defined Network (SDN) controllers.
+   
+   A well-defined open interface to each domain management system or 
+   controller is required for network operators to facilitate control 
+   automation and orchestrate end-to-end services across multi-domain 
+   networks. These functions may enabled using standardized data models 
+   (e.g. YANG), and appropriate protocol (e.g., RESTCONF).
+   
+   This document describes the key use cases and requirements for 
+   transport network control and management. It reviews proposed and 
+   existing IETF transport network data models, their applicability, 
+   and highlights gaps and requirements.  
+
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+   
+   This Internet-Draft will expire on August 7, 2017.
+
+
+
+
+
+
+King & Busi, et al.         Expires August, 2017              [Page 1]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+Copyright Notice
+
+   Copyright (c) 2017 IETF Trust and the persons identified as the
+   document authors. All rights reserved. This document is subject
+   to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF
+   Documents (http://trustee.ietf.org/license-info) in effect on the
+   date of publication of this document. Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.
+
+
+Table of Contents
+
+   1. Introduction.................................................2
+   2. Conventions used in this document............................3
+   3. Use Case 1: Single-domain with single-layer..................3
+      3.1. Reference Network.......................................3
+         3.1.1. Single Transport Domain - OTN Network..............3
+         3.1.2. Single Domain - ROADM Network......................3
+      3.2. Topology Abstractions...................................6
+      3.3. Service Configuration...................................7
+         3.3.1. ODU Transit........................................7
+         3.3.2. EPL over ODU.......................................8
+         3.3.3. Other OTN Client Services..........................8
+         3.3.4. EVPL over ODU......................................9
+         3.3.5. EVPLAN and EVPTree Services........................9
+         3.3.6. Virtual Network Services...........................9
+      3.4. Multi-functional Access Links...........................9
+   4. Use Case 2: Single-domain with multi-layer...................9
+   5. Use Case 3: Multi-domain with single-layer...................9
+   6. Use Case 4: Multi-domain and multi-layer.....................9
+   7. Security Considerations......................................9
+   8. IANA Considerations..........................................9
+   9. References...................................................9
+      9.1. Normative References....................................10
+      9.2. Informative References..................................10
+   10. Acknowledgments.............................................10
+   Authors' Addresses..............................................11
+
+
+1.  Introduction
+
+   A common open interface to each domain controller/management system 
+   is pre-requisite for network operators to control multi-vendor and 
+   multi-domain networks and enable also service provisioning 
+   coordination/automation. This can be achieved by using standardized 
+   YANG models, used together with an appropriate protocol (e.g., 
+   RESTCONF).
+
+
+
+King & Busi, et al.         Expires August, 2017              [Page 2]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+   
+   This document assumes a reference architecture, including interfaces,
+   based on the Abstraction and Control of Traffic-Engineered Networks 
+   (ACTN), defined in [ACTN-Frame].
+   
+   The focus of the current version is on the MPI (interface between 
+   the Multi Domain Service Coordinator (MDSC) and a Physical Network 
+   Controller (PNC), controlling a transport network domain).
+   
+   The relationship between the current IETF YANG models and the type of
+   ACTN interfaces can be found in [ACTN-YANG]. 
+
+   The ONF Technical Recommendations for Functional Requirements
+   for the transport API, may be found in [ONF TR-527]. 
+   Furthermore, ONF transport API multi-layer examples may be 
+   found in [ONF GitHub].
+
+   This document describes use cases that could be used for analyzing 
+   the applicability of the existing models defined by the IETF for 
+   transport networks
+   
+   Considerations about the CMI (interface between the Customer Network 
+   Controller (CNC) and the MDSC) are for further study.
+
+
+2. Conventions used in this document
+
+   For discussion in future revisions of this document. 
+
+
+3. Use Case 1: Single-domain with single-layer
+
+3.1. Reference Network
+
+   The current considerations discussed in this document are
+   based on the following reference networks:
+
+   - single transport domain: OTN network
+
+   It is expected that future revisions of the document will 
+   include additional reference networks. 
+   
+3.1.1. Single Transport Domain - OTN Network
+
+   Figure 1 shows the network physical topology composed of a 
+   single-domain transport network providing transport services to an 
+   IP network through five access links.
+
+
+
+
+
+King & Busi, et al.         Expires August, 2017              [Page 3]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+        ................................................
+        :                 IP domain                    :
+        :        ..............................        :
+        :        :  ........................  :        :
+        :        :  :                      :  :        :
+        :        :  :      S1 -------- S2 ------ C-R4  :
+        :        :  :     /             |  :  :        :
+        :        :  :    /              |  :  :        :
+        :  C-R1 ------ S3 ----- S4      |  :  :        :
+        :        :  :    \        \     |  :  :        :
+        :        :  :     \        \    |  :  :        :
+        :        :  :      S5       \   |  :  :        :
+        :  C-R2 -----+    /  \       \  |  :  :        :
+        :        :  : \  /    \       \ |  :  :        :
+        :        :  :  S6 ---- S7 ---- S8 ------ C-R5  :
+        :        :  : /                    :  :        :
+        :  C-R3 -----+                     :  :        :
+        :        :  :   Transport domain   :  :        :
+        :        :  :                      :  :        :
+        :........:  :......................:  :........:
+
+           Figure 1 Reference network for Use Case 1
+          
+   The IP and transport (OTN) domains are respectively composed by five
+   routers C-R1 to C-R5 and by eight ODU switches S1 to S8. The 
+   transport domain acts as a transit domain providing connectivity to
+   the IP layer.
+   
+   The behavior of the transport domain is the same whether the 
+   ingress/egress nodes in the IP domain, supporting an IP service, are
+   directly attached to the transport domain or there are other routers
+   in between the ingress/egress nodes of the IP domain and the routers
+   directly attached to the transport network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+King & Busi, et al.         Expires August, 2017              [Page 4]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+                              +-----+
+                              | CNC |
+                              +-----+
+                                 |
+                                 |CMI I/F
+                                 |
+                      +-----------------------+
+                      |         MDSC          |
+                      +-----------------------+
+                                 |
+                                 |MPI I/F
+                                 |
+                             +-------+
+                             |  PNC  |
+                             +-------+
+                                 |
+                               -----
+                             (       )
+                            (   OTN   )
+                           ( Physical  )
+                            ( Network )
+                             (       )
+                               -----
+                               
+         Figure 2 Controlling Hierarchy for Use Case 1
+         
+   The mapping of the client IP traffic on the physical link between the
+   routers and the transport network is made in the IP routers only and
+   is not controlled by the transport PNC and is transparent to the 
+   transport nodes. 
+   
+   The control plane architecture follows the ACTN architecture and 
+   framework document [ACTN-Frame]. The Client Controller act as a 
+   client with respect to the Multi-Domain Service Coordinator (MDSC) 
+   via the Controller-MDSC Interface (CMI). The MDSC is connected to a
+   plurality of Physical Network Controllers (PNCs), one for each 
+   domain, via a MDSC-PNC Interface (MPI). Each PNC is responsible 
+   only for the control of its domain and the MDSC is the only entity 
+   capable of multi-domain functionalities as well as of managing the 
+   inter-domain links. The key point of the whole ACTN framework is 
+   detaching the network and service control from the underlying 
+   technology and help the customer express the network as desired 
+   by business needs. Therefore care must be taken to keep minimal 
+   dependency on the CMI (or no dependency at all) with respect to 
+   the network domain technologies. The MPI instead requires some 
+   specialization according to the domain technology. 
+   
+   In this section, we address the case of an IP and a Transport PNC
+   having respectively an IP a Transport MPI. The interface within 
+   the scope of this document is the Transport MPI while the IP 
+
+King & Busi, et al.         Expires August, 2017              [Page 5]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+   Network MPI is out of its scope and considerations about the CMI
+   are for further study.
+
+
+3.2. Topology Abstractions
+
+   Abstraction is defined in [RFC7926] as: 
+   
+      Abstraction is the process of applying policy to the available TE 
+      information within a domain, to produce selective information that 
+      represents the potential ability to connect across the domain. 
+      Thus,  abstraction does not necessarily offer all possible 
+      connectivity options, but presents a general view of potential 
+      connectivity according to the policies that determine how the
+      domain's administrator wants to allow the domain resources to be
+      used.
+   
+   [TE-Topo] describes YANG models for TE-network abstraction.
+   
+   [ACTN-Abstraction] provides the context of topology abstraction in
+   the ACTN architecture and discusses a few alternatives for the 
+   methods of abstraction for both packet and optical networks. This 
+   is an important consideration since the choice of the abstraction 
+   method impacts protocol design and the information it carries. 
+   
+   According to [ACTN-Abstraction], there are three types of topology:
+   
+      o White topology: This is a case where the PNC provides the actual
+        network topology to the MDSC without any hiding or filtering. In
+        this case, the MDSC has the full knowledge of the underlying 
+        network topology and as such there is no need for the MDSC to 
+        send a path computation request to the PNC. The computation 
+        burden will fall on the MDSC to find an optimal end-to-end path
+         and optimal per domain paths.
+         
+      o Black topology: The entire domain network is abstracted as a 
+      single virtual node with the access/egress links without 
+      disclosing any node internal connectivity information.
+      
+      o Grey topology: This abstraction level is between black topology
+       and white topology from a granularity point of view. This is 
+       basically abstraction of TE tunnels for all pairs of border 
+       nodes.
+       
+       We may further differentiate from a perspective of how to 
+       abstract internal TE resources between the pairs of border nodes: 
+       
+         - Grey topology type A: border nodes with a TE links between 
+           them in a full mesh fashion.
+
+
+King & Busi, et al.         Expires August, 2017              [Page 6]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+         - Grey topology type B: border nodes with some internal 
+           abstracted nodes and abstracted links. 
+      
+   For single-domain with single-layer use-case, the white topology may
+   be disseminated from the PNC to the MDSC in most cases. There may be
+   some exception to this in the case where the underlay network may 
+   have complex optical parameters which do not warrant the distribution
+   of such details to the MDSC. In such case, the topology disseminated
+   from the PNC to the MDSC may not have the entire TE information but a
+   streamlined TE information. This case would incur another action from
+   the MDSC's standpoint when provisioning a path. 
+   
+   The MDSC may make a path compute request to the PNC in order to 
+   verify the feasibility of the estimated path before making the final
+   provisioning request to the PNC, as outlined in [Path-Compute]. 
+   
+   Topology abstraction for the CMI is for further study (to be 
+   addressed in future revisions of this document).
+
+3.3. Service Configuration
+   
+   In the following use cases, the Multi Domain Service Coordinator 
+   (MDSC) needs to be capable to request service connectivity from the
+   transport Physical Network Controller (PNC) to support IP routers 
+   connectivity. The type of services could depend of the type of 
+   physical links (e.g. OTN link, ETH link or SDH link) between the
+   routers and transport network.
+   
+   As described in section 3.1.1, the control of different adaptations
+   inside IP routers, C-Ri (PKT -> foo) and C-Rj (foo -> PKT), are 
+   assumed to be performed by means that are not under the control of,
+   and not visible to, transport PNC. Therefore, these mechanisms are
+   outside the scope of this document.
+
+3.3.1. ODU Transit
+
+   This use case assumes that the physical link interconnecting IP 
+   routers and transport network is an OTN link. 
+
+   The physical/optical interconnection is supposed to be a 
+   pre-configured and not exposed via MPI to MDSC.
+
+   If we consider the case of a 10Gb IP link between C-R1 to C-R3,
+   we need to instantiate an ODU2 end-to-end connection between C-R1 
+   and C-R3, crossing transport nodes S3, S5, and S6. 
+
+   The traffic flow between C-R1 and C-R3 can be summarized as:
+      
+      C-R1 (PKT -> ODU2), S3 (ODU2), S5 (ODU2), S6 (ODU2),
+      C-R3 (ODU2 -> PKT)
+
+King & Busi, et al.         Expires August, 2017              [Page 7]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+   The MDSC should be capable via MPI i/f to request the setup of ODU2 
+   transit service with enough information that can permit transport 
+   PNC to instantiate and control the ODU2 segment through nodes S3, 
+   S5, S6. 
+   
+3.3.2. EPL over ODU
+   
+   This use case assumes that the physical link interconnecting IP 
+   routers and transport network is an Ethernet link. 
+   
+   If we consider the case of a 10Gb IP link between C-R1 to C-R3, we
+   need to instantiate an EPL service between C-R1 and C-R3 supported
+   by an ODU2 end-to-end connection between S3 and S6, crossing 
+   transport node S5. 
+  
+   The traffic flow between C-R1 and C-R3 can be summarized as:
+   
+      C-R1 (PKT -> ETH), S3 (ETH -> ODU2), S5 (ODU2), 
+      S6 (ODU2 -> ETH), C-R3 (ETH-> PKT)
+  
+   The MDSC should be capable via MPI i/f to request the setup of EPL 
+   service with enough information that can permit transport PNC to 
+   instantiate and control the ODU2 end-to-end connection through nodes
+   S3, S5, S6, as well as the adaptation functions inside S3 and S6: 
+   S3&S6 (ETH -> ODU2) and S9&S6 (ODU2 -> ETH).
+   
+3.3.3. Other OTN Client Services
+
+   [ITU-T G.709-2016] defines mappings of different client layers into
+   ODU. Most of them are used to provide Private Line services over 
+   an OTN transport network supporting a variety of types of physical
+   access links (e.g., Ethernet, SDH STM-N, Fibre Channel, 
+   InfiniBand,).
+
+   This use case assumes that the physical links interconnecting IP 
+   routers and transport network are any one of these possible 
+   options. 
+
+   If we consider the case of a 10Gb IP link between C-R1 to C-R3 
+   using SDH physical links, we need to instantiate an STM-64 Private
+   Line service between C-R1 and C-R3 supported by an ODU2 end-to-end
+    connection between S3 and S6, crossing transport node S5. 
+
+   The traffic flow between C-R1 and C-R3 can be summarized as:
+      
+      C-R1 (PKT -> STM-64), S3 (STM-64 -> ODU2), S5 (ODU2), 
+      S6 (ODU2 -> STM-64), C-R3 (STM-64 -> PKT)
+
+   The MDSC should be capable via MPI i/f to request the setup of an
+
+
+King & Busi, et al.         Expires August, 2017              [Page 8]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+   STM-64 Private Line service with enough information that can permit
+   transport PNC to instantiate and control the ODU2 end-to-end 
+   connection through nodes S3, S5, S6, as well as the adaptation 
+   functions inside S3 and S6: S3&S6 (STM-64 -> ODU2) and S9&S3 
+   (STM-64 -> PKT).
+
+3.3.4. EVPL over ODU
+   
+   For future revision.
+   
+3.3.5. EVPLAN and EVPTree Services
+
+   For future revision.
+
+3.3.6. Virtual Network Services
+
+   For future revision
+
+3.4. Multi-functional Access Links
+
+   For future revision
+
+
+4. Use Case 2: Single-domain with multi-layer
+
+   For future revision
+
+
+5. Use Case 3: Multi-domain with single-layer
+
+   For future revision
+
+
+6. Use Case 4: Multi-domain and multi-layer
+
+   For future revision
+
+
+7. Security Considerations
+
+   For further study
+
+
+8. IANA Considerations
+
+   This document requires no IANA actions.
+
+
+9. References
+
+
+King & Busi, et al.         Expires August, 2017              [Page 9]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+9.1. Normative References
+
+   [RFC7926] Farrel, A. et al., "Problem Statement and Architecture for
+   Information Exchange between Interconnected Traffic-Engineered 
+   Networks", BCP 206, RFC 7926, July 2016.
+   
+   [ITU-T G.709-2016] ITU-T Recommendation G.709 (06/16), "Interfaces
+   for the optical transport network", June 2016.
+   
+   [ACTN-Frame] Ceccarelli, D., Lee, Y. et al., "Framework for 
+   Abstraction and Control of Transport Networks", 
+   draft-ietf-teas-actn-framework, work in progress.
+
+   [ACTN-Abstraction] Lee, Y. et al., " Abstraction and Control of
+   TE Networks (ACTN) Abstraction Methods", 
+   draft-lee-teas-actn-abstraction, work in progress.
+   
+9.2. Informative References
+
+   [TE-Topo] Liu, X. et al., "YANG Data Model for TE Topologies",
+   draft-ietf-teas-yang-te-topo, work in progress.
+
+   [ACTN-YANG] Zhang, X. et al., "Applicability of YANG models for 
+   Abstraction and Control of Traffic Engineered Networks", 
+   draft-zhang-teas-actn-yang, work in progress.
+
+   [Path-Compute] Busi, I., Belotti, S. et al., " Yang model for 
+   requesting Path Computation", draft-busibel-teas-yang-path-
+   computation, work in progress.
+
+   [ONF TR-527] ONF Technical Recommendation TR-527, "Functional 
+   Requirements for Transport API", June 2016
+
+   [ONF GitHub] ONF Open Transport (SNOWMASS)
+   https://github.com/OpenNetworkingFoundation/Snowmass-
+   ONFOpenTransport
+
+10. Acknowledgments
+
+   The authors would like to thank all members of the Transport NBI 
+   Design Team involved in the definition of use cases, gap analysis
+   and guidelines for using the IETF YANG models at the Northbound 
+   Interface (NBI) of a Transport SDN Controller.
+   
+   The authors would like to thank Xian Zhang, Anurag Sharma, Michael
+   Scharf, Karthik Sethuraman, Oscar Gonzalez de Dios, Tara Cummings 
+   and Hans Bjursrom, for having initiated work on gap analysis for 
+   transport NBI and having provided foundations work for the 
+   development of this document.
+
+
+King & Busi, et al.         Expires August, 2017             [Page 10]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
+
+
+Authors' Addresses
+
+   Italo Busi (Editor)
+   Huawei
+   Email: italo.busi@huawei.com
+
+   Daniel King (Editor)
+   Lancaster University
+   Email: d.king@lancaster.ac.uk
+
+   Sergio Belotti
+   Nokia
+   Email: sergio.belotti@nokia.com
+
+   Gianmarco Bruno
+   Ericsson
+   Email: gianmarco.bruno@ericsson.com
+
+   Young Lee
+   Huawei
+   Email: leeyoung@huawei.com
+
+   Victor Lopez
+   Telefonica
+   Email: victor.lopezalvarez@telefonica.com
+
+   Carlo Perocchio
+   Ericsson
+   Email: carlo.perocchio@ericsson.com
+
+   Haomian Zheng
+   Huawei
+   Email: zhenghaomian@huawei.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+King & Busi, et al.         Expires August, 2017             [Page 11]
+
+Internet-Draft          Transport NBI Use Cases          February 2017
