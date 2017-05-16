@@ -1,0 +1,135 @@
+{
+  "te": {
+    "globals": {
+      "named-explicit-paths": {
+        "named-explicit-path": [
+          {
+            "name": "odu2-service-named-explicit-path",
+            "config": {
+              "name": "odu2-service-named-explicit-path",
+              "explicit-route-objects": {
+                "explicit-route-object": [
+                  {
+                    "index": 0,
+                    "explicit-route-usage": "route-include-ero ",
+                    "config": {
+                      "index": 0,
+                      "type": "unnumbered-link",
+                      "unnumbered-hop": {
+                        "router-id": "NODE-S3-ID (to-be-added)",
+                        "interface-id": "S-LTP-3-ID (1)",
+                        "hop-type": "STRICT"
+                      }
+                    },
+                    "state": {
+                      "index": 0,
+                      "type": "unnumbered-link",
+                      "unnumbered-hop": {
+                        "router-id": "NODE-S3-ID (to-be-added)",
+                        "interface-id": "S-LTP-3-ID (1)",
+                        "hop-type": "STRICT"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "state": {
+              "name": "odu2-service-named-explicit-path",
+              "explicit-route-objects": {
+                "explicit-route-object": [
+                  {
+                    "index": 0,
+                    "explicit-route-usage": "route-include-ero ",
+                    "config": {
+                      "index": 0,
+                      "type": "unnumbered-link",
+                      "unnumbered-hop": {
+                        "router-id": "NODE-S3-ID (to-be-added)",
+                        "interface-id": "S-LTP-3-ID (1)",
+                        "hop-type": "STRICT"
+                      }
+                    },
+                    "state": {
+                      "index": 0,
+                      "type": "unnumbered-link",
+                      "unnumbered-hop": {
+                        "router-id": "NODE-S3-ID (to-be-added)",
+                        "interface-id": "S-LTP-3-ID (1)",
+                        "hop-type": "STRICT"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tunnels": {
+      "tunnel": [
+        {
+          "name": "odu2-service",
+          "identifier": "ODU2-SERVICE (1)",
+          "config": {
+            "name": "odu2-service",
+            "type": "tunnel-p2p",
+            "identifier": "ODU2-SERVICE (1)",
+            "description": "to-be-added",
+            "protection-type": "unprotected",
+            "admin-status": "state-up",
+            "bidirectional": {
+              "association": {
+                "type": "bidir-assoc-corouted"
+              }
+            }
+          },
+          "state": {
+            "name": "odu2-service",
+            "type": "tunnel-p2p",
+            "identifier": "ODU2-SERVICE (1)",
+            "description": "to-be-added",
+            "protection-type": "unprotected",
+            "admin-status": "state-up",
+            "bidirectional": {
+              "association": {
+                "type": "bidir-assoc-corouted"
+              }
+            },
+            "oper-status": "up"
+          },
+          "bandwidth": {
+            "config": {
+              "specification-type": "SPECIFIED",
+              "set-bandwidth": "10G (10000)"
+            },
+            "state": {
+              "specification-type": "SPECIFIED",
+              "set-bandwidth": "10G (10000)",
+              "signaled-bandwidth": "10G (10000)"
+            }
+          },
+          "p2p-primary-paths": {
+            "p2p-primary-path": [
+              {
+                "name": "odu2-service-explicit-path",
+                "config": {
+                  "name": "odu2-service-explicit-path",
+                  "named-explicit-path": "odu2-service-named-explicit-path"
+                },
+                "state": {
+                  "name": "odu2-service-explicit-path",
+                  "named-explicit-path": "odu2-service-named-explicit-path",
+                  "lsps": {
+                    "lsp": []
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
