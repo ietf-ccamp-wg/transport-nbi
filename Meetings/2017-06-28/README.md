@@ -1,4 +1,4 @@
-# Weekly Call (June 14th, 2017)
+# Weekly Call (June 28th, 2017)
 
 Agenda:
 1) Use Cases I-D Updates
