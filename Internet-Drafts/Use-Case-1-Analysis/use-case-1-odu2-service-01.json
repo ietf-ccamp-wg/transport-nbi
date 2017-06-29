@@ -1,0 +1,269 @@
+{
+   "ietf-te:te": {
+      "globals": {
+         "named-explicit-paths": {
+            "named-explicit-path": [
+               {
+                  "name": "odu2-service-named-explicit-path",
+                  "config": {
+                     "name": "odu2-service-named-explicit-path",
+                     "explicit-route-objects": {
+                        "explicit-route-object": [
+                           {
+                              "index": 0,
+                              "// comment": "ingress interface on S3 node",
+                              "explicit-route-usage": "ietf-te-types:route-include-ero",
+                              "config": {
+                                 "index": 0,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S3-NODE-ID",
+                                    "router-id": "10.0.0.3",
+                                    "// interface-id": "S3-1-LTP-ID",
+                                    "interface-id": 1,
+                                    "hop-type": "STRICT"
+                                 }
+                              },
+                              "state": {
+                                 "index": 0,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S3-NODE-ID",
+                                    "router-id": "10.0.0.3",
+                                    "// interface-id": "S3-1-LTP-ID",
+                                    "interface-id": 1,
+                                    "hop-type": "STRICT"
+                                 }
+                              }
+                           },
+                           {
+                              "index": 1,
+                              "// comment": "egress interface on S6 node",
+                              "explicit-route-usage": "ietf-te-types:route-include-ero",
+                              "config": {
+                                 "index": 1,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S6-NODE-ID",
+                                    "router-id": "10.0.0.6",
+                                    "// interface-id": "S6-2-LTP-ID",
+                                    "interface-id": 2,
+                                    "hop-type": "STRICT"
+                                 }
+                              },
+                              "state": {
+                                 "index": 1,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S6-NODE-ID",
+                                    "router-id": "10.0.0.6",
+                                    "// interface-id": "S6-2-LTP-ID",
+                                    "interface-id": 2,
+                                    "hop-type": "STRICT"
+                                 }
+                              }
+                           }
+                        ]
+                     }
+                  },
+                  "state": {
+                     "name": "odu2-service-named-explicit-path",
+                     "explicit-route-objects": {
+                        "explicit-route-object": [
+                           {
+                              "index": 0,
+                              "// comment": "ingress interface on S3 node",
+                              "explicit-route-usage": "ietf-te-types:route-include-ero",
+                              "config": {
+                                 "index": 0,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S3-NODE-ID",
+                                    "router-id": "10.0.0.3",
+                                    "// interface-id": "S3-1-LTP-ID",
+                                    "interface-id": 1,
+                                    "hop-type": "STRICT"
+                                 }
+                              },
+                              "state": {
+                                 "index": 0,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S3-NODE-ID",
+                                    "router-id": "10.0.0.3",
+                                    "// interface-id": "S3-1-LTP-ID",
+                                    "interface-id": 1,
+                                    "hop-type": "STRICT"
+                                 }
+                              }
+                           },
+                           {
+                              "index": 1,
+                              "// comment": "egress interface on S6 node",
+                              "explicit-route-usage": "ietf-te-types:route-include-ero",
+                              "config": {
+                                 "index": 1,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S6-NODE-ID",
+                                    "router-id": "10.0.0.6",
+                                    "// interface-id": "S6-2-LTP-ID",
+                                    "interface-id": 2,
+                                    "hop-type": "STRICT"
+                                 }
+                              },
+                              "state": {
+                                 "index": 1,
+                                 "unnumbered-hop": {
+                                    "// router-id": "S6-NODE-ID",
+                                    "router-id": "10.0.0.6",
+                                    "// interface-id": "S6-2-LTP-ID",
+                                    "interface-id": 2,
+                                    "hop-type": "STRICT"
+                                 }
+                              }
+                           }
+                        ]
+                     }
+                  }
+               }
+            ]
+         }
+      },
+      "tunnels": {
+         "tunnel": [
+            {
+               "name": "odu2-service",
+               "// identifier": "ODU2-SERVICE-ID",
+               "identifier": 1,
+               "config": {
+                  "name": "odu2-service",
+                  "type": "ietf-te-types:tunnel-p2p",
+                  "// identifier": "ODU2-SERVICE-ID",
+                  "identifier": 1,
+                  "description": "to-be-added",
+                  "protection-type": "ietf-te-types:lsp-prot-unprotected",
+                  "admin-status": "ietf-te-types:state-up",
+                  "// src-tp-id": "None: transit tunnel segment",
+                  "// dst-tp-id": "None: transit tunnel segment",
+                  "bidirectional": {
+                     "association": {
+                        "type": "ietf-te-types:bidir-assoc-corouted"
+                     }
+                  },
+                  "// comment": "augmentation from draft-sharma-ccamp-ietf-otn-tunnel-model-02",
+                  "ietf-otn-tunnel:payload-treatment": "switching",
+                  "ietf-otn-tunnel:src-client-signal": "ietf-transport-types:client-signal-ODU2",
+                  "ietf-otn-tunnel:src-tpn": 1,
+                  "ietf-otn-tunnel:src-tsg": "ietf-transport-types:tsg-1.25G",
+                  "ietf-otn-tunnel:src-tributary-slot-count": 8,
+                  "ietf-otn-tunnel:src-tributary-slots": {
+                     "values": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                     ]
+                  },
+                  "ietf-otn-tunnel:dst-client-signal": "ietf-transport-types:client-signal-ODU2",
+                  "ietf-otn-tunnel:dst-tpn": 2,
+                  "ietf-otn-tunnel:dst-tsg": "ietf-transport-types:tsg-1.25G",
+                  "ietf-otn-tunnel:dst-tributary-slot-count": 8,
+                  "ietf-otn-tunnel:dst-tributary-slots": {
+                     "values": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                     ]
+                  }
+               },
+               "state": {
+                  "name": "odu2-service",
+                  "type": "ietf-te-types:tunnel-p2p",
+                  "// identifier": "ODU2-SERVICE-ID",
+                  "identifier": 1,
+                  "description": "to-be-added",
+                  "protection-type": "ietf-te-types:lsp-prot-unprotected",
+                  "admin-status": "ietf-te-types:state-up",
+                  "// src-tp-id": "None: transit tunnel segment",
+                  "// dst-tp-id": "None: transit tunnel segment",
+                  "bidirectional": {
+                     "association": {
+                        "type": "ietf-te-types:bidir-assoc-corouted"
+                     }
+                  },
+                  "// comment": "augmentation from draft-sharma-ccamp-ietf-otn-tunnel-model-02",
+                  "ietf-otn-tunnel:payload-treatment": "switching",
+                  "ietf-otn-tunnel:src-client-signal": "ietf-transport-types:client-signal-ODU2",
+                  "ietf-otn-tunnel:src-tpn": 1,
+                  "ietf-otn-tunnel:src-tsg": "ietf-transport-types:tsg-1.25G",
+                  "ietf-otn-tunnel:src-tributary-slot-count": 8,
+                  "ietf-otn-tunnel:src-tributary-slots": {
+                     "values": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                     ]
+                  },
+                  "ietf-otn-tunnel:dst-client-signal": "ietf-transport-types:client-signal-ODU2",
+                  "ietf-otn-tunnel:dst-tpn": 2,
+                  "ietf-otn-tunnel:dst-tsg": "ietf-transport-types:tsg-1.25G",
+                  "ietf-otn-tunnel:dst-tributary-slot-count": 8,
+                  "ietf-otn-tunnel:dst-tributary-slots": {
+                     "values": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7
+                     ]
+                  }
+               },
+               "bandwidth": {
+                  "config": {
+                     "specification-type": "SPECIFIED",
+                     "// set-bandwidth": "ODU2-BW (10G)",
+                     "set-bandwidth": 10000
+                  },
+                  "state": {
+                     "specification-type": "SPECIFIED",
+                     "// set-bandwidth": "ODU2-BW (10G)",
+                     "set-bandwidth": 10000,
+                     "signaled-bandwidth": 10000
+                  }
+               },
+               "p2p-primary-paths": {
+                  "p2p-primary-path": [
+                     {
+                        "name": "odu2-service-explicit-path",
+                        "config": {
+                           "name": "odu2-service-explicit-path",
+                           "named-explicit-path": "odu2-service-named-explicit-path",
+                           "path-computation-method": "ietf-te-types:path-explicitly-defined"
+                        },
+                        "state": {
+                           "name": "odu2-service-explicit-path",
+                           "named-explicit-path": "odu2-service-named-explicit-path",
+                           "path-computation-method": "ietf-te-types:path-explicitly-defined",
+                           "lsps": {
+                              "lsp": []
+                           }
+                        }
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}
