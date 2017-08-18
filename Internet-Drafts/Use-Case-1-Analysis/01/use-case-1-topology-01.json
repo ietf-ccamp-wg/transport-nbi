@@ -9,6 +9,11 @@
         "// provider-id": "To be discussed",
         "// client-id": "To be discussed",
         "// te-topology-id": "To be discussed",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-otn-topology:otn-topology": {}
+          }
+        },
         "ietf-te-topology:te": {
           "state": {
             "// comment": "None analysed up to so far"
