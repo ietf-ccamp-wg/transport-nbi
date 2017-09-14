@@ -148,8 +148,10 @@
                 "type": "ietf-te-types:bidir-assoc-corouted"
               }
             },
-            "// comment-1": "augmentation from draft-sharma-",
-            "// comment-2": " ccamp-ietf-otn-tunnel-model-02",
+            "// comment-1": [
+	      "augmentation from draft-sharma-",
+              " ccamp-ietf-otn-tunnel-model-02"
+	    ],
             "ietf-otn-tunnel:payload-treatment": "switching",
             "ietf-otn-tunnel:src-client-signal":
               "ietf-transport-types:client-signal-ODU2",
@@ -201,8 +203,10 @@
                 "type": "ietf-te-types:bidir-assoc-corouted"
               }
             },
-            "// comment-1": "augmentation from draft-sharma-",
-            "// comment-2": " ccamp-ietf-otn-tunnel-model-02",
+            "// comment-1": [
+	      "augmentation from draft-sharma-",
+              "ccamp-ietf-otn-tunnel-model-02"
+	      ],
             "ietf-otn-tunnel:payload-treatment": "switching",
             "ietf-otn-tunnel:src-client-signal":
               "ietf-transport-types:client-signal-ODU2",
