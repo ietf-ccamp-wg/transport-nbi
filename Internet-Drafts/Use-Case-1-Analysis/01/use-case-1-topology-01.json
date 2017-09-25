@@ -4,16 +4,11 @@
       {
         "// comment": "ODU Abstract Topology @ MPI",
         "network-id": "Abstract-Topology",
-        "// comment-1": "Missing I2RS attributes - to be added in a",
-        "// comment-1": " future update",
+        "// comment-1":
+          "Missing I2RS attributes - to be added in a future update",
         "// provider-id": "To be discussed",
         "// client-id": "To be discussed",
         "// te-topology-id": "To be discussed",
-        "network-types": {
-          "ietf-te-topology:te-topology": {
-            "ietf-otn-topology:otn-topology": {}
-          }
-        },
         "ietf-te-topology:te": {
           "state": {
             "// comment": "None analysed up to so far"
@@ -21,198 +16,1153 @@
         },
         "node": [
           {
-            "// comment": "S3 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
-            "// te-node-id": "S3-NODE-ID",
-            "node-id": "10.0.0.3",
-            "ietf-te-topology:te": {
-              "state": {
-                "// comment": "None analysed up to so far"
-              }
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// comment": "S3-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added",
-                "// comment-1": " in a future update",
-                "// te-tp-id": "S3-1-LTP-ID (unnumbered)",
-                "tp-id": 1,
-                "ietf-te-topology:te": {
-                  "state": {
-                    "// comment": "Agumentation from draft-ietf-",
-                    "// comment": " ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4",
-                    "// adaptation-type": "Syntax not defined in",
-                    "// adaptation-type": " draft-ietf-",
-                    "// adaptation-type": " ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available",
-                    "// tributary-slots": " TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
-                  }
-                }
-              }
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
             ],
-            "// tunnel-termination-point": "to be added"
-          },
-          {
-            "// comment": "S6 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
-            "// te-node-id": "S6-NODE-ID",
-            "node-id": "10.0.0.6",
+            "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
                 "// comment": "None analysed up to so far"
               }
             },
+            "ietf-network:node-id": "of:0000000000000003",
             "ietf-network-topology:termination-point": [
               {
-                "// comment": "S6-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added",
-                "// comment-1": " in a future update",
-                "// te-tp-id": "S6-1 (unnumbered)",
-                "tp-id": 1,
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-",
-                    "// comment": " ccamp-otn-topo-yang-00",
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in",
-                    "// adaptation-type": " draft-ietf-",
-                    "// adaptation-type": " ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (16TSs at",
-                    "// tributary-slots": " 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed",
                     "ietf-otn-topology:protocol-type":
                       "ietf-transport-types:prot-OTU4"
                   }
-                }
+                },
+                "ietf-network-topology:tp-id": "1"
               },
               {
-                "// comment": "S6-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added",
-                "// comment-1": " in a future update",
-                "// te-tp-id": "S6-2 (unnumbered)",
-                "tp-id": 2,
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-",
-                    "// comment": " ccamp-otn-topo-yang-00",
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
                     "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4",
-                    "// adaptation-type": "Syntax not defined in",
-                    "// adaptation-type": " draft-ietf-",
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
                     "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
                     "// sink-adapt-active": "To be discussed",
                     "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (16TSs at",
-                    "// tributary-slots": " 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
                   }
-                }
+                },
+                "ietf-network-topology:tp-id": "3"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "4"
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
-            "// comment": "S8 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
-            "// te-node-id": "S8-NODE-ID",
-            "node-id": "10.0.0.8",
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
-              "state": {}
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
             },
-            "ietf-network-topology:termination-point": [],
-            "// tunnel-termination-point": "to be added"
+            "ietf-network:node-id": "of:0000000000000004",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000001",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000002",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "3"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000007",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "3"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000008",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "3"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "4"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000005",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "3"
+              }
+            ]
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "// tunnel-termination-point": "to be added",
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000006",
+            "ietf-network-topology:termination-point": [
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "1"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "2"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "3"
+              },
+              {
+                "// comment-1": [
+                 "Missing I2RS attributes - to be added in a future",
+                  " update"
+                ],
+                "ietf-te-topology:te": {
+                  "state": {
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                     "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type":
+                      "ietf-transport-types:prot-OTU4"
+                  }
+                },
+                "ietf-network-topology:tp-id": "4"
+              }
+            ]
           }
         ],
         "ietf-network-topology:link": [
           {
-            "// comment": "Access Link between S3 and C-R1",
-            "link-id": "S3_C-R1",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000001_of:0000000000000003",
                   "access-type": "point-to-point",
                   "external-domain": {
-                    "// comment": "Information needed to glue this",
-                    "// comment": " access link with C-R1 (to be",
-                    "// comment": " further analysed)"
-                  },
-                  "name": "Access Link between S3 and C-R1",
-                  "admin-status": "up"
-                },
-                "// comment": "Attributes from draft-ietf-",
-                "// comment": " ccamp-otn-topo-yang-00 to be added"
+                    "// comment": "Information needed to glue this"
+                  }
+                }
               }
-            }
+            },
+            "link-id": "of:0000000000000001_of:0000000000000003"
           },
           {
-            "// comment": "Access Link between S6 and C-R2",
-            "link-id": "S6_C-R2",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000003_of:0000000000000004",
                   "access-type": "point-to-point",
                   "external-domain": {
-                    "// comment": "Information needed to glue this",
-                    "// comment": " access link with C-R2 (to be",
-                    "// comment": " further analysed)"
-                  },
-                  "name": "Access Link between S6 and C-R2",
-                  "admin-status": "up"
-                },
-                "// comment": "Attributes from draft-ietf-",
-                "// comment": " ccamp-otn-topo-yang-00 to be added"
+                    "// comment": "Information needed to glue this"
+                  }
+                }
               }
-            }
+            },
+            "link-id": "of:0000000000000003_of:0000000000000004"
           },
           {
-            "// comment": "Access Link between S6 and C-R3",
-            "link-id": "S6_C-R3",
-            "// comment-1": "Missing I2RS attributes - to be added in",
-            "// comment-1": " a future update",
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000005_of:0000000000000006",
                   "access-type": "point-to-point",
                   "external-domain": {
-                    "// comment": "Information needed to glue this",
-                    "// comment": " access link with C-R3 (to be",
-                    "// comment": " further analysed)"
-                  },
-                  "name": "Access Link between S6 and C-R3",
-                  "admin-status": "up"
-                },
-                "// comment": "Attributes from draft-ietf-",
-                "// comment": " ccamp-otn-topo-yang-00 to be added"
+                    "// comment": "Information needed to glue this"
+                  }
+                }
               }
-            }
+            },
+            "link-id": "of:0000000000000005_of:0000000000000006"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000003_of:0000000000000005",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000003_of:0000000000000005"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000005_of:0000000000000007",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000005_of:0000000000000007"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000004_of:0000000000000008",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000004_of:0000000000000008"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000002_of:0000000000000008",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000002_of:0000000000000008"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000008_of:0000000000000002",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000008_of:0000000000000002"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000003_of:0000000000000001",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000003_of:0000000000000001"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000007_of:0000000000000005",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000007_of:0000000000000005"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000008_of:0000000000000004",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000008_of:0000000000000004"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000005_of:0000000000000003",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000005_of:0000000000000003"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000002_of:0000000000000001",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000002_of:0000000000000001"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000008_of:0000000000000007",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000008_of:0000000000000007"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000007_of:0000000000000006",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000007_of:0000000000000006"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000006_of:0000000000000005",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000006_of:0000000000000005"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000004_of:0000000000000003",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000004_of:0000000000000003"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000006_of:0000000000000007",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000006_of:0000000000000007"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000001_of:0000000000000002",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000001_of:0000000000000002"
+          },
+          {
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "of:0000000000000007_of:0000000000000008",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": "Information needed to glue this"
+                  }
+                }
+              }
+            },
+            "link-id": "of:0000000000000007_of:0000000000000008"
           }
         ]
       }
