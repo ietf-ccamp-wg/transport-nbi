@@ -1,3 +1,8 @@
+"// Reference drafts " : [  
+  "ietf-network-topology (draft-ietf-i2rs-yang-network-topo-12)",  
+  "ietf-te-topology (draft-ietf-teas-yang-te-topo-09)",  
+  "ietf-otn-topology (draft-ietf-ccamp-otn-topo-yang-00)"
+]
 {
   "ietf-network:networks": {
     "network": [
