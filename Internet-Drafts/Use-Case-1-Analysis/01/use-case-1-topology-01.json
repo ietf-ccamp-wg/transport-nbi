@@ -9,8 +9,7 @@
       {
         "// comment": "ODU Abstract Topology @ MPI",
         "network-id": "Abstract-Topology",
-        "// comment-1":
-          "Missing I2RS attributes - to be added in a future update",
+        "// comment-1": "Missing I2RS attributes - to be added in a future update",
         "// provider-id": "To be discussed",
         "// client-id": "To be discussed",
         "// te-topology-id": "To be discussed",
@@ -50,14 +49,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -78,14 +75,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -106,14 +101,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -134,14 +127,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "4"
@@ -176,14 +167,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -204,14 +193,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -246,14 +233,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -274,14 +259,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -316,14 +299,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -344,14 +325,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -372,14 +351,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -414,14 +391,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -442,14 +417,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -470,14 +443,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -513,14 +484,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -541,14 +510,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -569,14 +536,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -597,14 +562,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "4"
@@ -639,14 +602,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -667,14 +628,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -695,14 +654,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -739,14 +696,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "1"
@@ -768,14 +723,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "2"
@@ -796,14 +749,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "3"
@@ -824,14 +775,12 @@
                     "// source-adapt-active": "To be discussed",
                     "// supported-payload-types": "To be discussed",
                     "// tpn": "To be discussed",
-                    "// tributary-slots":
-                      " TSs at 1,25TS granularity (80 available)",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
                     "// tsg": "To be discussed",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type":
-                      "ietf-transport-types:prot-OTU4"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
                 },
                 "ietf-network-topology:tp-id": "4"
