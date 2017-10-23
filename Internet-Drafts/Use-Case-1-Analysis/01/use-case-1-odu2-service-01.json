@@ -1,5 +1,5 @@
 {
-  "// Last Update": "October 11, 2017",
+  "// Last Update": "October 23, 2017",
   "// Reference drafts ": [
     "ietf-te-types (draft-ietf-teas-yang-te-08)",
     "ietf-te (draft-ietf-teas-yang-te-08)",
@@ -67,8 +67,11 @@
           "identifier": 1,
           "config": {
             "name": "odu2-service",
-            "// type": "Do we need this attribute since p2mp Tunnels are in the tunnel-p2mp tree?",
-            "type": "ietf-te-types:tunnel-p2p",
+            "// type": [
+              "ietf-te-types:tunnel-p2p",
+              "It seems this attribute will be removed in the next version of the TE Tunnel model",
+              "No longer needed since p2p and p2mp Tunnels have been split"
+            ],
             "// identifier": "ODU2-SERVICE-ID",
             "identifier": 1,
             "description": "Tunnel Segment supporting the ODU2 Transit Service in Use Case 1",
@@ -83,7 +86,7 @@
             "// destination": "Not needed (to be discussed by the DT)",
             "// src-tp-id": "None: transit tunnel segment",
             "// dst-tp-id": "None: transit tunnel segment",
-            "// te-topology-id": "ODU Abstract Topology @ MPI",
+            "// topology-id": "ODU Abstract Topology @ MPI",
             "topology-id": "PNC:1",
             "// ignore-overload": "To be analyzed in a future update",
             "// bandwidth-generic": [
