@@ -38,7 +38,7 @@ You need to advertise the same plug-id independently of the topology (physical o
 
 Young example: co-existence of dynamic auto-discovery (e.g., LMP) with central assignment of plug-id values (with partitioning of the plug-id namespace between LMP and central authority):  
 
-[alt text](figure-1.png)
+![alt text](figure-1.png)
 
 Yunbin reported that in practical implementation, four types of links can be identified:  
     - intra-domain links having both source-tp and destination-tp  
@@ -46,7 +46,7 @@ Yunbin reported that in practical implementation, four types of links can be ide
     - access links, connected with a CE device, having only the source-tp (no destination-tp) and the plug-id  
     - access links, not connected with any CE device, having only the source-tp and no destination-tp nor plug-id  
 
-[alt text](figure-2.png)
+![alt text](figure-2.png)
 
 **Discussion to be continued on the mailing list and on the next DT call**  
 
