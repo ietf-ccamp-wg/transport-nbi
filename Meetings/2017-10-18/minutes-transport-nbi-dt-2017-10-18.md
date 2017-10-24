@@ -46,7 +46,7 @@ Yunbin reported that in practical implementation, four types of links can be ide
     - access links, connected with a CE device, having only the source-tp (no destination-tp) and the plug-id  
     - access links, not connected with any CE device, having only the source-tp and no destination-tp nor plug-id  
 
-[alt text](figure-1.png)
+[alt text](figure-2.png)
 
 **Discussion to be continued on the mailing list and on the next DT call**  
 
