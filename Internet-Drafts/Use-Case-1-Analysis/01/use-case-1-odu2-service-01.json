@@ -1,14 +1,14 @@
 {
-  "// Last Update": "October 23, 2017",
+  "// Last Update": "October 25, 2017",
   "// Reference drafts ": [
     "ietf-te-types (draft-ietf-teas-yang-te-08)",
     "ietf-te (draft-ietf-teas-yang-te-08)",
     "ietf-otn-tunnel (draft-ietf-ccamp-otn-tunnel-model-00)"
   ],
   "// comment": [
-    "Should we create named-explicit-paths and tunnels with different operations or in one operation?",
-    "Doing this in one request would have some issues when a new Tunnel is created but there are already existing named-explicit-paths  and/or tunnels",
-    "Suggestion: one POST/PUT operation, rooted on named-explicit-path/odu2-service-named-explicit-path, to create/update the ODU2 service named explicit path and one POST/PUSH operation, rooted on tunnels/tunnel/odu2-service, to create/update the ODU2 service tunnel"
+    "Need to split this file to describe creation of named-explicit-paths and tunnels with different operations:",
+    "One POST/PUT operation, rooted on named-explicit-path/odu2-service-named-explicit-path, to create/update the ODU2 service named explicit path and one POST/PUSH operation, rooted on tunnels/tunnel/odu2-service, to create/update the ODU2 service tunnel"
+    "Reason: doing this in one request would have some issues when a new Tunnel is created but there are already existing named-explicit-paths  and/or tunnels",
   ],
   "ietf-te:te": {
     "globals": {
@@ -32,7 +32,6 @@
                       "router-id": "10.0.0.3",
                       "// interface-id": "S3-1-LTP-ID",
                       "interface-id": 1,
-                      "// hop-type": "STRICT or LOOSE (to be further discussed by the DT)",
                       "hop-type": "STRICT"
                     }
                   }
@@ -48,7 +47,6 @@
                       "router-id": "10.0.0.6",
                       "// interface-id": "S6-2-LTP-ID",
                       "interface-id": 2,
-                      "// hop-type": "STRICT or LOOSE (to be further discussed by the DT)",
                       "hop-type": "STRICT"
                     }
                   }
@@ -82,22 +80,22 @@
             "provisioning-state": "tunnel-state-down",
             "// preference": "To be analyzed in a future update",
             "// reoptimize-timer": "To be analyzed in a future update",
-            "// source": "Not needed (to be discussed by the DT)",
-            "// destination": "Not needed (to be discussed by the DT)",
+            "// source": "None: transit tunnel segment",
+            "// destination": "None: transit tunnel segment",
             "// src-tp-id": "None: transit tunnel segment",
             "// dst-tp-id": "None: transit tunnel segment",
-            "// topology-id": "ODU Abstract Topology @ MPI",
+            "// topology-id": "ODU It seems not relevant forAbstract Topology @ MPI",
             "topology-id": "PNC:1",
             "// ignore-overload": "To be analyzed in a future update",
             "// bandwidth-generic": [
-              "To be discussed by the DT",
+              "To be discussed with TE Tunnel model authors",
               "The definition of ietf-te-types:te-bandwidth is a string with complex structure/parsing",
               "Using the new ietf-te-types:te-bandwidth grouping seems simpler to indicate this is an ODU2 Tunnel"
             ],
             "// disjointness": "To be analyzed in a future update",
             "// setup-priority": "To be analyzed in a future update",
             "// hold-priority": "To be analyzed in a future update",
-            "// signaling-type": "It seems that only the base path-signaling-type is defined in ietf-te-types (to be further discussed by the DT)",
+            "// signaling-type": "To be discussed with TE Tunnel model authors: syntax not complete and it seems not applicable to the MPI",
             "// bidirectional": "Indicates this is a bidirectional co-routed Tunnel",
             "bidirectional": {
               "association": {
@@ -106,7 +104,8 @@
                 "// global-source": "Not needed (bidirectional co-routed)",
                 "type": "ietf-te-types:bidir-assoc-corouted",
                 "// provisioing": [
-                  "It seems not relevant for the MPI (to be further discussed by the DT)",
+                  "It seems not applicable to",        
+                  " the MPI (to be further discussed with TE Tunnel model authors)",
                   "typo? c/provisioing/provisioning/"
                 ]
               }
@@ -151,7 +150,6 @@
               ]
             }
           },
-          "// bandwidth": "Removed in the latest update of the TE model",
           "p2p-primary-paths": {
             "p2p-primary-path": [
               {
