@@ -1,5 +1,5 @@
 {
-  "// Last Update": "October 25, 2017",
+  "// Last Update": "October 26, 2017",
   "// Reference drafts ": [
     "ietf-te-types (draft-ietf-teas-yang-te-08)",
     "ietf-te (draft-ietf-teas-yang-te-08)",
@@ -7,8 +7,8 @@
   ],
   "// comment": [
     "Need to split this file to describe creation of named-explicit-paths and tunnels with different operations:",
-    "One POST/PUT operation, rooted on named-explicit-path/odu2-service-named-explicit-path, to create/update the ODU2 service named explicit path and one POST/PUSH operation, rooted on tunnels/tunnel/odu2-service, to create/update the ODU2 service tunnel"
-    "Reason: doing this in one request would have some issues when a new Tunnel is created but there are already existing named-explicit-paths  and/or tunnels",
+    "One POST/PUT operation, rooted on named-explicit-path/odu2-service-named-explicit-path, to create/update the ODU2 service named explicit path and one POST/PUSH operation, rooted on tunnels/tunnel/odu2-service, to create/update the ODU2 service tunnel",
+    "Reason: doing this in one request would have some issues when a new Tunnel is created but there are already existing named-explicit-paths  and/or tunnels"
   ],
   "ietf-te:te": {
     "globals": {
@@ -30,8 +30,8 @@
                     "unnumbered-hop": {
                       "// router-id": "S3-NODE-ID",
                       "router-id": "10.0.0.3",
-                      "// interface-id": "S3-1-LTP-ID",
-                      "interface-id": 1,
+                      "// link-tp-id": "S3-1-LTP-ID",
+                      "link-tp-id": 1,
                       "hop-type": "STRICT"
                     }
                   }
@@ -45,8 +45,8 @@
                     "unnumbered-hop": {
                       "// router-id": "S6-NODE-ID",
                       "router-id": "10.0.0.6",
-                      "// interface-id": "S6-2-LTP-ID",
-                      "interface-id": 2,
+                      "// link-tp-id": "S6-2-LTP-ID",
+                      "link-tp-id": 2,
                       "hop-type": "STRICT"
                     }
                   }
@@ -104,7 +104,7 @@
                 "// global-source": "Not needed (bidirectional co-routed)",
                 "type": "ietf-te-types:bidir-assoc-corouted",
                 "// provisioing": [
-                  "It seems not applicable to",        
+                  "It seems not applicable to",
                   " the MPI (to be further discussed with TE Tunnel model authors)",
                   "typo? c/provisioing/provisioning/"
                 ]
