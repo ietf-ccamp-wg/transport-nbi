@@ -6,5 +6,6 @@ Agenda:
 3) JSON code review
 4) Review of TE tutorial
 5) Inter-domain link stitching
+6) AOB
 
 Etherpad for minutes takers: https://etherpad.net/p/transport-nbi-dt-2017-11-29
