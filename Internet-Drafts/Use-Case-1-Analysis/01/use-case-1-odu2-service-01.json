@@ -6,124 +6,68 @@
           {
             "name": "odu2-service-named-explicit-path",
             "config": {
-              "name": "odu2-service-named-explicit-path",
-              "explicit-route-objects": {
-                "explicit-route-object": [
-                  {
+              "name": "odu2-service-named-explicit-path"
+	    },
+            "explicit-route-objects": {
+              "explicit-route-object": [
+                {
+                  "index": 0,
+                  "// comment": "ingress interface on S3 node",
+                  "explicit-route-usage":
+                    "ietf-te-types:route-include-ero",
+                  "config": {
                     "index": 0,
-                    "// comment": "ingress interface on S3 node",
-                    "explicit-route-usage":
-                      "ietf-te-types:route-include-ero",
-                    "config": {
-                      "index": 0,
-                      "unnumbered-hop": {
-                        "// router-id": "S3-NODE-ID",
-                        "router-id": "10.0.0.3",
-                        "// interface-id": "S3-1-LTP-ID",
-                        "interface-id": 1,
-                        "hop-type": "STRICT"
-                      }
-                    },
-                    "state": {
-                      "index": 0,
-                      "unnumbered-hop": {
-                        "// router-id": "S3-NODE-ID",
-                        "router-id": "10.0.0.3",
-                        "// interface-id": "S3-1-LTP-ID",
-                        "interface-id": 1,
-                        "hop-type": "STRICT"
-                      }
+                    "unnumbered-hop": {
+                      "// node-id": "S3-NODE-ID",
+                      "node-id": "10.0.0.3",
+                      "// link-tp-id": "S3-1-LTP-ID",
+                      "link-tp-id": 1,
+                      "hop-type": "STRICT"
                     }
                   },
-                  {
-                    "index": 1,
-                    "// comment": "egress interface on S6 node",
-                    "explicit-route-usage":
-                      "ietf-te-types:route-include-ero",
-                    "config": {
-                      "index": 1,
-                      "unnumbered-hop": {
-                        "// router-id": "S6-NODE-ID",
-                        "router-id": "10.0.0.6",
-                        "// interface-id": "S6-2-LTP-ID",
-                        "interface-id": 2,
-                        "hop-type": "STRICT"
-                      }
-                    },
-                    "state": {
-                      "index": 1,
-                      "unnumbered-hop": {
-                        "// router-id": "S6-NODE-ID",
-                        "router-id": "10.0.0.6",
-                        "// interface-id": "S6-2-LTP-ID",
-                        "interface-id": 2,
-                        "hop-type": "STRICT"
-                      }
+                  "state": {
+                    "index": 0,
+                    "unnumbered-hop": {
+                      "// node-id": "S3-NODE-ID",
+                      "node-id": "10.0.0.3",
+                      "// link-tp-id": "S3-1-LTP-ID",
+                      "link-tp-id": 1,
+                      "hop-type": "STRICT"
                     }
                   }
-                ]
-              }
+                },
+                {
+                  "index": 1,
+                  "// comment": "egress interface on S6 node",
+                  "explicit-route-usage":
+                    "ietf-te-types:route-include-ero",
+                  "config": {
+                    "index": 1,
+                    "unnumbered-hop": {
+                      "// node-id": "S6-NODE-ID",
+                      "node-id": "10.0.0.6",
+                      "// link-tp-id": "S6-2-LTP-ID",
+                      "link-tp-id": 2,
+                      "hop-type": "STRICT"
+                    }
+                  },
+                  "state": {
+                    "index": 1,
+                    "unnumbered-hop": {
+                      "// node-id": "S6-NODE-ID",
+                      "node-id": "10.0.0.6",
+                      "// link-tp-id": "S6-2-LTP-ID",
+                      "link-tp-id": 2,
+                      "hop-type": "STRICT"
+                    }
+                  }
+                }
+              ]
             },
             "state": {
               "name": "odu2-service-named-explicit-path"
+            }
 
-            },
-                          "explicit-route-objects": {
-                "explicit-route-object": [
-                  {
-                    "index": 0,
-                    "// comment": "ingress interface on S3 node",
-                    "explicit-route-usage":
-                      "ietf-te-types:route-include-ero",
-                    "config": {
-                      "index": 0,
-                      "unnumbered-hop": {
-                        "// router-id": "S3-NODE-ID",
-                        "router-id": "10.0.0.3",
-                        "// interface-id": "S3-1-LTP-ID",
-                        "interface-id": 1,
-                        "hop-type": "STRICT"
-                      }
-                    },
-                    "state": {
-                      "index": 0,
-                      "unnumbered-hop": {
-                        "// router-id": "S3-NODE-ID",
-                        "router-id": "10.0.0.3",
-                        "// interface-id": "S3-1-LTP-ID",
-                        "interface-id": 1,
-                        "hop-type": "STRICT"
-                      }
-                    }
-                  },
-                  {
-                    "index": 1,
-                    "// comment": "egress interface on S6 node",
-                    "explicit-route-usage":
-                      "ietf-te-types:route-include-ero",
-                    "config": {
-                      "index": 1,
-                      "unnumbered-hop": {
-                        "// router-id": "S6-NODE-ID",
-                        "router-id": "10.0.0.6",
-                        "// interface-id": "S6-2-LTP-ID",
-                        "interface-id": 2,
-                        "hop-type": "STRICT"
-                      }
-                    },
-                    "state": {
-                      "index": 1,
-                      "unnumbered-hop": {
-                        "// router-id": "S6-NODE-ID",
-                        "router-id": "10.0.0.6",
-                        "// interface-id": "S6-2-LTP-ID",
-                        "interface-id": 2,
-                        "hop-type": "STRICT"
-                      }
-                    }
-                  }
-                ]
-              }
           }
         ]
       }
