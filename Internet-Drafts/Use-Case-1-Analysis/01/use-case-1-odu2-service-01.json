@@ -80,12 +80,18 @@
           "identifier": 1,
           "config": {
             "name": "odu2-service",
+
+            "// bandwidth": "not generic but HORRIBLE REPRESENTATION (dura lex sed lex)",
+            "bandwidth-generic": "2,1",
+                "// ?!? bandwidth : specification-type": "SPECIFIED",
+                "// bandwidth : detailed": "ODU2-BW (10G)",
+                "// bandwidth : numeric": 10000,
             "type": "ietf-te-types:tunnel-p2p",
             "// identifier": "ODU2-SERVICE-ID",
             "identifier": 1,
             "description": "to-be-added",
             "protection-type": "ietf-te-types:lsp-prot-unprotected",
-            "admin-status": "ietf-te-types:state-up",
+            "// NO MORE AVAILABLE! admin-status": "ietf-te-types:state-up",
             "// src-tp-id": "None: transit tunnel segment",
             "// dst-tp-id": "None: transit tunnel segment",
             "bidirectional": {
@@ -135,12 +141,20 @@
           },
           "state": {
             "name": "odu2-service",
+
+            "// bandwidth": "not generic but HORRIBLE REPRESENTATION (dura lex sed lex)",
+            "bandwidth-generic": "2,1",
+                "// ?!? bandwidth : specification-type": "SPECIFIED",
+                "// bandwidth : detailed": "ODU2-BW (10G)",
+                "// bandwidth : numeric": 10000,
+                "// Where is signaled-bandwidth ?": 10000,
+
             "type": "ietf-te-types:tunnel-p2p",
             "// identifier": "ODU2-SERVICE-ID",
             "identifier": 1,
             "description": "to-be-added",
             "protection-type": "ietf-te-types:lsp-prot-unprotected",
-            "admin-status": "ietf-te-types:state-up",
+            "// NO MORE AVAILABLE! admin-status": "ietf-te-types:state-up",
             "// src-tp-id": "None: transit tunnel segment",
             "// dst-tp-id": "None: transit tunnel segment",
             "bidirectional": {
@@ -186,19 +200,6 @@
                 6,
                 7
               ]
-            }
-          },
-          "bandwidth": {
-            "config": {
-              "specification-type": "SPECIFIED",
-              "// set-bandwidth": "ODU2-BW (10G)",
-              "set-bandwidth": 10000
-            },
-            "state": {
-              "specification-type": "SPECIFIED",
-              "// set-bandwidth": "ODU2-BW (10G)",
-              "set-bandwidth": 10000,
-              "signaled-bandwidth": 10000
             }
           },
           "p2p-primary-paths": {
