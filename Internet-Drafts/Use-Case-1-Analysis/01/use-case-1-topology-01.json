@@ -2,21 +2,74 @@
   "ietf-network:networks": {
     "network": [
       {
-        "// Last Update": "Feb 14, 2018",
-        "// REST operation": "GET http://127.0.0.1:8182/restconf/data/ietf-network:networks/network/",
-        "// Reference drafts": [
-          "ietf-network-topology (draft-ietf-i2rs-yang-network-topo-12)",
-          "ietf-te-topology (draft-ietf-teas-yang-te-topo-09)",
-          "ietf-otn-topology (draft-ietf-ccamp-otn-topo-yang-00)",
-          "ietf-te-types@2017-07-02 (draft-ietf-teas-yang-te-08)"
+        "// __LAST_UPDATE__": "Feb 14, 2018",
+        "// __REST_OPERATION__": "GET http://127.0.0.1:8182/restconf/data/ietf-network:networks",
+        "// __REFERENCE_DRAFTS__": [
+          { "ietf-network@2017-03-01"          : "draft-ietf-i2rs-yang-network-topo-12"    },
+          { "ietf-network-topology@2017-03-01" : "draft-ietf-i2rs-yang-network-topo-12"    },
+          { "ietf-te-topology@2017-06-10"      : "draft-ietf-teas-yang-te-topo-09"         },
+          { "ietf-te-types@2017-07-02"         : "draft-ietf-teas-yang-te-08"              },
+          { "ietf-routing-types"               : "???"                                     },
+          { "ietf-otn-topology@2017-04-25"     : "draft-ietf-ccamp-otn-topo-yang-00"       },
+          { "ietf-transport-types@2016-06-24"  : "draft-sharma-ccamp-otn-service-model-00" }
         ],
-        "// Topology-layout": [],
-        "// comment": "ODU Abstract Topology @ MPI",
-        "// comment-1": "Missing I2RS attributes - to be added in a a future update",
-        "// comment-2": "network-id= URI composed as <te-topology-id>:<provider-id>:<client-id>",
-        "// comment-3": "provider-id=0 is a full TE capable exporting white-topology (proposal)",
-        "// comment-4": "client-id=0 for native TE topology [TE-TOPO 5.4]",
-        "network-id": "ietf:teas:ccamp:tnbi:0:0",
+        "// __TITLE__": "ODU Abstract Topology @ MPI",
+        "// __TOPOLOGY_LAYOUT__": [
+          "          ..................................           ",
+          "          :                                :           ",
+          "          :   ODU Abstract Topology @ MPI  :           ",
+          "          :        Gotham City Area        :           ",
+          "          :     Metro Transport Network    :           ",
+          "          :                                :           ",
+          "          :        +----+        +----+    :           ",
+          "          :        |    |S1-1    |    |S2-1:           ",
+          "          :        | S1 |--------| S2 |- - - - -(C-R4) ",
+          "          :        +----+    S2-2+----+    :           ",
+          "          :     S1-2/               |S2-3  :           ",
+          "          :    S3-2/ Robinson Park  |      :           ",
+          "          :    +----+   +----+      |      :           ",
+          "          :    |    |3 1|    |      |      :           ",
+          "(C-R1)- - - - -| S3 |---| S4 |      |      :           ",
+          "          :S3-1+----+   +----+      |      :           ",
+          "          :   S3-4\\       \\S4-2   |      :           ",
+          "          :        \\S5-1   \\      |      :           ",
+          "          :        +----+    \\     |      :           ",
+          "          :        |    |     \\S8-3|      :           ",
+          "          :        | S5 |      \\   |      :           ",
+          "          :        +----+ Metro \\  |S8-2  :           ",
+          "(C-R2)- - - - -   2/ E \\3 Main  \\ |      :           ",
+          "          :S6-1\\ /3 a E\\1 Ring  \\|      :           ",
+          "          :    +----+s-n+----+   +----+    :           ",
+          "          :    |    |t d|    |   |    |S8-1:           ",
+          "          :    | S6 |---| S7 |---| S8 |- - - - -(C-R5) ",
+          "          :    +----+4 2+----+3 4+----+    :           ",
+          "          :     /                          :           ",
+          "(C-R3)- - - - -                            :           ",
+          "          :S6-2                            :           ",
+          "          :................................:           "
+        ],
+        "// __MISSING_ATTRIBUTES__": true,
+        "// __BEST_PRACTICE_PROPOSAL__:__NETWORK__": [
+          "Proposed best-practice for network-id value:",
+          "  since a te-topology is uniquely udentified by a key ",
+          "  composed with [TE-TOPO 5.4]:                        ",
+          "       te-topology-id                                 ",
+          "       provider-id                                    ",
+          "       client-id                                      ",
+          "  and since network-id is a URI, the network-id value ",
+          "  can be a string composed as:                        ",
+          "       <te-topology-id>:<provider-id>:<client-id>     ",
+          "  where:                                              ",
+          "  te-topology-id assumes in case of MPI for transport ",
+          "    the value:                                        ",
+          "       urn:ietf:teas:ccamp-tnbi                       ",
+          "    that should be IANA REGISTERED.                   ",
+          "  provider-id = 0 to represent in TNBI context        ",
+          "    a full TE-capable topology provider exporting     ",
+          "    white-topology (proposal)                         ",
+          "  client-id = 0 for native TE topology [TE-TOPO 5.4]  "
+        ],
+        "network-id": "urn:ietf:teas:ccamp-tnbi/0,0",
         "network-types": {
           "ietf-te-topology:te-topology": {
             "ietf-otn-topology:otn-topology": {}
@@ -24,20 +77,31 @@
         },
         "ietf-te-topology:provider-id": 0,
         "ietf-te-topology:client-id": 0,
-        "ietf-te-topology:te-topology-id": "ietf:teas:ccamp:tnbi",
+        "ietf-te-topology:te-topology-id": "urn:ietf:teas:ccamp-tnbi",
         "ietf-otn-topology:name": "gotham-city:metro-transport-network",
         "ietf-network:node": [
           {
-            "// comment": "S3 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __BEST_PRACTICE_PROPOSAL__:__NODE__": [
+              "Proposed best practice for node-id value          ",
+              "  since node-id is a URI it can represent the     ",
+              "  te-node-id (yang:dotted-quad) value as string   ",
+              "      node-id = te-node-id                        "
+            ],
+            "// __NODE__:__DESCRIPTION__": [
+              "S3",
+              "10.0.0.3",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S3-NODE-ID",
             "node-id": "10.0.0.3",
             "ietf-te-topology:te-node-id": "10.0.0.3",
-            "ietf-otn-topology:name": "S3:diamond-district-ring:gateway",
+            "ietf-otn-topology:name": "S3:metro-main-ring:gateway",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S3",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -46,94 +110,98 @@
             },
             "ietf-network-topology:termination-point": [
               {
-                "// comment": "S3-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __BEST_PRACTICE_PROPOSAL__:__TP__": [
+                  "Proposed best practice for tp-id value            ",
+                  "  since tp-id is a URI it can represent the       ",
+                  "  te-tp-id (union of uint32 and ip-address) value ",
+                  "  as string                                       ",
+                  "      tp-id = te-tp-id.toString()                 "
+                ],
+                "// __DESCRIPTION__:__TP__": [
+                  "S3-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "ODU-2 carring 10GbE-LAN",
+                  "tributary port"
+                ],
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S3-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS",
+                    "// ietf-otn-topology:tpn": "To be discussed",
+                    "// ietf-otn-topology:tsg": "To be discussed",
+                    "// ietf-otn-topology:sink-adapt-active": "To be discussed",
+                    "// ietf-otn-topology:source-adapt-active": "To be discussed",
+                    "// ietf-otn-topology:tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
+                    "// ietf-otn-topology:supported-payload-types": "To be discussed"
                   }
                 }
               },
               {
-                "// comment": "S3-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
-                "// ietf-te-topology:te-tp-id": "S3-2-LTP-ID (unnumbered)",
+                "// __DESCRIPTION__:__TP__": [
+                  "S3-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
+                "// __MISSING_ATTRIBUTES__": true,
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "// ietf-te-topology:te-tp-id": "S3-2-LTP-ID (unnumbered)",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
-                "// comment": "S3-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __DESCRIPTION__:__TP__": [
+                  "S3-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S3-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
-                "// comment": "S3-4 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __DESCRIPTION__:__TP__": [
+                  "S3-4 LTP",
+                  "unnumberd/ifIndex: 4",
+                  "OTU-4",
+                  "line port"
+                ],
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S3-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
-                "ietf-te-topology:te-tp-id": "4",
+                "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -141,16 +209,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S4 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S4",
+              "10.0.0.4",
+              "pizza-box"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S4-NODE-ID",
             "node-id": "10.0.0.4",
             "ietf-te-topology:te-node-id": "10.0.0.4",
-            "ietf-otn-topology:name": "S4:diamond-district-ring:line",
+            "ietf-otn-topology:name": "S4:metro-main-ring:line",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S4",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -159,48 +232,44 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S4-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S4-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S4-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S4-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S4-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S4-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -208,16 +277,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S1 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S1",
+              "10.0.0.1",
+              "pizza-box"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S1-NODE-ID",
             "node-id": "10.0.0.1",
             "ietf-te-topology:te-node-id": "10.0.0.1",
             "ietf-otn-topology:name": "S1:robinson-park-ring:line",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S1",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -226,48 +300,44 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S1-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S1-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S1-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S1-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S1-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S1-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -275,16 +345,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S2 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S2",
+              "10.0.0.2",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S2-NODE-ID",
             "node-id": "10.0.0.2",
             "ietf-te-topology:te-node-id": "10.0.0.2",
             "ietf-otn-topology:name": "S2:robinson-park-ring:access",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S2",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -293,71 +368,68 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S2-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "ODU-2 carring 10GbE-LAN",
+                  "tributary port"
+                ],
                 "// comment": "S2-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S2-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "admin-status": "up",
+                    "oper-status": "up",
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S2-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S2-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S2-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S2-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S2-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S2-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -365,16 +437,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S7 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S7",
+              "10.0.0.7",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S7-NODE-ID",
             "node-id": "10.0.0.7",
             "ietf-te-topology:te-node-id": "10.0.0.7",
             "ietf-otn-topology:name": "S7:east-end-ring:gateway",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S7",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -383,71 +460,65 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S7-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S7-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S7-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S7-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S7-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S7-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S7-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S7-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S7-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -455,16 +526,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S8 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S8",
+              "10.0.0.8",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S8-NODE-ID",
             "node-id": "10.0.0.8",
             "ietf-te-topology:te-node-id": "10.0.0.8",
-            "ietf-otn-topology:name": "S8:diamond-district-ring:access",
+            "ietf-otn-topology:name": "S8:metro-main-ring:access",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S8",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -473,94 +549,89 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S8-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "ODU-2 carring 10GbE-LAN",
+                  "tributary port"
+                ],
                 "// comment": "S8-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S8-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "admin-status": "up",
+                    "oper-status": "up",
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S8-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S8-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S8-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S8-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S8-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S8-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S8-4 LTP",
+                  "unnumberd/ifIndex: 4",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S8-4 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S8-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
-                "ietf-te-topology:te-tp-id": "4",
+                "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -568,16 +639,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S5 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S5",
+              "10.0.0.5",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S5-NODE-ID",
             "node-id": "10.0.0.5",
             "ietf-te-topology:te-node-id": "10.0.0.5",
             "ietf-otn-topology:name": "S5:east-end-ring:gateway",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S5",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -586,71 +662,65 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S5-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S5-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S5-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S5-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S5-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S5-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S5-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S5-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S5-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -658,16 +728,21 @@
             "// tunnel-termination-point": "to be added"
           },
           {
-            "// comment": "S6 Node",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __NODE__:__DESCRIPTION__": [
+              "S6",
+              "10.0.0.6",
+              "ADM"
+            ],
+            "// __MISSING_ATTRIBUTES__": true,
             "// ietf-te-topology:te-node-id": "S6-NODE-ID",
             "node-id": "10.0.0.6",
             "ietf-te-topology:te-node-id": "10.0.0.6",
             "ietf-otn-topology:name": "S6:east-end-ring:access",
             "ietf-te-topology:te": {
               "state": {
+                "// comment": "TO BE COMPLETED",
+                "oper-status": "up",
                 "te-node-attributes": {
-                  "// comment": "None analysed up to so far",
                   "name": "S6",
                   "admin-status": "up",
                   "domain-id": 65001
@@ -676,94 +751,92 @@
             },
             "ietf-network-topology:termination-point": [
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S6-1 LTP",
+                  "unnumberd/ifIndex: 1",
+                  "ODU-2 carring 10GbE-LAN",
+                  "tributary port"
+                ],
                 "// comment": "S6-1 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S6-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
-                "ietf-te-topology:te-tp-id": "1",
+                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S6-2 LTP",
+                  "unnumberd/ifIndex: 2",
+                  "ODU-2 carring 10GbE-LAN",
+                  "tributary port"
+                ],
                 "// comment": "S6-2 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S6-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
-                "ietf-te-topology:te-tp-id": "2",
+                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S6-3 LTP",
+                  "unnumberd/ifIndex: 3",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S6-3 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S6-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
-                "ietf-te-topology:te-tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               },
               {
+                "// __DESCRIPTION__:__TP__": [
+                  "S6-4 LTP",
+                  "unnumberd/ifIndex: 4",
+                  "OTU-4",
+                  "line port"
+                ],
                 "// comment": "S6-4 LTP",
-                "// comment-1": "Missing I2RS attributes - to be added in a future update",
+                "// __MISSING_ATTRIBUTES__": true,
                 "// ietf-te-topology:te-tp-id": "S6-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
-                "ietf-te-topology:te-tp-id": "4",
+                "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
                   "state": {
-                    "// comment": "Agumentation from draft-ietf-ccamp-otn-topo-yang-00",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
+                    "admin-status": "up",
+                    "oper-status": "up",
                     "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// tpn": "To be discussed",
-                    "// tsg": "To be discussed",
-                    "// adaptation-type": "Syntax not defined in draft-ietf-ccamp-otn-topo-yang-00",
-                    "// sink-adapt-active": "To be discussed",
-                    "// source-adapt-active": "To be discussed",
-                    "// tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// supported-payload-types": "To be discussed"
+                    "ietf-otn-topology:adaptation-type": "ODU"
                   }
                 }
               }
@@ -774,29 +847,33 @@
         "// ietf-network-topology:link": "Access links to be added in a future update.",
         "ietf-network-topology:link": [
           {
-            "// comment": "Link from S1 to S3",
-            "link-id": "S1_S3",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// __BEST_PRACTICE_PROPOSAL__:__LINK__": [
+            ],
+            "// comment": "Link from S1-2 to S3-2",
+            "// link-id": "S1, S1-2, S3, S3-2",
+            "link-id": "10.0.0.1,2,10.0.0.3,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
                   "admin-status": "up",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S1 and S3"
                 }
               }
             }
           },
           {
-            "// comment": "Link from S5 to S6",
-            "link-id": "S5_S6",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S5-2 to S6-3",
+            "// link-id": "S5, S5-2, S6, S6-3",
+            "link-id": "10.0.0.5,2,10.0.0.6,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S5 and S6",
                   "admin-status": "up"
                 }
@@ -804,14 +881,15 @@
             }
           },
           {
-            "// comment": "Link from S3 to S4",
-            "link-id": "S3_S4",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S3-3 to S4-1",
+            "// link-id": "S3, S3-3, S4, S4-1",
+            "link-id": "10.0.0.3,3,10.0.0.4,1",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S3 and S4",
                   "admin-status": "up"
                 }
@@ -819,14 +897,15 @@
             }
           },
           {
-            "// comment": "Link from S5 to S7",
-            "link-id": "S5_S7",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S5-3 to S7-1",
+            "// link-id": "S5, S5-3, S7, S7-1",
+            "link-id": "10.0.0.5,3,10.0.0.7,1",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S5 and S7",
                   "admin-status": "up"
                 }
@@ -834,14 +913,15 @@
             }
           },
           {
-            "// comment": "Link from S3 to S5",
-            "link-id": "S3_S5",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S3-4 to S5-1",
+            "// link-id": "S3, S3-4, S5, S5-1",
+            "link-id": "10.0.0.3,4,10.0.0.5,1",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S3 and S5",
                   "admin-status": "up"
                 }
@@ -849,14 +929,15 @@
             }
           },
           {
-            "// comment": "Link from S4 to S8",
-            "link-id": "S4_S8",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S4-2 to S8-3",
+            "// link-id": "S4, S4-2, S8, S8-3",
+            "link-id": "10.0.0.4,2,10.0.0.8,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S4 and S8",
                   "admin-status": "up"
                 }
@@ -864,14 +945,15 @@
             }
           },
           {
-            "// comment": "Link from S2 to S8",
-            "link-id": "S2_S8",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S2-3 to S8-2",
+            "// link-id": "S2, S2-3, S8, S8-2",
+            "link-id": "10.0.0.2,3,10.0.0.8,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S2 and S8",
                   "admin-status": "up"
                 }
@@ -879,14 +961,15 @@
             }
           },
           {
-            "// comment": "Link from S8 to S2",
-            "link-id": "S8_S2",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S8-2 to S2-3",
+            "// link-id": "S8, S8-2, S2, S2-3",
+            "link-id": "10.0.0.8,2,10.0.0.2,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S8 and S2",
                   "admin-status": "up"
                 }
@@ -894,14 +977,15 @@
             }
           },
           {
-            "// comment": "Link from S3 to S1",
-            "link-id": "S3_S1",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S3-2 to S1-2",
+            "// link-id": "S3, S3-2, S1, S1-2",
+            "link-id": "10.0.0.3,2,10.0.0.1,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S3 and S1",
                   "admin-status": "up"
                 }
@@ -909,14 +993,15 @@
             }
           },
           {
-            "// comment": "Link from S7 to S5",
-            "link-id": "S7_S5",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S7-1 to S5-3",
+            "// link-id": "S7, S7-1, S5, S5-3",
+            "link-id": "10.0.0.7,1,10.0.0.5,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S7 and S5",
                   "admin-status": "up"
                 }
@@ -924,14 +1009,15 @@
             }
           },
           {
-            "// comment": "Link from S8 to S4",
-            "link-id": "S8_S4",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S8-3 to S4-2",
+            "// link-id": "S8, S8-3, S4, S4-2",
+            "link-id": "10.0.0.8,3,10.0.0.4,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S8 and S4",
                   "admin-status": "up"
                 }
@@ -939,14 +1025,15 @@
             }
           },
           {
-            "// comment": "Link from S5 to S3",
-            "link-id": "S5_S3",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S5-1 to S3-4",
+            "// link-id": "S5, S5-1, S3, S3-4",
+            "link-id": "10.0.0.5,1,10.0.0.3,4",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S5 and S3",
                   "admin-status": "up"
                 }
@@ -954,14 +1041,15 @@
             }
           },
           {
-            "// comment": "Link from S2 to S1",
-            "link-id": "S2_S1",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S2-2 to S1-1",
+            "// link-id": "S2, S2-2, S1, S1-1",
+            "link-id": "10.0.0.2,2,10.0.0.1,1",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S2 and S1",
                   "admin-status": "up"
                 }
@@ -969,14 +1057,15 @@
             }
           },
           {
-            "// comment": "Link from S7 to S6",
-            "link-id": "S7_S6",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S7-2 to S6-4",
+            "// link-id": "S7, S7-2, S6, S6-4",
+            "link-id": "10.0.0.7,2,10.0.0.6,4",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S7 and S6",
                   "admin-status": "up"
                 }
@@ -984,14 +1073,15 @@
             }
           },
           {
-            "// comment": "Link from S8 to S7",
-            "link-id": "S8_S7",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S8-4 to S7-3",
+            "// link-id": "S8, S8-4, S7, S7-3",
+            "link-id": "10.0.0.8,4,10.0.0.7,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S8 and S7",
                   "admin-status": "up"
                 }
@@ -999,14 +1089,15 @@
             }
           },
           {
-            "// comment": "Link from S6 to S5",
-            "link-id": "S6_S5",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S6-3 to S5-2",
+            "// link-id": "S6, S6-3, S5, S5-2",
+            "link-id": "10.0.0.6,3,10.0.0.5,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S6 and S5",
                   "admin-status": "up"
                 }
@@ -1014,14 +1105,15 @@
             }
           },
           {
-            "// comment": "Link from S4 to S3",
-            "link-id": "S4_S3",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S4-1 to S3-3",
+            "// link-id": "S4, S4-1, S3, S3-3",
+            "link-id": "10.0.0.4,1,10.0.0.3,3",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S4 and S3",
                   "admin-status": "up"
                 }
@@ -1029,14 +1121,15 @@
             }
           },
           {
-            "// comment": "Link from S6 to S7",
-            "link-id": "S6_S7",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S6-4 to S7-2",
+            "// link-id": "S6, S6-4, S7, S7-2",
+            "link-id": "10.0.0.6,4,10.0.0.7,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S6 and S7",
                   "admin-status": "up"
                 }
@@ -1044,14 +1137,15 @@
             }
           },
           {
-            "// comment": "Link from S1 to S2",
-            "link-id": "S1_S2",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S1-1 to S2-2",
+            "// link-id": "S1, S1-1, S2, S2-2",
+            "link-id": "10.0.0.1,1,10.0.0.2,2",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S1 and S2",
                   "admin-status": "up"
                 }
@@ -1059,14 +1153,15 @@
             }
           },
           {
-            "// comment": "Link from S7 to S8",
-            "link-id": "S7_S8",
-            "// comment-1": "Missing I2RS attributes - to be added in a future update",
+            "// comment": "Link from S7-3 to S8-4",
+            "// link-id": "S7, S7-3, S8, S8-4",
+            "link-id": "10.0.0.7,3,10.0.0.8,4",
+            "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
                   "access-type": "point-to-point",
-                  "//-x external-domain": "To be discussed",
+                  "// external-domain": "Internal link: not present",
                   "name": "Link between S7 and S8",
                   "admin-status": "up"
                 }
