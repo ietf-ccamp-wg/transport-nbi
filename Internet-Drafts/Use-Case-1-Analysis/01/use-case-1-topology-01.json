@@ -1,6 +1,6 @@
 {
   "// __TITLE__": "ODU Abstract Topology @ MPI, use case 1",
-  "// __LAST_UPDATE__": "Feb 14, 2018",
+  "// __LAST_UPDATE__": "Feb 21, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "GET",
     "url": "http://{{PNC-ADDR}}/restconf/data/ietf-network:networks"
@@ -9,7 +9,7 @@
     "ietf-network@2017-12-18"         : "draft-ietf-i2rs-yang-network-topo-20",
     "ietf-network-topology@2017-12-18": "draft-ietf-i2rs-yang-network-topo-20",
     "ietf-te-topology@2017-10-25"     : "draft-ietf-teas-yang-te-topo-13",
-    "ietf-te-types@2017-10-29"        : "draft-ietf-teas-yang-te-10",
+    "ietf-te-types@2018-02-15"        : "draft-ietf-teas-yang-te-11",
     "ietf-routing-types@2017-12-04"   : "rfc8294",
     "ietf-otn-topology@2017-10-30"    : "draft-ietf-ccamp-otn-topo-yang-02",
     "ietf-otn-types@2017-10-30"       : "draft-ietf-ccamp-otn-tunnel-model-01"
@@ -905,9 +905,7 @@
                   }
                 }
               },
-              "-x under-discussion": {
-                "// external-domain",
-              },
+              "-x under-discussion": "// external-domain",
               "-x out-of-scope": [
               ],
               "-x well-known-not-reported": [
