@@ -1,19 +1,22 @@
 {
+  "// __TITLE__": "ODU Abstract Topology @ MPI, use case 1",
+  "// __LAST_UPDATE__": "Feb 14, 2018",
+  "// __RESTCONF_OPERATION__": {
+    "operation": "GET",
+    "url": "http://{{PNC-ADDR}}/restconf/data/ietf-network:networks"
+  },
+  "// __REFERENCE_DRAFTS__": {
+    "ietf-network@2017-12-18"         : "draft-ietf-i2rs-yang-network-topo-20",
+    "ietf-network-topology@2017-12-18": "draft-ietf-i2rs-yang-network-topo-20",
+    "ietf-te-topology@2017-10-25"     : "draft-ietf-teas-yang-te-topo-13",
+    "ietf-te-types@2017-10-29"        : "draft-ietf-teas-yang-te-10",
+    "ietf-routing-types@2017-12-04"   : "rfc8294",
+    "ietf-otn-topology@2017-10-30"    : "draft-ietf-ccamp-otn-topo-yang-02",
+    "ietf-otn-types@2017-10-30"       : "draft-ietf-ccamp-otn-tunnel-model-01"
+  },
   "ietf-network:networks": {
     "network": [
       {
-        "// __LAST_UPDATE__": "Feb 14, 2018",
-        "// __REST_OPERATION__": "GET http://127.0.0.1:8182/restconf/data/ietf-network:networks",
-        "// __REFERENCE_DRAFTS__": [
-          { "ietf-network@2017-03-01"          : "draft-ietf-i2rs-yang-network-topo-12"    },
-          { "ietf-network-topology@2017-03-01" : "draft-ietf-i2rs-yang-network-topo-12"    },
-          { "ietf-te-topology@2017-06-10"      : "draft-ietf-teas-yang-te-topo-09"         },
-          { "ietf-te-types@2017-07-02"         : "draft-ietf-teas-yang-te-08"              },
-          { "ietf-routing-types"               : "???"                                     },
-          { "ietf-otn-topology@2017-04-25"     : "draft-ietf-ccamp-otn-topo-yang-00"       },
-          { "ietf-transport-types@2016-06-24"  : "draft-sharma-ccamp-otn-service-model-00" }
-        ],
-        "// __TITLE__": "ODU Abstract Topology @ MPI",
         "// __TOPOLOGY_LAYOUT__": [
           "          ..................................           ",
           "          :                                :           ",
@@ -51,23 +54,23 @@
         "// __MISSING_ATTRIBUTES__": true,
         "// __BEST_PRACTICE_PROPOSAL__:__NETWORK__": [
           "Proposed best-practice for network-id value:",
-          "  since a te-topology is uniquely udentified by a key ",
-          "  composed with [TE-TOPO 5.4]:                        ",
-          "       te-topology-id                                 ",
-          "       provider-id                                    ",
-          "       client-id                                      ",
-          "  and since network-id is a URI, the network-id value ",
-          "  can be a string composed as:                        ",
-          "       <te-topology-id>:<provider-id>:<client-id>     ",
-          "  where:                                              ",
-          "  te-topology-id assumes in case of MPI for transport ",
-          "    the value:                                        ",
-          "       urn:ietf:teas:ccamp-tnbi                       ",
-          "    that should be IANA REGISTERED.                   ",
-          "  provider-id = 0 to represent in TNBI context        ",
-          "    a full TE-capable topology provider exporting     ",
-          "    white-topology (proposal)                         ",
-          "  client-id = 0 for native TE topology [TE-TOPO 5.4]  "
+          "  since a te-topology is uniquely udentified by a key  ",
+          "  composed with [TE-TOPO 5.4]:                         ",
+          "       te-topology-id                                  ",
+          "       provider-id                                     ",
+          "       client-id                                       ",
+          "  and since network-id is a URI, the network-id value  ",
+          "  can be a string composed as:                         ",
+          "       <te-topology-id>:<provider-id>:<client-id>      ",
+          "  where:                                               ",
+          "  te-topology-id assumes in case of MPI for transport  ",
+          "    the value:                                         ",
+          "       urn:ietf:teas:ccamp-tnbi                        ",
+          "    that should be IANA REGISTERED.                    ",
+          "  provider-id = 0 to represent in TNBI context         ",
+          "    a full TE-capable topology provider exporting      ",
+          "    white-topology (proposal)                          ",
+          "  client-id = 0 for native TE topology [TE-TOPO 5.4]   "
         ],
         "network-id": "urn:ietf:teas:ccamp-tnbi/0,0",
         "network-types": {
@@ -78,44 +81,67 @@
         "ietf-te-topology:provider-id": 0,
         "ietf-te-topology:client-id": 0,
         "ietf-te-topology:te-topology-id": "urn:ietf:teas:ccamp-tnbi",
-        "ietf-otn-topology:name": "gotham-city:metro-transport-network",
+        "ietf-te-topology:te": {
+          "name": "gotham-city:metro-transport-network"
+        },
         "ietf-network:node": [
           {
             "// __BEST_PRACTICE_PROPOSAL__:__NODE__": [
-              "Proposed best practice for node-id value          ",
-              "  since node-id is a URI it can represent the     ",
-              "  te-node-id (yang:dotted-quad) value as string   ",
-              "      node-id = te-node-id                        "
+              "Proposed best practice for node-id value           ",
+              "  since node-id is a URI it can represent the      ",
+              "  te-node-id (yang:dotted-quad) value as string    ",
+              "      node-id = te-node-id                         "
             ],
             "// __NODE__:__DESCRIPTION__": [
               "S3",
               "10.0.0.3",
               "ADM"
             ],
-            "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S3-NODE-ID",
+            "// __MISSING_ATTRIBUTES__:__NODE__": {
+              "-x completed": false,
+              "-x to-be-added": [
+                "-x tunnel-termination-point"
+              ],
+              "-x under-discussion": {
+              },
+              "-x out-of-scope": [
+              ],
+              "-x well-known-not-reported": [
+              ],
+              "-x obsoleted": {
+              }
+            },
             "node-id": "10.0.0.3",
             "ietf-te-topology:te-node-id": "10.0.0.3",
-            "ietf-otn-topology:name": "S3:metro-main-ring:gateway",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S3",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "oper-status": "up",
+              "te-node-attributes": {
+                "// comment-on-name": [
+                  "Often transport domains contain subdomain      ",
+                  "topological partitioning that may be reported  ",
+                  "in node te name                                "
+                ],
+                "name": "S3-metro_main_ring-gateway",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "// comment-on-discontinuity-time": [
+                  "The presence of the container depends on       ",
+                  "mandatory statement in discontinuity-time      ",
+                  "leaf.                                          "
+                ],
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
               {
                 "// __BEST_PRACTICE_PROPOSAL__:__TP__": [
-                  "Proposed best practice for tp-id value            ",
-                  "  since tp-id is a URI it can represent the       ",
-                  "  te-tp-id (union of uint32 and ip-address) value ",
-                  "  as string                                       ",
-                  "      tp-id = te-tp-id.toString()                 "
+                  "Proposed best practice for tp-id value         ",
+                  "  since tp-id is a URI it can represent the    ",
+                  "  te-tp-id (union of uint32 and ip-address)    ",
+                  "  value as string                              ",
+                  "      tp-id = te-tp-id.toString()              "
                 ],
                 "// __DESCRIPTION__:__TP__": [
                   "S3-1 LTP",
@@ -123,26 +149,34 @@
                   "ODU-2 carring 10GbE-LAN",
                   "tributary port"
                 ],
-                "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S3-1-LTP-ID (unnumbered)",
+                "// __MISSING_ATTRIBUTES__:__TP__": {
+                  "-x completed": false,
+                  "-x to-be-added": [
+                  ],
+                  "-x under-discussion": {
+                    "-x ietf-te-topology:te": {
+                      "-x ietf-otn-topology:supported-payload-types": "To be discussed"
+                    }
+                  },
+                  "-x out-of-scope": [
+                  ],
+                  "-x well-known-not-reported": [
+                  ],
+                  "-x obsoleted": {
+                    "-x ietf-te-topology:te": {
+                      "-x ietf-otn-topology:client-facing": [
+                        null
+                      ],
+                      "-x ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                      "-x ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
+                    }
+                  }
+                },
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
-                    "oper-status": "up",
-                    "ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
-                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS",
-                    "// ietf-otn-topology:tpn": "To be discussed",
-                    "// ietf-otn-topology:tsg": "To be discussed",
-                    "// ietf-otn-topology:sink-adapt-active": "To be discussed",
-                    "// ietf-otn-topology:source-adapt-active": "To be discussed",
-                    "// ietf-otn-topology:tributary-slots": "To be added (80 available TSs at 1,25TS granularity)",
-                    "// ietf-otn-topology:supported-payload-types": "To be discussed"
-                  }
+                    "oper-status": "up"
                 }
               },
               {
@@ -154,15 +188,12 @@
                 ],
                 "// __MISSING_ATTRIBUTES__": true,
                 "tp-id": "2",
-                "// ietf-te-topology:te-tp-id": "S3-2-LTP-ID (unnumbered)",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -173,16 +204,13 @@
                   "line port"
                 ],
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S3-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -193,20 +221,16 @@
                   "line port"
                 ],
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S3-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -215,19 +239,18 @@
               "pizza-box"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S4-NODE-ID",
             "node-id": "10.0.0.4",
             "ietf-te-topology:te-node-id": "10.0.0.4",
-            "ietf-otn-topology:name": "S4:metro-main-ring:line",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S4",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S4-line-metro_main_ring",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -240,16 +263,13 @@
                 ],
                 "// comment": "S4-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S4-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -261,20 +281,16 @@
                 ],
                 "// comment": "S4-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S4-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -283,19 +299,18 @@
               "pizza-box"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S1-NODE-ID",
             "node-id": "10.0.0.1",
             "ietf-te-topology:te-node-id": "10.0.0.1",
-            "ietf-otn-topology:name": "S1:robinson-park-ring:line",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S1",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S1-robinson_park_ring-line",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -308,16 +323,13 @@
                 ],
                 "// comment": "S1-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S1-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -329,20 +341,16 @@
                 ],
                 "// comment": "S1-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S1-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -351,19 +359,18 @@
               "ADM"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S2-NODE-ID",
             "node-id": "10.0.0.2",
             "ietf-te-topology:te-node-id": "10.0.0.2",
-            "ietf-otn-topology:name": "S2:robinson-park-ring:access",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S2",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S2-robinson_park_ring-access",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -376,19 +383,16 @@
                 ],
                 "// comment": "S2-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S2-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
-                    "ietf-otn-topology:client-facing": [
+                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
                       null
                     ],
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
-                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                 }
               },
               {
@@ -400,16 +404,13 @@
                 ],
                 "// comment": "S2-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S2-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -421,20 +422,16 @@
                 ],
                 "// comment": "S2-3 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S2-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -443,19 +440,18 @@
               "ADM"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S7-NODE-ID",
             "node-id": "10.0.0.7",
             "ietf-te-topology:te-node-id": "10.0.0.7",
-            "ietf-otn-topology:name": "S7:east-end-ring:gateway",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S7",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S7-east_end_ring-gateway",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -468,16 +464,13 @@
                 ],
                 "// comment": "S7-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S7-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -489,16 +482,13 @@
                 ],
                 "// comment": "S7-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S7-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -510,20 +500,16 @@
                 ],
                 "// comment": "S7-3 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S7-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -532,19 +518,18 @@
               "ADM"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S8-NODE-ID",
             "node-id": "10.0.0.8",
             "ietf-te-topology:te-node-id": "10.0.0.8",
-            "ietf-otn-topology:name": "S8:metro-main-ring:access",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S8",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S8-metro_main_ring-access",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -557,19 +542,16 @@
                 ],
                 "// comment": "S8-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S8-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
-                    "ietf-otn-topology:client-facing": [
+                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
                       null
                     ],
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
-                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                 }
               },
               {
@@ -581,16 +563,13 @@
                 ],
                 "// comment": "S8-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S8-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -602,16 +581,13 @@
                 ],
                 "// comment": "S8-3 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S8-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -623,20 +599,16 @@
                 ],
                 "// comment": "S8-4 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S8-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -645,19 +617,18 @@
               "ADM"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S5-NODE-ID",
             "node-id": "10.0.0.5",
             "ietf-te-topology:te-node-id": "10.0.0.5",
-            "ietf-otn-topology:name": "S5:east-end-ring:gateway",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S5",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S5-east_end_ring-gateway",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -670,16 +641,13 @@
                 ],
                 "// comment": "S5-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S5-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -691,16 +659,13 @@
                 ],
                 "// comment": "S5-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S5-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -712,20 +677,16 @@
                 ],
                 "// comment": "S5-3 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S5-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           },
           {
             "// __NODE__:__DESCRIPTION__": [
@@ -734,19 +695,18 @@
               "ADM"
             ],
             "// __MISSING_ATTRIBUTES__": true,
-            "// ietf-te-topology:te-node-id": "S6-NODE-ID",
             "node-id": "10.0.0.6",
             "ietf-te-topology:te-node-id": "10.0.0.6",
-            "ietf-otn-topology:name": "S6:east-end-ring:access",
             "ietf-te-topology:te": {
-              "state": {
-                "// comment": "TO BE COMPLETED",
-                "oper-status": "up",
-                "te-node-attributes": {
-                  "name": "S6",
-                  "admin-status": "up",
-                  "domain-id": 65001
-                }
+              "// comment": "TO BE COMPLETED",
+              "oper-status": "up",
+              "te-node-attributes": {
+                "name": "S6-east_end_ring-access",
+                "admin-status": "up",
+                "domain-id": 65001
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             },
             "ietf-network-topology:termination-point": [
@@ -759,19 +719,16 @@
                 ],
                 "// comment": "S6-1 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S6-1-LTP-ID (unnumbered)",
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:client-facing": [
+                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
-                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                 }
               },
               {
@@ -783,19 +740,16 @@
                 ],
                 "// comment": "S6-2 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S6-2-LTP-ID (unnumbered)",
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:client-facing": [
+                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
                       null
                     ],
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
-                    "ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-ODU2",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ETHERNET_PP-OS"
                 }
               },
               {
@@ -807,16 +761,13 @@
                 ],
                 "// comment": "S6-3 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S6-3-LTP-ID (unnumbered)",
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               },
               {
@@ -828,20 +779,16 @@
                 ],
                 "// comment": "S6-4 LTP",
                 "// __MISSING_ATTRIBUTES__": true,
-                "// ietf-te-topology:te-tp-id": "S6-4-LTP-ID (unnumbered)",
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                  "state": {
                     "admin-status": "up",
                     "oper-status": "up",
-                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "ietf-otn-topology:adaptation-type": "ODU"
-                  }
+                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
+                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
                 }
               }
-            ],
-            "// tunnel-termination-point": "to be added"
+            ]
           }
         ],
         "// ietf-network-topology:link": "Access links to be added in a future update.",
@@ -852,15 +799,131 @@
             "// comment": "Link from S1-2 to S3-2",
             "// link-id": "S1, S1-2, S3, S3-2",
             "link-id": "10.0.0.1,2,10.0.0.3,2",
-            "// __MISSING_ATTRIBUTES__": true,
-            "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "admin-status": "up",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S1 and S3"
+            "// __MISSING_ATTRIBUTES__:__LINK__": {
+              "-x completed": false,
+              "-x to-be-added": {
+                "-x ietf-te-topology:te": {
+                  "-x te-link-attributes": {
+                    "-x interface-switching-capability": [
+                      {
+                        "-x switching-capability": "switching-otn",
+                        "-x encoding": "lsp-encoding-oduk",
+                        "-x max-lsp-bandwidth": [
+                          {
+                            "priority": 0,
+                            "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 1, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 2, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 3, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 4, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 5, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 6, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          },
+                          { "priority": 7, "bandwidth": {
+                              "te-bandwidth": {
+                                "otn": [
+                                  {
+                                    "rate-type": "odu2",
+                                    "counter": 1
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 }
+              },
+              "-x under-discussion": {
+                "// external-domain",
+              },
+              "-x out-of-scope": [
+              ],
+              "-x well-known-not-reported": [
+              ],
+              "-x obsoleted": {
+              }
+            },
+            "ietf-te-topology:te": {
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "name": "Link between S1 and S3",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -870,13 +933,15 @@
             "link-id": "10.0.0.5,2,10.0.0.6,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S5 and S6",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S5 and S6",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -886,13 +951,15 @@
             "link-id": "10.0.0.3,3,10.0.0.4,1",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S3 and S4",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S3 and S4",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -902,13 +969,15 @@
             "link-id": "10.0.0.5,3,10.0.0.7,1",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S5 and S7",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+              "access-type": "point-to-point",
+              "// external-domain": "Internal link: not present",
+              "name": "Link between S5 and S7",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -918,13 +987,15 @@
             "link-id": "10.0.0.3,4,10.0.0.5,1",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S3 and S5",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S3 and S5",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -934,13 +1005,15 @@
             "link-id": "10.0.0.4,2,10.0.0.8,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S4 and S8",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S4 and S8",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -950,13 +1023,15 @@
             "link-id": "10.0.0.2,3,10.0.0.8,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S2 and S8",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S2 and S8",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -966,13 +1041,15 @@
             "link-id": "10.0.0.8,2,10.0.0.2,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S8 and S2",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S8 and S2",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -982,13 +1059,15 @@
             "link-id": "10.0.0.3,2,10.0.0.1,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S3 and S1",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S3 and S1",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -998,13 +1077,15 @@
             "link-id": "10.0.0.7,1,10.0.0.5,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S7 and S5",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S7 and S5",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1014,13 +1095,15 @@
             "link-id": "10.0.0.8,3,10.0.0.4,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S8 and S4",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S8 and S4",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1030,13 +1113,15 @@
             "link-id": "10.0.0.5,1,10.0.0.3,4",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S5 and S3",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S5 and S3",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1046,13 +1131,15 @@
             "link-id": "10.0.0.2,2,10.0.0.1,1",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S2 and S1",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S2 and S1",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1062,13 +1149,15 @@
             "link-id": "10.0.0.7,2,10.0.0.6,4",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S7 and S6",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S7 and S6",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1078,13 +1167,15 @@
             "link-id": "10.0.0.8,4,10.0.0.7,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S8 and S7",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S8 and S7",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1094,13 +1185,15 @@
             "link-id": "10.0.0.6,3,10.0.0.5,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S6 and S5",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S6 and S5",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1110,13 +1203,15 @@
             "link-id": "10.0.0.4,1,10.0.0.3,3",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S4 and S3",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S4 and S3",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1126,13 +1221,15 @@
             "link-id": "10.0.0.6,4,10.0.0.7,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S6 and S7",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S6 and S7",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1142,13 +1239,15 @@
             "link-id": "10.0.0.1,1,10.0.0.2,2",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S1 and S2",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S1 and S2",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           },
@@ -1158,13 +1257,15 @@
             "link-id": "10.0.0.7,3,10.0.0.8,4",
             "// __MISSING_ATTRIBUTES__": true,
             "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "// external-domain": "Internal link: not present",
-                  "name": "Link between S7 and S8",
-                  "admin-status": "up"
-                }
+              "oper-status": "up",
+              "te-link-attributes": {
+                "access-type": "point-to-point",
+                "// external-domain": "Internal link: not present",
+                "name": "Link between S7 and S8",
+                "admin-status": "up"
+              },
+              "statistics": {
+                "discontinuity-time": "1970-01-01T00:00:00.000+01:00"
               }
             }
           }
