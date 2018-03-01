@@ -6,13 +6,14 @@
     "url": "http://{{PNC-ADDR}}/restconf/data/ietf-network:networks"
   },
   "// __REFERENCE_DRAFTS__": {
-    "ietf-network@2017-12-18"         : "draft-ietf-i2rs-yang-network-topo-20",
-    "ietf-network-topology@2017-12-18": "draft-ietf-i2rs-yang-network-topo-20",
-    "ietf-te-topology@2018-02-21"     : "draft-ietf-teas-yang-te-topo-15",
-    "ietf-te-types@2018-02-19"        : "draft-ietf-teas-yang-te-12",
-    "ietf-routing-types@2017-12-04"   : "rfc8294",
-    "ietf-otn-topology@2017-10-30"    : "draft-ietf-ccamp-otn-topo-yang-02",
-    "ietf-otn-types@2017-10-30"       : "draft-ietf-ccamp-otn-tunnel-model-01"
+    "ietf-network@2017-12-18": "draft-ietf-i2rs-yang-network-topo-20",
+    "ietf-network-topology@2017-12-18":
+      "draft-ietf-i2rs-yang-network-topo-20",
+    "ietf-te-topology@2018-02-21": "draft-ietf-teas-yang-te-topo-15",
+    "ietf-te-types@2018-02-19": "draft-ietf-teas-yang-te-12",
+    "ietf-routing-types@2017-12-04": "rfc8294",
+    "ietf-otn-topology@2017-10-30": "draft-ietf-ccamp-otn-topo-yang-02",
+    "ietf-otn-types@2017-10-30": "draft-ietf-ccamp-otn-tunnel-model-01"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
@@ -58,8 +59,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -73,14 +73,17 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU2",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "// __OBSOLETE__ ietf-otn-topology:client-facing": [
+                    null
+                  ],
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU2",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -94,11 +97,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -112,11 +118,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -130,11 +139,14 @@
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -155,8 +167,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -171,11 +182,14 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -190,11 +204,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -215,8 +232,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -231,11 +247,14 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -250,11 +269,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -275,8 +297,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -291,14 +312,17 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU2",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "// __OBSOLETE__ ietf-otn-topology:client-facing": [
+                    null
+                  ],
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU2",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -313,11 +337,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -332,11 +359,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -357,8 +387,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -373,11 +402,14 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -392,11 +424,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -411,11 +446,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -436,8 +474,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -452,14 +489,17 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU2",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "// __OBSOLETE__ ietf-otn-topology:client-facing": [
+                    null
+                  ],
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU2",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -474,11 +514,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -493,11 +536,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -512,11 +558,14 @@
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -537,8 +586,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -553,11 +601,14 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -572,11 +623,14 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -591,11 +645,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
@@ -616,8 +673,7 @@
                 "admin-status": "up",
                 "// __DISCUSS__ domain-id": 65001
               },
-              "// __DISCUSS__ tunnel-termination-point": [
-              ]
+              "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
@@ -632,14 +688,17 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU2",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// __OBSOLETE__ ietf-otn-topology:client-facing": [
+                    null
+                  ],
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU2",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -654,14 +713,17 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __OBSOLETE__ ietf-otn-topology:client-facing": [
-                      null
-                    ],
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU2",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// __OBSOLETE__ ietf-otn-topology:client-facing": [
+                    null
+                  ],
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU2",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -676,11 +738,14 @@
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               },
               {
@@ -695,17 +760,21 @@
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                    "admin-status": "up",
-                    "oper-status": "up",
-                    "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "To be discussed",
-                    "// __OBSOLETE__ ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4",
-                    "// __OBSOLETE__ ietf-otn-topology:adaptation-type": "ODU"
+                  "admin-status": "up",
+                  "oper-status": "up",
+                  "// ietf-otn-topology:supported-payload-types":
+                    "__DISCUSS__",
+                  "// __OBSOLETE__ ietf-otn-topology:protocol-type":
+                    "ietf-transport-types:prot-OTU4",
+                  "// __OBSOLETE__ ietf-otn-topology:adaptation-type":
+                    "ODU"
                 }
               }
             ]
           }
         ],
-        "// ietf-network-topology:link": "Access links to be added in a future update.",
+        "// ietf-network-topology:link":
+          "Access links to be added in a future update.",
         "ietf-network-topology:link": [
           {
             "// __DESCRIPTION__:__LINK__": [
@@ -719,21 +788,23 @@
               "te-link-attributes": {
                 "access-type": "point-to-point",
                 "// comment": [
-                  "external-domain container not present for internal links"
+                  "external-domain container",
+		  "not present for internal links"
                 ],
                 "name": "Link between S1 and S3",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                      "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for             ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -745,8 +816,8 @@
                         "priority": 1,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -758,8 +829,8 @@
                         "priority": 2,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -771,8 +842,8 @@
                         "priority": 3,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -784,8 +855,8 @@
                         "priority": 4,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -797,8 +868,8 @@
                         "priority": 5,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -810,8 +881,8 @@
                         "priority": 6,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -823,8 +894,8 @@
                         "priority": 7,
                         "te-bandwidth": {
                           "// __OBSOLETE__ otn": [
-                            "__WARNING__ : pending for                 ",
-                            "  technology specific bandwidth definition",
+                            "__WARNING__ : pending for               ",
+                            "technology specific bandwidth definition",
                             {
                               "rate-type": "ietf-te-types:odu2",
                               "counter": 1
@@ -880,8 +951,8 @@
             "ietf-te-topology:te": {
               "oper-status": "up",
               "te-link-attributes": {
-              "access-type": "point-to-point",
-              "name": "Link between S5 and S7",
+                "access-type": "point-to-point",
+                "name": "Link between S5 and S7",
                 "admin-status": "up"
               }
             }
