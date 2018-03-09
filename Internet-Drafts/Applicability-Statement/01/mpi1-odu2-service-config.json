@@ -1,4 +1,5 @@
-﻿  "ietf-te:te": {
+{
+  "ietf-te:te": {
     "globals": {
       "named-explicit-paths": {
         "named-explicit-path": [
@@ -56,7 +57,7 @@
           "config": {
             "name": "odu2-service",
 
-            "// bandwidth": "not generic but HORRIBLE REPRESENTATION (dura lex sed lex)",
+            "// bandwidth": "actually not generic",
             "bandwidth-generic": "2,1",
                 "// ?!? bandwidth : specification-type": "SPECIFIED",
                 "// bandwidth : detailed": "ODU2-BW (10G)",
@@ -66,7 +67,7 @@
             "identifier": 1,
             "description": "to-be-added",
             "protection-type": "ietf-te-types:lsp-prot-unprotected",
-            "// NO MORE AVAILABLE! admin-status": "ietf-te-types:state-up",
+            "// NO MORE AVAIL. admin-status": "ietf-te-types:state-up",
             "// src-tp-id": "None: transit tunnel segment",
             "// dst-tp-id": "None: transit tunnel segment",
             "bidirectional": {
