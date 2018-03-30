@@ -1,0 +1,120 @@
+﻿{
+  "// __TITLE__": "ODU2 Service Configuration @ MPI1",
+  "// __LAST_UPDATE__": "March 30, 2018",
+  "// __RESTCONF_OPERATION__": {
+    "operation": "PUT",
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
+  },
+  "// __REFERENCE_DRAFTS__": {
+    "ietf-te-types@2018-03-05": "draft-ietf-teas-yang-te-14",
+    "ietf-te@2018-03-03": "draft-ietf-teas-yang-te-14",
+    "ietf-otn-types@2017-10-30": "draft-ietf-ccamp-otn-tunnel-model-01",
+    "ietf-otn-tunnel@2017-10-30": "draft-ietf-ccamp-otn-tunnel-model-01"
+  },
+  "// __MISSING_ATTRIBUTES__": true,
+  "ietf-te:te": {
+    "tunnels": {
+      "tunnel": [
+        {
+          "name": "mpi1-odu2-service",
+          "// identifier": "ODU2-SERVICE-TUNNEL-ID @ MPI1",
+          "identifier": 1,
+          "description": "TNBI Example for an ODU2 Service implemented by an ODU2 OTN Tunnel Segment @ MPI1",
+          "// encoding and switching-type": "ODU",
+          "encoding": "te-types:lsp-encoding-oduk ",
+          "switching-type": "te-types:switching-otn",
+          "// __ DISCUSS __ source": "Is souce alternative or complementary to src-tp-id?",
+          "// __ DISCUSS __ destination": "Is souce alternative or complementary to src-tp-id?",
+          "// src-tp-id": "None: transit tunnel segment",
+          "// dst-tp-id": "None: transit tunnel segment",
+          "// __ DISCUSS __ ietf-otn-tunnel:payload-treatment": "Do we need this attribute in otn-tunnel?",
+          "// __ DISCUSS __ ietf-otn-tunnel:src-client-signal": "None: insgress signal is an ODU2",
+          "// __ DISCUSS __ src-tpn": "Do we need this attribute in otn-tunnel?",
+          "// __ DISCUSS __ src-tsg": "Do we need this attribute in otn-tunnel?",
+          "// __ DISCUSS __ src-tributary-slot-count": "Do we need this attribute in otn-tunnel?",
+          "// __ DISCUSS __ src-tributary-slots": "Do we need this container in otn-tunnel?",
+          "// __ DISCUSS __ ietf-otn-tunnel:dst-client-signal": "None: egress signal is an ODU2",
+          "// __ DEFAULT __ protection": {
+            "// __ DEFAULT __ enable": false
+          },
+          "// __ DEFAULT __ restoration": {
+            "// __ DEFAULT __ enable": false
+          },
+          "// __ DISCUSS __ te-topology-identifier": "Would it be possible not to specify the topology identifer since there is only one OTN topology?",
+          "// __ DISCUSS __ te-bandwidth": {
+            "// __ DISCUSS __ odu-type": "ODU2"
+          },
+          "// __ DISCUSS __ bidirectional": "Not clear how to indicate it is a bidirectional tunnel (not associated)",
+          "p2p-primary-paths": {
+            "name": "mpi1-odu2-service-primary-path",
+            "// __ DISCUSS __ hierarchical-link": [
+              "Not to be specified: the tunnel supports a service and not a link in the client layer",
+              "Why this container is defined per primary path and not per tunnel?"
+            ],
+            "// __ DISCUSS __ path-scope": "Should we differentiate between head, tail and intermediate segments?",
+            "path-scope": "path-scope-segment",
+            "// __ DISCUSS __ te-bandwidth": "What is the difference between path and tunnel bandwidth?",
+            "explicit-route-objects": {
+              "route-object-include-exclude": [
+                {
+                  "// comment": "Tunnel hand-off OTU2 ingress interface (S3-1)",
+                  "index": 1,
+                  "explicit-route-usage": "route-include-ero",
+                  "unnumbered-hop": {
+                    "// node-id": "S3-NODE-ID",
+                    "node-id": "10.0.0.3",
+                    "// link-tp-id": "S3-1-LTP-ID",
+                    "link-tp-id": 1,
+                    "// __ DISCUSS __ hop-type": "As discussed in DT call on October 25, 2017",
+                    "hop-type": "STRICT",
+                    "// __ DISCUSSION __ direction": "Please check proposal below",
+                    "direction": "INCOMING "
+                  }
+                },
+                {
+                  "// comment": "Tunnel hand-off ODU2 ingress label  (ODU2 over OTU2) at S3-1",
+                  "index": 2,
+                  "explicit-route-usage": "route-include-ero",
+                  "label-hop": {
+                    "te-label": {
+                      "// __ DISCUSSS __ odu-label": "Need to define the ODU label augmentation",
+                      "// __ DISCUSS __ direction": "Please check proposal below",
+                      "direction": "FORWARD "
+                    }
+                  }
+                },
+                {
+                  "// comment": "Tunnel hand-off OTU4 ingress interface (S2-1)",
+                  "index": 3,
+                  "explicit-route-usage": "route-include-ero",
+                  "unnumbered-hop": {
+                    "// node-id": "S2-NODE-ID",
+                    "node-id": "10.0.0.2",
+                    "// link-tp-id": "S2-1-LTP-ID",
+                    "link-tp-id": 1,
+                    "// __ DISCUSS __ hop-type": "As discussed in DT call on October 25, 2017",
+                    "hop-type": "STRICT",
+                    "// __ DISCUSSION __ direction": "Please check proposal below",
+                    "direction": "OUTGOING"
+                  }
+                },
+                {
+                  "// comment": "Tunnel hand-off ODU2 ingress label  (ODU2 over OTU4) at S2-1",
+                  "index": 4,
+                  "explicit-route-usage": "route-include-ero",
+                  "label-hop": {
+                    "te-label": {
+                      "// __ DISCUSSS __ odu-label": "Need to define the ODU label augmentation",
+                      "// __ DISCUSS __ direction": "Please check proposal below",
+                      "direction": "FORWARD "
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
