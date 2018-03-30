@@ -1,0 +1,28 @@
+
+2. Terminology
+
+   Domain: is considered to be any collection of network elements within a common realm of address space or path computation responsibility [RFC5151]
+
+   E-LINE: Ethernet Line
+
+   EPL: Ethernet Private Line
+
+   EVPL: Ethernet Virtual Private Line
+
+   OTH: Optical Network Hierarchy
+
+   OTN: Optical Transport Network
+
+   Service: [RFC8309] A service in the context of this document can be considered as some form of connectivity between customer sites across the network operator’s network 
+      
+   Service Model: As described in [RFC8309] it describes a service and the parameters of the service in a portable way that can be used uniformly and independent of the equipment and operating environment.
+
+   UNI: User Network Interface 
+
+   MDSC: Multi-Domain Service Coordinator
+
+   CNC: Customer Network Controller
+
+   PNC: Provisioning Network Controller
+
+   MAC Bridging: Virtual LANs (VLANs) on IEEE 802.3 Ethernet network
