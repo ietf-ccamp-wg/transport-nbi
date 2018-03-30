@@ -34,6 +34,10 @@ The proposed approach seems reasonable.
 
 ### 2) OpenConfig
 
+Reference open issue:
+
+https://github.com/danielkinguk/transport-nbi/issues/20
+
 The OC model is structured with a set of different Yang models folders. One of them is specific for optical transport, composed by:
 -terminal device model
 -optical amplifier model
@@ -71,6 +75,10 @@ When setting up a tunnel segment at the MPI, the MDSC configures the ingress/egr
 The TNBI Applicability statement I-D will be updated to make sure its content is consistent with these assumptions.
 
 ### 4) Multi-layer architecture issue
+
+Reference open issue:
+
+https://github.com/danielkinguk/transport-nbi/issues/28
 
 Theoretically the issue applies not only to the IP over Optical scenario but in general to any multi-layer scenario e.g. in case of ODU over OCh/OTSiA, when the ODU network and the WDM network belong to the same provide but are managed by different departments.
 
