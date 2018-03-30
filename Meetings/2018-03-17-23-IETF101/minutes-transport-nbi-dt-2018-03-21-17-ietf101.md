@@ -16,7 +16,7 @@
 1) Relationship with TE Tutorial
 2) OpenConfig
 3) Inter-domain link and tunnel stitching
-4) Multi-layer architecture issue
+4) Multi-layer architecture
 
 ## Meeting Notes:
 
@@ -70,7 +70,7 @@ When setting up a tunnel segment at the MPI, the MDSC configures the ingress/egr
 
 The TNBI Applicability statement I-D will be updated to make sure its content is consistent with these assumptions.
 
-### 4) Multi-layer architecture issue ([open issue #28](https://github.com/danielkinguk/transport-nbi/issues/28))
+### 4) Multi-layer architecture ([open issue #28](https://github.com/danielkinguk/transport-nbi/issues/28))
 
 Theoretically the issue applies not only to the IP over Optical scenario but in general to any multi-layer scenario e.g. in case of ODU over OCh/OTSiA, when the ODU network and the WDM network belong to the same provide but are managed by different departments.
 
