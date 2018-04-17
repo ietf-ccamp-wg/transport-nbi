@@ -1,6 +1,6 @@
 {
   "// __TITLE__": "EPL Configuration @ MPI1",
-  "// __LAST_UPDATE__": "March 30, 2018",
+  "// __LAST_UPDATE__": "April 17, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-trans-client-service:etht-svc"
@@ -18,9 +18,9 @@
         "etht-svc-descr": "TNBI Example for an EPL over ODU2 Service @ MPI1",
         "// __ DEFAULT __ etht-svc-type": "p2p-svc",
         "// __ DISCUSS __ te-topology-identifier": "Would it be possible to use this grouping instead of re-defining the three attributes below?",
-        "// __ DISCUSS __ access-provider-id": "Would it be possible not to specify the topology identifer since there is only one OTN topology?",
-        "// __ DISCUSS __ access-client-id": "Would it be possible not to specify the topology identifer since there is only one OTN topology?",
-        "// __ DISCUSS __ topology-id": "Would it be possible not to specify the topology identifer since there is only one OTN topology?",
+        "// __ ACTION __ access-provider-id": "Need to add the te-topology-identifier information",
+        "// __ ACTION __ access-client-id": "Need to add the te-topology-identifier information",
+        "// __ ACTION __ topology-id": "Need to add the te-topology-identifier information",
         "etht-svc-access-ports": [
           {
             "// comment": "10GE access interface (S3-1)",

@@ -1,6 +1,6 @@
 ﻿{
   "// __TITLE__": "ODU2 Service Configuration @ MPI1",
-  "// __LAST_UPDATE__": "March 30, 2018",
+  "// __LAST_UPDATE__": "April 17, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
@@ -23,32 +23,32 @@
           "// encoding and switching-type": "ODU",
           "encoding": "te-types:lsp-encoding-oduk ",
           "switching-type": "te-types:switching-otn",
-          "// __ DISCUSS __ source": "Is souce alternative or complementary to src-tp-id?",
-          "// __ DISCUSS __ destination": "Is souce alternative or complementary to src-tp-id?",
+          "// source": "None: transit tunnel segment",
+          "// destination": "None: transit tunnel segment",
           "// src-tp-id": "None: transit tunnel segment",
           "// dst-tp-id": "None: transit tunnel segment",
           "// __ DISCUSS __ ietf-otn-tunnel:payload-treatment": "Do we need this attribute in otn-tunnel?",
-          "// __ DISCUSS __ ietf-otn-tunnel:src-client-signal": "None: insgress signal is an ODU2",
+          "ietf-otn-tunnel:src-client-signal": "client-signal-ODU2",
           "// __ DISCUSS __ src-tpn": "Do we need this attribute in otn-tunnel?",
           "// __ DISCUSS __ src-tsg": "Do we need this attribute in otn-tunnel?",
           "// __ DISCUSS __ src-tributary-slot-count": "Do we need this attribute in otn-tunnel?",
           "// __ DISCUSS __ src-tributary-slots": "Do we need this container in otn-tunnel?",
-          "// __ DISCUSS __ ietf-otn-tunnel:dst-client-signal": "None: egress signal is an ODU2",
+          "ietf-otn-tunnel:dst-client-signal": "client-signal-ODU2",
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
           },
           "// __ DEFAULT __ restoration": {
             "// __ DEFAULT __ enable": false
           },
-          "// __ DISCUSS __ te-topology-identifier": "Would it be possible not to specify the topology identifer since there is only one OTN topology?",
+          "// __ ACTION __ te-topology-identifier": "Need to add the te-topology-identifier information",
           "// __ DISCUSS __ te-bandwidth": {
             "// __ DISCUSS __ odu-type": "ODU2"
           },
-          "// __ DISCUSS __ bidirectional": "Not clear how to indicate it is a bidirectional tunnel (not associated)",
+          "// __ ACTION __ bidirectional": "Wait for the next TE Tunnel model update to indicate it is a bidirectional tunnel (not associated)",
           "p2p-primary-paths": {
             "name": "mpi1-odu2-service-primary-path",
             "// __ DISCUSS __ hierarchical-link": [
-              "Not to be specified: the tunnel supports a service and not a link in the client layer",
+              "Not to be specified: transit tunnel segment",
               "Why this container is defined per primary path and not per tunnel?"
             ],
             "// __ DISCUSS __ path-scope": "Should we differentiate between head, tail and intermediate segments?",
