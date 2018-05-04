@@ -1,6 +1,6 @@
 {
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
-  "// __LAST_UPDATE__": "April 17, 2018",
+  "// __LAST_UPDATE__": "May 4, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
@@ -45,16 +45,18 @@
           "// __ DISCUSS __ te-bandwidth": {
             "// __ DISCUSS __ odu-type": "ODU2"
           },
-          "// __ ACTION __ bidirectional": "Wait for the next TE Tunnel model update to indicate it is a bidirectional tunnel (not associated)",
+          "// __ ACTION __ bidirectional": "Wait for the next TE Tunnel model update to indicate it is a native bidirectional tunnel",
           "p2p-primary-paths": {
             "name": "mpi1-odu2-tunnel-primary-path",
             "// __ DISCUSS __ hierarchical-link": [
-              "Optional to be specified since the tunnel supports a service and not a link in the client layer",
-              "Why this container is defined per primary path and not per tunnel?"
+              "Optional to be specified since the tunnel supports a service and not a link in the client layer"
+            ],
+            "// __ ACTION __ hierarchical-link": [
+              "Wait for the next TE Tunnel model update to move this container under the tunnel"
             ],
             "// __ DISCUSS __ path-scope": "Should we differentiate between head, tail and intermediate segments?",
             "path-scope": "path-scope-segment",
-            "// __ DISCUSS __ te-bandwidth": "What is the difference between path and tunnel bandwidth?",
+            "// te-bandwidth": "None: only the tunnel bandwidth needs to be specified in transport applications",
             "explicit-route-objects": {
               "route-object-include-exclude": [
                 {
@@ -68,7 +70,7 @@
                     "link-tp-id": 1,
                     "// __ DISCUSS __ hop-type": "As discussed in DT call on October 25, 2017",
                     "hop-type": "STRICT",
-                    "// __ DISCUSSION __ direction": "Please check proposal below",
+                    "// __ DISCUSS __ direction": "Please check proposal below",
                     "direction": "OUTGOING"
                   }
                 },
@@ -78,7 +80,7 @@
                   "explicit-route-usage": "route-include-ero",
                   "label-hop": {
                     "te-label": {
-                      "// __ DISCUSSS __ odu-label": "Need to define the ODU label augmentation",
+                      "// __ DISCUSS __ odu-label": "Need to define the ODU label augmentation",
                       "// __ DISCUSS __ direction": "Please check proposal below",
                       "direction": "FORWARD "
                     }
