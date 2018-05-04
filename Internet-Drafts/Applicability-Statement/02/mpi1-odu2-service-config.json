@@ -84,7 +84,7 @@
                   }
                 },
                 {
-                  "// comment": "Tunnel hand-off OTU4 ingress interface (S2-1)",
+                  "// comment": "Tunnel hand-off OTU4 egress interface (S2-1)",
                   "index": 3,
                   "explicit-route-usage": "route-include-ero",
                   "unnumbered-hop": {
@@ -99,7 +99,7 @@
                   }
                 },
                 {
-                  "// comment": "Tunnel hand-off ODU2 ingress label  (ODU2 over OTU4) at S2-1",
+                  "// comment": "Tunnel hand-off ODU2 egress label  (ODU2 over OTU4) at S2-1",
                   "index": 4,
                   "explicit-route-usage": "route-include-ero",
                   "label-hop": {
