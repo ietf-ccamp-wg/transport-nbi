@@ -9,10 +9,8 @@
 *   Yuji Tochio
   
 
-## Agenda:
--------
+## Agenda
 
-  
 1) Status update after IETF 101  
 2) JSON code updates  
     2.1) I2RS Topology attributes  
@@ -20,8 +18,7 @@
 3) AOB  
   
 
-Meeting Notes:
---------------
+## Meeting Notes
 
 ### 1) Status update after IETF 101
 
@@ -65,10 +62,8 @@ There are three proposals on the table to be evaluated/reconciled:
   
 
 *   [https://github.com/danielkinguk/transport-nbi/pull/10](https://github.com/danielkinguk/transport-nbi/pull/10)
-*     
     
 *   [https://github.com/danielkinguk/transport-nbi/pull/24/commits/caf2a364209e5b52a641ed3be366baff8d9ab838](https://github.com/danielkinguk/transport-nbi/pull/24/commits/caf2a364209e5b52a641ed3be366baff8d9ab838)
-*     
     
 *   [https://tools.ietf.org/html/draft-ietf-teas-te-topo-and-tunnel-modeling-01](https://tools.ietf.org/html/draft-ietf-teas-te-topo-and-tunnel-modeling-01)
 
