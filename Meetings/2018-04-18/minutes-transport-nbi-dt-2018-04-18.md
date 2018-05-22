@@ -29,19 +29,19 @@ Minutes of the face-to-face meeting during IETF 101:
 Need to assign some action points:  
       
 
-#### 1.1) Review of OpenConfig model (open issue#20)
+#### 1.1) Review of OpenConfig model ([open issue#20](https://github.com/danielkinguk/transport-nbi/issues/20))
 
   
 **Action assigned to Sergio**: Review in details the OpenConfig model to check if there is something which can be used by the TNBI DT or confirm that there is nothing that can be reused  
   
 
-#### 1.2) Relationship with the TE Tutorial in TEAS (open issue#19)
+#### 1.2) Relationship with the TE Tutorial in TEAS ([open issue#19](https://github.com/danielkinguk/transport-nbi/issues/19))
 
   
 **Action assigned to Italo and Sergio**: Review in details the two drafts to understand which text should be moved into the TE Tutorial and which text should be replaced with a reference to the TE Tutorial.  
   
 
-#### 1.3) Multi-layer Modelling with ACTN (open issue #28)
+#### 1.3) Multi-layer Modelling with ACTN ([open issue #28](https://github.com/danielkinguk/transport-nbi/issues/28))
 
   
 The feedbacks is that it is possible that ODU and WDM networks are managed by different departments so the multi-layer issue #28 applies also within the Optical network.  
@@ -76,7 +76,7 @@ Initial call planned on Friday April 27, 2018 at 4:30pm CEST and 10:30am EDT
 #### 2.2) ODU2 and EPL Service Examples
 
   
-[https://github.com/danielkinguk/transport-nbi/pull/29](https://github.com/danielkinguk/transport-nbi/pull/29)  
+[Pull Request #29](https://github.com/danielkinguk/transport-nbi/pull/29)  
   
 Confirmed that hierarchical-link container should be empty in case of tunnel transit segments  
   
@@ -94,7 +94,7 @@ This is not typical in transport network: it is possible to only specify the te-
   
 The modelling of bidirectional tunnels/LSPs is still under discussion among TE Tunnel authors and contributions:  
   
-[https://github.com/ietf-mpls-yang/te/issues/25](https://github.com/ietf-mpls-yang/te/issues/25)  
+[TE Tunnel Open Issue #25](https://github.com/ietf-mpls-yang/te/issues/25)  
   
 It is not clear why the association container is needed since the association should be between LSPs and not between tunnels  
   
