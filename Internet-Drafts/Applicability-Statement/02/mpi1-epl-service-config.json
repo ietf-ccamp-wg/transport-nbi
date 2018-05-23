@@ -1,26 +1,37 @@
 {
   "// __TITLE__": "EPL Configuration @ MPI1",
-  "// __LAST_UPDATE__": "April 17, 2018",
+  "// __LAST_UPDATE__": "May 23, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
-    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-trans-client-service:etht-svc"
+    "url":
+ "http://{{PNC1-ADDR}}/restconf/data/ietf-trans-client-service:etht-svc"
   },
   "// __REFERENCE_DRAFTS__": {
     "ietf-te-types@2018-03-05": "draft-ietf-teas-yang-te-14",
-    "ietf-eth-tran-types@2018-03-01": "draft-zheng-ccamp-otn-client-signal-yang-02",
-    "ietf-eth-tran-service@2018-03-01": "draft-zheng-ccamp-otn-client-signal-yang-02"
+    "ietf-eth-tran-types@2018-03-01":
+      "draft-zheng-ccamp-otn-client-signal-yang-02",
+    "ietf-routing-types@2017-12-04": "rfc8294",
+    "ietf-eth-tran-service@2018-03-01":
+      "draft-zheng-ccamp-otn-client-signal-yang-02"
   },
   "// __MISSING_ATTRIBUTES__": true,
-  "ietf-trans-client-service:etht-svc": {
+  "ietf-eth-tran-service:etht-svc": {
     "etht-svc-instances": [
       {
         "etht-svc-name": "mpi1-epl-service",
-        "etht-svc-descr": "TNBI Example for an EPL over ODU2 Service @ MPI1",
+        "etht-svc-descr":
+          "TNBI Example for an EPL over ODU2 Service @ MPI1",
         "// __ DEFAULT __ etht-svc-type": "p2p-svc",
-        "// __ DISCUSS __ te-topology-identifier": "Would it be possible to use this grouping instead of re-defining the three attributes below?",
-        "// __ ACTION __ access-provider-id": "Need to add the te-topology-identifier information",
-        "// __ ACTION __ access-client-id": "Need to add the te-topology-identifier information",
-        "// __ ACTION __ topology-id": "Need to add the te-topology-identifier information",
+        "// __ DISCUSS __ te-topology-identifier": [
+         "Would it be possible to use this grouping instead of",
+          " re-defining the three attributes below?"
+        ],
+        "// __ ACTION __ access-provider-id":
+          "Need to add the te-topology-identifier information",
+        "// __ ACTION __ access-client-id":
+          "Need to add the te-topology-identifier information",
+        "// __ ACTION __ topology-id":
+          "Need to add the te-topology-identifier information",
         "etht-svc-access-ports": [
           {
             "// comment": "10GE access interface (S3-1)",
@@ -29,8 +40,10 @@
             "access-node-id": "10.0.0.3",
             "// access-ltp-id": "S3-1-LTP-ID",
             "access-ltp-id": 1,
-            "service-classification-type": "etht-types:port-classification",
-            "// __ DISCUSS __ ingress-egress-bandwidth-profile-name": "10G-EPL-BWP",
+            "service-classification-type":
+              "ietf-eth-tran-types:port-classification",
+            "// __ DISCUSS __ ingress-egress-bandwidth-profile-name":
+              "10G-EPL-BWP",
             "// vlan-operations": "None: transparent VLAN operations"
           }
         ],
@@ -39,7 +52,7 @@
             "tunnel-name": "mpi1-odu2-tunnel"
           }
         ],
-        "admin-status": "te-types:tunnel-state-up"
+        "admin-status": "ietf-te-types:tunnel-state-up"
       }
     ]
   }
