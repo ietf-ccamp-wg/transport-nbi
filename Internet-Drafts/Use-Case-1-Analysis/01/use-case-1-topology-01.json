@@ -1,156 +1,89 @@
 {
-  "// Last Update": "October 11, 2017",
   "// Reference drafts ": [
-    "ietf-network (draft-ietf-i2rs-yang-network-topo-12)",
     "ietf-network-topology (draft-ietf-i2rs-yang-network-topo-12)",
     "ietf-te-topology (draft-ietf-teas-yang-te-topo-09)",
-    "ietf-otn-topology (draft-ietf-ccamp-otn-topo-yang-01)"
+    "ietf-otn-topology (draft-ietf-ccamp-otn-topo-yang-00)"
   ],
   "ietf-network:networks": {
     "network": [
       {
         "// comment": "ODU Abstract Topology @ MPI",
-        "// comment-1": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-        "// network-id": [
-          "I2RS definition is an URI (to be discussed by the DT)",
-          "The idea was to reflect into this attribute the provider-id, client-id and topology-id defined by TEAS",
-          "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1'?"
-        ],
         "network-id": "Abstract-Topology",
-        "// network-types": "OTN Topology",
-        "network-types": {
-          "ietf-te-topology:te-topology": {
-            "ietf-otn-topology:otn-topology": {}
+        "// comment-1": "Missing I2RS attributes - to be added in a future update",
+        "// provider-id": "To be discussed",
+        "// client-id": "To be discussed",
+        "// te-topology-id": "To be discussed",
+        "ietf-te-topology:te": {
+          "state": {
+            "// comment": "None analysed up to so far"
           }
         },
-        "// server-provided": [
-          "Not needed",
-          "No longer exists in draft-ietf-i2rs-yang-network-topo-16"
-        ],
-        "// supporting-network*": "Not needed (to be discussed by the DT)",
-        "// ietf-te-topology:provider-id": [
-          "TEAS definition is 'An identifier to uniquely identify a provider' (to be discussed by DT)",
-          "Syntax definition in te-types, copyed here:",
-          [
-            "An identifier to uniquely identify an operator, which can be",
-            "either a provider or a client.",
-            "The definition of this type is taken from RFC6370 and RFC5003.",
-            "This attribute type is used solely to provide a globally",
-            "unique context for TE topologies."
-          ],
-          "RFC 5398 assigns the '64496-64511' and '65536-65551' ranges for documentation purposes",
-          "Should it be something like '64496'?"
-        ],
-        "ietf-te-topology:provider-id": 64496,
-        "// ietf-te-topology:client-id": [
-          "TEAS definition is 'An identifier to uniquely identify a client' (to be discussed by DT)",
-          "Clarification text from section 5.4 of draft-ietf-teas-yang-te-topo-09, copyed here:",
-          "Same syntax as the provider-id (defed in te-types)",
-          [
-            "The client-id is used only",
-            "when Customized TE Topologies come into play; a value of \"0\" is used",
-            "as the client-id for native TE Topologies"
-          ],
-          "Should it be 0?"
-        ],
-        "ietf-te-topology:client-id": 0,
-        "// ietf-te-topology:te-topology-id": [
-          "TEAS definition is a string (to be discussed by DT)",
-          "Syntax definition in te-types, copyed here:",
-          [
-            "An identifier for a topology.",
-            "It is optional to have one or more prefixes at the begining,",
-            "separated by colons. The prefixes can be the network-types,",
-            "defined in ietf-network.yang, to help user to understand the",
-            "topology better before further inquiry."
-          ],
-          "Should it be something like 'PNC:1'?"
-        ],
-        "ietf-te-topology:te-topology-id": "PNC:1",
-        "ietf-otn-topology:name": "ODU Abstract Topology @ MPI",
-        "// node*": [
-          "Updated with I2RS and some TEAS and OTN attributes:",
-          "0) Node S3",
-          "Other nodes still to be updated"
-        ],
         "node": [
           {
             "// comment": "S3 Node",
-            "// comment-1": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-            "// node-id": [
-              "I2RS definition is an URI (to be discussed by the DT)",
-              "It may be worthwhile reflecting into this attribute the te-node-id defined by TEAS",
-              "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3'?"
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
             ],
-            "node-id": "of:0000000000000003",
-            "// supporting-node*": "Not needed (to be discussed by the DT)",
-            "// ietf-te-topology:te-node-id": "TEAS definition is a yang:dotted-quad",
-            "ietf-te-topology:te-node-id": "10.0.0.3",
             "// tunnel-termination-point": "to be added",
-            "ietf-otn-topology:name": "Node S3",
-            "// ietf-network-topology:termination-point*": [
-              "Updated with I2RS and some TEAS and OTN attributes:",
-              "0) S3-1 LTP (terminating the access link to C-R1)",
-              "1) S3-2 LTP (terminating the link to S1)",
-              "Other LTPs still to be updated"
-            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "// comment": "None analysed up to so far"
+              }
+            },
+            "ietf-network:node-id": "of:0000000000000003",
             "ietf-network-topology:termination-point": [
               {
-                "// comment": "S3-1 LTP (access link to C-R1)",
+                "// comment": "S3-1 LTP",
                 "// comment-1": [
-                  "It is assumed that this LTP is S3-1 LTP",
-                  "which is terminating the access link to C-R1",
-                  "This information was missing in the generated JSON code"
+                  "Missing I2RS attributes - to be added in a future",
+                  " update"
                 ],
-                "// comment-2": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-                "// ietf-network-topology:tp-id": [
-                  "I2RS definition is an URI (to be discussed by the DT)",
-                  "It may be worthwhile reflecting into this attribute the te-tp-id defined by TEAS",
-                  "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3/teLinkId/1'?"
-                ],
-                "ietf-network-topology:tp-id": "1",
-                "//supporting-termination-point*": "Not needed (to be discussed by the DT)",
-                "// ietf-te-topology:te-tp-id": [
-                  "TEAS definition is either the LTP IP address or an unnumbered identifier (to be discussed by the DT)",
-                  "Could we only use unnumbered identifiers?"
-                ],
-                "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "// config": "Not present (state reporting)",
                   "state": {
-                    "admin-status": "up",
-                    "name": "LTP S3-1 terminating the access link to C-R1",
-                    "// Other TEAS attributes": "To be analyzed in a future update",
-                    "// ietf-otn-topologysupported-payload-types*": "To be analyzed in a future update"
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                      "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
-                }
+                },
+                "ietf-network-topology:tp-id": "1"
               },
               {
-                "// comment": "S3-2 LTP (link to S1)",
                 "// comment-1": [
-                  "It is assumed that this LTP is S3-2 LTP",
-                  "which is terminating the internal link to S1",
-                  "This information was missing in the generated JSON code"
+                  "Missing I2RS attributes - to be added in a future",
+                  " update"
                 ],
-                "// comment-2": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-                "// ietf-network-topology:tp-id": [
-                  "I2RS definition is an URI (to be discussed by the DT)",
-                  "It may be worthwhile reflecting into this attribute the te-tp-id defined by TEAS",
-                  "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3/teLinkId/2'?"
-                ],
-                "//supporting-termination-point*": "Not needed (to be discussed by the DT)",
-                "ietf-network-topology:tp-id": "2",
-                "// ietf-te-topology:te-tp-id": "See comment for LTP S3-1",
-                "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "// config": "Not present (state reporting)",
                   "state": {
-                    "admin-status": "up",
-                    "name": "LTP S3-2 terminating the link to S1",
-                    "// Other TEAS attributes": "To be analyzed in a future update",
-                    "// ietf-otn-topologysupported-payload-types*": "To be analyzed in a future update"
+                    "// adaptation-type": " ccamp-otn-topo-yang-00",
+                    "// comment": [
+                      "Agumentation from",
+                      " draft-ietf-ccamp-otn-topo-yang-00"
+                    ],
+                    "// sink-adapt-active": "To be discussed",
+                    "// source-adapt-active": "To be discussed",
+                    "// supported-payload-types": "To be discussed",
+                    "// tpn": "To be discussed",
+                    "// tributary-slots": " TSs at 1,25TS granularity (80 available)",
+                    "// tsg": "To be discussed",
+                    "ietf-otn-topology:client-facing": [
+                      null
+                    ],
+                    "ietf-otn-topology:protocol-type": "ietf-transport-types:prot-OTU4"
                   }
-                }
+                },
+                "ietf-network-topology:tp-id": "2"
               },
               {
                 "// comment-1": [
@@ -204,12 +137,7 @@
                 },
                 "ietf-network-topology:tp-id": "4"
               }
-            ],
-            "ietf-te-topology:te": {
-              "state": {
-                "// comment": "To be analyzed in a future update"
-              }
-            }
+            ]
           },
           {
             "// comment-1": [
@@ -218,7 +146,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000004",
@@ -284,7 +212,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000001",
@@ -350,7 +278,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000002",
@@ -442,7 +370,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000007",
@@ -535,7 +463,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000008",
@@ -653,7 +581,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000005",
@@ -746,7 +674,7 @@
             "// tunnel-termination-point": "to be added",
             "ietf-te-topology:te": {
               "state": {
-                "// comment": "To be analyzed in a future update"
+                "// comment": "None analysed up to so far"
               }
             },
             "ietf-network:node-id": "of:0000000000000006",
@@ -860,109 +788,9 @@
             ]
           }
         ],
-        "// ietf-network-topology:link*": [
-          "Added unidirectional ingress access links",
-          "Updated with I2RS and some TEAS and OTN attributes:",
-          "0) Access Link from S3 to C-R1",
-          "1) Access link from C-R1 to S3",
-          "3) Internal link from S1 to S3",
-          "Other links still to be updated"
-        ],
         "ietf-network-topology:link": [
           {
-            "// comment": "Access Link from S3 to C-R1",
-            "// comment-1": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-            "source": {
-              "// comment": "Reference to S3-1 LTP",
-              "// source-node": "How to encode in JSON a YANG leafref? (to be discussed by the DT)",
-              "// source-tp": "How to encode in JSON a YANG leafref? (to be discussed by the DT)"
-            },
-            "// destination": "Not present because it is an egress access link (to be discussed by the DT)",
-            "// link-id": [
-              "I2RS definition is an URI (to be discussed by the DT)",
-              "It may be worthwhile reflecting into this attribute the source or destination node and ltp",
-              "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3/teLinkId/1'?",
-              "What could be the value if the destination node and ltp information is used instead?",
-              "We need different link-id values for the two unidirectional access links between S3 and C-R1"
-            ],
-            "link-id": "S3_C-R1",
-            "// supporting-link*": "Not needed (to be discussed by the DT)",
-            "ietf-te-topology:te": {
-              "// config": "Not present (state reporting)",
-              "state": {
-                "// bundle-stack-level": "To be discussed by the DT",
-                "// te-link-template*": "To be analyzed in a future update",
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "external-domain": {
-                    "// comment": [
-                      "Information needed to glue this",
-                      "access link with C-R1",
-                      "(to be further analysed)"
-                    ]
-                  },
-                  "// is-abstract?": "To be analyzed in a future update",
-                  "name": "Access Link from S3 to C-R1",
-                  "// underlay ": "Not needed (to be discussed by the DT)",
-                  "admin-status": "up",
-                  "// Other TEAS attributes": "To be analyzed in a future update"
-                },
-                "// Other TEAS attributes": "To be analyzed in a future update",
-                "// ietf-otn-topology:available-odu-info*": "To be analyzed in a future update",
-                "// ietf-otn-topology:tsg": "To be analyzed in a future update",
-                "// ietf-otn-topology:distance": "To be analyzed in a future update"
-              },
-              "// statistics": "To be analyzed in a future update"
-            }
-          },
-          {
-            "// comment": "Access Link from C-R1 to S3",
-            "// comment-1": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-            "// source": "Not present because it is an ingress access link (to be discussed by the DT)",
-            "destination": {
-              "// comment": "Reference to S3-1 LTP",
-              "// source-node": "How to encode in JSON a YANG leafref? (to be discussed by the DT)",
-              "// source-tp": "How to encode in JSON a YANG leafref? (to be discussed by the DT)"
-            },
-            "// link-id": [
-              "I2RS definition is an URI (to be discussed by the DT)",
-              "It may be worthwhile reflecting into this attribute the source or destination node and ltp",
-              "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3/teLinkId/1'?",
-              "What could be the value if the source node and ltp information is used instead?",
-              "We need different link-id values for the two unidirectional access links between S3 and C-R1"
-            ],
-            "link-id": "C-R1_S3",
-            "// supporting-link*": "Not needed (to be discussed by the DT)",
-            "ietf-te-topology:te": {
-              "// config": "Not present (state reporting)",
-              "state": {
-                "// bundle-stack-level": "To be discussed by the DT",
-                "// te-link-template*": "To be analyzed in a future update",
-                "te-link-attributes": {
-                  "access-type": "point-to-point",
-                  "external-domain": {
-                    "// comment": [
-                      "Information needed to glue this",
-                      "access link with C-R1",
-                      "(to be further analysed)"
-                    ]
-                  },
-                  "// is-abstract?": "To be analyzed in a future update",
-                  "name": "Access Link from C-R1 to S3",
-                  "// underlay ": "Not needed (to be discussed by the DT)",
-                  "admin-status": "up",
-                  "// Other TEAS attributes": "To be analyzed in a future update"
-                },
-                "// Other TEAS attributes": "To be analyzed in a future update",
-                "// ietf-otn-topology:available-odu-info*": "To be analyzed in a future update",
-                "// ietf-otn-topology:tsg": "To be analyzed in a future update",
-                "// ietf-otn-topology:distance": "To be analyzed in a future update"
-              },
-              "// statistics": "To be analyzed in a future update"
-            }
-          },
-          {
-            "// comment": "Access Link from S6 to C-R2",
+            "// comment": "Access Link between S3 and C-R1",
             "// comment-1": [
               "Missing I2RS attributes - to be added in a future update"
             ],
@@ -970,7 +798,30 @@
               "state": {
                 "te-link-attributes": {
                   "admin-status": "up",
-                  "name": "Access Link from S6 to C-R2",
+                  "name": "Access Link between S3 and C-R1",
+                  "access-type": "point-to-point",
+                  "external-domain": {
+                    "// comment": [
+                      "Information needed to glue this",
+                      "access link with C-R1",
+                      "(to be further analysed)"
+                    ]
+                  }
+                }
+              }
+            },
+            "link-id": "S3_C-R1"
+          },
+          {
+            "// comment": "Access Link between S6 and C-R2",
+            "// comment-1": [
+              "Missing I2RS attributes - to be added in a future update"
+            ],
+            "ietf-te-topology:te": {
+              "state": {
+                "te-link-attributes": {
+                  "admin-status": "up",
+                  "name": "Access Link between S6 and C-R2",
                   "access-type": "point-to-point",
                   "external-domain": {
                     "// comment": [
@@ -985,7 +836,7 @@
             "link-id": "S6_C-R2"
           },
           {
-            "// comment": "Access Link from C-R2 to S6",
+            "// comment": "Access Link between S6 and C-R3",
             "// comment-1": [
               "Missing I2RS attributes - to be added in a future update"
             ],
@@ -993,30 +844,7 @@
               "state": {
                 "te-link-attributes": {
                   "admin-status": "up",
-                  "name": "Access Link from C-R2 to S6",
-                  "access-type": "point-to-point",
-                  "external-domain": {
-                    "// comment": [
-                      "Information needed to glue this",
-                      "access link with C-R2",
-                      "(to be further analysed)"
-                    ]
-                  }
-                }
-              }
-            },
-            "link-id": "S6_C-R2"
-          },
-          {
-            "// comment": "Access Link from S6 to C-R3",
-            "// comment-1": [
-              "Missing I2RS attributes - to be added in a future update"
-            ],
-            "ietf-te-topology:te": {
-              "state": {
-                "te-link-attributes": {
-                  "admin-status": "up",
-                  "name": "Access Link from S6 to C-R3",
+                  "name": "Access Link between S6 and C-R3",
                   "access-type": "point-to-point",
                   "external-domain": {
                     "// comment": [
@@ -1031,118 +859,22 @@
             "link-id": "S6_C-R3"
           },
           {
-            "// comment": "Access Link from C-R3 to S6 ",
             "// comment-1": [
               "Missing I2RS attributes - to be added in a future update"
             ],
             "ietf-te-topology:te": {
               "state": {
                 "te-link-attributes": {
-                  "admin-status": "up",
-                  "name": "Access Link from S6 to C-R3",
-                  "access-type": "point-to-point",
-                  "external-domain": {
-                    "// comment": [
-                      "Information needed to glue this",
-                      "access link with C-R3",
-                      "(to be further analysed)"
-                    ]
-                  }
-                }
-              }
-            },
-            "link-id": "S6_C-R3"
-          },
-          {
-            "// comment": "Link from S1 to S3",
-            "// comment-1": "Initial proposal for I2RS attributes (to be discussed by the DT)",
-            "source": {
-              "// comment": "Reference to S1-1 LTP",
-              "// source-node": "How to encode in JSON a YANG leafref? (to be discussed by the DT)",
-              "// source-tp": "How to encode in JSON a YANG leafref? (to be discussed by the DT)"
-            },
-            "destination": {
-              "// comment": "Reference to S3-2 LTP",
-              "// source-node": "How to encode in JSON a YANG leafref? (to be discussed by the DT)",
-              "// source-tp": "How to encode in JSON a YANG leafref? (to be discussed by the DT)"
-            },
-            "// link-id": [
-              "I2RS definition is an URI (to be discussed by the DT)",
-              "Should it be something like 'providerId/64496/clientId/0/topologyId/PNC:1/teNodeId/10.0.0.3/teLinkId/2'?"
-            ],
-            "link-id": "of:0000000000000001_of:0000000000000003",
-            "// supporting-link*": "Not needed (to be discussed by the DT)",
-            "ietf-te-topology:te": {
-              "// config": "Not present (state reporting)",
-              "state": {
-                "te-link-attributes": {
-                  "// bundle-stack-level": "To be discussed by the DT",
-                  "// te-link-template*": "To be analyzed in a future update",
                   "admin-status": "up",
                   "name": "of:0000000000000001_of:0000000000000003",
                   "access-type": "point-to-point",
                   "external-domain": {
                     "// comment": "Empty container (internal link)"
                   }
-                },
-                "// Other TEAS attributes": "To be analyzed in a future update",
-                "// ietf-otn-topology:available-odu-info*": "Assuming only one priority (to be further discussed by the DT)",
-                "ietf-otn-topology:available-odu-info": [
-                  {
-                    "priority": 1,
-                    "odulist": [
-                      {
-                        "odu-type": "prot-ODU4",
-                        "number": 1,
-                        "// tpn-range": "Not applicable for ODU4 -> OTU4 (to be discussed by the DT)"
-                      },
-                      {
-                        "odu-type": "prot-ODU3",
-                        "number": 2,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "odu-type": "prot-ODU2",
-                        "number": 8,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "odu-type": "prot-ODU2e",
-                        "number": 8,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "odu-type": "prot-ODU1",
-                        "number": 40,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "odu-type": "prot-ODU0",
-                        "number": 80,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "// comment": "ODU availability for ODU flex to be further discussed by the DT",
-                        "odu-type": "prot-ODUFlex-cbr",
-                        "number": 80,
-                        "tpn-range": "1-80"
-                      },
-                      {
-                        "// comment": "ODU availability for ODU flex to be further discussed by the DT",
-                        "odu-type": "prot-ODUFlex-gfp",
-                        "number": 80,
-                        "tpn-range": "1-80"
-                      }
-                    ],
-                    "ts-range": "1-80"
-                  }
-                ],
-                "// ietf-otn-topology:tsg": "ODU4 supports only 1.25G TSG",
-                "ietf-otn-topology:tsg": "tsg-1.25G",
-                "// ietf-otn-topology:distance": "To be analyzed in a future update"
-              },
-              "// statistics": "To be analyzed in a future update"
-            }
+                }
+              }
+            },
+            "link-id": "of:0000000000000001_of:0000000000000003"
           },
           {
             "// comment-1": [
@@ -1486,18 +1218,8 @@
             },
             "link-id": "of:0000000000000007_of:0000000000000008"
           }
-        ],
-        "ietf-te-topology:te": {
-          "state": {
-            "// comment": "To be analyzed in a future update"
-          }
-        }
+        ]
       }
-    ],
-    "ietf-te-topology:te": {
-      "state": {
-        "// comment": "To be analyzed in a future update"
-      }
-    }
+    ]
   }
 }
