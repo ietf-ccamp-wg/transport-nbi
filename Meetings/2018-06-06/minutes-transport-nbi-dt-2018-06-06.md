@@ -46,9 +46,9 @@ A future update is expected as soon as the TE and OTN Tunnel models are updated.
 New OTN tunnel model will be available soon.  
   
 Status update of some open issues in GitHub:  
-- [Pull Request #28](https://github.com/danielkinguk/transport-nbi/issues/28)  
-- [Pull Request #23](https://github.com/danielkinguk/transport-nbi/issues/23)  
-- [Pull Request #21](https://github.com/danielkinguk/transport-nbi/issues/21)  
+- [Open Issue #28](https://github.com/danielkinguk/transport-nbi/issues/28)  
+- [Open Issue #23](https://github.com/danielkinguk/transport-nbi/issues/23)  
+- [Open Issue #21](https://github.com/danielkinguk/transport-nbi/issues/21)  
   
 The next DT call is planned for next week June 13, 2018 at 3pm CEST  
   
