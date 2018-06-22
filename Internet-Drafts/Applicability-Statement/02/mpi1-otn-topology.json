@@ -1,6 +1,6 @@
 {
-  "// __TITLE__": "ODU Abstract Topology @ MPI1 (option 1)",
-  "// __LAST_UPDATE__": "May 22, 2018",
+  "// __TITLE__": "ODU Abstract Topology @ MPI1",
+  "// __LAST_UPDATE__": "June 19, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "GET",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
@@ -39,7 +39,10 @@
           ],
           "DT proposal (May 23):",
           [
-            "Option 2 rule? (to be discussed)"
+            "Need to add an indication of the rule used to create the URN (defined by the TNBI DT)",
+            "Need to clarify that it is an URN",
+            "Reflect into the URI the provider-id, client-id and topology-id defined by TEAS",
+            "Rule: urn:ietf:teas:ccamp-tnbi/providerId/<provider-id>/clientId/<client-id>/topologyId/<te-topology-id>"
           ]
         ],
         "network-id": "tnbi",
@@ -48,6 +51,10 @@
             "ietf-otn-topology:otn-topology": {}
           }
         },
+        "// comment": [
+          "te container presence requires:           ",
+          " provider-id, client-id and te-topology-id"
+        ],
         "// __DISCUSS (I2RS)__ ietf-te-topology:provider-id": [
           "TEAS definition is 'An identifier to uniquely identify a provider' ",
           "Option 1",
@@ -69,7 +76,7 @@
           ],
           "DT proposal (May 23):",
           [
-            "Option 3 rule? (to be discussed)"
+            "Option 3 rule: '201'"
           ]
         ],
         "ietf-te-topology:provider-id": 0,
@@ -92,7 +99,7 @@
           ],
           "DT proposal (May 23):",
           [
-            "Option 3 rule? (to be discussed)"
+            "Option 3 rule: '300'"
           ]
         ],
         "ietf-te-topology:client-id": 0,
@@ -105,19 +112,22 @@
           ],
           "option 2",
           [
+            "Rule: encode the semantics of the topology (e.g., TNBI topology)",
+            "Example: 'urn:ietf:teas:ccamp-tnbi'"
+          ],
+          "option 3",
+          [
             "Rule: te-topology:<network-id>",
             "Example: 'te-topology:otn-domain1-abs'"
           ],
           "DT proposal (May 23):",
           [
-            "Unique string in the MPI context? (e.g., otn-topology)? (to be discussed)"
+            "Unique string in the MPI context",
+            "Rule: <technology>-<abstraction-type>",
+            "otn-native-topology (for white topology abstraction) or otn-abstract-topology (for grey or single-node block topology abstraction) or otn-border-nodes (for further discussion for border-node only black topology)"
           ]
         ],
         "ietf-te-topology:te-topology-id": "tnbi",
-        "// comment": [
-          "te container presence requires:           ",
-          " provider-id, client-id and te-topology-id"
-        ],
         "ietf-te-topology:te": {
           "name": "gotham-city:metro-transport-network"
         },
@@ -147,7 +157,7 @@
               ],
               "DT proposal (May 23):",
               [
-                "Option 2 rule? (to be discussed)"
+                "Option 2 rule"
               ]
             ],
             "node-id": "10.0.0.3",
@@ -194,7 +204,7 @@
                   ],
                   "DT proposal (May 23):",
                   [
-                    "Option 2 rule? (to be discussed)"
+                    "Option 2 rule: need to check that it is a valid URI"
                   ]
                 ],
                 "tp-id": "1",
