@@ -1,15 +1,15 @@
 {
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
-  "// __LAST_UPDATE__": "May 23, 2018 (DT call)",
+  "// __LAST_UPDATE__": "June 28, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
   },
   "// __REFERENCE_DRAFTS__": {
-    "ietf-te-types@2018-03-05": "draft-ietf-teas-yang-te-14",
-    "ietf-te@2018-03-03": "draft-ietf-teas-yang-te-14",
-    "ietf-otn-types@2017-10-30": "draft-ietf-ccamp-otn-tunnel-model-01",
-    "ietf-otn-tunnel@2017-10-30": "draft-ietf-ccamp-otn-tunnel-model-01"
+    "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
+    "ietf-te@2018-06-12": "draft-ietf-teas-yang-te-15",
+    "ietf-otn-types@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02",
+    "ietf-otn-tunnel@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-te:te": {
@@ -23,41 +23,28 @@
           "// encoding and switching-type": "ODU",
           "encoding": "te-types:lsp-encoding-oduk ",
           "switching-type": "te-types:switching-otn",
-          "// __ DISCUSS __source": "S3-NODE-ID. Why ip-address and not te-node-id? ",
           "source": "10.0.0.3",
           "// destination": "None: head tunnel segment",
           "src-tp-id": 1,
           "// dst-tp-id": "None: head tunnel segment",
-          "// __ DISCUSS __ ietf-otn-tunnel:payload-treatment": "Do we need this attribute in otn-tunnel?",
           "ietf-otn-tunnel:src-client-signal": "client-signal-ODU2",
-          "// __ DISCUSS __ src-tpn": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ src-tsg": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ src-tributary-slot-count": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ src-tributary-slots": "This information should be provided in the label hop. Should this container to be removed?",
           "ietf-otn-tunnel:dst-client-signal": "client-signal-ODU2",
-          "// __ DISCUSS __ dst-tpn": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ dst-tsg": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ dst-tributary-slot-count": "This information should be provided in the label hop. Should this attribute to be removed?",
-          "// __ DISCUSS __ dst-tributary-slots": "This information should be provided in the label hop. Should this container to be removed?",
+          "bidirectional": true,
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
           },
           "// __ DEFAULT __ restoration": {
             "// __ DEFAULT __ enable": false
           },
-          "// __ ACTION __ te-topology-identifier": "Need to add the te-topology-identifier information",
-          "// __ DISCUSS __ te-bandwidth": {
-            "// __ DISCUSS __ odu-type": "ODU2 (wait for the next OTN Tunnel model update)"
+          "// __ DISCUSS __ te-topology-identifier": "Need to add the te-topology-identifier information.\nWaiting for updates to topology identifiers",
+          "te-bandwidth": {
+            "odu-type": "prot-ODU2"
           },
-          "// __ ACTION __ bidirectional": "Wait for the next TE Tunnel model update to indicate it is a native bidirectional tunnel",
+          "// __ DISCUSS __ hierarchical-link": [
+            "Optional to be specified since the tunnel supports a service and not a link in the client layer"
+          ],
           "p2p-primary-paths": {
             "name": "mpi1-odu2-tunnel-primary-path",
-            "// __ DISCUSS __ hierarchical-link": [
-              "Optional to be specified since the tunnel supports a service and not a link in the client layer"
-            ],
-            "// __ ACTION __ hierarchical-link": [
-              "Wait for the next TE Tunnel model update to move this container under the tunnel"
-            ],
             "// __ DISCUSS __ path-scope": "Need to align the model based on the on-going disucssion of the related open issue",
             "path-scope": "path-scope-segment",
             "// te-bandwidth": "None: only the tunnel bandwidth needs to be specified in transport applications",
@@ -67,10 +54,11 @@
                   "// comment": "Tunnel TTP in node S3",
                   "index": 1,
                   "explicit-route-usage": "route-include-ero",
-                  "numbered-hop": {
-                    "// address": "S3-NODE-ID",
-                    "address": "10.0.0.3",
+                  "num-unnum-hop": {
+                    "// node-id": "S3-NODE-ID",
+                    "node-id": "10.0.0.3",
                     "hop-type": "STRICT",
+                    "// __ ACTION __ direction": "Check with TE Tunnel authors",
                     "direction": "OUTGOING"
                   }
                 },
@@ -78,7 +66,7 @@
                   "// comment": "Tunnel hand-off OTU4 egress interface (S2-1)",
                   "index": 1,
                   "explicit-route-usage": "route-include-ero",
-                  "unnumbered-hop": {
+                  "num-unnum-hop": {
                     "// node-id": "S2-NODE-ID",
                     "node-id": "10.0.0.2",
                     "// link-tp-id": "S2-1-LTP-ID",
@@ -93,8 +81,10 @@
                   "explicit-route-usage": "route-include-ero",
                   "label-hop": {
                     "te-label": {
-                      "// __ DISCUSS __ odu-label": "Need to define the ODU label augmentation",
-                      "// __ DISCUSS __ direction": "Please check proposal below",
+                      "tpn": 2,
+                      "tsg": "tsg-1.25G",
+                      "ts-list": "9-16",
+                      "// __ ACTION __ direction": "Check with TE Tunnel authors",
                       "direction": "FORWARD "
                     }
                   }
