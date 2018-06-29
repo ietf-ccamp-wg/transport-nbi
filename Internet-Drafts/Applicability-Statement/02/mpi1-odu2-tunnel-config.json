@@ -1,12 +1,13 @@
 {
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
-  "// __LAST_UPDATE__": "June 28, 2018",
+  "// __LAST_UPDATE__": "June 29, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
   },
   "// __REFERENCE_DRAFTS__": {
     "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
+    "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te@2018-06-12": "draft-ietf-teas-yang-te-15",
     "ietf-otn-types@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02",
     "ietf-otn-tunnel@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02"
@@ -19,16 +20,19 @@
           "name": "mpi1-odu2-tunnel",
           "// identifier": "ODU2-TUNNEL-ID @ MPI1",
           "identifier": 2,
-          "description": "TNBI Example for an ODU2 Head Tunnel Segment @ MPI1",
+          "description":
+           "TNBI Example for an ODU2 Head Tunnel Segment @ MPI1",
           "// encoding and switching-type": "ODU",
-          "encoding": "te-types:lsp-encoding-oduk ",
-          "switching-type": "te-types:switching-otn",
+          "encoding": "ietf-te-types:lsp-encoding-oduk ",
+          "switching-type": "ietf-te-types:switching-otn",
           "source": "10.0.0.3",
           "// destination": "None: head tunnel segment",
-          "src-tp-id": 1,
+          "src-tp-id": "AAAB",
           "// dst-tp-id": "None: head tunnel segment",
-          "ietf-otn-tunnel:src-client-signal": "client-signal-ODU2",
-          "ietf-otn-tunnel:dst-client-signal": "client-signal-ODU2",
+          "ietf-otn-tunnel:src-client-signal":
+           "ietf-otn-types:client-signal-ODU2",
+          "ietf-otn-tunnel:dst-client-signal":
+           "ietf-otn-types:client-signal-ODU2",
           "bidirectional": true,
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
@@ -36,61 +40,75 @@
           "// __ DEFAULT __ restoration": {
             "// __ DEFAULT __ enable": false
           },
-          "// __ DISCUSS __ te-topology-identifier": "Need to add the te-topology-identifier information.\nWaiting for updates to topology identifiers",
+          "// __ DISCUSS __ te-topology-identifier":
+           "Need to add the te-topology-identifier information",
           "te-bandwidth": {
-            "odu-type": "prot-ODU2"
+            "ietf-otn-tunnel:odu-type": "ietf-otn-types:prot-ODU2"
           },
-          "// __ DISCUSS __ hierarchical-link": [
-            "Optional to be specified since the tunnel supports a service and not a link in the client layer"
-          ],
+          "// __ DISCUSS __ hierarchical-link":
+  "Optional: tunnel supports service and not link in the client layer",
           "p2p-primary-paths": {
-            "name": "mpi1-odu2-tunnel-primary-path",
-            "// __ DISCUSS __ path-scope": "Need to align the model based on the on-going disucssion of the related open issue",
-            "path-scope": "path-scope-segment",
-            "// te-bandwidth": "None: only the tunnel bandwidth needs to be specified in transport applications",
-            "explicit-route-objects": {
-              "route-object-include-exclude": [
-                {
-                  "// comment": "Tunnel TTP in node S3",
-                  "index": 1,
-                  "explicit-route-usage": "route-include-ero",
-                  "num-unnum-hop": {
-                    "// node-id": "S3-NODE-ID",
-                    "node-id": "10.0.0.3",
-                    "hop-type": "STRICT",
-                    "// __ ACTION __ direction": "Check with TE Tunnel authors",
-                    "direction": "OUTGOING"
-                  }
-                },
-                {
-                  "// comment": "Tunnel hand-off OTU4 egress interface (S2-1)",
-                  "index": 1,
-                  "explicit-route-usage": "route-include-ero",
-                  "num-unnum-hop": {
-                    "// node-id": "S2-NODE-ID",
-                    "node-id": "10.0.0.2",
-                    "// link-tp-id": "S2-1-LTP-ID",
-                    "link-tp-id": 1,
-                    "hop-type": "STRICT",
-                    "direction": "OUTGOING"
-                  }
-                },
-                {
-                  "// comment": "Tunnel hand-off ODU2 egress label  (ODU2 over OTU4) at S2-1",
-                  "index": 2,
-                  "explicit-route-usage": "route-include-ero",
-                  "label-hop": {
-                    "te-label": {
-                      "tpn": 2,
-                      "tsg": "tsg-1.25G",
-                      "ts-list": "9-16",
-                      "// __ ACTION __ direction": "Check with TE Tunnel authors",
-                      "direction": "FORWARD "
+            "p2p-primary-path": [
+              {
+                "name": "mpi1-odu2-tunnel-primary-path",
+                "// __ DISCUSS __ path-scope":
+                 "Need to align the model",
+                "path-scope": "ietf-te-types:path-scope-segment",
+                "// te-bandwidth":
+                 "None: only the tunnel bandwidth needed in transport",
+                "explicit-route-objects": {
+                  "route-object-include-exclude": [
+                    {
+                      "// comment": "Tunnel TTP in node S3",
+                      "index": 1,
+                      "explicit-route-usage":
+                       "ietf-te-types:route-include-ero",
+                      "num-unnum-hop": {
+                        "// node-id": "S3-NODE-ID",
+                        "node-id": "10.0.0.3",
+                        "hop-type": "STRICT",
+                        "// __ ACTION __ direction":
+                         "Check with TE Tunnel authors",
+                        "direction": "OUTGOING"
+                      }
+                    },
+                    {
+                      "// comment":
+                       "Tunnel hand-off OTU4 egress interface (S2-1)",
+                      "index": 2,
+                      "explicit-route-usage":
+                       "ietf-te-types:route-include-ero",
+                      "num-unnum-hop": {
+                        "// node-id": "S2-NODE-ID",
+                        "node-id": "10.0.0.2",
+                        "// link-tp-id": "S2-1-LTP-ID",
+                        "link-tp-id": 1,
+                        "hop-type": "STRICT",
+                        "direction": "OUTGOING"
+                      }
+                    },
+                    {
+                      "// comment":
+          "Tunnel hand-off ODU2 egress label (ODU2 over OTU4) at S2-1",
+                      "index": 3,
+                      "explicit-route-usage":
+                       "ietf-te-types:route-include-ero",
+                      "label-hop": {
+                        "te-label": {
+                          "ietf-otn-tunnel:tpn": 2,
+                          "ietf-otn-tunnel:tsg":
+                           "ietf-otn-types:tsg-1.25G",
+                          "ietf-otn-tunnel:ts-list": "9-16",
+                          "// __ ACTION __ direction":
+                           "Check with TE Tunnel authors",
+                          "direction": "FORWARD "
+                        }
+                      }
                     }
-                  }
+                  ]
                 }
-              ]
-            }
+              }
+            ]
           }
         }
       ]
