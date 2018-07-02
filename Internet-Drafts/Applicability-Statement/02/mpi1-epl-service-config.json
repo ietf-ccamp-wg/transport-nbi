@@ -1,10 +1,10 @@
 {
   "// __TITLE__": "EPL Configuration @ MPI1",
-  "// __LAST_UPDATE__": "May 23, 2018",
+  "// __LAST_UPDATE__": "July 2, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
     "url":
- "http://{{PNC1-ADDR}}/restconf/data/ietf-trans-client-service:etht-svc"
+ "http://{{PNC1}}/restconf/data/ietf-trans-client-service:etht-svc"
   },
   "// __REFERENCE_DRAFTS__": {
     "ietf-te-types@2018-03-05": "draft-ietf-teas-yang-te-14",
@@ -42,9 +42,10 @@
             "access-ltp-id": 1,
             "service-classification-type":
               "ietf-eth-tran-types:port-classification",
-            "// __ DISCUSS __ ingress-egress-bandwidth-profile-name":
+           "// __ DISCUSS __ ingress-egress-bandwidth-profile-name":
               "10G-EPL-BWP",
-            "// vlan-operations": "None: transparent VLAN operations"
+            "// vlan-operations":
+              "None: transparent VLAN operations"
           }
         ],
         "etht-svc-tunnels": [
