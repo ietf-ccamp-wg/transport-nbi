@@ -1,6 +1,6 @@
 {
   "// __TITLE__": "ODU Abstract Topology @ MPI1",
-  "// __LAST_UPDATE__": "July 31, 2018",
+  "// __LAST_UPDATE__": "September 12, 2018",
   "// __RESTCONF_OPERATION__": {
     "operation": "GET",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
@@ -37,13 +37,16 @@
             "URI without encoding provider-id and client-id information",
             "Example: 'otn-domain1-abs'"
           ],
-          "DT proposal (June 19 and July 31):",
+          "DT working assumption (September 12):",
           [
+            "Reflect into the URI the provider-id, client-id and topology-id defined by TEAS",
+            "Rule: providerId/<provider-id>/clientId/<client-id>/topologyId/<te-topology-id>",
+            "Example: providerId/201/clientId/300/topologyId/otn-abstract-topology",
             "Need to add an indication of the rule used to create the URN (defined by the TNBI DT)",
             "Need to clarify that it is an URN",
             "In alternave, register an URI schema in IANA (https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)",
-            "Reflect into the URI the provider-id, client-id and topology-id defined by TEAS",
-            "Rule: urn:ietf:teas:ccamp-tnbi//providerId/<provider-id>/clientId/<client-id>/topologyId/<te-topology-id>"
+            "In alternative we can use a registered URN/URI schema",
+            "Alternative Rule: urn:ietf:teas:ccamp-tnbi//providerId/<provider-id>/clientId/<client-id>/topologyId/<te-topology-id>"
           ]
         ],
         "network-id": "tnbi",
@@ -75,7 +78,7 @@
             "Rule: network-wide unique number identifying PNC1",
             "Example: '201'"
           ],
-          "DT proposal (June 19):",
+          "DT working assumption (September 12):",
           [
             "Option 3 rule: network-wide unique number identifying PNC1",
             "Example: '201'"
@@ -99,7 +102,7 @@
             "Rule: network-wide unique number identifying MDSC",
             "Example: '300'"
           ],
-          "DT proposal (June 19):",
+          "DT working assumption (September 12):",
           [
             "Option 3 rule: network-wide unique number identifying MDSC",
             "Example: '300'"
@@ -123,11 +126,11 @@
             "Rule: te-topology:<network-id>",
             "Example: 'te-topology:otn-domain1-abs'"
           ],
-          "DT proposal (June 19):",
+          "DT working assumption (September 12):",
           [
             "Unique string in the MPI context",
-            "Rule: <technology>-<abstraction-type>",
-            "otn-native-topology (for white topology abstraction) or otn-abstract-topology (for grey or single-node block topology abstraction) or otn-border-nodes (for further discussion for border-node only black topology)"
+            "Rule: <technology>-<abstraction-type>-topology",
+            "otn-native-topology (for white topology abstraction) or otn-abstract-topology (for grey or single-node block topology abstraction) or otn-border-nodes-topology (for further discussion for border-node only black topology)"
           ]
         ],
         "ietf-te-topology:te-topology-id": "tnbi",
@@ -158,7 +161,7 @@
                 "Rule: node name",
                 "Example: 'D1'"
               ],
-              "DT proposal (June 19):",
+              "DT working assumption (September 12):",
               [
                 "Option 2 rule: node-id=te-node-id",
                 "Example: 10.0.0.3"
@@ -206,12 +209,10 @@
                     "A structured string that gets translated into a number in te-tp-id",
                     "Example: '1-3-0' -> te-tp-id = 10300"
                   ],
-                  "DT proposal (June 19 and July 31):",
+                  "DT working assumption (September 12):",
                   [
                     "Option 2 rule: tp-id = te-tp-id.toString()",
                     "Example: '1'",
-                    "Open Issue: need to check that it is a valid URI",
-                    "Action Italo and Carlo to check that the string '1' is a valid URI",
                     "In alternative we can use a registered URN/URI schema",
                     "Rule: urn:ietf:teas:ccamp-tnbi//tpId/te-tp-id.toString()"
                   ]
@@ -864,12 +865,13 @@
                 "Example: '10.0.0.1,2,10.0.0.3,2'"
               ],
               "Option 3: not found",
-              "DT proposal (July 31):",
+              "DT working assumption (September 12):",
               [
                 "A simplified option 2",
                 "Rule: teNodeId/<source-node>/teLinkId/<source-tp>",
+                "Example: teNodeId/10.0.0.1/teLinkId/2",
                 "In alternative we can use a registered URN/URI schema",
-                "Rule: urn:ietf:teas:ccamp-tnbi//teNodeId/<source-node>/teLinkId/<source-tp>",
+                "Alternative Rule: urn:ietf:teas:ccamp-tnbi//teNodeId/<source-node>/teLinkId/<source-tp>",
                 "Open Issue: does this solution work with bundled links?",
                 "Action Sergio, Carlo and Italo: check with Igor and Xufeng about how to model bundled links with TE Topology and validate this rule accordingly"
               ]
