@@ -26,6 +26,7 @@ Meeting Notes:
 The DT will adopt the updated proposal as working assumption and JSON code be updated accordingly, with two new open issues that, when closed, may require to udpate the conventions and the JSON codes: 
 
 **[Open issue #41](https://github.com/danielkinguk/transport-nbi/issues/41) - Need to register a URN/URI schema to be used with I2RS topology identifiers**
+
 **[Open Issue #42](https://github.com/danielkinguk/transport-nbi/issues/42) - Link Bundling analysis and impact on the I2RS link identifier**
 
 ### 2) Applicability Statement I-D Review
