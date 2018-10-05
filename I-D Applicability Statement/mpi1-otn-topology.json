@@ -1,1213 +1,1022 @@
 {
-  "// __TITLE__": "ODU Abstract Topology @ MPI1",
-  "// __LAST_UPDATE__": "July 2, 2018",
+  "// __LAST_UPDATE__": "October 3, 2018",
+  "// __MISSING_ATTRIBUTES__": true,
+  "// __REFERENCE_DRAFTS__": {
+    "ietf-network@2018-02-26": "rfc8345",
+    "ietf-network-topology@2018-02-26": "rfc8345",
+    "ietf-routing-types@2017-12-04": "rfc8294",
+    "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
+    "ietf-te-topology@2018-06-15": "draft-ietf-teas-yang-te-topo-18",
+    "ietf-otn-types@2018-08-23": "draft-ietf-ccamp-otn-tunnel-model-05",
+    "ietf-otn-topology@2018-08-23": "draft-ietf-ccamp-otn-topo-yang-05"
+  },
   "// __RESTCONF_OPERATION__": {
     "operation": "GET",
-    "url":
-      "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
   },
-  "// __REFERENCE_DRAFTS__": {
-    "ietf-network@2017-12-18":
-      "draft-ietf-i2rs-yang-network-topo-20",
-    "ietf-network-topology@2017-12-18":
-      "draft-ietf-i2rs-yang-network-topo-20",
-    "ietf-te-topology@2018-02-21":
-      "draft-ietf-teas-yang-te-topo-15",
-    "ietf-te-types@2018-02-19": "draft-ietf-teas-yang-te-12",
-    "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-otn-topology@2017-10-30":
-      "draft-ietf-ccamp-otn-topo-yang-02",
-    "ietf-otn-types@2017-10-30":
-      "draft-ietf-ccamp-otn-tunnel-model-01"
-  },
-  "// __MISSING_ATTRIBUTES__": true,
+  "// __TITLE__": "ODU Abstract Topology @ MPI1",
   "ietf-network:networks": {
     "network": [
       {
-        "network-id": "tnbi",
+        "network-id": "providerId/201/clientId/300/topologyId/otn-abstract-topology",
         "network-types": {
           "ietf-te-topology:te-topology": {
             "ietf-otn-topology:otn-topology": {}
           }
         },
-        "// __DISCUSS__ ietf-te-topology:provider-id": null,
-        "ietf-te-topology:provider-id": 0,
-        "// __DISCUSS__ ietf-te-topology:client-id": 0,
-        "ietf-te-topology:client-id": 0,
-        "// __DISCUSS__ ietf-te-topology:te-topology-id": null,
-        "ietf-te-topology:te-topology-id": "tnbi",
-        "// comment": [
-          "te container presence requires:           ",
-          " provider-id, client-id and te-topology-id"
-        ],
+        "ietf-te-topology:provider-id": 201,
+        "ietf-te-topology:client-id": 300,
+        "ietf-te-topology:te-topology-id": "otn-abstract-topology",
+        "// ietf-te-topology:te": "te container presence requires: provider-id, client-id and te-topology-id",
         "ietf-te-topology:te": {
-          "name": "gotham-city:metro-transport-network"
+          "name": "OTN Abstract Topology @ MPI1"
         },
+        "// ietf-network:node": "Access LTPs to be reviewed in a future update",
         "ietf-network:node": [
           {
-            "// __NODE__:__DESCRIPTION__": [
-              "S3",
-              "10.0.0.3",
-              "ADM"
-            ],
-            "node-id": "10.0.0.3",
-            "ietf-te-topology:te-node-id": "10.0.0.3",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-node-attributes": {
-                "// comment-on-name": [
-                  "Often transport domains contain subdomain      ",
-                  "topological partitioning that may be reported  ",
-                  "in node te name                                "
-                ],
-                "name": "S3-metro_main_ring-gateway",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
+            "// __NODE__:__DESCRIPTION__": {
+              "name": "AN11",
+              "identifier": "10.0.0.1",
+              "type": "Abstract Node",
+              "physical node(s)": "S1, S2, S3, S4"
             },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S3-1 LTP",
-                  "connected to (C-R1)",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-2",
-                  "tributary port"
-                ],
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "// _OBSOLETE_ ietf-otn-topology:client-facing": [
-                    null
-                  ],
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU2",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S3-2 LTP",
-                  "connected to S1-2",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S3-3 LTP",
-                  "connected to S4-1",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S3-4 LTP",
-                  "connected to S5-1",
-                  "unnumberd/ifIndex: 4",
-                  "OTU-4",
-                  "line port"
-                ],
-                "tp-id": "4",
-                "ietf-te-topology:te-tp-id": 4,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S4",
-              "10.0.0.4",
-              "pizza-box"
-            ],
-            "node-id": "10.0.0.4",
-            "ietf-te-topology:te-node-id": "10.0.0.4",
-            "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
-              "te-node-attributes": {
-                "name": "S4-line-metro_main_ring",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S4-1 LTP",
-                  "connected to S3-3",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S4-1 LTP",
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S4-2 LTP",
-                  "connected to S8-3",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S4-2 LTP",
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S1",
-              "10.0.0.1",
-              "pizza-box"
-            ],
             "node-id": "10.0.0.1",
             "ietf-te-topology:te-node-id": "10.0.0.1",
             "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
               "te-node-attributes": {
-                "name": "S1-robinson_park_ring-line",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
+                "name": "AN11",
+                "// __DISCUSS__ domain-id": 65001,
+                "admin-status": "up"
               },
+              "oper-status": "up",
               "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S1-1 LTP",
-                  "connected to S2-2",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S1-1 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN11-1 LTP",
+                  "link type(s)": "OTU-2",
+                  "physical node": "S3",
+                  "unnumberd/ifIndex": 1,
+                  "port type": "tributary port",
+                  "connected to": "R1"
+                },
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
+                  "name": "AN11-1 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
+                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S1-2 LTP",
-                  "connected to S3-2",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S1-2 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN11-2 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S2",
+                  "unnumberd/ifIndex": 2,
+                  "port type": "inter-domain port",
+                  "connected to": "S31"
+                },
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
+                  "name": "AN11-2 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+                }
+              },
+              {
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN11-3 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S2",
+                  "unnumberd/ifIndex": 3,
+                  "port type": "line port",
+                  "connected to": "S8-3"
+                },
+                "tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
+                "ietf-te-topology:te": {
+                  "name": "AN11-3 LTP",
+                  "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
+                  "oper-status": "up",
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+                }
+              },
+              {
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN11-4 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S4",
+                  "unnumberd/ifIndex": 2,
+                  "port type": "line port",
+                  "connected to": "S8-3"
+                },
+                "tp-id": "4",
+                "ietf-te-topology:te-tp-id": 4,
+                "ietf-te-topology:te": {
+                  "name": "AN11-4 LTP",
+                  "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
+                  "oper-status": "up",
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+                }
+              },
+              {
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN11-5 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S3",
+                  "unnumberd/ifIndex": 4,
+                  "port type": "line port",
+                  "connected to": "S5-2"
+                },
+                "tp-id": "5",
+                "ietf-te-topology:te-tp-id": 5,
+                "ietf-te-topology:te": {
+                  "name": "AN11-5 LTP",
+                  "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
+                  "oper-status": "up",
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               }
             ]
           },
           {
-            "// __NODE__:__DESCRIPTION__": [
-              "S2",
-              "10.0.0.2",
-              "ADM"
-            ],
+            "// __NODE__:__DESCRIPTION__": {
+              "name": "AN12",
+              "identifier": "10.0.0.2",
+              "type": "Abstract Node",
+              "physical node(s)": "S5, S6, S7, S8"
+            },
             "node-id": "10.0.0.2",
             "ietf-te-topology:te-node-id": "10.0.0.2",
             "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
               "te-node-attributes": {
-                "name": "S2-robinson_park_ring-access",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
+                "name": "AN12",
+                "// __DISCUSS__ domain-id": 65001,
+                "admin-status": "up"
               },
+              "oper-status": "up",
               "// __DISCUSS__ tunnel-termination-point": []
             },
             "ietf-network-topology:termination-point": [
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S2-1 LTP",
-                  "connected to (C-R4)",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-2",
-                  "tributary port"
-                ],
-                "// comment": "S2-1 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-1 LTP",
+                  "link type(s)": "OTU-2",
+                  "physical node": "S6",
+                  "unnumberd/ifIndex": 1,
+                  "port type": "tributary port",
+                  "connected to": "R2"
+                },
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "// _OBSOLETE_ ietf-otn-topology:client-facing": [
-                    null
-                  ],
+                  "name": "AN12-1 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU2",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
+                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S2-2 LTP",
-                  "connected to S1-1",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S2-2 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-2 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S5",
+                  "unnumberd/ifIndex": 2,
+                  "port type": "line port",
+                  "connected to": "S3-4"
+                },
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
+                  "name": "AN12-2 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S2-3 LTP",
-                  "connected to S8-2",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S2-3 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-3 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S8",
+                  "unnumberd/ifIndex": 2,
+                  "port type": "line port",
+                  "connected to": "S4-2"
+                },
                 "tp-id": "3",
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
+                  "name": "AN12-3 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S7",
-              "10.0.0.7",
-              "ADM"
-            ],
-            "node-id": "10.0.0.7",
-            "ietf-te-topology:te-node-id": "10.0.0.7",
-            "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
-              "te-node-attributes": {
-                "name": "S7-east_end_ring-gateway",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S7-1 LTP",
-                  "connected to S5-3",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S7-1 LTP",
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S7-2 LTP",
-                  "connected to S6-4",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S7-2 LTP",
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S7-3 LTP",
-                  "connected to S8-4",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S7-3 LTP",
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S8",
-              "10.0.0.8",
-              "ADM"
-            ],
-            "node-id": "10.0.0.8",
-            "ietf-te-topology:te-node-id": "10.0.0.8",
-            "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
-              "te-node-attributes": {
-                "name": "S8-metro_main_ring-access",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S8-1 LTP",
-                  "connected to (C-R5)",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-2",
-                  "tributary port"
-                ],
-                "// comment": "S8-1 LTP",
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "// _OBSOLETE_ ietf-otn-topology:client-facing": [
-                    null
-                  ],
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU2",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S8-2 LTP",
-                  "connected to S2-3",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S8-2 LTP",
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S8-3 LTP",
-                  "connected to S4-2",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S8-3 LTP",
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S8-4 LTP",
-                  "connected to S7-3",
-                  "unnumberd/ifIndex: 4",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S8-4 LTP",
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-4 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S8",
+                  "unnumberd/ifIndex": 3,
+                  "port type": "line port",
+                  "connected to": "S2-3"
+                },
                 "tp-id": "4",
                 "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
+                  "name": "AN12-4 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S5",
-              "10.0.0.5",
-              "ADM"
-            ],
-            "node-id": "10.0.0.5",
-            "ietf-te-topology:te-node-id": "10.0.0.5",
-            "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
-              "te-node-attributes": {
-                "name": "S5-east_end_ring-gateway",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S5-1 LTP",
-                  "connected to S3-4",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S5-1 LTP",
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S5-2 LTP",
-                  "connected to S6-3",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S5-2 LTP",
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-5 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S8",
+                  "unnumberd/ifIndex": 4,
+                  "port type": "inter-domain port",
+                  "connected to": "S32"
+                },
+                "tp-id": "5",
+                "ietf-te-topology:te-tp-id": 5,
                 "ietf-te-topology:te": {
+                  "name": "AN12-5 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S5-3 LTP",
-                  "connected to S7-1",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S5-3 LTP",
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-6 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S8",
+                  "unnumberd/ifIndex": 5,
+                  "port type": "inter-domain port",
+                  "connected to": "S12"
+                },
+                "tp-id": "6",
+                "ietf-te-topology:te-tp-id": 6,
                 "ietf-te-topology:te": {
+                  "name": "AN12-6 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": [
-              "S6",
-              "10.0.0.6",
-              "ADM"
-            ],
-            "node-id": "10.0.0.6",
-            "ietf-te-topology:te-node-id": "10.0.0.6",
-            "ietf-te-topology:te": {
-              "// comment": "TO BE COMPLETED",
-              "oper-status": "up",
-              "te-node-attributes": {
-                "name": "S6-east_end_ring-access",
-                "admin-status": "up",
-                "// __DISCUSS__ domain-id": 65001
-              },
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S6-1 LTP",
-                  "connected to (C-R2)",
-                  "unnumberd/ifIndex: 1",
-                  "OTU-2",
-                  "tributary port"
-                ],
-                "// comment": "S6-1 LTP",
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// _OBSOLETE_ ietf-otn-topology:client-facing": [
-                    null
-                  ],
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU2",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S6-2 LTP",
-                  "connected to (C-R3)",
-                  "unnumberd/ifIndex: 2",
-                  "OTU-2",
-                  "tributary port"
-                ],
-                "// comment": "S6-2 LTP",
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-7 LTP",
+                  "link type(s)": "OTU-4",
+                  "physical node": "S7",
+                  "unnumberd/ifIndex": 4,
+                  "port type": "inter-domain port",
+                  "connected to": "S11"
+                },
+                "tp-id": "7",
+                "ietf-te-topology:te-tp-id": 7,
                 "ietf-te-topology:te": {
+                  "name": "AN12-7 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
-                  "// _OBSOLETE_ ietf-otn-topology:client-facing": [
-                    null
-                  ],
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU2",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S6-3 LTP",
-                  "connected to S5-2",
-                  "unnumberd/ifIndex: 3",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S6-3 LTP",
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
+                "// __DESCRIPTION__:__LTP__": {
+                  "name": "AN12-8 LTP",
+                  "link type(s)": "OTU-2",
+                  "physical node": "S6",
+                  "unnumberd/ifIndex": 4,
+                  "port type": "tributary port",
+                  "connected to": "R3"
+                },
+                "tp-id": "8",
+                "ietf-te-topology:te-tp-id": 8,
                 "ietf-te-topology:te": {
+                  "name": "AN12-8 LTP",
                   "admin-status": "up",
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": [
-                  "S6-4 LTP",
-                  "connected to S7-2",
-                  "unnumberd/ifIndex: 4",
-                  "OTU-4",
-                  "line port"
-                ],
-                "// comment": "S6-4 LTP",
-                "tp-id": "4",
-                "ietf-te-topology:te-tp-id": 4,
-                "ietf-te-topology:te": {
-                  "admin-status": "up",
-                  "oper-status": "up",
-                  "// ietf-otn-topology:supported-payload-types":
-                    "__DISCUSS__",
-                  "// _OBSOLETE_ ietf-otn-topology:protocol-type":
-                    "ietf-transport-types:prot-OTU4",
-                  "// _OBSOLETE_ ietf-otn-topology:adaptation-type":
-                    "ODU"
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
+                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               }
             ]
           }
         ],
-        "// ietf-network-topology:link":
-          "Access links to be added in a future update.",
+        "// ietf-network-topology:link": "Access links to be reviewed in a future update",
         "ietf-network-topology:link": [
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S1-2 to S3-2",
-              "internal link"
-            ],
-            "// link-id": "S1, S1-2, S3, S3-2",
-            "link-id": "10.0.0.1,2,10.0.0.3,2",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Access Link from AN11-1",
+              "type": "access link",
+              "physical link": "Link from S3-1 to R1"
+            },
+            "link-id": "teNodeId/10.0.0.1/teLinkId/1",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 1
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "// comment": [
-                  "external-domain container",
-                  "not present for internal links"
-                ],
-                "name": "Link between S1 and S3",
+                "name": "Access Link from AN11-1",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
-                    "switching-capability":
-                      "ietf-te-types:switching-otn",
+                    "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
+                        "// __DISCUSS__ te-bandwidth": "ODU2"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "unreserved-bandwidth": [
                       {
-                        "priority": 1,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 2,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 3,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 4,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 5,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 6,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "priority": 7,
-                        "te-bandwidth": {
-                          "// _OBSOLETE_ otn": [
-  "_WARNING_ : technology specific bandwidth definition",
-                            {
-                              "rate-type": "ietf-te-types:odu2",
-                              "counter": 1
-                            }
-                          ]
-                        }
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU2"
                       }
                     ]
                   }
                 ]
-              }
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S5-2 to S6-3",
-              "internal link"
-            ],
-            "// link-id": "S5, S5-2, S6, S6-3",
-            "link-id": "10.0.0.5,2,10.0.0.6,3",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Inter-domain Link from AN11-2",
+              "type": "inter-domain link",
+              "physical link": "Link from S3-2 to S31"
+            },
+            "link-id": "teNodeId/10.0.0.1/teLinkId/2",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 2
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S5 and S6",
-                "admin-status": "up"
-              }
+                "name": "Inter-domain Link from AN11-2",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S3-3 to S4-1",
-              "internal link"
-            ],
-            "// link-id": "S3, S3-3, S4, S4-1",
-            "link-id": "10.0.0.3,3,10.0.0.4,1",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN11-3 to AN12-4",
+              "type": "internal link",
+              "physical link": "Link from S2-3 to S8-3"
+            },
+            "link-id": "teNodeId/10.0.0.1/teLinkId/3",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 3
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 4
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S3 and S4",
-                "admin-status": "up"
-              }
+                "name": "Link from AN11-3 to AN12-4",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S5-3 to S7-1",
-              "internal link"
-            ],
-            "// link-id": "S5, S5-3, S7, S7-1",
-            "link-id": "10.0.0.5,3,10.0.0.7,1",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN12-4 to AN11-3",
+              "type": "internal link",
+              "physical link": "Link from S8-3 to S2-3"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/4",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 4
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 3
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S5 and S7",
-                "admin-status": "up"
-              }
+                "name": "Link from AN12-4 to AN11-3",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S3-4 to S5-1",
-              "internal link"
-            ],
-            "// link-id": "S3, S3-4, S5, S5-1",
-            "link-id": "10.0.0.3,4,10.0.0.5,1",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN11-4 to AN12-3",
+              "type": "internal link",
+              "physical link": "Link from S4-2 to S8-2"
+            },
+            "link-id": "teNodeId/10.0.0.1/teLinkId/4",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 4
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 4
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S3 and S5",
-                "admin-status": "up"
-              }
+                "name": "Link from AN11-4 to AN12-3",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S4-2 to S8-3",
-              "internal link"
-            ],
-            "// link-id": "S4, S4-2, S8, S8-3",
-            "link-id": "10.0.0.4,2,10.0.0.8,3",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN12-3 to AN11-4",
+              "type": "internal link",
+              "physical link": "Link from S8-2 to S4-2"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/4",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 3
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 4
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S4 and S8",
-                "admin-status": "up"
-              }
+                "name": "Link from AN12-3 to AN11-4",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S2-3 to S8-2",
-              "internal link"
-            ],
-            "// link-id": "S2, S2-3, S8, S8-2",
-            "link-id": "10.0.0.2,3,10.0.0.8,2",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN11-5 to AN12-2",
+              "type": "internal link",
+              "physical link": "Link from S3-4 to S5-2"
+            },
+            "link-id": "teNodeId/10.0.0.1/teLinkId/5",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 5
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 2
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S2 and S8",
-                "admin-status": "up"
-              }
+                "name": "Link from AN11-5 to AN12-2",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S8-2 to S2-3",
-              "internal link"
-            ],
-            "// link-id": "S8, S8-2, S2, S2-3",
-            "link-id": "10.0.0.8,2,10.0.0.2,3",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Link from AN12-2 to AN11-5",
+              "type": "internal link",
+              "physical link": "Link from S5-2 to S3-4"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/2",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 2
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 5
+            },
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S8 and S2",
-                "admin-status": "up"
-              }
+                "name": "Link from AN12-2 to AN11-5",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S3-2 to S1-2",
-              "internal link"
-            ],
-            "// link-id": "S3, S3-2, S1, S1-2",
-            "link-id": "10.0.0.3,2,10.0.0.1,2",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Access Link from AN12-1",
+              "type": "access link",
+              "physical link": "Link from S6-1 to R2"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/1",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 1
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S3 and S1",
-                "admin-status": "up"
-              }
+                "name": "Access Link from AN12-1",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU2"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S7-1 to S5-3",
-              "internal link"
-            ],
-            "// link-id": "S7, S7-1, S5, S5-3",
-            "link-id": "10.0.0.7,1,10.0.0.5,3",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Inter-domain Link from AN12-5",
+              "type": "inter-domain link",
+              "physical link": "Link from S8-4 to S32"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/5",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 5
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S7 and S5",
-                "admin-status": "up"
-              }
+                "name": "Inter-domain Link from AN12-5",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S8-3 to S4-2",
-              "internal link"
-            ],
-            "// link-id": "S8, S8-3, S4, S4-2",
-            "link-id": "10.0.0.8,3,10.0.0.4,2",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Inter-domain Link from AN12-6",
+              "type": "inter-domain link",
+              "physical link": "Link from S8-5 to S12"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/6",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 6
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S8 and S4",
-                "admin-status": "up"
-              }
+                "name": "Inter-domain Link from AN12-6",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S5-1 to S3-4",
-              "internal link"
-            ],
-            "// link-id": "S5, S5-1, S3, S3-4",
-            "link-id": "10.0.0.5,1,10.0.0.3,4",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Inter-domain Link from AN12-7",
+              "type": "inter-domain link",
+              "physical link": "Link from S7-4 to S11"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/7",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 7
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S5 and S3",
-                "admin-status": "up"
-              }
+                "name": "Inter-domain Link from AN12-7",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU4"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S2-2 to S1-1",
-              "internal link"
-            ],
-            "// link-id": "S2, S2-2, S1, S1-1",
-            "link-id": "10.0.0.2,2,10.0.0.1,1",
+            "// __DESCRIPTION__:__LINK__": {
+              "name": "Access Link from AN12-8",
+              "type": "access link",
+              "physical link": "Link from S6-4 to R3"
+            },
+            "link-id": "teNodeId/10.0.0.2/teLinkId/8",
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 8
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
+                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link between S2 and S1",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S7-2 to S6-4",
-              "internal link"
-            ],
-            "// link-id": "S7, S7-2, S6, S6-4",
-            "link-id": "10.0.0.7,2,10.0.0.6,4",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S7 and S6",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S8-4 to S7-3",
-              "internal link"
-            ],
-            "// link-id": "S8, S8-4, S7, S7-3",
-            "link-id": "10.0.0.8,4,10.0.0.7,3",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S8 and S7",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S6-3 to S5-2",
-              "internal link"
-            ],
-            "// link-id": "S6, S6-3, S5, S5-2",
-            "link-id": "10.0.0.6,3,10.0.0.5,2",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S6 and S5",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S4-1 to S3-3",
-              "internal link"
-            ],
-            "// link-id": "S4, S4-1, S3, S3-3",
-            "link-id": "10.0.0.4,1,10.0.0.3,3",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S4 and S3",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S6-4 to S7-2",
-              "internal link"
-            ],
-            "// link-id": "S6, S6-4, S7, S7-2",
-            "link-id": "10.0.0.6,4,10.0.0.7,2",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S6 and S7",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S1-1 to S2-2",
-              "internal link"
-            ],
-            "// link-id": "S1, S1-1, S2, S2-2",
-            "link-id": "10.0.0.1,1,10.0.0.2,2",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S1 and S2",
-                "admin-status": "up"
-              }
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": [
-              "Link from S7-3 to S8-4",
-              "internal link"
-            ],
-            "// link-id": "S7, S7-3, S8, S8-4",
-            "link-id": "10.0.0.7,3,10.0.0.8,4",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "access-type": "point-to-point",
-                "name": "Link between S7 and S8",
-                "admin-status": "up"
-              }
+                "name": "Access Link from AN12-8",
+                "admin-status": "up",
+                "interface-switching-capability": [
+                  {
+                    "switching-capability": "ietf-te-types:switching-otn",
+                    "encoding": "ietf-te-types:lsp-encoding-oduk",
+                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
+                    "max-lsp-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "ODU2"
+                      }
+                    ],
+                    "// __DISCUSS__ label-restrictions": "To be added?",
+                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
+                    "link-protection-type": "unprotected",
+                    "max-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "max-resv-link-bandwidth": {
+                      "// __DISCUSS__ te-bandwidth": "1xODU2"
+                    },
+                    "unreserved-bandwidth": [
+                      {
+                        "priority": 0,
+                        "// __DISCUSS__ te-bandwidth": "1xODU2"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "oper-status": "up"
             }
           }
         ]
