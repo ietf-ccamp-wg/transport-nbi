@@ -1,5 +1,6 @@
 {
-  "// __LAST_UPDATE__": "October 3, 2018",
+  "// __TITLE__": "ODU Abstract Topology @ MPI1",
+  "// __LAST_UPDATE__": "October 5, 2018",
   "// __MISSING_ATTRIBUTES__": true,
   "// __REFERENCE_DRAFTS__": {
     "ietf-network@2018-02-26": "rfc8345",
@@ -14,7 +15,6 @@
     "operation": "GET",
     "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
   },
-  "// __TITLE__": "ODU Abstract Topology @ MPI1",
   "ietf-network:networks": {
     "network": [
       {
