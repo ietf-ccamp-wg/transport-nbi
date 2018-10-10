@@ -1,20 +1,20 @@
 {
   "// __TITLE__": "ODU Abstract Topology @ MPI1",
-  "// __LAST_UPDATE__": "October 5, 2018",
-  "// __MISSING_ATTRIBUTES__": true,
+  "// __LAST_UPDATE__": "October 10, 2018",
+  "// __RESTCONF_OPERATION__": {
+    "operation": "GET",
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
+  },
   "// __REFERENCE_DRAFTS__": {
+    "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-network@2018-02-26": "rfc8345",
     "ietf-network-topology@2018-02-26": "rfc8345",
-    "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
     "ietf-te-topology@2018-06-15": "draft-ietf-teas-yang-te-topo-18",
     "ietf-otn-types@2018-08-23": "draft-ietf-ccamp-otn-tunnel-model-05",
     "ietf-otn-topology@2018-08-23": "draft-ietf-ccamp-otn-topo-yang-05"
   },
-  "// __RESTCONF_OPERATION__": {
-    "operation": "GET",
-    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
-  },
+  "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
     "network": [
       {
@@ -45,7 +45,6 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "// __DISCUSS__ domain-id": 65001,
                 "admin-status": "up"
               },
               "oper-status": "up",
@@ -66,7 +65,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN11-1 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/1)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
@@ -87,8 +86,8 @@
                 "ietf-te-topology:te": {
                   "name": "AN11-2 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/2)",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
                   "// __DEFAULT__ ietf-otn-topology:client-facing": false
@@ -108,7 +107,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN11-3 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/3)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
@@ -129,7 +128,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN11-4 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/4)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
@@ -150,11 +149,11 @@
                 "ietf-te-topology:te": {
                   "name": "AN11-5 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "See Link attributes (teNodeId/10.0.0.1/teLinkId/5)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+                  "// __DEFAULT__ ietf-otn-topology:client-facing": false,
+                  "// __DISCUSS__ interface-switching-capability": "ODU switching"
                 }
               }
             ]
@@ -171,7 +170,6 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN12",
-                "// __DISCUSS__ domain-id": 65001,
                 "admin-status": "up"
               },
               "oper-status": "up",
@@ -192,7 +190,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-1 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/1)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
@@ -213,7 +211,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-2 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/2)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
@@ -234,7 +232,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-3 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/3)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
@@ -255,7 +253,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-4 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/4)",
                   "// __EMPTY__ inter-domain-plug-id": "Internal Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
@@ -276,7 +274,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-5 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/5)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -297,7 +295,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-6 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/6)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -318,7 +316,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-7 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/7)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -339,7 +337,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN12-8 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/8)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
@@ -358,12 +356,8 @@
               "physical link": "Link from S3-1 to R1"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 1
-            },
-            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -373,7 +367,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -397,9 +390,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 1
+            },
+            "// __EMPTY__ destination": "access link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -408,12 +405,8 @@
               "physical link": "Link from S3-2 to S31"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/2",
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 2
-            },
-            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -423,7 +416,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -447,9 +439,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 2
+            },
+            "// __EMPTY__ destination": "inter-domain link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -458,15 +454,8 @@
               "physical link": "Link from S2-3 to S8-3"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/3",
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 3
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 4
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -476,7 +465,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -500,8 +488,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 3
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 4
             }
           },
           {
@@ -511,15 +506,8 @@
               "physical link": "Link from S8-3 to S2-3"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/4",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 4
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 3
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -529,7 +517,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -553,8 +540,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 4
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 3
             }
           },
           {
@@ -564,15 +558,8 @@
               "physical link": "Link from S4-2 to S8-2"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/4",
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 4
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 4
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -582,7 +569,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -606,8 +592,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 4
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 4
             }
           },
           {
@@ -617,15 +610,8 @@
               "physical link": "Link from S8-2 to S4-2"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/4",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 3
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 4
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -635,7 +621,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -659,8 +644,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 3
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 4
             }
           },
           {
@@ -670,15 +662,8 @@
               "physical link": "Link from S3-4 to S5-2"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/5",
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 5
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 2
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -688,7 +673,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -712,8 +696,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 5
+            },
+            "destination": {
+              "dest-node": "10.0.0.2",
+              "dest-tp": 2
             }
           },
           {
@@ -723,15 +714,8 @@
               "physical link": "Link from S5-2 to S3-4"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/2",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 2
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 5
-            },
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -741,7 +725,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -765,8 +748,15 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 2
+            },
+            "destination": {
+              "dest-node": "10.0.0.1",
+              "dest-tp": 5
             }
           },
           {
@@ -776,12 +766,8 @@
               "physical link": "Link from S6-1 to R2"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/1",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 1
-            },
-            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -791,7 +777,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -815,9 +800,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 1
+            },
+            "// __EMPTY__ destination": "access link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -826,12 +815,8 @@
               "physical link": "Link from S8-4 to S32"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/5",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 5
-            },
-            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -841,7 +826,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -865,9 +849,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 5
+            },
+            "// __EMPTY__ destination": "inter-domain link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -876,12 +864,8 @@
               "physical link": "Link from S8-5 to S12"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/6",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 6
-            },
-            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -891,7 +875,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -915,9 +898,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 6
+            },
+            "// __EMPTY__ destination": "inter-domain link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -926,12 +913,8 @@
               "physical link": "Link from S7-4 to S11"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/7",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 7
-            },
-            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -941,7 +924,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -965,9 +947,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 7
+            },
+            "// __EMPTY__ destination": "inter-domain link"
           },
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -976,12 +962,8 @@
               "physical link": "Link from S6-4 to R3"
             },
             "link-id": "teNodeId/10.0.0.2/teLinkId/8",
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 8
-            },
-            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
+              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
@@ -991,7 +973,6 @@
                   {
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "// __DISCUSS__ max-lsp-bandwidth": "What is the defaul priority? 0 or 7?",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
@@ -1015,9 +996,13 @@
                     ]
                   }
                 ]
-              },
-              "oper-status": "up"
-            }
+              }
+            },
+            "source": {
+              "source-node": "10.0.0.2",
+              "source-tp": 8
+            },
+            "// __EMPTY__ destination": "access link"
           }
         ]
       }
