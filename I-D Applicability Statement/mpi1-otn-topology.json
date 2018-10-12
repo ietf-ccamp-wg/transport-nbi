@@ -1,24 +1,24 @@
 {
-  "// __TITLE__": "ODU Abstract Topology @ MPI1",
+  "// __TITLE__": "ODU Black Topology @ MPI1",
   "// __LAST_UPDATE__": "October 10, 2018",
-  "// __RESTCONF_OPERATION__": {
-    "operation": "GET",
-    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
-  },
+  "// __MISSING_ATTRIBUTES__": true,
   "// __REFERENCE_DRAFTS__": {
-    "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-network@2018-02-26": "rfc8345",
     "ietf-network-topology@2018-02-26": "rfc8345",
+    "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
     "ietf-te-topology@2018-06-15": "draft-ietf-teas-yang-te-topo-18",
     "ietf-otn-types@2018-08-23": "draft-ietf-ccamp-otn-tunnel-model-05",
     "ietf-otn-topology@2018-08-23": "draft-ietf-ccamp-otn-topo-yang-05"
   },
-  "// __MISSING_ATTRIBUTES__": true,
+  "// __RESTCONF_OPERATION__": {
+    "operation": "GET",
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
+  },
   "ietf-network:networks": {
     "network": [
       {
-        "network-id": "providerId/201/clientId/300/topologyId/otn-abstract-topology",
+        "network-id": "providerId/201/clientId/300/topologyId/otn-black-topology",
         "network-types": {
           "ietf-te-topology:te-topology": {
             "ietf-otn-topology:otn-topology": {}
@@ -26,19 +26,19 @@
         },
         "ietf-te-topology:provider-id": 201,
         "ietf-te-topology:client-id": 300,
-        "ietf-te-topology:te-topology-id": "otn-abstract-topology",
+        "ietf-te-topology:te-topology-id": "otn-black-topology",
         "// ietf-te-topology:te": "te container presence requires: provider-id, client-id and te-topology-id",
         "ietf-te-topology:te": {
-          "name": "OTN Abstract Topology @ MPI1"
+          "name": "OTN Black Topology @ MPI1"
         },
         "// ietf-network:node": "Access LTPs to be reviewed in a future update",
         "ietf-network:node": [
           {
             "// __NODE__:__DESCRIPTION__": {
-              "name": "AN11",
+              "name": "AN1",
               "identifier": "10.0.0.1",
               "type": "Abstract Node",
-              "physical node(s)": "S1, S2, S3, S4"
+              "physical node(s)": "whole network domain 1"
             },
             "node-id": "10.0.0.1",
             "ietf-te-topology:te-node-id": "10.0.0.1",
@@ -53,7 +53,7 @@
             "ietf-network-topology:termination-point": [
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN11-1 LTP",
+                  "name": "AN1-1 LTP",
                   "link type(s)": "OTU-2",
                   "physical node": "S3",
                   "unnumberd/ifIndex": 1,
@@ -63,7 +63,7 @@
                 "tp-id": "1",
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
-                  "name": "AN11-1 LTP",
+                  "name": "AN1-1 LTP",
                   "admin-status": "up",
                   "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/1)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
@@ -74,7 +74,7 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN11-2 LTP",
+                  "name": "AN1-2 LTP",
                   "link type(s)": "OTU-4",
                   "physical node": "S2",
                   "unnumberd/ifIndex": 2,
@@ -84,10 +84,10 @@
                 "tp-id": "2",
                 "ietf-te-topology:te-tp-id": 2,
                 "ietf-te-topology:te": {
-                  "name": "AN11-2 LTP",
+                  "name": "AN1-2 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/2)",
+                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
                   "// __DEFAULT__ ietf-otn-topology:client-facing": false
@@ -95,102 +95,19 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN11-3 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S2",
-                  "unnumberd/ifIndex": 3,
-                  "port type": "line port",
-                  "connected to": "S8-3"
-                },
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
-                "ietf-te-topology:te": {
-                  "name": "AN11-3 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/3)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN11-4 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S4",
-                  "unnumberd/ifIndex": 2,
-                  "port type": "line port",
-                  "connected to": "S8-3"
-                },
-                "tp-id": "4",
-                "ietf-te-topology:te-tp-id": 4,
-                "ietf-te-topology:te": {
-                  "name": "AN11-4 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/4)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN11-5 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S3",
-                  "unnumberd/ifIndex": 4,
-                  "port type": "line port",
-                  "connected to": "S5-2"
-                },
-                "tp-id": "5",
-                "ietf-te-topology:te-tp-id": 5,
-                "ietf-te-topology:te": {
-                  "name": "AN11-5 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "See Link attributes (teNodeId/10.0.0.1/teLinkId/5)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false,
-                  "// __DISCUSS__ interface-switching-capability": "ODU switching"
-                }
-              }
-            ]
-          },
-          {
-            "// __NODE__:__DESCRIPTION__": {
-              "name": "AN12",
-              "identifier": "10.0.0.2",
-              "type": "Abstract Node",
-              "physical node(s)": "S5, S6, S7, S8"
-            },
-            "node-id": "10.0.0.2",
-            "ietf-te-topology:te-node-id": "10.0.0.2",
-            "ietf-te-topology:te": {
-              "te-node-attributes": {
-                "name": "AN12",
-                "admin-status": "up"
-              },
-              "oper-status": "up",
-              "// __DISCUSS__ tunnel-termination-point": []
-            },
-            "ietf-network-topology:termination-point": [
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-1 LTP",
+                  "name": "AN1-3 LTP",
                   "link type(s)": "OTU-2",
                   "physical node": "S6",
                   "unnumberd/ifIndex": 1,
                   "port type": "tributary port",
                   "connected to": "R2"
                 },
-                "tp-id": "1",
-                "ietf-te-topology:te-tp-id": 1,
+                "tp-id": "3",
+                "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
-                  "name": "AN12-1 LTP",
+                  "name": "AN1-3 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/1)",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/3)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
@@ -199,82 +116,19 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-2 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S5",
-                  "unnumberd/ifIndex": 2,
-                  "port type": "line port",
-                  "connected to": "S3-4"
-                },
-                "tp-id": "2",
-                "ietf-te-topology:te-tp-id": 2,
-                "ietf-te-topology:te": {
-                  "name": "AN12-2 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/2)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-3 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S8",
-                  "unnumberd/ifIndex": 2,
-                  "port type": "line port",
-                  "connected to": "S4-2"
-                },
-                "tp-id": "3",
-                "ietf-te-topology:te-tp-id": 3,
-                "ietf-te-topology:te": {
-                  "name": "AN12-3 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/3)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-4 LTP",
-                  "link type(s)": "OTU-4",
-                  "physical node": "S8",
-                  "unnumberd/ifIndex": 3,
-                  "port type": "line port",
-                  "connected to": "S2-3"
-                },
-                "tp-id": "4",
-                "ietf-te-topology:te-tp-id": 4,
-                "ietf-te-topology:te": {
-                  "name": "AN12-4 LTP",
-                  "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/4)",
-                  "// __EMPTY__ inter-domain-plug-id": "Internal Link",
-                  "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (internal OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
-                }
-              },
-              {
-                "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-5 LTP",
+                  "name": "AN1-4 LTP",
                   "link type(s)": "OTU-4",
                   "physical node": "S8",
                   "unnumberd/ifIndex": 4,
                   "port type": "inter-domain port",
                   "connected to": "S32"
                 },
-                "tp-id": "5",
-                "ietf-te-topology:te-tp-id": 5,
+                "tp-id": "4",
+                "ietf-te-topology:te-tp-id": 4,
                 "ietf-te-topology:te": {
-                  "name": "AN12-5 LTP",
+                  "name": "AN1-4 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/5)",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/4)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -283,19 +137,19 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-6 LTP",
+                  "name": "AN1-5 LTP",
                   "link type(s)": "OTU-4",
                   "physical node": "S8",
                   "unnumberd/ifIndex": 5,
                   "port type": "inter-domain port",
                   "connected to": "S12"
                 },
-                "tp-id": "6",
-                "ietf-te-topology:te-tp-id": 6,
+                "tp-id": "5",
+                "ietf-te-topology:te-tp-id": 5,
                 "ietf-te-topology:te": {
-                  "name": "AN12-6 LTP",
+                  "name": "AN1-5 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/6)",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/5)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -304,19 +158,19 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-7 LTP",
+                  "name": "AN1-6 LTP",
                   "link type(s)": "OTU-4",
                   "physical node": "S7",
                   "unnumberd/ifIndex": 4,
                   "port type": "inter-domain port",
                   "connected to": "S11"
                 },
-                "tp-id": "7",
-                "ietf-te-topology:te-tp-id": 7,
+                "tp-id": "6",
+                "ietf-te-topology:te-tp-id": 6,
                 "ietf-te-topology:te": {
-                  "name": "AN12-7 LTP",
+                  "name": "AN1-6 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/7)",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/6)",
                   "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
@@ -325,19 +179,19 @@
               },
               {
                 "// __DESCRIPTION__:__LTP__": {
-                  "name": "AN12-8 LTP",
+                  "name": "AN1-7 LTP",
                   "link type(s)": "OTU-2",
                   "physical node": "S6",
                   "unnumberd/ifIndex": 4,
                   "port type": "tributary port",
                   "connected to": "R3"
                 },
-                "tp-id": "8",
-                "ietf-te-topology:te-tp-id": 8,
+                "tp-id": "7",
+                "ietf-te-topology:te-tp-id": 7,
                 "ietf-te-topology:te": {
-                  "name": "AN12-8 LTP",
+                  "name": "AN1-7 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.2/teLinkId/8)",
+                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/7)",
                   "// __DISCUSS__ inter-domain-plug-id": "Access Link",
                   "oper-status": "up",
                   "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
@@ -351,17 +205,21 @@
         "ietf-network-topology:link": [
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Access Link from AN11-1",
+              "name": "Access Link from AN1-1",
               "type": "access link",
               "physical link": "Link from S3-1 to R1"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 1
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Access Link from AN11-1",
+                "name": "Access Link from AN1-1",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -390,76 +248,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 1
-            },
-            "// __EMPTY__ destination": "access link"
+              },
+              "oper-status": "up"
+            }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Inter-domain Link from AN11-2",
+              "name": "Inter-domain Link from AN1-2",
               "type": "inter-domain link",
-              "physical link": "Link from S3-2 to S31"
+              "physical link": "Link from S2-2 to S31"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/2",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Inter-domain Link from AN11-2",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
             "source": {
               "source-node": "10.0.0.1",
               "source-tp": 2
             },
-            "// __EMPTY__ destination": "inter-domain link"
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN11-3 to AN12-4",
-              "type": "internal link",
-              "physical link": "Link from S2-3 to S8-3"
-            },
-            "link-id": "teNodeId/10.0.0.1/teLinkId/3",
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Link from AN11-3 to AN12-4",
+                "name": "Inter-domain Link from AN1-2",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -488,290 +297,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 3
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 4
+              },
+              "oper-status": "up"
             }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN12-4 to AN11-3",
-              "type": "internal link",
-              "physical link": "Link from S8-3 to S2-3"
-            },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/4",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Link from AN12-4 to AN11-3",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 4
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 3
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN11-4 to AN12-3",
-              "type": "internal link",
-              "physical link": "Link from S4-2 to S8-2"
-            },
-            "link-id": "teNodeId/10.0.0.1/teLinkId/4",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Link from AN11-4 to AN12-3",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 4
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 4
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN12-3 to AN11-4",
-              "type": "internal link",
-              "physical link": "Link from S8-2 to S4-2"
-            },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/4",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Link from AN12-3 to AN11-4",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 3
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 4
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN11-5 to AN12-2",
-              "type": "internal link",
-              "physical link": "Link from S3-4 to S5-2"
-            },
-            "link-id": "teNodeId/10.0.0.1/teLinkId/5",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Link from AN11-5 to AN12-2",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.1",
-              "source-tp": 5
-            },
-            "destination": {
-              "dest-node": "10.0.0.2",
-              "dest-tp": 2
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Link from AN12-2 to AN11-5",
-              "type": "internal link",
-              "physical link": "Link from S5-2 to S3-4"
-            },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/2",
-            "ietf-te-topology:te": {
-              "oper-status": "up",
-              "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
-                "access-type": "point-to-point",
-                "name": "Link from AN12-2 to AN11-5",
-                "admin-status": "up",
-                "interface-switching-capability": [
-                  {
-                    "switching-capability": "ietf-te-types:switching-otn",
-                    "encoding": "ietf-te-types:lsp-encoding-oduk",
-                    "max-lsp-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "ODU4"
-                      }
-                    ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 2
-            },
-            "destination": {
-              "dest-node": "10.0.0.1",
-              "dest-tp": 5
-            }
-          },
-          {
-            "// __DESCRIPTION__:__LINK__": {
-              "name": "Access Link from AN12-1",
+              "name": "Access Link from AN1-3",
               "type": "access link",
               "physical link": "Link from S6-1 to R2"
             },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/1",
+            "link-id": "teNodeId/10.0.0.1/teLinkId/3",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 3
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Access Link from AN12-1",
+                "name": "Access Link from AN1-3",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -800,27 +346,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 1
-            },
-            "// __EMPTY__ destination": "access link"
+              },
+              "oper-status": "up"
+            }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Inter-domain Link from AN12-5",
+              "name": "Inter-domain Link from AN1-4",
               "type": "inter-domain link",
               "physical link": "Link from S8-4 to S32"
             },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/5",
+            "link-id": "teNodeId/10.0.0.1/teLinkId/4",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 4
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Inter-domain Link from AN12-5",
+                "name": "Inter-domain Link from AN1-4",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -849,27 +395,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 5
-            },
-            "// __EMPTY__ destination": "inter-domain link"
+              },
+              "oper-status": "up"
+            }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Inter-domain Link from AN12-6",
+              "name": "Inter-domain Link from AN1-5",
               "type": "inter-domain link",
               "physical link": "Link from S8-5 to S12"
             },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/6",
+            "link-id": "teNodeId/10.0.0.1/teLinkId/4",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 5
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Inter-domain Link from AN12-6",
+                "name": "Inter-domain Link from AN1-5",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -898,27 +444,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 6
-            },
-            "// __EMPTY__ destination": "inter-domain link"
+              },
+              "oper-status": "up"
+            }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Inter-domain Link from AN12-7",
+              "name": "Inter-domain Link from AN1-6",
               "type": "inter-domain link",
               "physical link": "Link from S7-4 to S11"
             },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/7",
+            "link-id": "teNodeId/10.0.0.1/teLinkId/6",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 6
+            },
+            "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Inter-domain Link from AN12-7",
+                "name": "Inter-domain Link from AN1-6",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -947,27 +493,27 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 7
-            },
-            "// __EMPTY__ destination": "inter-domain link"
+              },
+              "oper-status": "up"
+            }
           },
           {
             "// __DESCRIPTION__:__LINK__": {
-              "name": "Access Link from AN12-8",
+              "name": "Access Link from AN1-7",
               "type": "access link",
               "physical link": "Link from S6-4 to R3"
             },
-            "link-id": "teNodeId/10.0.0.2/teLinkId/8",
+            "link-id": "teNodeId/10.0.0.1teLinkId/7",
+            "source": {
+              "source-node": "10.0.0.1",
+              "source-tp": 7
+            },
+            "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
-              "oper-status": "up",
               "te-link-attributes": {
                 "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
-                "name": "Access Link from AN12-8",
+                "name": "Access Link from AN1-7",
                 "admin-status": "up",
                 "interface-switching-capability": [
                   {
@@ -996,13 +542,9 @@
                     ]
                   }
                 ]
-              }
-            },
-            "source": {
-              "source-node": "10.0.0.2",
-              "source-tp": 8
-            },
-            "// __EMPTY__ destination": "access link"
+              },
+              "oper-status": "up"
+            }
           }
         ]
       }
