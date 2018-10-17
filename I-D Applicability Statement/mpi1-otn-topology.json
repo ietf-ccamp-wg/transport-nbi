@@ -7,18 +7,23 @@
     "ietf-network-topology@2018-02-26": "rfc8345",
     "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2018-06-12": "draft-ietf-teas-yang-te-15",
-    "ietf-te-topology@2018-06-15": "draft-ietf-teas-yang-te-topo-18",
-    "ietf-otn-types@2018-08-23": "draft-ietf-ccamp-otn-tunnel-model-05",
-    "ietf-otn-topology@2018-08-23": "draft-ietf-ccamp-otn-topo-yang-05"
+    "ietf-te-topology@2018-06-15":
+     "draft-ietf-teas-yang-te-topo-18",
+    "ietf-otn-types@2018-08-23":
+     "draft-ietf-ccamp-otn-tunnel-model-05",
+    "ietf-otn-topology@2018-08-23":
+     "draft-ietf-ccamp-otn-topo-yang-05"
   },
   "// __RESTCONF_OPERATION__": {
     "operation": "GET",
-    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
+    "url":
+     "http://{{PNC1-ADDR}}/restconf/data/ietf-network:networks"
   },
   "ietf-network:networks": {
     "network": [
       {
-        "network-id": "providerId/201/clientId/300/topologyId/otn-black-topology",
+        "network-id":
+        "providerId/201/clientId/300/topologyId/otn-black-topology",
         "network-types": {
           "ietf-te-topology:te-topology": {
             "ietf-otn-topology:otn-topology": {}
@@ -27,11 +32,13 @@
         "ietf-te-topology:provider-id": 201,
         "ietf-te-topology:client-id": 300,
         "ietf-te-topology:te-topology-id": "otn-black-topology",
-        "// ietf-te-topology:te": "te container presence requires: provider-id, client-id and te-topology-id",
+        "// ietf-te-topology:te":
+ "presence container requires: provider, client and te-topology-id",
         "ietf-te-topology:te": {
           "name": "OTN Black Topology @ MPI1"
         },
-        "// ietf-network:node": "Access LTPs to be reviewed in a future update",
+        "// ietf-network:node":
+         "Access LTPs to be reviewed in a future update",
         "ietf-network:node": [
           {
             "// __NODE__:__DESCRIPTION__": {
@@ -65,11 +72,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-1 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/1)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/1)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Access Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
-                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "List of ODU clients?",
+          "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               },
               {
@@ -86,11 +96,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-2 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/2)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/2)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Inter-domain Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "Empty? (inter-domain OTN link)",
+          "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
@@ -107,11 +120,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-3 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/3)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/3)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Access Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
-                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "List of ODU clients?",
+          "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               },
               {
@@ -128,11 +144,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-4 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/4)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
+              "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/4)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Inter-domain Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "Empty? (inter-domain OTN link)",
+             "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
@@ -149,11 +168,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-5 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/5)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/5)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Inter-domain Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "Empty? (inter-domain OTN link)",
+           "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
@@ -170,11 +192,14 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-6 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/6)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Inter-domain Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/6)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Inter-domain Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "Empty? (inter-domain OTN link)",
-                  "// __DEFAULT__ ietf-otn-topology:client-facing": false
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "Empty? (inter-domain OTN link)",
+             "// __DEFAULT__ ietf-otn-topology:client-facing": false
                 }
               },
               {
@@ -191,17 +216,21 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-7 LTP",
                   "admin-status": "up",
-                  "// __DISCUSS__ interface-switching-capability": "See Link attributes (teNodeId/10.0.0.1/teLinkId/7)",
-                  "// __DISCUSS__ inter-domain-plug-id": "Access Link",
+                  "// __DISCUSS__ interface-switching-capability":
+               "See Link attributes (teNodeId/10.0.0.1/teLinkId/7)",
+                  "// __DISCUSS__ inter-domain-plug-id":
+                   "Access Link",
                   "oper-status": "up",
-                  "// __DISCUSS__ ietf-otn-topology:supported-payload-types": "List of ODU clients?",
-                  "// __DISCUSS__ ietf-otn-topology:client-facing": true
+         "// __DISCUSS__ ietf-otn-topology:supported-payload-types":
+                   "List of ODU clients?",
+             "// __DISCUSS__ ietf-otn-topology:client-facing": true
                 }
               }
             ]
           }
         ],
-        "// ietf-network-topology:link": "Access links to be reviewed in a future update",
+        "// ietf-network-topology:link":
+         "Access links to be reviewed in a future update",
         "ietf-network-topology:link": [
           {
             "// __DESCRIPTION__:__LINK__": {
@@ -217,13 +246,30 @@
             "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Access Link from AN1-1",
                 "admin-status": "up",
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU2"
+                  }
+                ],
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -231,21 +277,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU2"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU2"
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -266,13 +299,30 @@
             "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Inter-domain Link from AN1-2",
                 "admin-status": "up",
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                  }
+                ],
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -280,21 +330,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU4"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -315,13 +352,30 @@
             "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Access Link from AN1-3",
                 "admin-status": "up",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU2"
+                  }
+                ],
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -329,21 +383,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU2"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU2"
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -364,13 +405,30 @@
             "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Inter-domain Link from AN1-4",
                 "admin-status": "up",
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                  }
+                ],
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -378,21 +436,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU4"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -405,7 +450,7 @@
               "type": "inter-domain link",
               "physical link": "Link from S8-5 to S12"
             },
-            "link-id": "teNodeId/10.0.0.1/teLinkId/4",
+            "link-id": "teNodeId/10.0.0.1/teLinkId/5",
             "source": {
               "source-node": "10.0.0.1",
               "source-tp": 5
@@ -413,13 +458,30 @@
             "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Inter-domain Link from AN1-5",
                 "admin-status": "up",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                  }
+                ],
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -427,21 +489,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU4"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -462,13 +511,30 @@
             "// __EMPTY__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Inter-domain Link from AN1-6",
                 "admin-status": "up",
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                },
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
+                  }
+                ],
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -476,21 +542,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU4"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU4, ..."
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
@@ -511,13 +564,30 @@
             "// __EMPTY__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
-                "// __DISCUSS__ access-type": "Can we assume point-to-point as the default value?",
+                "// __DISCUSS__ access-type":
+               "Can we assume point-to-point as the default value?",
                 "access-type": "point-to-point",
                 "name": "Access Link from AN1-7",
                 "admin-status": "up",
+                "// __DISCUSS__ link-protection-type":
+                 "Can we assume unprotected as the default value?",
+                "link-protection-type": "unprotected",
+                "max-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
+                "max-resv-link-bandwidth": {
+                  "// __DISCUSS__ te-bandwidth": "1xODU2"
+                },
+                "unreserved-bandwidth": [
+                  {
+                    "priority": 0,
+                    "// __DISCUSS__ te-bandwidth": "1xODU2"
+                  }
+                ],
                 "interface-switching-capability": [
                   {
-                    "switching-capability": "ietf-te-types:switching-otn",
+                    "switching-capability":
+                     "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
@@ -525,21 +595,8 @@
                         "// __DISCUSS__ te-bandwidth": "ODU2"
                       }
                     ],
-                    "// __DISCUSS__ label-restrictions": "To be added?",
-                    "// __DISCUSS__ link-protection-type": "Can we assume unprotected as the default value?",
-                    "link-protection-type": "unprotected",
-                    "max-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "max-resv-link-bandwidth": {
-                      "// __DISCUSS__ te-bandwidth": "1xODU2"
-                    },
-                    "unreserved-bandwidth": [
-                      {
-                        "priority": 0,
-                        "// __DISCUSS__ te-bandwidth": "1xODU2"
-                      }
-                    ]
+                    "// __DISCUSS__ label-restrictions":
+                     "To be added?"
                   }
                 ]
               },
