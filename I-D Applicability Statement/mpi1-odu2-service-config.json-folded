@@ -1,13 +1,17 @@
+========== NOTE: '\\' line wrapping per BCP XX (RFC XXXX) ===========
+
 {
   "// __TITLE__": "ODU2 Service Configuration @ MPI1",
   "// __LAST_UPDATE__": "October 22, 2018",
   "// __MISSING_ATTRIBUTES__": true,
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-otn-types@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02",
+    "ietf-otn-types@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-\
+\02",
     "ietf-te-types@2018-07-01": "draft-ietf-teas-yang-te-16",
     "ietf-te@2018-07-01": "draft-ietf-teas-yang-te-16",
-    "ietf-otn-tunnel@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model-02"
+    "ietf-otn-tunnel@2018-06-07": "draft-ietf-ccamp-otn-tunnel-model\
+\-02"
   },
   "// __RESTCONF_OPERATION__": {
     "operation": "PUT",
@@ -20,7 +24,8 @@
           "name": "mpi1-odu2-service",
           "// identifier": "ODU2-SERVICE-TUNNEL-ID @ MPI1",
           "identifier": 1,
-          "description": "ODU2 Service implemented by ODU2 OTN Tunnel Segment @ MPI1",
+          "description": "ODU2 Service implemented by ODU2 OTN Tunne\
+\l Segment @ MPI1",
           "// encoding and switching-type": "ODU",
           "encoding": "ietf-te-types:lsp-encoding-oduk ",
           "switching-type": "ietf-te-types:switching-otn",
@@ -28,8 +33,10 @@
           "// destination": "None: transit tunnel segment",
           "// src-tp-id": "None: transit tunnel segment",
           "// dst-tp-id": "None: transit tunnel segment",
-          "// ietf-otn-tunnel:src-client-signal": "None: ODU transit tunnel segment",
-          "// ietf-otn-tunnel:dst-client-signal": "None: ODU transit tunnel segment",
+          "// ietf-otn-tunnel:src-client-signal": "None: ODU transit\
+\ tunnel segment",
+          "// ietf-otn-tunnel:dst-client-signal": "None: ODU transit\
+\ tunnel segment",
           "bidirectional": true,
           "// protection": "No protection",
           "// __ DEFAULT __ protection": {
@@ -54,13 +61,16 @@
               {
                 "name": "mpi1-odu2-service-primary-path",
                 "path-scope": "ietf-te-types:path-scope-segment",
-                "// te-bandwidth": "None: only the tunnel bandwidth needs to be specified in transport applications",
+                "// te-bandwidth": "None: only the tunnel bandwidth \
+\needs to be specified in transport applications",
                 "explicit-route-objects": {
                   "route-object-include-exclude": [
                     {
-                      "// comment": "Tunnel hand-off OTU2 ingress interface (S3-1)",
+                      "// comment": "Tunnel hand-off OTU2 ingress in\
+\terface (S3-1)",
                       "index": 1,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-i\
+\nclude-ero",
                       "num-unnum-hop": {
                         "// node-id": "AN1 Node",
                         "node-id": "10.0.0.1",
@@ -71,21 +81,27 @@
                       }
                     },
                     {
-                      "// comment": "Tunnel hand-off ODU2 ingress label (ODU2 over OTU2) at S3-1",
+                      "// comment": "Tunnel hand-off ODU2 ingress la\
+\bel (ODU2 over OTU2) at S3-1",
                       "index": 2,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-i\
+\nclude-ero",
                       "label-hop": {
                         "te-label": {
-                          "// __ DISCUSS __ odu-label": "How are HO-ODU (ODUk over OTUk) label represented?",
-                          "// __ DISCUSS __ direction": "Check with TE Tunnel authors",
+                          "// __ DISCUSS __ odu-label": "How are HO-\
+\ODU (ODUk over OTUk) label represented?",
+                          "// __ DISCUSS __ direction": "Check with \
+\TE Tunnel authors",
                           "direction": "FORWARD "
                         }
                       }
                     },
                     {
-                      "// comment": "Tunnel hand-off OTU4 egress interface (S2-1)",
+                      "// comment": "Tunnel hand-off OTU4 egress int\
+\erface (S2-1)",
                       "index": 3,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-i\
+\nclude-ero",
                       "num-unnum-hop": {
                         "// node-id": "AN1 Node",
                         "node-id": "10.0.0.1",
@@ -96,15 +112,19 @@
                       }
                     },
                     {
-                      "// comment": "Tunnel hand-off ODU2 egress label (ODU2 over OTU4) at S2-1",
+                      "// comment": "Tunnel hand-off ODU2 egress lab\
+\el (ODU2 over OTU4) at S2-1",
                       "index": 4,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-i\
+\nclude-ero",
                       "label-hop": {
                         "te-label": {
                           "ietf-otn-tunnel:tpn": 1,
-                          "ietf-otn-tunnel:tsg": "ietf-otn-types:tsg-1.25G",
+                          "ietf-otn-tunnel:tsg": "ietf-otn-types:tsg\
+\-1.25G",
                           "ietf-otn-tunnel:ts-list": "1-8",
-                          "// __ DISCUSS __ direction": "Check with TE Tunnel authors",
+                          "// __ DISCUSS __ direction": "Check with \
+\TE Tunnel authors",
                           "direction": "FORWARD "
                         }
                       }
