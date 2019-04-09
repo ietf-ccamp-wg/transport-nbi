@@ -53,7 +53,7 @@ Open Pull Requests in GitHub to submit your text proposals
 
 [GitHub Issue #49](https://github.com/danielkinguk/transport-nbi/issues/49): See JSON Code 
 
-[GitHub Issue #36](https://github.com/danielkinguk/transport-nbi/issues/36): Dan to explicitly mention that alarm propagation is not in scope of this document. To be documented in management considerations section. 
+[GitHub Issue #46](https://github.com/danielkinguk/transport-nbi/issues/46): Dan to explicitly mention that alarm propagation is not in scope of this document. To be documented in management considerations section. 
 
 [GitHub Issue #45](https://github.com/danielkinguk/transport-nbi/issues/45): Italo will provide plug ID text
 
