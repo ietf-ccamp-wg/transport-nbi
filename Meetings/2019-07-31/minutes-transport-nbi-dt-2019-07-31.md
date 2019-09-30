@@ -17,7 +17,9 @@
 
 DT review tracked on github [pull request #66](https://github.com/danielkinguk/transport-nbi/pull/66)
 
-Proposed text changes from Italo uploaded on July 30, 2019: [Italo's I-D text](https://github.com/danielkinguk/transport-nbi/files/3447099/draft-ietf-ccamp-transport-nbi-app-statement-ib-2019-07-30.docx)
+#### 1.1) Proposed text changes from Italo
+
+Proposed text uploaded on July 30, 2019: [Italo's I-D text](https://github.com/danielkinguk/transport-nbi/files/3447099/draft-ietf-ccamp-transport-nbi-app-statement-ib-2019-07-30.docx)
 
 Addressing comments:
 - [#65](https://github.com/danielkinguk/transport-nbi/issues/65): Review of the terminology section)
@@ -26,7 +28,9 @@ Addressing comments:
 
 All these issues have been closed.
 
-Proposed text changes from Daniel uploaded on July 31, 2019: [Daniel's comments]( https://github.com/danielkinguk/transport-nbi/files/3451228/draft-ietf-ccamp-transport-nbi-app-statement-05-English-Review-DK-Comments.docx)
+#### 1.2) Proposed text changes from Daniel
+
+Proposed text uploaded on July 31, 2019: [Daniel's I-D text]( https://github.com/danielkinguk/transport-nbi/files/3451228/draft-ietf-ccamp-transport-nbi-app-statement-05-English-Review-DK-Comments.docx)
 
 A few minor 
 
@@ -38,6 +42,8 @@ Addressing comments:
 
 All these issues but #75 have been addressed:
 - We will reopen issue [#75](https://github.com/danielkinguk/transport-nbi/issues/75).
+
+#### 1.3) DT review status
 
 Issues not yet addressed:
 - [#46](https://github.com/danielkinguk/transport-nbi/issues/46): Alarm propagation between PNC and MDSC
