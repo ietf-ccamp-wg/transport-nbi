@@ -33,9 +33,9 @@
               {
                 "// __COMMENT__": "10GE Service Access Point at the access interface (S3-1 -> AN1-1)",
                 "etht-svc-end-point-name": "mpi-epl-an1-1-service-access-point",
-                "// access-node-id": "AN1 NODE-ID",
+                "// __COMMENT__ access-node-id": "AN1 NODE-ID",
                 "access-node-id": "10.0.0.1",
-                "// access-ltp-id": "AN1-1 LTP-ID",
+                "// __COMMENT__ access-ltp-id": "AN1-1 LTP-ID",
                 "access-ltp-id": 1
               }
             ]
