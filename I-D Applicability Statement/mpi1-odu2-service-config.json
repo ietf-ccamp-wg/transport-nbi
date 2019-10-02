@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "September 30, 2019",
+  "// __LAST_UPDATE__": "October 2, 2019",
   "// __TITLE__": "ODU2 Service Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -50,7 +50,7 @@
               {
                 "name": "mpi1-odu2-service-primary-path",
                 "// __EMPTY__ te-bandwidth": "The tunnel bandwidth is used",
-                "explicit-route-objects": {
+                "explicit-route-objects-always": {
                   "route-object-include-exclude": [
                     {
                       "// __COMMENT__": "Tunnel hand-off OTU2 ingress interface (S3-1 -> AN1-1)",
@@ -82,7 +82,7 @@
                       "// __COMMENT__": "Tunnel hand-off OTU4 egress interface (S2-3 -> AN1-7)",
                       "index": 3,
                       "explicit-route-usage": "ietf-te-types:route-include-object",
-                      "num-unnum-hop": {
+                      "numbered-link-hop": {
                         "// __COMMENT__ node-id": "AN1 Node",
                         "node-id": "10.0.0.1",
                         "// __COMMENT__ link-tp-id": "AN1-7 LTP",
