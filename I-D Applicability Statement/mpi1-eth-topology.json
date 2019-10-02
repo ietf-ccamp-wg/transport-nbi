@@ -1,13 +1,13 @@
 {
-  "// __LAST_UPDATE__": "September 30, 2019",
+  "// __LAST_UPDATE__": "October 2, 2019",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-    "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signal-yang-00",
     "ietf-network@2018-02-26": "rfc8345",
     "ietf-network-topology@2018-02-26": "rfc8345",
     "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
+    "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signal-yang-00",
     "ietf-eth-te-topology@2019-07-08": "draft-zheng-ccamp-client-topo-yang-06"
   },
   "// __MISSING_ATTRIBUTES__": true,
@@ -62,14 +62,14 @@
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "name": "AN1-1 LTP",
-                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                  "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "AN1-1 ILL-ID (1)",
                   "inter-layer-lock-id": [
                     1
                   ],
                   "admin-status": "up",
-                  "oper-status": "up"
+                  "oper-status": "up",
+                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                  "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document"
                 },
                 "// __COMMENT__ ingress-bandwidth-profile": "Outside the scope of this JSON example",
                 "ietf-eth-te-topology:eth-svc": {
@@ -104,14 +104,14 @@
                 "ietf-te-topology:te-tp-id": 8,
                 "ietf-te-topology:te": {
                   "name": "AN1-8 LTP",
-                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                  "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "AN1-8 ILL-ID (8)",
                   "inter-layer-lock-id": [
                     8
                   ],
                   "admin-status": "up",
-                  "oper-status": "up"
+                  "oper-status": "up",
+                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                  "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document"
                 },
                 "// __COMMENT__ ingress-bandwidth-profile": "Outside the scope of this JSON example",
                 "ietf-eth-te-topology:eth-svc": {
@@ -154,12 +154,12 @@
                 "name": "Access Link from AN1-1",
                 "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
                 "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __EMPTY__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
+                "admin-status": "up",
                 "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
                 "// __EMPTY__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
                 "// __EMPTY__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "admin-status": "up"
+                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)"
               },
               "oper-status": "up",
               "// __EMPTY__ is-transitional": "It is not a transitional link"
@@ -182,12 +182,12 @@
                 "name": "Access Link from AN1-8",
                 "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
                 "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __EMPTY__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
+                "admin-status": "up",
                 "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
                 "// __EMPTY__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
                 "// __EMPTY__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "admin-status": "up"
+                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)"
               },
               "oper-status": "up",
               "// __EMPTY__ is-transitional": "It is not a transitional link"
