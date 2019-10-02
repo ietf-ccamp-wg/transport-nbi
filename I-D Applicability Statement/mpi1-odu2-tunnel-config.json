@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "September 30, 2019",
+  "// __LAST_UPDATE__": "October 2, 2019",
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -69,7 +69,7 @@
                     },
                     {
                       "// __COMMENT__": "Tunnel hand-off ODU2 egress label (ODU2 over OTU4)",
-                      "index": 1,
+                      "index": 2,
                       "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {

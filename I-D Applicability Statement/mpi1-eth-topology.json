@@ -68,6 +68,7 @@
                   "inter-layer-lock-id": [
                     1
                   ],
+                  "admin-status": "up",
                   "oper-status": "up"
                 },
                 "// __COMMENT__ ingress-bandwidth-profile": "Outside the scope of this JSON example",
