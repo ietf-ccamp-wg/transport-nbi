@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "October 2, 2019",
+  "// __LAST_UPDATE__": "October 16, 2019",
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -10,8 +10,8 @@
   },
   "// __MISSING_ATTRIBUTES__": true,
   "// __RESTCONF_OPERATION__": {
-    "operation": "PUT",
-    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te"
+    "operation": "POST",
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te/tunnels"
   },
   "ietf-te:te": {
     "tunnels": {
@@ -58,7 +58,7 @@
                       "// __COMMENT__": "Tunnel hand-off OTU4 egress interface (AN1-7 LTP)",
                       "index": 1,
                       "explicit-route-usage": "ietf-te-types:route-include-object",
-                      "numbered-link-hop": {
+                      "unnumbered-link-hop": {
                         "// __COMMENT__ node-id": "AN1 NODE-ID",
                         "node-id": "10.0.0.1",
                         "// __COMMENT__ link-tp-id": "AN1-7 LTP-ID",
