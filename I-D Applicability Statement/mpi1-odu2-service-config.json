@@ -24,10 +24,10 @@
           "// __COMMENT__ encoding and switching-type": "OTN (ODU)",
           "encoding": "ietf-te-types:lsp-encoding-oduk ",
           "switching-type": "ietf-te-types:switching-otn",
-          "// __EMPTY__ source": "Transit tunnel segment",
-          "// __EMPTY__ src-tp-id": "Transit tunnel segment",
-          "// __EMPTY__ destination": "Transit tunnel segment",
-          "// __EMPTY__ dst-tp-id": "Transit tunnel segment",
+          "// __NOT-PRESENT__ source": "Transit tunnel segment",
+          "// __NOT-PRESENT__ src-tp-id": "Transit tunnel segment",
+          "// __NOT-PRESENT__ destination": "Transit tunnel segment",
+          "// __NOT-PRESENT__ dst-tp-id": "Transit tunnel segment",
           "bidirectional": true,
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
@@ -49,7 +49,7 @@
             "p2p-primary-path": [
               {
                 "name": "mpi1-odu2-service-primary-path",
-                "// __EMPTY__ te-bandwidth": "The tunnel bandwidth is used",
+                "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandwidth is used",
                 "explicit-route-objects-always": {
                   "route-object-include-exclude": [
                     {
@@ -72,8 +72,8 @@
                       "label-hop": {
                         "te-label": {
                           "ietf-otn-tunnel:tpn": 1,
-                          "// __EMPTY__ ietf-otn-tunnel:tsg": "Not applicable for ODUk over OTUk",
-                          "// __EMPTY__ ietf-otn-tunnel:ts-list": "Not applicable for ODUk over OTUk",
+                          "// __NOT-PRESENT__ ietf-otn-tunnel:tsg": "Not applicable for ODUk over OTUk",
+                          "// __NOT-PRESENT__ ietf-otn-tunnel:ts-list": "Not applicable for ODUk over OTUk",
                           "// __DEFAULT__ direction": "forward"
                         }
                       }
