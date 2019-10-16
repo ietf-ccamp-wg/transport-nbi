@@ -43,7 +43,7 @@
         ],
         "service-classification-type": "ietf-eth-tran-types:port-classification",
         "// __COMMENT__ ingress-egress-bandwidth-profile": "Outside the scope of this JSON example",
-        "// __EMPTY__ vlan-operations": "Transparent VLAN operations",
+        "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN operations",
         "etht-svc-tunnels": [
           {
             "// __COMMENT__ tunnel-name": "ODU2 Head Tunnel Segment @ MPI1",
