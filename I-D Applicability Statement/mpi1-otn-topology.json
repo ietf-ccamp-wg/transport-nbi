@@ -134,7 +134,7 @@
                       ]
                     }
                   ],
-                  "// __EMPTY__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL-ID (1) }",
                   "inter-layer-lock-id": [
                     1
@@ -177,7 +177,7 @@
                       ]
                     }
                   ],
-                  "// __EMPTY__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "{ AN1-2 ILL-ID (2) }",
                   "inter-layer-lock-id": [
                     2
@@ -205,8 +205,8 @@
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "name": "AN1-3 LTP",
-                  "// __EMPTY__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
-                  "// __EMPTY__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// __NOT-PRESENT__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
+                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "{ AN1-3 ILL-ID (3) }",
                   "inter-layer-lock-id": [
                     3
@@ -251,10 +251,10 @@
                   ],
                   "// __COMMENT__ inter-domain-plug-id": "S7-S11 Plug-id (0x000711 -> AAcR)",
                   "inter-domain-plug-id": "AAcR",
-                  "// __EMPTY__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __EMPTY__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
@@ -287,10 +287,10 @@
                   ],
                   "// __COMMENT__ inter-domain-plug-id": "S8‑S12 Plug-id (0x000812 -> AAgS)",
                   "inter-domain-plug-id": "AAgS",
-                  "// __EMPTY__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __EMPTY__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
@@ -323,10 +323,10 @@
                   ],
                   "// __COMMENT__ inter-domain-plug-id": "S8‑S32 Plug-id (0x000832 -> AAgy)",
                   "inter-domain-plug-id": "AAgy",
-                  "// __EMPTY__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __EMPTY__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
@@ -359,10 +359,10 @@
                   ],
                   "// __COMMENT__ inter-domain-plug-id": "S2-S31 Plug-id (0x000231 -> AAIx)",
                   "inter-domain-plug-id": "AAIx",
-                  "// __EMPTY__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __EMPTY__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               }
             ]
@@ -380,12 +380,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 1
             },
-            "// __EMPTY__ destination": "access link",
+            "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-1",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -435,11 +435,11 @@
                     }
                   }
                 ],
-                "// __EMPTY__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
+                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -453,12 +453,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 2
             },
-            "// __EMPTY__ destination": "access link",
+            "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-2",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -508,11 +508,11 @@
                     }
                   }
                 ],
-                "// __EMPTY__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
+                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -526,21 +526,21 @@
               "source-node": "10.0.0.1",
               "source-tp": 3
             },
-            "// __EMPTY__ destination": "access link",
+            "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-3",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
-                "// __EMPTY__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
-                "// __EMPTY__ max-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __EMPTY__ max-resv-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __EMPTY__ unreserved-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __EMPTY__ ietf-otn-topology:tsg": "STM-64 Access Link only (no HO-ODU termination and LO-ODU switching)",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
+                "// __NOT-PRESENT__ max-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// __NOT-PRESENT__ max-resv-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// __NOT-PRESENT__ unreserved-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "STM-64 Access Link only (no HO-ODU termination and LO-ODU switching)",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -554,12 +554,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 4
             },
-            "// __EMPTY__ destination": "inter-domain link",
+            "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-4",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -637,7 +637,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -651,12 +651,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 5
             },
-            "// __EMPTY__ destination": "inter-domain link",
+            "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-5",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -734,7 +734,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -748,12 +748,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 6
             },
-            "// __EMPTY__ destination": "inter-domain link",
+            "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-6",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -831,7 +831,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -845,12 +845,12 @@
               "source-node": "10.0.0.1",
               "source-tp": 7
             },
-            "// __EMPTY__ destination": "inter-domain link",
+            "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-7",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
                     "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
@@ -928,7 +928,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           }
         ]
