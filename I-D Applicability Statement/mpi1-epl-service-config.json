@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "September 30, 2019",
+  "// __LAST_UPDATE__": "October 16, 2019",
   "// __TITLE__": "EPL Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -9,8 +9,8 @@
   },
   "// __MISSING_ATTRIBUTES__": true,
   "// __RESTCONF_OPERATION__": {
-    "operation": "PUT",
-    "url": "http://{{PNC1}}/restconf/data/ietf-trans-client-service:etht-svc"
+    "operation": "POST",
+    "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-eth-tran-service:etht-svc/etht-svc-instances"
   },
   "ietf-eth-tran-service:etht-svc": {
     "etht-svc-instances": [
