@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "October 16, 2019",
+  "// __LAST_UPDATE__": "October 17, 2019",
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -26,10 +26,10 @@
           "switching-type": "ietf-te-types:switching-otn",
           "// __COMMENT__ source": "AN1 Node-ID",
           "source": "10.0.0.1",
-          "// __COMMENT__ src-tp-id": "AN1-1 TTP-ID (1 -> B)",
-          "src-tp-id": "B",
-          "// __EMPTY__ destination": "Head tunnel segment",
-          "// __EMPTY__ dst-tp-id": "Head tunnel segment",
+          "// __COMMENT__ src-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> 'AQ==')",
+          "src-tp-id": "AQ==",
+          "// __NOT-PRESENT__ destination": "Head tunnel segment",
+          "// __NOT-PRESENT__ dst-tp-id": "Head tunnel segment",
           "bidirectional": true,
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
@@ -51,7 +51,7 @@
             "p2p-primary-path": [
               {
                 "name": "mpi1-odu2-tunnel-primary-path",
-                "// __EMPTY__ te-bandwidth": "The tunnel bandwidth is used",
+                "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandwidth is used",
                 "explicit-route-objects-always": {
                   "route-object-include-exclude": [
                     {
