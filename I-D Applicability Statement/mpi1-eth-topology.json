@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "October 2, 2019",
+  "// __LAST_UPDATE__": "October 16, 2019",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -39,6 +39,7 @@
             },
             "node-id": "10.0.0.1",
             "ietf-te-topology:te-node-id": "10.0.0.1",
+            "// __COMMENT__ supporting-node": "Not used because topology hierarchy is outside the scope of this JSON example",
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
@@ -46,7 +47,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ tunnel-termination-point": "ETH Access Links only (no ETH TE switching)"
+              "// __NOT-PRESENT__ tunnel-termination-point": "ETH Access Links only (no ETH TE switching)"
             },
             "ietf-network-topology:termination-point": [
               {
@@ -62,7 +63,7 @@
                 "ietf-te-topology:te-tp-id": 1,
                 "ietf-te-topology:te": {
                   "name": "AN1-1 LTP",
-                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                  "// __NOT-PRESENT__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
                   "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "// __COMMENT__ inter-layer-lock-id": "AN1-1 ILL-ID (1)",
                   "inter-layer-lock-id": [
@@ -105,7 +106,7 @@
                 "ietf-te-topology:te": {
                   "name": "AN1-8 LTP",
                   "// __COMMENT__ inter-layer-lock-id": "AN1-8 ILL-ID (8)",
-                  "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                  "// __NOT-PRESENT__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
                   "// __COMMENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
                   "inter-layer-lock-id": [
                     8
@@ -148,21 +149,21 @@
               "source-node": "10.0.0.1",
               "source-tp": 1
             },
-            "// __EMPTY__ destination": "access link",
+            "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-1",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
-                "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           },
           {
@@ -176,21 +177,21 @@
               "source-node": "10.0.0.1",
               "source-tp": 8
             },
-            "// __EMPTY__ destination": "access link",
+            "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-8",
-                "// __EMPTY__ external-domain": "The plug-id is used instead of this container",
-                "// __EMPTY__ is-abstract": "The access link is not abstract",
-                "// __EMPTY__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
-                "// __EMPTY__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
+                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// __NOT-PRESENT__ interface-switching-capability": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ label-restrictions": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ max-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ max-resv-link-bandwidth": "ETH Access Link only (no ETH TE switching)",
+                "// __NOT-PRESENT__ unreserved-bandwidth": "ETH Access Link only (no ETH TE switching)",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __EMPTY__ is-transitional": "It is not a transitional link"
+              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
             }
           }
         ]
