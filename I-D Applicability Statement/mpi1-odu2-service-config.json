@@ -22,7 +22,7 @@
           "identifier": 1,
           "description": "ODU2 Service implemented by ODU2 OTN Tunnel Segment @ MPI1",
           "// __COMMENT__ encoding and switching-type": "OTN (ODU)",
-          "encoding": "ietf-te-types:lsp-encoding-oduk ",
+          "encoding": "ietf-te-types:lsp-encoding-oduk",
           "switching-type": "ietf-te-types:switching-otn",
           "// __NOT-PRESENT__ source": "Transit tunnel segment",
           "// __NOT-PRESENT__ src-tp-id": "Transit tunnel segment",
@@ -68,7 +68,7 @@
                     {
                       "// __COMMENT__": "Tunnel hand-off ODU2 ingress label (ODU2 over OTU2) at S3-1 (AN1-1)",
                       "index": 2,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {
                           "ietf-otn-tunnel:tpn": 1,
@@ -94,7 +94,7 @@
                     {
                       "// __COMMENT__": "Tunnel hand-off ODU2 egress label (ODU2 over OTU4) at S2-3 (AN1-7)",
                       "index": 4,
-                      "explicit-route-usage": "ietf-te-types:route-include-ero",
+                      "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {
                           "ietf-otn-tunnel:tpn": 1,
