@@ -1,12 +1,12 @@
 {
-  "// __LAST_UPDATE__": "October 16, 2019",
+  "// __LAST_UPDATE__": "October 23, 2019",
   "// __TITLE__": "ODU2 Service Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
     "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-02",
     "ietf-te@2019-04-09": "draft-ietf-teas-yang-te-21",
-    "ietf-otn-tunnel@2019-07-08": "draft-ietf-ccamp-otn-tunnel-model-07"
+    "ietf-otn-tunnel@2019-10-23": "draft-ietf-ccamp-otn-tunnel-model-08"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "// __RESTCONF_OPERATION__": {
