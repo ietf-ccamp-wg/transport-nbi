@@ -23,7 +23,7 @@
         "ietf-te-topology:te-topology-identifier": {
           "provider-id": 201,
           "client-id": 300,
-          "te-topology-id": "eth-black-topology"
+          "topology-id": "eth-black-topology"
         },
         "// __COMMENT__ ietf-te-topology:te": "presence container requires: provider-id, client-id and te-topology-id",
         "ietf-te-topology:te": {
@@ -43,7 +43,7 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": {},
+                "is-abstract": "",
                 "admin-status": "up"
               },
               "oper-status": "up",
