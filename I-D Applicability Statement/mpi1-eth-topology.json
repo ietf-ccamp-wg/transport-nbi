@@ -8,7 +8,7 @@
     "ietf-network-topology@2018-02-26": "rfc8345",
     "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
     "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signal-yang-00",
-    "ietf-eth-te-topology@2019-07-08": "draft-zheng-ccamp-client-topo-yang-06"
+    "ietf-eth-te-topology@2019-11-18": "draft-zheng-ccamp-client-topo-yang-08"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
