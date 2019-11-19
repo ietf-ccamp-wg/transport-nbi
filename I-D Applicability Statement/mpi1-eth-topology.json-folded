@@ -1,7 +1,7 @@
 ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
 
 {
-  "// __LAST_UPDATE__": "October 16, 2019",
+  "// __LAST_UPDATE__": "November 19, 2019",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -11,8 +11,8 @@
     "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
     "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signa\
 \l-yang-00",
-    "ietf-eth-te-topology@2019-07-08": "draft-zheng-ccamp-client-top\
-\o-yang-06"
+    "ietf-eth-te-topology@2019-11-18": "draft-zheng-ccamp-client-top\
+\o-yang-08"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
@@ -28,7 +28,7 @@
         "ietf-te-topology:te-topology-identifier": {
           "provider-id": 201,
           "client-id": 300,
-          "te-topology-id": "eth-black-topology"
+          "topology-id": "eth-black-topology"
         },
         "// __COMMENT__ ietf-te-topology:te": "presence container re\
 \quires: provider-id, client-id and te-topology-id",
@@ -50,7 +50,7 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": {},
+                "is-abstract": "",
                 "admin-status": "up"
               },
               "oper-status": "up",
