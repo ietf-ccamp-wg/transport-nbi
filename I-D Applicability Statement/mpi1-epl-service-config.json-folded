@@ -1,7 +1,7 @@
 ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
 
 {
-  "// __LAST_UPDATE__": "October 16, 2019",
+  "// __LAST_UPDATE__": "November 19, 2019",
   "// __TITLE__": "EPL Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -40,12 +40,14 @@
 \oint",
             "etht-svc-end-point-descr": "Ethernet Service End-Point \
 \at S3-1 (AN1-1) access link",
+            "service-classification-type": "ietf-eth-tran-types:port\
+\-classification",
             "etht-svc-access-points": [
               {
                 "// __COMMENT__": "10GE Service Access Point at the \
 \access interface (S3-1 -> AN1-1)",
-                "etht-svc-end-point-name": "mpi-epl-an1-1-service-ac\
-\cess-point",
+                "access-point-id": "mpi-epl-an1-1-service-access-poi\
+\nt",
                 "// __COMMENT__ access-node-id": "AN1 NODE-ID",
                 "access-node-id": "10.0.0.1",
                 "// __COMMENT__ access-ltp-id": "AN1-1 LTP-ID",
@@ -54,8 +56,6 @@
             ]
           }
         ],
-        "service-classification-type": "ietf-eth-tran-types:port-cla\
-\ssification",
         "// __COMMENT__ ingress-egress-bandwidth-profile": "Outside \
 \the scope of this JSON example",
         "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN oper\
