@@ -29,10 +29,11 @@
             "// __COMMENT__": "10GE Service End-Point at the access interface (S3-1 -> AN1-1)",
             "etht-svc-end-point-name": "mpi1-epl-an1-1-service-end-point",
             "etht-svc-end-point-descr": "Ethernet Service End-Point at S3-1 (AN1-1) access link",
+            "service-classification-type": "ietf-eth-tran-types:port-classification",
             "etht-svc-access-points": [
               {
                 "// __COMMENT__": "10GE Service Access Point at the access interface (S3-1 -> AN1-1)",
-                "etht-svc-end-point-name": "mpi-epl-an1-1-service-access-point",
+                "access-point-id": "mpi-epl-an1-1-service-access-point",
                 "// __COMMENT__ access-node-id": "AN1 NODE-ID",
                 "access-node-id": "10.0.0.1",
                 "// __COMMENT__ access-ltp-id": "AN1-1 LTP-ID",
@@ -41,7 +42,6 @@
             ]
           }
         ],
-        "service-classification-type": "ietf-eth-tran-types:port-classification",
         "// __COMMENT__ ingress-egress-bandwidth-profile": "Outside the scope of this JSON example",
         "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN operations",
         "etht-svc-tunnels": [
