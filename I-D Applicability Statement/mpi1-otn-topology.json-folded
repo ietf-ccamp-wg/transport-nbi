@@ -1,18 +1,18 @@
-========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+=============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
 {
-  "// __LAST_UPDATE__": "October 21, 2019",
+  "// __LAST_UPDATE__": "August 20,2021",
   "// __TITLE__": "ODU Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-    "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-0\
-\2",
+    "ietf-te-types@2020-06-10": "rfc8776",
+    "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types-1\
+\0",
     "ietf-network@2018-02-26": "rfc8345",
     "ietf-network-topology@2018-02-26": "rfc8345",
-    "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
-    "ietf-otn-topology@2019-07-07": "draft-ietf-ccamp-otn-topo-yang-\
-\08"
+    "ietf-te-topology@2020-08-06": "rfc8795",
+    "ietf-otn-topology@2021-07-08": "draft-ietf-ccamp-otn-topo-yang-\
+\13"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
@@ -48,14 +48,16 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": "",
+                "is-abstract": [
+                  null
+                ],
                 "admin-status": "up"
               },
               "oper-status": "up",
               "tunnel-termination-point": [
                 {
                   "// __COMMENT__ tunnel-tp-id": "AN1-1 TTP-ID (1 ->\
-\ 0x01 -> 'AQ==')",
+\ 0x01 -> 'AQ==' in base64)",
                   "tunnel-tp-id": "AQ==",
                   "name": "AN1-1 OTN TTP",
                   "// __COMMENT__ encoding and switching-capability"\
@@ -73,7 +75,7 @@
                 },
                 {
                   "// __COMMENT__ tunnel-tp-id": "AN1-2 TTP-ID (2 ->\
-\ 0x02 -> 'Ag==')",
+\ 0x02 -> 'Ag==' in base64)",
                   "tunnel-tp-id": "Ag==",
                   "name": "AN1-2 OTN TTP",
                   "// __COMMENT__ encoding and switching-capability"\
@@ -91,7 +93,7 @@
                 },
                 {
                   "// __COMMENT__ tunnel-tp-id": "AN1-3 TTP-ID (3 ->\
-\ 0x03 -> 'Awo=')",
+\ 0x03 -> 'Awo=' in base64)",
                   "tunnel-tp-id": "Awo=",
                   "name": "AN1-3 OTN TTP",
                   "// __COMMENT__ encoding and switching-capability"\
@@ -109,7 +111,7 @@
                 },
                 {
                   "// __COMMENT__ tunnel-tp-id": "AN1-8 TTP-ID (8 ->\
-\ 0x08 -> 'CA==')",
+\ 0x08 -> 'CA==' in base64)",
                   "tunnel-tp-id": "CA==",
                   "name": "AN1-8 OTN TTP",
                   "// __COMMENT__ encoding and switching-capability"\
@@ -180,7 +182,8 @@
               {
                 "// __DESCRIPTION__:__LTP__": {
                   "name": "AN1-2 LTP",
-                  "link type(s)": "Multi-function (OTU2 and STM-64)",
+                  "link type(s)": "Multi-function (OTU2 and STM-64)"\
+\,
                   "physical node": "S6",
                   "unnumberd/ifIndex": 2,
                   "port type": "tributary port",
@@ -330,7 +333,7 @@
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S8‑S12 Plu\
+                  "// __COMMENT__ inter-domain-plug-id": "S8-S12 Plu\
 \g-id (0x000812 -> AAgS)",
                   "inter-domain-plug-id": "AAgS",
                   "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
@@ -372,7 +375,7 @@
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S8‑S32 Plu\
+                  "// __COMMENT__ inter-domain-plug-id": "S8-S32 Plu\
 \g-id (0x000832 -> AAgy)",
                   "inter-domain-plug-id": "AAgy",
                   "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
@@ -514,7 +517,8 @@
           {
             "// __DESCRIPTION__:__LINK__": {
               "name": "Access Link from AN1-2",
-              "type": "Multi-function access link (OTU2 and STM-64)",
+              "type": "Multi-function access link (OTU2 and STM-64)"\
+\,
               "physical link": "Link from S6-2 to R3"
             },
             "link-id": "teNodeId/10.0.0.1/teLinkId/2",

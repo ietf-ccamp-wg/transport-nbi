@@ -1,14 +1,14 @@
 {
-  "// __LAST_UPDATE__": "October 16, 2019",
+  "// __LAST_UPDATE__": "August 20,2021",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
+    "ietf-te-types@2020-06-10": "rfc8776",
     "ietf-network@2018-02-26": "rfc8345",
     "ietf-network-topology@2018-02-26": "rfc8345",
-    "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
-    "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signal-yang-00",
-    "ietf-eth-te-topology@2019-11-18": "draft-zheng-ccamp-client-topo-yang-08"
+    "ietf-te-topology@2020-08-06": "rfc8795",
+    "ietf-eth-tran-types@2021-07-07": "draft-ietf-ccamp-client-signal-yang-05",
+    "ietf-eth-te-topology@2019-11-18": "draft-ietf-ccamp-eth-client-te-topo-yang-00"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
@@ -43,7 +43,7 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": "",
+                "is-abstract": [null],
                 "admin-status": "up"
               },
               "oper-status": "up",
@@ -72,7 +72,7 @@
                   "admin-status": "up",
                   "oper-status": "up"
                 },
-                "// __COMMENT__ ingress-bandwidth-profile": "Outside the scope of this JSON example",
+                "// __COMMENT__ ietf-eth-te-topology:ingress-bandwidth-profile": "Outside the scope of this JSON example",
                 "ietf-eth-te-topology:eth-svc": {
                   "client-facing": true,
                   "supported-classification": {
