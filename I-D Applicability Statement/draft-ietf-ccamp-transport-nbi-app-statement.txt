@@ -5,12 +5,12 @@
 CCAMP Working Group                                         I. Busi, Ed.
 Internet-Draft                                                    Huawei
 Intended status: Informational                              D. King, Ed.
-Expires: November 28, 2021                            Old Dog Consulting
+Expires: April 2, 2022                                Old Dog Consulting
                                                            H. Zheng, Ed.
                                                                   Huawei
                                                               Y. Xu, Ed.
                                                                    CAICT
-                                                            May 27, 2021
+                                                      September 29, 2021
 
 
          Transport Northbound Interface Applicability Statement
@@ -43,7 +43,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on November 28, 2021.
+   This Internet-Draft will expire on April 2, 2022.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 1]
+Busi, et al.              Expires April 2, 2022                 [Page 1]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 2]
+Busi, et al.              Expires April 2, 2022                 [Page 2]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .  47
@@ -165,9 +165,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 3]
+Busi, et al.              Expires April 2, 2022                 [Page 3]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    This document examines the applicability of the YANG models being
@@ -221,9 +221,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 4]
+Busi, et al.              Expires April 2, 2022                 [Page 4]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 2.  Terminology
@@ -277,9 +277,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 5]
+Busi, et al.              Expires April 2, 2022                 [Page 5]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    OTU  Optical Channel Transport Unit
@@ -333,9 +333,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 6]
+Busi, et al.              Expires April 2, 2022                 [Page 6]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    happens, the reference will be updated and the [TE-TUTORIAL]
@@ -389,9 +389,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 7]
+Busi, et al.              Expires April 2, 2022                 [Page 7]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    Node R1 is switching at the packet (PKT) layer and mapping packets
@@ -445,9 +445,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 8]
+Busi, et al.              Expires April 2, 2022                 [Page 8]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    reading, another JSON name/value pair formatted as a comment and
@@ -501,9 +501,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021               [Page 9]
+Busi, et al.              Expires April 2, 2022                 [Page 9]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                   ........................
@@ -557,9 +557,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 10]
+Busi, et al.              Expires April 2, 2022                [Page 10]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    Different transmission technologies can be used on the access links
@@ -613,9 +613,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 11]
+Busi, et al.              Expires April 2, 2022                [Page 11]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                               --------------
@@ -669,9 +669,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 12]
+Busi, et al.              Expires April 2, 2022                [Page 12]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The control interfaces within the scope of this document are the
@@ -725,9 +725,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 13]
+Busi, et al.              Expires April 2, 2022                [Page 13]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
       domain.  Thus, abstraction does not necessarily offer all possible
@@ -781,9 +781,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 14]
+Busi, et al.              Expires April 2, 2022                [Page 14]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The MDSC should be capable of stitching together the abstracted
@@ -837,9 +837,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 15]
+Busi, et al.              Expires April 2, 2022                [Page 15]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    nodes S3, S1, S2, S31, S33, S34, S15 and S18 which belong to
@@ -893,9 +893,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 16]
+Busi, et al.              Expires April 2, 2022                [Page 16]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
@@ -949,9 +949,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 17]
+Busi, et al.              Expires April 2, 2022                [Page 17]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
          R1 [(PKT) -> STM-64], S3 [STM-64 -> (ODU2)], S1 [(ODU2)],
@@ -1005,9 +1005,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 18]
+Busi, et al.              Expires April 2, 2022                [Page 18]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    It is worth noting that the first EVPL service is required between
@@ -1061,9 +1061,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 19]
+Busi, et al.              Expires April 2, 2022                [Page 19]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
@@ -1117,9 +1117,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 20]
+Busi, et al.              Expires April 2, 2022                [Page 20]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    In the service examples described in Section 4.3, switching within
@@ -1173,9 +1173,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 21]
+Busi, et al.              Expires April 2, 2022                [Page 21]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The PNCs should be capable of reporting to the MDSC which is the
@@ -1229,9 +1229,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 22]
+Busi, et al.              Expires April 2, 2022                [Page 22]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    3.  Object state change
@@ -1285,9 +1285,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 23]
+Busi, et al.              Expires April 2, 2022                [Page 23]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 5.  YANG Model Analysis
@@ -1341,9 +1341,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 24]
+Busi, et al.              Expires April 2, 2022                [Page 24]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    In order to support the EPL and EVPL services, described in
@@ -1397,9 +1397,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 25]
+Busi, et al.              Expires April 2, 2022                [Page 25]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                       ...................................
@@ -1453,9 +1453,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 26]
+Busi, et al.              Expires April 2, 2022                [Page 26]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The OTU4 trails on the inter-domain physical links (e.g., the link
@@ -1509,9 +1509,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 27]
+Busi, et al.              Expires April 2, 2022                [Page 27]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The PNC1 native topology would represent the physical network
@@ -1565,9 +1565,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 28]
+Busi, et al.              Expires April 2, 2022                [Page 28]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
       Physical Interface     OTN Topology LTP     ETH Topology LTP
@@ -1621,9 +1621,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 29]
+Busi, et al.              Expires April 2, 2022                [Page 29]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    o  the instance reports the domain 2 Ethernet abstract topology view
@@ -1677,9 +1677,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 30]
+Busi, et al.              Expires April 2, 2022                [Page 30]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The topology of each domain may be in an abstracted shape (refer to
@@ -1733,9 +1733,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 31]
+Busi, et al.              Expires April 2, 2022                [Page 31]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
            Inter-Domain Link     Plug-ID Value
@@ -1789,9 +1789,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 32]
+Busi, et al.              Expires April 2, 2022                [Page 32]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 5.2.  YANG Models for Service Configuration
@@ -1845,9 +1845,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 33]
+Busi, et al.              Expires April 2, 2022                [Page 33]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                                     |
@@ -1901,9 +1901,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 34]
+Busi, et al.              Expires April 2, 2022                [Page 34]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    After receiving such request, MDSC determines the domain sequence,
@@ -1957,9 +1957,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 35]
+Busi, et al.              Expires April 2, 2022                [Page 35]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    nodes terminating the inter-domain links (e.g., S2 and S31) from the
@@ -2013,9 +2013,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 36]
+Busi, et al.              Expires April 2, 2022                [Page 36]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    o  Ingress and egress points are indicated in the route-object-
@@ -2069,9 +2069,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 37]
+Busi, et al.              Expires April 2, 2022                [Page 37]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    access links terminating on AN-1 and AN1-2 LTPs within the MPI1
@@ -2125,9 +2125,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 38]
+Busi, et al.              Expires April 2, 2022                [Page 38]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    o  PNC3, at MPI3, to setup an ODU2 (Transit Segment) Tunnel within
@@ -2181,9 +2181,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 39]
+Busi, et al.              Expires April 2, 2022                [Page 39]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    native topology, and sets up the ODU2 cross-connections within the
@@ -2237,9 +2237,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 40]
+Busi, et al.              Expires April 2, 2022                [Page 40]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 5.2.3.  Other OTN Client Services
@@ -2293,9 +2293,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 41]
+Busi, et al.              Expires April 2, 2022                [Page 41]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    configure the STM-64 links on the R1-S3 and R8-S18 multi-function
@@ -2349,9 +2349,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 42]
+Busi, et al.              Expires April 2, 2022                [Page 42]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    functions, in nodes S3 and S6, as shown in Section 4.3.2.  PNC1 also
@@ -2405,9 +2405,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 43]
+Busi, et al.              Expires April 2, 2022                [Page 43]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    MDSC requests at the MPI1, PNC1 to setup an ODU2 (Head Segment)
@@ -2461,9 +2461,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 44]
+Busi, et al.              Expires April 2, 2022                [Page 44]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    segmented protection can be divided into a few steps, considering the
@@ -2517,9 +2517,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 45]
+Busi, et al.              Expires April 2, 2022                [Page 45]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    Following similar requests from MDSC to setup ODU2 (Segment) Tunnels,
@@ -2573,9 +2573,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 46]
+Busi, et al.              Expires April 2, 2022                [Page 46]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 6.  Security Considerations
@@ -2629,23 +2629,22 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 47]
+Busi, et al.              Expires April 2, 2022                [Page 47]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    [CLIENT-SIGNAL]
               Zheng, H., Guo, A., Busi, I., Snitser, A., Lazzeri, F.,
               Xu, Y., Zhao, Y., Liu, X., and G. Fioccola, "A YANG Data
               Model for Transport Network Client Signals", draft-ietf-
-              ccamp-client-signal-yang-04 (work in progress), January
-              2021.
+              ccamp-client-signal-yang-05 (work in progress), July 2021.
 
    [CLIENT-TOPO]
               Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y., and X.
               Liu, "A YANG Data Model for Ethernet TE Topology", draft-
-              ietf-ccamp-eth-client-te-topo-yang-00 (work in progress),
-              March 2021.
+              ietf-ccamp-eth-client-te-topo-yang-01 (work in progress),
+              September 2021.
 
    [ITU-T_G.709]
               ITU-T Recommendation G.709, "Interfaces for the optical
@@ -2663,19 +2662,19 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
    [OTN-TOPO]
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. D.
               Dios, "A YANG Data Model for Optical Transport Network
-              Topology", draft-ietf-ccamp-otn-topo-yang-12 (work in
-              progress), February 2021.
+              Topology", draft-ietf-ccamp-otn-topo-yang-13 (work in
+              progress), July 2021.
 
    [OTN-TUNNEL]
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
               "OTN Tunnel YANG Model", draft-ietf-ccamp-otn-tunnel-
-              model-13 (work in progress), April 2021.
+              model-14 (work in progress), July 2021.
 
    [PATH-COMPUTE]
               Busi, I., Belotti, S., Lopez, V., Sharma, A., and Y. Shi,
               "YANG Data Model for requesting Path Computation", draft-
-              ietf-teas-yang-path-computation-12 (work in progress),
-              February 2021.
+              ietf-teas-yang-path-computation-16 (work in progress),
+              September 2021.
 
    [RFC4427]  Mannie, E., Ed. and D. Papadimitriou, Ed., "Recovery
               (Protection and Restoration) Terminology for Generalized
@@ -2685,9 +2684,10 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 48]
+
+Busi, et al.              Expires April 2, 2022                [Page 48]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    [RFC4655]  Farrel, A., Vasseur, J., and J. Ash, "A Path Computation
@@ -2722,8 +2722,7 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., Bryskin, I.,
               and O. G. D. Dios, "A YANG Data Model for Traffic
               Engineering Tunnels, Label Switched Paths and Interfaces",
-              draft-ietf-teas-yang-te-26 (work in progress), February
-              2021.
+              draft-ietf-teas-yang-te-27 (work in progress), July 2021.
 
 8.2.  Informative References
 
@@ -2731,7 +2730,7 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
               Lee, Y., Zheng, H., Ceccarelli, D., Yoon, B. Y., and S.
               Belotti, "Applicability of YANG models for Abstraction and
               Control of Traffic Engineered Networks", draft-ietf-teas-
-              actn-yang-07 (work in progress), February 2021.
+              actn-yang-08 (work in progress), September 2021.
 
    [MEF55]    Metro Ethernet Forum, "Lifecycle Service Orchestration
               (LSO): Reference Architecture and Framework", Technical
@@ -2741,9 +2740,10 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 49]
+
+Busi, et al.              Expires April 2, 2022                [Page 49]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    [ONF_TR-527]
@@ -2797,9 +2797,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 50]
+Busi, et al.              Expires April 2, 2022                [Page 50]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 Appendix A.  Validating a JSON fragment against a YANG Model
@@ -2853,9 +2853,9 @@ A.1.  Manipulation of JSON fragments
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 51]
+Busi, et al.              Expires April 2, 2022                [Page 51]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    relevant YANG modules using available open-source tools.  It can be
@@ -2909,9 +2909,9 @@ A.3.  Validation of JSON fragments: DSDL-based approach
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 52]
+Busi, et al.              Expires April 2, 2022                [Page 52]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 A.4.  Validation of JSON fragments: why not using an XSD-based approach
@@ -2965,9 +2965,9 @@ B.1.1.  JSON Code: mpi1-otn-topology.json
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 53]
+Busi, et al.              Expires April 2, 2022                [Page 53]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
      "ietf-network:networks": {
@@ -3021,9 +3021,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 54]
+Busi, et al.              Expires April 2, 2022                [Page 54]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL\
@@ -3077,9 +3077,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 55]
+Busi, et al.              Expires April 2, 2022                [Page 55]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      "name": "AN1-8 OTN TTP",
@@ -3133,9 +3133,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 56]
+Busi, et al.              Expires April 2, 2022                [Page 56]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      ],
@@ -3189,9 +3189,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 57]
+Busi, et al.              Expires April 2, 2022                [Page 57]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      ],
@@ -3245,9 +3245,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 58]
+Busi, et al.              Expires April 2, 2022                [Page 58]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    }
@@ -3301,9 +3301,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 59]
+Busi, et al.              Expires April 2, 2022                [Page 59]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      "physical node": "S8",
@@ -3357,9 +3357,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 60]
+Busi, et al.              Expires April 2, 2022                [Page 60]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    "ietf-te-topology:te-tp-id": 6,
@@ -3413,9 +3413,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 61]
+Busi, et al.              Expires April 2, 2022                [Page 61]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    \ity": "OTN (ODU)",
@@ -3469,9 +3469,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 62]
+Busi, et al.              Expires April 2, 2022                [Page 62]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    "// __NOT-PRESENT__ is-abstract": "The access link i\
@@ -3525,9 +3525,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 63]
+Busi, et al.              Expires April 2, 2022                [Page 63]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                              "odu-type": "ietf-layer1-types:ODU2",
@@ -3581,9 +3581,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 64]
+Busi, et al.              Expires April 2, 2022                [Page 64]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                            }
@@ -3637,9 +3637,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 65]
+Busi, et al.              Expires April 2, 2022                [Page 65]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
              },
@@ -3693,9 +3693,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 66]
+Busi, et al.              Expires April 2, 2022                [Page 66]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                "// __NOT-PRESENT__ destination": "inter-domain link",
@@ -3749,9 +3749,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 67]
+Busi, et al.              Expires April 2, 2022                [Page 67]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                        "ietf-otn-topology:odulist": [
@@ -3805,9 +3805,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 68]
+Busi, et al.              Expires April 2, 2022                [Page 68]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                  "name": "Inter-domain Link from AN1-5",
@@ -3861,9 +3861,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 69]
+Busi, et al.              Expires April 2, 2022                [Page 69]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                          {
@@ -3917,9 +3917,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 70]
+Busi, et al.              Expires April 2, 2022                [Page 70]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    "admin-status": "up"
@@ -3973,9 +3973,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 71]
+Busi, et al.              Expires April 2, 2022                [Page 71]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                        "ietf-otn-topology:odulist": [
@@ -4029,9 +4029,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 72]
+Busi, et al.              Expires April 2, 2022                [Page 72]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                              "odu-type": "ietf-layer1-types:ODU0",
@@ -4085,9 +4085,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 73]
+Busi, et al.              Expires April 2, 2022                [Page 73]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                            }
@@ -4141,9 +4141,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 74]
+Busi, et al.              Expires April 2, 2022                [Page 74]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                            {
@@ -4197,9 +4197,9 @@ B.1.2.  JSON Code: mpi1-eth-topology.json
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 75]
+Busi, et al.              Expires April 2, 2022                [Page 75]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
        "ietf-eth-te-topology@2019-11-18": "draft-zheng-ccamp-client-top\
@@ -4253,9 +4253,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 76]
+Busi, et al.              Expires April 2, 2022                [Page 76]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    "// __DESCRIPTION__:__LTP__": {
@@ -4309,9 +4309,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 77]
+Busi, et al.              Expires April 2, 2022                [Page 77]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                      "name": "AN1-8 LTP",
@@ -4365,9 +4365,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 78]
+Busi, et al.              Expires April 2, 2022                [Page 78]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
              {
@@ -4421,9 +4421,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 79]
+Busi, et al.              Expires April 2, 2022                [Page 79]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                "// __NOT-PRESENT__ destination": "access link",
@@ -4477,9 +4477,9 @@ B.2.1.  JSON Code: mpi1-odu2-service-config.json
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 80]
+Busi, et al.              Expires April 2, 2022                [Page 80]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
        "ietf-te@2019-04-09": "draft-ietf-teas-yang-te-21",
@@ -4533,9 +4533,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 81]
+Busi, et al.              Expires April 2, 2022                [Page 81]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                    "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandw\
@@ -4589,9 +4589,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 82]
+Busi, et al.              Expires April 2, 2022                [Page 82]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                            "// __DEFAULT__ direction": "outgoing"
@@ -4645,9 +4645,9 @@ B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 83]
+Busi, et al.              Expires April 2, 2022                [Page 83]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
      },
@@ -4701,9 +4701,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 84]
+Busi, et al.              Expires April 2, 2022                [Page 84]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    \idth is used",
@@ -4757,9 +4757,9 @@ Internet-Draft    Transport NBI Applicability-Statement         May 2021
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 85]
+Busi, et al.              Expires April 2, 2022                [Page 85]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 B.2.3.  JSON Code: mpi1-epl-service-config.json
@@ -4813,9 +4813,9 @@ B.2.3.  JSON Code: mpi1-epl-service-config.json
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 86]
+Busi, et al.              Expires April 2, 2022                [Page 86]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
                "etht-svc-access-points": [
@@ -4869,9 +4869,9 @@ Acknowledgments
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 87]
+Busi, et al.              Expires April 2, 2022                [Page 87]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    The authors would like to thank Henry Yu and Aihua Guo for their
@@ -4925,9 +4925,9 @@ Additional Authors' Addresses
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 88]
+Busi, et al.              Expires April 2, 2022                [Page 88]
 
-Internet-Draft    Transport NBI Applicability-Statement         May 2021
+Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
    Ricard Vilalta
@@ -4981,4 +4981,4 @@ Authors' Addresses
 
 
 
-Busi, et al.            Expires November 28, 2021              [Page 89]
+Busi, et al.              Expires April 2, 2022                [Page 89]
