@@ -147,7 +147,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 1
+              "source-tp": "1"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
@@ -175,7 +175,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/8",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 8
+              "source-tp": "8"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
