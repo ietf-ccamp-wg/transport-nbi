@@ -1,7 +1,7 @@
 =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
 {
-  "// __LAST_UPDATE__": "August 20,2021",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -50,7 +50,9 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": [null],
+                "is-abstract": [
+                  null
+                ],
                 "admin-status": "up"
               },
               "oper-status": "up",
@@ -165,7 +167,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 1
+              "source-tp": "1"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
@@ -201,7 +203,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/8",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 8
+              "source-tp": "8"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
