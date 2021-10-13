@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "August 20,2021",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "ETH Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -43,7 +43,9 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": [null],
+                "is-abstract": [
+                  null
+                ],
                 "admin-status": "up"
               },
               "oper-status": "up",

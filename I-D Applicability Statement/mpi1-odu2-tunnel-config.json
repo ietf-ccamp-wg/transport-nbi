@@ -1,11 +1,11 @@
 {
-  "// __LAST_UPDATE__": "August 20,2021",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
     "ietf-te-types@2020-06-10": "rfc8776",
     "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types-10",
-    "ietf-te@2021-05-16": "draft-ietf-teas-yang-te-27",
+    "ietf-te@2021-02-20": "draft-ietf-teas-yang-te-26",
     "ietf-otn-tunnel@2021-06-25": "draft-ietf-ccamp-otn-tunnel-model-14"
   },
   "// __MISSING_ATTRIBUTES__": true,
@@ -26,8 +26,8 @@
           "switching-type": "ietf-te-types:switching-otn",
           "// __COMMENT__ source": "AN1 Node-ID",
           "source": "10.0.0.1",
-          "// __COMMENT__ src-tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> '01')",
-          "src-tunnel-tp-id": "01",
+          "// __COMMENT__ src-tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> 'AQ==' in base64)",
+          "src-tunnel-tp-id": "AQ==",
           "// __NOT-PRESENT__ destination": "Head tunnel segment",
           "// __NOT-PRESENT__ dst-tunnel-tp-id": "Head tunnel segment",
           "bidirectional": true,
@@ -44,7 +44,9 @@
             "topology-id": "otn-black-topology"
           },
           "te-bandwidth": {
-            "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+            "ietf-otn-tunnel:otn": {
+              "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+            }
           },
           "admin-state": "ietf-te:tunnel-admin-auto",
           "primary-paths": {
@@ -73,7 +75,7 @@
                       "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {
-                          "ietf-otn-tunnel:tpn": 2,
+                          "ietf-otn-tunnel:otn-tpn": 2,
                           "ietf-otn-tunnel:tsg": "ietf-layer1-types:tsg-1.25G",
                           "ietf-otn-tunnel:ts-list": "9-16",
                           "// __DEFAULT__ direction": "forward"

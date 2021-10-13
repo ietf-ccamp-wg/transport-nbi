@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "August 20,2021",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "EPL Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -42,7 +42,7 @@
             ],
             "service-classification-type": "ietf-eth-tran-types:port-classification",
             "// __COMMENT__ ingress-egress-bandwidth-profile": "Outside the scope of this JSON example",
-            "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN operations"   
+            "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN operations"
           }
         ],
         "underlay": {

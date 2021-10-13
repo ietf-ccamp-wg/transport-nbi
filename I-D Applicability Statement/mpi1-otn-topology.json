@@ -1,5 +1,5 @@
 {
-  "// __LAST_UPDATE__": "August 20,2021",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "ODU Black Topology @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
@@ -130,7 +130,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU2"
+                            }
                           }
                         }
                       ]
@@ -173,7 +175,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU2"
+                            }
                           }
                         }
                       ]
@@ -245,7 +249,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
@@ -281,7 +287,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
@@ -317,7 +325,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
@@ -353,7 +363,9 @@
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
@@ -380,7 +392,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 1
+              "source-tp": "1"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
@@ -397,7 +409,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
@@ -453,7 +467,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/2",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 2
+              "source-tp": "2"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
@@ -470,7 +484,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU2"
+                          }
                         }
                       }
                     ]
@@ -526,7 +542,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/3",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 3
+              "source-tp": "3"
             },
             "// __NOT-PRESENT__ destination": "access link",
             "ietf-te-topology:te": {
@@ -554,7 +570,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/4",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 4
+              "source-tp": "4"
             },
             "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
@@ -571,7 +587,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU2"
+                          }
                         }
                       }
                     ]
@@ -651,7 +669,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/5",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 5
+              "source-tp": "5"
             },
             "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
@@ -668,7 +686,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
@@ -748,7 +768,7 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/6",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 6
+              "source-tp": "6"
             },
             "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
@@ -765,7 +785,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
@@ -845,7 +867,7 @@
             "link-id": "teNodeId/10.0.0.1teLinkId/7",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 7
+              "source-tp": "7"
             },
             "// __NOT-PRESENT__ destination": "inter-domain link",
             "ietf-te-topology:te": {
@@ -862,7 +884,9 @@
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
