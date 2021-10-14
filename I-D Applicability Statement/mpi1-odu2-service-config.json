@@ -1,12 +1,12 @@
 {
-  "// __LAST_UPDATE__": "October 23, 2019",
+  "// __LAST_UPDATE__": "October 13,2021",
   "// __TITLE__": "ODU2 Service Configuration @ MPI1",
   "// __REFERENCE_DRAFTS__": {
     "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-    "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-02",
-    "ietf-te@2019-04-09": "draft-ietf-teas-yang-te-21",
-    "ietf-otn-tunnel@2019-10-23": "draft-ietf-ccamp-otn-tunnel-model-08"
+    "ietf-te-types@2020-06-10": "rfc8776",
+    "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types-10",
+    "ietf-te@2021-02-20": "draft-ietf-teas-yang-te-26",
+    "ietf-otn-tunnel@2021-06-25": "draft-ietf-ccamp-otn-tunnel-model-14"
   },
   "// __MISSING_ATTRIBUTES__": true,
   "// __RESTCONF_OPERATION__": {
@@ -25,9 +25,9 @@
           "encoding": "ietf-te-types:lsp-encoding-oduk",
           "switching-type": "ietf-te-types:switching-otn",
           "// __NOT-PRESENT__ source": "Transit tunnel segment",
-          "// __NOT-PRESENT__ src-tp-id": "Transit tunnel segment",
+          "// __NOT-PRESENT__ src-tunnel-tp-id": "Transit tunnel segment",
           "// __NOT-PRESENT__ destination": "Transit tunnel segment",
-          "// __NOT-PRESENT__ dst-tp-id": "Transit tunnel segment",
+          "// __NOT-PRESENT__ dst-tunnel-tp-id": "Transit tunnel segment",
           "bidirectional": true,
           "// __ DEFAULT __ protection": {
             "// __ DEFAULT __ enable": false
@@ -42,11 +42,13 @@
             "topology-id": "otn-black-topology"
           },
           "te-bandwidth": {
-            "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+            "ietf-otn-tunnel:otn": {
+              "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+            }
           },
-          "provisioning-state": "ietf-te-types:tunnel-state-up",
-          "p2p-primary-paths": {
-            "p2p-primary-path": [
+          "admin-state": "ietf-te-types:tunnel-admin-state-up",
+          "primary-paths": {
+            "primary-path": [
               {
                 "name": "mpi1-odu2-service-primary-path",
                 "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandwidth is used",
@@ -71,7 +73,7 @@
                       "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {
-                          "ietf-otn-tunnel:tpn": 1,
+                          "ietf-otn-tunnel:otn-tpn": 1,
                           "// __NOT-PRESENT__ ietf-otn-tunnel:tsg": "Not applicable for ODUk over OTUk",
                           "// __NOT-PRESENT__ ietf-otn-tunnel:ts-list": "Not applicable for ODUk over OTUk",
                           "// __DEFAULT__ direction": "forward"
@@ -97,7 +99,7 @@
                       "explicit-route-usage": "ietf-te-types:route-include-object",
                       "label-hop": {
                         "te-label": {
-                          "ietf-otn-tunnel:tpn": 1,
+                          "ietf-otn-tunnel:otn-tpn": 1,
                           "ietf-otn-tunnel:tsg": "ietf-layer1-types:tsg-1.25G",
                           "ietf-otn-tunnel:ts-list": "1-8",
                           "// __DEFAULT__ direction": "forward"
