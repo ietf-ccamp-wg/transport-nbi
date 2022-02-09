@@ -82,16 +82,16 @@ normative:
   ITU-T_G.808.1:
     title: Generic protection switching - Linear trail and subnetwork protection
     author:
-      org: ITU-T Recommendation G.808.1
+      org: International Telecommunication Union
     date: May 2014
-    seriesinfo: ITU-T G.808.1
+    seriesinfo: ITU-T Recommendation G.808.1
   ITU-T_G.873.1:
     title: >
         Optical transport network (OTN): Linear protection
     author:
-      org: ITU-T Recommendation G.873.1
+      org: International Telecommunication Union
     date: October 2017
-    seriesinfo: ITU-T G.808.1
+    seriesinfo: ITU-T Recommendation G.873.1
   OTN-TOPO: I-D.ietf-ccamp-otn-topo-yang
   CLIENT-TOPO: I-D.ietf-ccamp-eth-client-te-topo-yang
   TE-TUNNEL: I-D.ietf-teas-yang-te
@@ -102,24 +102,38 @@ normative:
 informative:
   ACTN-YANG: I-D.ietf-teas-actn-yang
   TE-TUTORIAL: I-D.ietf-teas-te-topo-and-tunnel-modeling
+  ITU-T_X.733:
+    title: >
+        Information technology – 
+        Open Systems Interconnection – 
+        Systems Management: Alarm reporting function
+    author:
+      org: International Telecommunication Union
+    date: February 1992
+    seriesinfo: ITU-T Recommendation X.733
+  ITU-T_X.734:
+    title: >
+        Information technology – 
+        Open Systems Interconnection – 
+        Systems Management: Event report management function
+    author:
+      org: International Telecommunication Union
+    date: September 1992
+    seriesinfo: ITU-T Recommendation X.734
   ONF_TR-527:
     title: Functional Requirements for Transport API
     author:
-      org: ONF Technical Recommendation TR-527
+      org: Open Networking Foundation
     date: May 2014
-    seriesinfo: ONF TR-527
+    seriesinfo: ONF Technical Recommendation TR-527
   MEF55:
     title: >
         Lifecycle Service Orchestration (LSO): Reference Architecture and Framework
     author:
-      org: Metro Ethernet Forum
+      org: MEF Forum
     date: March 2016
-    seriesinfo: Technical Specification MEF 55
+    seriesinfo: MEF 55
     target: https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_55.pdf
-
-# Need to include "X.733" Alarm reporting function"
-# Need to include "X.734" Event report management function"
-
 
 --- abstract
 
@@ -160,7 +174,7 @@ informative:
    vendor and multi-domain networks and also enable coordination and
    automation of service provisioning.  This is facilitated by using
    standardized data models (e.g., YANG models), and an appropriate
-   protocol (e.g., RESTCONF [RFC8040]).
+   protocol (e.g., RESTCONF {{?RFC8040}}).
   
    This document examines the applicability of the YANG models defined
    by the IETF (in particular in the Traffic Engineering Architecture
@@ -174,40 +188,40 @@ informative:
 
    This document assumes a reference architecture, including interfaces,
    based on the Framework for Abstraction and Control of Traffic- 
-   Engineered Networks (ACTN), defined in [RFC8453].
+   Engineered Networks (ACTN), defined in {{!RFC8453}}.
    
    The focus of this document is on the interface between the Multi
    Domain Service Coordinator (MDSC) and a Provisioning Network
    Controller (PNC), controlling a transport network domain, called
-   MDSC-PNC Interface (MPI) in [RFC8453].
+   MDSC-PNC Interface (MPI) in {{!RFC8453}}.
    
    It is worth noting that the same MPI analyzed in this document could
    be used between hierarchical MDSC controllers, as shown in Figure 4
-   of [RFC8453].
+   of {{!RFC8453}}.
 
    A detailed analysis of the interface between the Customer Network
    Controller (CNC) and the MDSC, called CNC-MDSC Interface (CMI) in
-   [RFC8453], as well as of the interface between service and network
+   {{!RFC8453}}, as well as of the interface between service and network
    orchestrators are outside the scope of this document.  However, when
    needed, this document describes some considerations and assumptions
    about the information which needs to be provided at these interfaces.
    The list of the IETF YANG models which apply to the ACTN MPI
-   can be found in [ACTN-YANG].
+   can be found in {{ACTN-YANG}}.
 
    The Functional Requirements for the transport API as described in the
-   Optical Networking Foundation (ONF) document [ONF_TR-527] have been
+   Optical Networking Foundation (ONF) document {{ONF_TR-527}} have been
    taken as input for defining the reference scenarios analyzed in this
    document.
 
    The analysis provided in this document confirms that the IETF YANG
-   models defined in [RFC8453], [RFC8795], [OTN-TOPO], [CLIENT-TOPO],
-   [TE-TUNNEL], [PATH-COMPUTE], [OTN-TUNNEL], and [CLIENT-SIGNAL] can be
+   models defined in {{!RFC8453}}, {{!RFC8795}}, {{OTN-TOPO}}, {{CLIENT-TOPO}},
+   {{TE-TUNNEL}}, {{PATH-COMPUTE}}, {{OTN-TUNNEL}}, and {{CLIENT-SIGNAL}} can be
    used together to control a multi-domain OTN network to support
    different types of multi-domain services, such as Optical Data Unit 
    (ODU) transit services, Transparent client services and EPL/EVPL 
    Ethernet Private Line/Ethernet Virtual Private Line (EPL/EVPL)    
    services, over a multi-domain OTN connection, satisfying also 
-   the requirements in [ONF_TR-527].
+   the requirements in {{ONF_TR-527}}.
 
 {: #terminology}
 
@@ -231,8 +245,7 @@ informative:
    document it is typically an ODU LSP.  An end-to-end connection/LSP
    represents an entire connection between the connection
    node end-points.  A connection/LSP segment represents a portion of
-   the end-to-end connection
-.
+   the end-to-end connection.
 
    Connectivity Service
    : A connectivity service, in the context of this document can be 
@@ -316,14 +329,14 @@ informative:
    presented as an edge on TE graph.
 
    TE Tunnel
-   :  As defined in [TE-TUNNEL], it is a connection-oriented
+   :  As defined in {{TE-TUNNEL}}, it is a connection-oriented
    service provided by a layer network of delivery of a client's data
    between source and destination tunnel termination points. See also
-   [TE-TUTORIAL].
+   {{TE-TUTORIAL}}.
 
    TE Tunnel Segment
-   : As defined in [TE-TUNNEL], it is a part of a
-   multi-domain TE tunnel that spans. See also [TE-TUTORIAL].
+   : As defined in {{TE-TUNNEL}}, it is a part of a
+   multi-domain TE tunnel that spans. See also {{TE-TUTORIAL}}.
 
    TE Tunnel Hand-off
    : It is an access or inter-domain LTP by
@@ -594,7 +607,6 @@ informative:
    the same procedures, described above for the multi-domain service,
    and decide the network configuration to request only at the MPI of
    the PNC controlling that domain (e.g., MPI1 of PNC1 in {{fig-control-hierarchy}}).
-
 {: #topology-description}
 
 ## Topology Abstractions
@@ -1157,13 +1169,13 @@ informative:
    {{topology-analysis}} describes the different topology abstractions provided
    to the MDSC by each PNC via its own MPI.
 
-   {{service-analysis}} describes how the MDSC can request different PNCs, via
-   their own MPIs, the network configuration needed to setup the
-   different services described in {{service-description}}.
+  {{service-analysis}} describes how the MDSC can request different PNCs, via
+  their own MPIs, the network configuration needed to setup the
+  different services described in {{service-description}}.
 
-   {{protection-analysis}} describes how the protection scenarios can be deployed,
-   including end-to-end protection and segment protection, for both
-   intra-domain and inter-domain scenario.
+  {{protection-analysis}} describes how the protection scenarios can be deployed,
+  including end-to-end protection and segment protection, for both
+  intra-domain and inter-domain scenario.
 
 {: #topology-analysis}
 
@@ -1197,7 +1209,7 @@ informative:
    STM-64 physical link) or as an OTUk trail.
 
    In order to support the EPL and EVPL services, described in
-   {{epl-description}} and {{epl-description}},
+   {{epl-description}} and {{evpl-description}},
    the access links, which are capable of being
    configured as Ethernet physical links, are reported by each PNC
    within its respective Ethernet abstract topology, using the Topology
@@ -2254,7 +2266,7 @@ informative:
    notification can be found in section 6 of {{?RFC8040}}.
    
    Additional alarm reporting functions and alarm report management may
-   be found in {{?X.733}} and {{?X.734}}
+   be found in {{ITU-T_X.733}} and {{ITU-T_X.734}}
    
    Further detailed analysis of notification management is outside 
    the scope of this document.
