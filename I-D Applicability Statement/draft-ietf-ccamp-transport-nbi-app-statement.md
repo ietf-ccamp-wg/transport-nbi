@@ -33,52 +33,44 @@ author:
     role: editor
     org: CAICT
     email: xuyunbin@ritt.cn
-#  -
-#    name: Yang Zhao
-#    org: China Mobile
-#    email: zhaoyangyjy@chinamobile.com
-#  -
-#    name: Sergio Belotti
-#    org: Nokia
-#    email: sergio.belotti@nokia.com
-#  -
-#    name: Gianmarco Bruno
-#    org: Ericsson
-#    email: gianmarco.bruno@ericsson.com
-#  -
-#    name: Young Lee
-#    org: Sung Kyun Kwan University
-#    email: younglee.tx@gmail.com
-#  -
-#    name: Victor Lopez
-#    org: Nokia
-#    email: victor.lopez@nokia.com
-#  -
-#    name: Carlo Perocchio
-#    org: Ericsson
-#    email: carlo.perocchio@ericsson.com
-#  -
-#    name: Ricard Vilalta
-#    org: CTTC
-#    email: ricard.vilalta@cttc.es
-#  -
-#    name: Michael Scharf
-#    org: Hochschule Esslingen - University of Applied Sciences
-#    email: michael.scharf@hs-esslingen.de
-#  -
-#    name: Dieter Beller
-#    org: Nokia
-#    email: dieter.beller@nokia.com
 
-#contributor:
-#-
-#    name: Aihua Guo
-#    org: Futurewei Inc.
-#    email: aihuaguo.ietf@gmail.com
-#-
-#    name: Haomian Zheng
-#    org: Huawei
-#    email: zhenghaomian@huawei.com
+contributor:
+  -
+    name: Yang Zhao
+    org: China Mobile
+    email: zhaoyangyjy@chinamobile.com
+  -
+    name: Sergio Belotti
+    org: Nokia
+    email: sergio.belotti@nokia.com
+  -
+    name: Gianmarco Bruno
+    org: Ericsson
+    email: gianmarco.bruno@ericsson.com
+  -
+    name: Young Lee
+    org: Sung Kyun Kwan University
+    email: younglee.tx@gmail.com
+  -
+    name: Victor Lopez
+    org: Nokia
+    email: victor.lopez@nokia.com
+  -
+    name: Carlo Perocchio
+    org: Ericsson
+    email: carlo.perocchio@ericsson.com
+  -
+    name: Ricard Vilalta
+    org: CTTC
+    email: ricard.vilalta@cttc.es
+  -
+    name: Michael Scharf
+    org: Hochschule Esslingen - University of Applied Sciences
+    email: michael.scharf@hs-esslingen.de
+  -
+    name: Dieter Beller
+    org: Nokia
+    email: dieter.beller@nokia.com
 
 normative:
   ITU-T_G.709:
@@ -125,17 +117,22 @@ informative:
     seriesinfo: Technical Specification MEF 55
     target: https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_55.pdf
 
+# Need to include "X.733" Alarm reporting function"
+# Need to include "X.734" Event report management function"
+
+
 --- abstract
 
    This document provides an analysis of the applicability of the YANG
-   models defined by the IETF (Traffic Engineering Architecture and
-   Signaling (TEAS) moreover, Common Control and Measurement Plane
-   (CCAMP) WGs in particular) to support ODU transit services,
-   Transparent client services and EPL/EVPL Ethernet services over OTN
-   single and multi-domain network scenarios.
+   models defined by the IETF (in particular in the Traffic Engineering
+   Architecture and Signaling (TEAS) and Common Control and Measurement
+   Plane (CCAMP) working groups) to support ODU transit services,
+   transparent client services, and Ethernet Private Line/Ethernet
+   Virtual Private Line (EPL/EVPL) services over Optical Transport
+   Network (OTN) in single and multi-domain network scenarios.
 
    This document also describes how existing YANG models can be used
-   through a number of worked examples and JSON fragments.
+   through several worked examples and JSON fragments.
 
 --- middle
 
@@ -144,74 +141,73 @@ informative:
 # Introduction
 
    Transport network domains, including Optical Transport Network (OTN)
-   and Wavelength Division Multiplexing (WDM) networks, are typically
-   deployed based on a single vendor or technology platforms. They are
-   often managed using proprietary interfaces to dedicated Element
-   Management Systems (EMS), Network Management Systems (NMS) and
+   and Wavelength Division Multiplexing (WDM) networks are typically
+   deployed based on a single vendor, or a single technology platform.  
+   They are often managed using proprietary interfaces to dedicated 
+   Element Management Systems (EMS), Network Management Systems (NMS) and
    increasingly Software Defined Network (SDN) controllers.
-
-   Support of packet connectivity services over transport network
-   domains are critical for a wide range of applications and services,
+   
+   Support of packet connectivity services over a transport network
+   domain is critical for a wide range of applications and services,
    including data center and LAN interconnects, Internet service
    backhauling, mobile backhaul and enterprise Carrier Ethernet
-   services. A clear goal of operators is to automate the setup of
+   services. An explicit goal of operators is to automate the setup of
    these connectivity services across multiple transport network
    domains, that may utilize different technologies.
-
+   
    A well-defined common open interface to each domain controller or a
-   management system is required for network operators to control
-   multi-vendor and multi-domain networks and also enable coordination
-   and automation of service provisioning. This is facilitated by using
+   management system is required for network operators to control multi-
+   vendor and multi-domain networks and also enable coordination and
+   automation of service provisioning.  This is facilitated by using
    standardized data models (e.g., YANG models), and an appropriate
-   protocol (e.g., RESTCONF {{?RFC8040}}).
-
-   This document examines the applicability of the YANG models being
-   defined by IETF (Traffic Engineering Architecture and Signaling
-   (TEAS) moreover, Common Control and Measurement Plane (CCAMP) WGs in
-   particular) to support Optical Transport Networks (OTN) single and
-   multi-domain scenarios.
+   protocol (e.g., RESTCONF [RFC8040]).
+  
+   This document examines the applicability of the YANG models defined
+   by the IETF (in particular in the Traffic Engineering Architecture
+   and Signaling (TEAS) and Common Control and Measurement Plane (CCAMP)
+   working groups) to support OTN in single and multi-domain network
+   scenarios.
 
 {: #scope}
 
 ## The Scope of this Document
 
-   This document assumes a reference architecture, including
-   interfaces, based on the Abstraction and Control of Traffic-
-   Engineered Networks (ACTN), defined in {{!RFC8453}}.
-
+   This document assumes a reference architecture, including interfaces,
+   based on the Framework for Abstraction and Control of Traffic- 
+   Engineered Networks (ACTN), defined in [RFC8453].
+   
    The focus of this document is on the interface between the Multi
    Domain Service Coordinator (MDSC) and a Provisioning Network
    Controller (PNC), controlling a transport network domain, called
-   MDSC-PNC Interface (MPI) in {{!RFC8453}}.
-
+   MDSC-PNC Interface (MPI) in [RFC8453].
+   
    It is worth noting that the same MPI analyzed in this document could
    be used between hierarchical MDSC controllers, as shown in Figure 4
-   of {{!RFC8453}}.
+   of [RFC8453].
 
-   Detailed analysis of the interface between the Customer Network
+   A detailed analysis of the interface between the Customer Network
    Controller (CNC) and the MDSC, called CNC-MDSC Interface (CMI) in
-   {{!RFC8453}}, as well as of the interface between service and network
-   orchestrators are outside the scope of this document. However, when
+   [RFC8453], as well as of the interface between service and network
+   orchestrators are outside the scope of this document.  However, when
    needed, this document describes some considerations and assumptions
-   about the information which needs to be provided at these
-   interfaces.
+   about the information which needs to be provided at these interfaces.
+   The list of the IETF YANG models which apply to the ACTN MPI
+   can be found in [ACTN-YANG].
 
-   The list of the IETF YANG models which are applicable to the ACTN
-   MPI can be found in {{ACTN-YANG}}.
-
-   The Functional Requirements for the transport API as described in
-   the Optical Networking Foundation (ONF) document {{ONF_TR-527}} have
-   been taken as input for defining the reference scenarios analyzed in
-   this document.
+   The Functional Requirements for the transport API as described in the
+   Optical Networking Foundation (ONF) document [ONF_TR-527] have been
+   taken as input for defining the reference scenarios analyzed in this
+   document.
 
    The analysis provided in this document confirms that the IETF YANG
-   models defined in {{!RFC8453}}, {{!RFC8795}}, {{OTN-TOPO}}, {{CLIENT-TOPO}},
-   {{TE-TUNNEL}}, {{PATH-COMPUTE}}, {{OTN-TUNNEL}} and {{CLIENT-SIGNAL}} can be
+   models defined in [RFC8453], [RFC8795], [OTN-TOPO], [CLIENT-TOPO],
+   [TE-TUNNEL], [PATH-COMPUTE], [OTN-TUNNEL], and [CLIENT-SIGNAL] can be
    used together to control a multi-domain OTN network to support
-   different types of multi-domain services, such as ODU transit
-   services, Transparent client services and EPL/EVPL Ethernet
-   services, over a multi-domain OTN connection, satisfying also the
-   requirements in {{ONF_TR-527}}.
+   different types of multi-domain services, such as Optical Data Unit 
+   (ODU) transit services, Transparent client services and EPL/EVPL 
+   Ethernet Private Line/Ethernet Virtual Private Line (EPL/EVPL)    
+   services, over a multi-domain OTN connection, satisfying also 
+   the requirements in [ONF_TR-527].
 
 {: #terminology}
 
@@ -231,16 +227,16 @@ informative:
    : Customer Network Controller
 
    Connection
-   : The data plane configuration of an LSP, within this
-   document it is typically an ODU LSP. An end-to-end connection/LSP
-   represents an entire connection/LSP between the connection/LSP node
-   end-points. A connection/LSP segment represents a portion of the
-   end-to-end connection/LSP.
+   : The data plane configuration of an LSP: within this
+   document it is typically an ODU LSP.  An end-to-end connection/LSP
+   represents an entire connection between the connection
+   node end-points.  A connection/LSP segment represents a portion of
+   the end-to-end connection
+.
 
    Connectivity Service
-   : A service, or connectivity service, in the
-   context of this document can be considered as some form of
-   connectivity service between customer sites across the network
+   : A connectivity service, in the context of this document can be 
+   considered as a connection between customer sites, across the network
    operator's network {{?RFC8309}}.
 
    E-LINE
@@ -256,9 +252,9 @@ informative:
    : Inter-Layer Lock
 
    Link
-   : A link, or a physical link, is used to reprent the adjacency
-   between two physical nodes. The term OTN link represents a link
-   between two OTN switching physical nodes.
+   : It is used to represent the adjacency between two nodes.  
+   The term physical link represents a link between two physical
+   nodes. The term OTN link represents a link between two OTN nodes. 
 
    LSP
    : Label Switched Path
@@ -320,19 +316,20 @@ informative:
    presented as an edge on TE graph.
 
    TE Tunnel
-   : As defined in {{TE-TUTORIAL}}, it is a connection-oriented
+   :  As defined in [TE-TUNNEL], it is a connection-oriented
    service provided by a layer network of delivery of a client's data
-   between source and destination tunnel termination points.
+   between source and destination tunnel termination points. See also
+   [TE-TUTORIAL].
 
    TE Tunnel Segment
-   : As defined in {{TE-TUTORIAL}}, it is a part of a
-   multi-domain TE tunnel that spans.
+   : As defined in [TE-TUNNEL], it is a part of a
+   multi-domain TE tunnel that spans. See also [TE-TUTORIAL].
 
    TE Tunnel Hand-off
-   : As defined in {{TE-TUTORIAL}}, it is an access
-   link or inter-domain link by which a multi-domain TE tunnel enters
-   or exits a given network domain.
-
+   : It is an access or inter-domain LTP by
+   which a multi-domain TE tunnel enters or exits a given network
+   domain. See also [TE-TUTORIAL.
+   
    Note - The three definitions above are currently in {{TE-TUTORIAL}}
    but it is expected that they will be moved to {{TE-TUNNEL}}. When this
    happens, the reference will be updated and the {{TE-TUTORIAL}}
@@ -417,55 +414,8 @@ informative:
    bidirectional paths, the forward and backward directions are
    selected arbitrarily, but the convention is consistent between
    working/protection path pairs, as well as across multiple domains.
-
-## JSON code
-
-   This document provides some detailed JSON code examples to describe
-   how the YANG models being developed by the IETF (TEAS and CCAMP WG
-   in particular) may be used. The scenario examples are provided using
-   JSON to facilitate readability.
-
-   Different objects need to have an identifier. The convention used to
-   create mnemonic identifiers is to use the object name (e.g., S3 for
-   node S3), followed by its type (e.g., NODE), separated by an "-",
-   followed by "-ID". For example, the mnemonic identifier for node S3
-   would be S3-NODE-ID.
-
-   The JSON language does not support the insertion of comments that
-   have been instead found to be useful when writing the examples. This
-   document will insert comments into the JSON code as JSON name/value
-   pair with the JSON name string starting with the "//" characters.
-   For example, when describing the example of a TE Topology instance
-   representing the ODU Abstract Topology exposed by the Transport PNC,
-   the following comment has been added to the JSON code:
-
-~~~~
-      "// comment": "ODU Abstract Topology @ MPI",
-~~~~
-
-   The JSON code examples provided in this document have been validated
-   against the YANG models following the validation process described
-   in {{json-validation}}, which would not consider the comments.
-
-   To have successful validation of the examples, some numbering scheme
-   has been defined to assign identifiers to the different entities
-   which would pass the syntax checks. In that case, to simplify the
-   reading, another JSON name/value pair formatted as a comment and
-   using the mnemonic identifiers is also provided. For example, the
-   identifier of node S3 (S3-NODE-ID) has been assumed to be "10.0.0.3"
-   and would be shown in the JSON code example using the two JSON
-   name/value pair:
-
-~~~~
-      "// te-node-id": "S3-NODE-ID",
-
-      "te-node-id": "10.0.0.3",
-~~~~
-
-   The first JSON name/value pair will be automatically removed in the
-   first step of the validation process, while the second JSON
-   name/value pair will be validated against the YANG model
-   definitions.
+   
+   The use of curly brackets denotes multiple nodes in a list. 
 
 {: #scenarios}
 
@@ -521,7 +471,7 @@ informative:
 
    This document assumes that all the Si transport network switching
    nodes are capable of switching in the electrical domain (ODU
-   switching) moreover, that all the Si-Sj OTN links within the
+   switching) moreover, all the Si-Sj OTN links within the
    transport network (intra-domain or inter-domain) are 100G links
    while the access Ri-Sj links are 10G links.
 
@@ -532,12 +482,11 @@ informative:
    to the MDSC.
 
    Different transmission technologies can be used on the access links
-   (e.g., Ethernet, STM-N and OTU).
+   (e.g., Ethernet, Synchronous Transport Module (STM) and OTU).
    {{service-description}} provides more details
    about the different assumptions on the access links for different
-   types of connectivity services and
-   {{multi-function-access}} describes the control
-   of access links which can support different technology
+   types of connectivity services, and {{multi-function-access}} 
+   describes the control of access links which can support different technology
    configurations (e.g., STM-64, 10GE or OTU2) depending on the type of
    service being configured (multi-function access links).
 
@@ -601,7 +550,7 @@ informative:
    MDSC control the end-to-end network through the MPIs toward the
    underlying PNCs.
 
-   The ACTN framework facilitates the separation of the network and
+   The ACTN framework facilitates seperating the network and
    service control from the underlying technology. It helps the
    customer to define the network as desired by business needs. The CMI
    is defined to keep a minimal level of dependency (or no dependency
@@ -612,8 +561,7 @@ informative:
    three MPIs, as shown in {{fig-control-hierarchy}}.
 
    The split of functionality at the MPI in the ACTN architecture
-   between the MDSC (multi-domain controller) and the PNCs (domain
-   controllers), is equivalent to separation functionality assumed in
+   between the MDSC and the PNCs, is equivalent to separation functionality assumed in
    the ONF T-API interface, as described in the ONF T-API multi-domain
    use cases {{ONF_TR-527}}. Furthermore, this functional separation is
    similarly defined in the MEF PRESTO interface between the Service
@@ -690,13 +638,13 @@ informative:
    level of abstraction provided by each PNC is based on the PNC
    configuration parameters and it is independent of the abstractions
    provided by other PNCs. Therefore, it is possible that different
-   PNCs provide different types of topology abstractions. The MDSC can
+   PNCs provides different topology abstractions. The MDSC can
    operate on each MPI abstract topology regardless of, and
    independently from, the type of abstraction provided by its
    underlying PNC.
 
    For analyzing how the MDSC can operate on an abstract topology
-   provided by several PNcs that independently applied different
+   provided by several PNCs that independently applied different
    abstraction policies and therefore provided different types of
    abstract topologies, the following assumptions are made for the
    reference network in {{fig-reference-network}}:
@@ -719,7 +667,7 @@ informative:
 
    The MDSC can also provide topology abstraction of its view of the
    multi-domain network topology at its CMIs depending on the
-   customers' needs and policies: it can provide different types of
+   customers' needs and policies: it can provide different 
    topology abstractions at different CMIs. Analyzing the topology
    abstractions provided by the MDSC to its CMIs is outside the scope
    of this document.
@@ -758,7 +706,7 @@ informative:
    interfaces are not channelized (i.e., they can only support one
    ODU2).
 
-   When a 10Gb IP link between R1 and R8 is needed, an ODU2 end-to-end
+   When a 10Gb an IP connectivity service between R1 and R8 is needed, an ODU2 end-to-end
    connection needs to be created, passing through transport network
    nodes S3, S1, S2, S31, S33, S34, S15 and S18 which belong to
    different PNC domains (multi-domain service request):
@@ -769,7 +717,7 @@ informative:
       S15 [(ODU2)], S18 [(ODU2)], R8 [ODU2 -> (PKT)]
 ~~~~
 
-   The MDSC receives, at the CMI,the request to create an ODU2 transit
+   The MDSC receives, at the CMI, the request to create an ODU2 transit
    service between the access links on S3 and S18, which belong to
    different PNC domains (multi-domain service request). The MDSC also
    determines the network configuration requests to be sent to its
@@ -777,7 +725,7 @@ informative:
    domain ODU2 connection segment between the access links on S3 and
    S18.
 
-   When a 10Gb IP link between R1 and R3 is needed, an ODU2 end-to-end
+   When a 10Gb an IP connectivity service between R1 and R3 is needed, an ODU2 end-to-end
    connection needs to be created, passing through transport network
    nodes S3, S5 and S6 which belong to the same PNC domain (single-
    domain service request):
@@ -809,8 +757,8 @@ informative:
    outside the scope of this document and not exposed at the MPIs
    between the PNCs and the MDSC.
 
-   When a 10Gb IP link between between R1 and R8 is needed, an EPL
-   service needs to be created, supported by an ODU2 end-to-end
+   When a 10Gb an IP connectivity service between R1 and R8 is needed, an EPL
+   service needs to be created, supported by a ODU2 end-to-end
    connection, between transport network nodes S3 and S18, passing
    through transport network nodes S1, S2, S31, S33, S34 and S15, which
    belong to different PNC domains (multi-domain service request):
@@ -830,8 +778,8 @@ informative:
    adaptation functions inside these edge nodes, such as S3 \[ETH ->
    (ODU2)] and S18 \[(ODU2) -> ETH].
 
-   When a 10Gb IP link between R1 and R2 is needed, an EPL service
-   needs to be created, supported by an ODU2 end-to-end connection
+   When a 10Gb an IP connection between R1 and R2 is needed, an EPL service
+   needs to be created, supported by a ODU2 end-to-end connection
    between transport network nodes S3 and S6, passing through the
    transport network node S5, which belong to the same PNC domain
    (single-domain service request):
@@ -862,9 +810,9 @@ informative:
    InfiniBand, etc.) interconnecting the IP routers and the transport
    network.
 
-   When a 10Gb IP link between R1 and R8 is needed, using, for example
+   When a 10Gb an IP connectivity service between R1 and R8 is needed, using, for example
    SDH physical links between the IP routers and the transport network,
-   an STM-64 Private Line service needs to be created, supported by an
+   an STM-64 Private Line service needs to be created, supported by a
    ODU2 end-to-end connection, between transport network nodes S3 and
    S18, passing through transport network nodes S1, S2, S31, S33, S34
    and S15, which belong to different PNC domains (multi-domain service
@@ -884,7 +832,7 @@ informative:
    functions inside these edge nodes, such as S3 \[STM-64 -> (ODU2)] and
    S18 \[(ODU2) -> STM-64].
 
-   When a 10Gb IP link between R1 and R3 is needed, an STM-64 Private
+   When a 10Gb an IP connectivity service between R1 and R3 is needed, an STM-64 Private
    Line service needs to be created between R1 and R3 (single-domain
    service request):
 
@@ -944,7 +892,7 @@ informative:
 
 {: #multi-function-access}
 
-## Multi-function Access Links
+## Multi-Function Access Links
 
    Some physical links interconnecting the IP routers and the transport
    network can be configured in different modes, e.g., as OTU2 trail or
@@ -990,7 +938,7 @@ informative:
    STM-64 Private Line service, between R1 and R4, or an EPL service,
    between R1 and R8.
 
-   The MDSC, based on the service being request, decides the network
+   The MDSC, based on the service being requested, decides the network
    configurations to request, at the MPIs, to its underlying PNCs, to
    coordinate the setup of an end-to-end ODU2 connection, either
    between nodes S3 and S6, or between nodes S3 and S18, including the
@@ -1039,7 +987,7 @@ informative:
 
 {: #linear-protection-description}
 
-### Linear Protection (end-to-end)
+### Linear Protection (End-to-End)
 
    To protect the connectivity services described in {{service-description}} from
    failures within the OTN multi-domain transport network, the MDSC can
@@ -1083,7 +1031,7 @@ informative:
                                        S15, S18
 ~~~~
 
-   The PNCs should be capable of reporting to the MDSC which is the
+   The PNCs should be capable of reporting to the MDSC which, is the
    active transport entity, as defined in {{ITU-T_G.808.1}}, in the data
    plane.
 
@@ -1104,7 +1052,7 @@ informative:
    decide to request its underlying PNCs to configure ODU2 linear
    protection between the edge nodes of each domain.
 
-   For example, MDSC can request PNC1 to configure linear protection
+   For example, the MDSC can request PNC1 to configure linear protection
    between its edge nodes S3 and S2:
 
 ~~~~
@@ -1135,8 +1083,9 @@ informative:
 
 ## Notification
 
-   To realize the topology update, service update and restoration
-   function, following notification types should be supported:
+   To realize the three functions of topology update, service update,
+   and restoration, the following notification types need to be
+   supported:
 
    1. Object create
 
@@ -1154,13 +1103,13 @@ informative:
    it should provide notification of the service state change to the
    MDSC.
 
-   Analysis and methods of how event alarms are triggered, managed and
+   A detailed analysis and methods of how event alarms are triggered, managed and
    propagated are outside the scope of this document.
 
 ## Path Computation with Constraints
 
    It is possible to define constraints to be taken into account during
-   path computation procedures (e.g., IRO/XRO).
+   path computation procedures (e.g., Include Route Object (IRO) and Exclude Route Object (XRO) {{!RFC5521}}).
 
    For example, the CNC can request, at the CMI, an ODU transit
    service, as described in {{odu-description}}, between R1 and R8 with the
@@ -1431,7 +1380,7 @@ informative:
 ~~~~
 {: #fig-pnc1-topology title="Physical Topology controlled by PNC1"}
 
-   The PNC1 native topology is not exposed and therefore it under PNC
+   The PNC1 native topology is not exposed and therefore it is the PNC's
    responsibility to abstract the whole domain physical topology as a
    single TE node and to maintain a mapping between the LTPs exposed at
    MPI abstract topologies and the associated physical interfaces
@@ -1503,14 +1452,14 @@ informative:
    OTN in the TTPs within the MPI2 OTN Topology.
 
    In particular, PNC2 reports in both the MPI2 OTN Topology and MPI2
-   ETH Topology an AN2-1 access link which abstracts the multi-function
-   physical access link between S18 and R8, which is assumed to
-   correspond to the S18-3 LTP, within the PNC2 native topology. It
-   also reports in the MPI2 ETH Topology a TTP which abstracts the ODU
-   termination and adaptation resources dedicated to this physical
-   access link and the inter-layer lock between this TTP, and the AN2-1
-   LTPs reported within the MPI2 OTN Topology and the MPI2 ETH
-   Topology.
+   ETH Topology an access link which abstracts the multi-function
+   physical access link between S18 and R8, and terminates on the
+   AN2-1 LTP which corresponds to the S18-3 physical interface,
+   within the PNC2 native topology.  It also reports in the MPI2 ODU 
+   Topology an AN2-1 TTP which abstracts the ODU termination and
+   adaptation resources dedicated to this physical access link and
+   the inter-layer lock between the AN2-1 TTP, and the AN2-1
+   LTPs reported within the MPI2 OTN Topology and the MPI2 ETH Topology.
 
 {: #domain3-topo}
 
@@ -1900,7 +1849,8 @@ informative:
 
    Therefore, the MDSC also understands that it needs to coordinate the
    setup of a multi-domain ODU2 Tunnel between AN1-1 and AN2-1 TTPs,
-   abstracting S3-1 and S18-3 TTPs, within the OTN Abstract Topologies
+   abstracting the ODU termination and adaptation resources on S3-1
+   and S18-3 physical interfaces, within the OTN Abstract Topologies
    exposed by PNC1 and PNC2, respectively.
 
    MDSC then performs multi-domain path computation (step 2 in
@@ -2024,7 +1974,7 @@ informative:
    The CNC requests, at the CMI, MDSC to setup an STM-64 Private Line
    service between R1 and R8.
 
-   Following similar procedures as described in {{epl-analysis}}, MDSC
+   Following similar procedures as described in {{epl-analysis}}, the MDSC
    understands that:
 
    -  R1 is attached to the access link terminating on AN1-1 LTP in the
@@ -2033,9 +1983,10 @@ informative:
       OTN Abstract Topology, exposed by PNC2;
 
    -  it needs to coordinate the setup of a multi-domain ODU2 Tunnel
-      between the AN1-1 and AN2-1 TTPs, abstracting S3-1 and S18-3
-      TTPs, within the OTN Abstract Topologies exposed by PNC1 and
-      PNC2, respectively.
+      between the AN1-1 and AN2-1 TTPs, abstracting the ODU termination
+      and adaptation resources on S3-1 and S18-3 physical interfaces,
+      within the OTN Abstract Topologies exposed by PNC1 and PNC2,
+      respectively.
 
    The MDSC then performs multi-domain path computation (step 2 in
    {{fig-svc-setup}}) and then requests:
@@ -2066,7 +2017,7 @@ informative:
 
 #### Single Domain Example
 
-   When this IP link, between R1 and R3, is needed, the CNC requests,
+   When an IP link, between R1 and R3, is needed, the CNC requests,
    at the CMI, the MDSC to setup an STM-64 Private Line service.
 
    The MDSC and PNC1 follows similar procedures as described in
@@ -2101,10 +2052,11 @@ informative:
       S6-1 TTPs, within the OTN Abstract Topology exposed by PNC1;
 
    -  To setup the second (multi-domain) EPVL service, between R1 and
-      R8, it needs to coordinate the setup of a multi-domain ODU0
-      Tunnel between the AN1-1 and AN2-1 TTPs, abstracting nodes S3-1
-      and S18-3 TTPs, within the OTN Abstract Topologies exposed by
-      PNC1 and PNC2, respectively.
+      R8, it needs to coordinate the setup of a multi-domain ODU0 Tunnel
+      between the AN1-1 and AN2-1 TTPs, abstracting the ODU termination
+      and adaptation resources on S3-1 and S18-3 physical interfaces,
+      within the OTN Abstract Topologies exposed by PNC1 and PNC2,
+      respectively.
 
    To setup the first (single-domain) EVPL service between R1 and R2,
    the MDSC and PNC1 follows similar procedures as described in
@@ -2293,13 +2245,19 @@ informative:
    this draft, as described in {{notification-description}}.
 
    The notification mechanisms are protocol-dependent. It is assumed
-   that the RESTCONF protocol, defined in {{?RFC8040}}, is used at the
-   MPIs mentioned in this document.
+   that the RESTCONF protocol, defined in {{?RFC8040}} is optional, 
+   and may be used at the MPIs mentioned in this document.
 
    On the perspective of MPI, the MDSC is the client while the PNC is
    acting as the server of the notification. The essential event
    streams, subscription and processing rules after receiving
    notification can be found in section 6 of {{?RFC8040}}.
+   
+   Additional alarm reporting functions and alarm report management may
+   be found in {{?X.733}} and {{?X.734}}
+   
+   Further detailed analysis of notification management is outside 
+   the scope of this document.
 
 {: #path-computation-analysis}
 
@@ -2314,7 +2272,7 @@ informative:
    specify the tunnel information on MPI, with the constraint included
    in TE Tunnel model.
 
-   Further detailed analysis is outside the scope of this document
+   Further detailed analysis is outside the scope of this document.
 
 # Security Considerations
 
@@ -2328,7 +2286,7 @@ informative:
    should all be carefully considered.  Section 9 of {{!RFC8453}}
    highlights that implementations should consider encrypting data that
    flows between key components, especially when they are implemented
-   at remote node. Further discussion on securing the interface between
+   at remote nodes. Further discussion on securing the interface between
    the MDSC and PNCs via the MDSC-PNC Interface (MPI) is discussed in
    section 9.2 of {{!RFC8453}}.
 
@@ -2366,6 +2324,55 @@ informative:
    The objective is to have a tool that allows validating whether a
    piece of JSON code embedded in an Internet-Draft is compliant with a
    YANG model without using a client/server.
+
+## JSON CODE
+
+   This document provides some detailed JSON code examples to describe
+   how the YANG models being developed by the IETF (TEAS and CCAMP WG
+   in particular) may be used. The scenario examples are provided using
+   JSON to facilitate readability.
+
+   Different objects need to have an identifier. The convention used to
+   create mnemonic identifiers is to use the object name (e.g., S3 for
+   node S3), followed by its type (e.g., NODE), separated by a "-",
+   followed by "-ID". For example, the mnemonic identifier for node S3
+   would be S3-NODE-ID.
+
+   The JSON language does not support the insertion of comments that
+   have been instead found to be useful when writing the examples. This
+   document will insert comments into the JSON code as JSON name/value
+   pair with the JSON name string starting with the "//" characters.
+   For example, when describing the example of a TE Topology instance
+   representing the ODU Abstract Topology exposed by the Transport PNC,
+   the following comment has been added to the JSON code:
+
+~~~~
+      "// comment": "ODU Abstract Topology @ MPI",
+~~~~
+
+   The JSON code examples provided in this document have been validated
+   against the YANG models following the validation process described
+   in {{json-validation}}, which would not consider the comments.
+
+   To have successful validation of the examples, some numbering scheme
+   has been defined to assign identifiers to the different entities
+   which would pass the syntax checks. In that case, to simplify the
+   reading, another JSON name/value pair formatted as a comment and
+   using the mnemonic identifiers is also provided. For example, the
+   identifier of node S3 (S3-NODE-ID) has been assumed to be "10.0.0.3"
+   and would be shown in the JSON code example using the two JSON
+   name/value pair:
+
+~~~~
+      "// te-node-id": "S3-NODE-ID",
+
+      "te-node-id": "10.0.0.3",
+~~~~
+
+   The first JSON name/value pair will be automatically removed in the
+   first step of the validation process, while the second JSON
+   name/value pair will be validated against the YANG model
+   definitions.
 
 ##  Manipulation of JSON fragments
 
@@ -2556,7 +2563,7 @@ This is the JSON code reporting the EPL service configuration @ MPI:
 
    The authors would like to thank Xian Zhang, Anurag Sharma, Sergio
    Belotti, Tara Cummings, Michael Scharf, Karthik Sethuraman, Oscar
-   Gonzalez de Dios, Hans Bjursrom and Italo Busi for having initiated
+   Gonzalez de Dios, and Hans Bjursrom for having initiated
    the work on gap analysis for transport NBI and having provided
    foundations work for the development of this document.
 
@@ -2575,60 +2582,3 @@ This is the JSON code reporting the EPL service configuration @ MPI:
    This document was prepared using kramdown.
 
    Previous versions of this document was prepared using 2-Word-v2.0.template.dot.
-
-{: numbered="false"}
-
-# Additional Authors' Addresses
-
-    Yang Zhao
-    China Mobile
-    
-    Email: zhaoyangyjy@chinamobile.com
-    
-    
-    Sergio Belotti
-    Nokia
-    
-    Email: sergio.belotti@nokia.com
-    
-    
-    Gianmarco Bruno
-    Ericsson
-    
-    Email: gianmarco.bruno@ericsson.com
-    
-    
-    Young Lee
-    Sung Kyun Kwan University
-    
-    Email: younglee.tx@gmail.com
-    
-    
-    Victor Lopez
-    Nokia
-    
-    Email: victor.lopez@nokia.com
-    
-    
-    Carlo Perocchio
-    Ericsson
-    
-    Email: carlo.perocchio@ericsson.com
-    
-    
-    Ricard Vilalta
-    CTTC
-    
-    Email: ricard.vilalta@cttc.es
-    
-    
-    Michael Scharf
-    Hochschule Esslingen - University of Applied Sciences
-    
-    Email: michael.scharf@hs-esslingen.de
-    
-    
-    Dieter Beller
-    Nokia
-    
-    Email: dieter.beller@nokia.com
