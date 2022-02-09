@@ -1435,7 +1435,7 @@ informative:
 
    -  The comments describing the rationale for not including some
       attributes in this JSON code example even if in the scope of this
-      document are identified with the prefix "// __COMMENT" and
+      document are identified with the prefix "// comment" and
       included only in the first object instance (e.g., in the Access
       Link from the AN1-1 description or in the AN1-1 LTP description).
 
@@ -2437,11 +2437,11 @@ informative:
    We found useful to introduce two kinds of comments, both defined as
    key-value pairs where the key starts with "//":
 
-   - free-form descriptive comments, e.g."// COMMENT" : "refine this"
+   - free-form descriptive comments, e.g."// comment" : "refine this"
    to describe properties of JSON fragments.
 
-   - machine-usable directives e.g. "// __REFERENCES__DRAFTS__" : {
-   "ietf-routing-types@2017-12-04": "rfc8294",} which can be used to
+   - machine-usable directives e.g. "// header" : {"reference-drafts" : {
+   "ietf-routing-types@2017-12-04": "rfc8294",}} which can be used to
    automatically download from the network the relevant I-Ds or RFCs
    and extract from them the YANG models of interest. This is
    particularly useful to keep consistency when the drafting work is
