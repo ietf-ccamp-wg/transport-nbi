@@ -5,12 +5,12 @@
 CCAMP Working Group                                         I. Busi, Ed.
 Internet-Draft                                                    Huawei
 Intended status: Informational                              D. King, Ed.
-Expires: April 2, 2022                                Old Dog Consulting
+Expires: August 5, 2022                               Old Dog Consulting
                                                            H. Zheng, Ed.
                                                                   Huawei
                                                               Y. Xu, Ed.
                                                                    CAICT
-                                                      September 29, 2021
+                                                       February 01, 2022
 
 
          Transport Northbound Interface Applicability Statement
@@ -43,19 +43,19 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 2, 2022.
+   This Internet-Draft will expire on August 5, 2022.
 
 Copyright Notice
 
-   Copyright (c) 2021 IETF Trust and the persons identified as the
+   Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 1]
+Busi, et al.             Expires August 5, 2022                 [Page 1]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 2]
+Busi, et al.             Expires August 5, 2022                 [Page 2]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    6.  Security Considerations . . . . . . . . . . . . . . . . . . .  47
@@ -129,14 +129,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
    Appendix B.  Detailed JSON Examples . . . . . . . . . . . . . . .  53
      B.1.  JSON Examples for Topology Abstractions . . . . . . . . .  53
        B.1.1.  JSON Code: mpi1-otn-topology.json . . . . . . . . . .  53
-       B.1.2.  JSON Code: mpi1-eth-topology.json . . . . . . . . . .  75
-     B.2.  JSON Examples for Service Configuration . . . . . . . . .  80
-       B.2.1.  JSON Code: mpi1-odu2-service-config.json  . . . . . .  80
-       B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json . . . . . . .  83
+       B.1.2.  JSON Code: mpi1-eth-topology.json . . . . . . . . . .  76
+     B.2.  JSON Examples for Service Configuration . . . . . . . . .  81
+       B.2.1.  JSON Code: mpi1-odu2-service-config.json  . . . . . .  81
+       B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json . . . . . . .  84
        B.2.3.  JSON Code: mpi1-epl-service-config.json . . . . . . .  86
-   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  87
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  88
    Additional Authors' Addresses . . . . . . . . . . . . . . . . . .  88
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  89
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  90
 
 1.  Introduction
 
@@ -165,9 +165,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 3]
+Busi, et al.             Expires August 5, 2022                 [Page 3]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    This document examines the applicability of the YANG models being
@@ -221,9 +221,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 4]
+Busi, et al.             Expires August 5, 2022                 [Page 4]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 2.  Terminology
@@ -277,9 +277,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 5]
+Busi, et al.             Expires August 5, 2022                 [Page 5]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    OTU  Optical Channel Transport Unit
@@ -333,9 +333,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 6]
+Busi, et al.             Expires August 5, 2022                 [Page 6]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    happens, the reference will be updated and the [TE-TUTORIAL]
@@ -389,9 +389,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 7]
+Busi, et al.             Expires August 5, 2022                 [Page 7]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    Node R1 is switching at the packet (PKT) layer and mapping packets
@@ -445,9 +445,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 8]
+Busi, et al.             Expires August 5, 2022                 [Page 8]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    reading, another JSON name/value pair formatted as a comment and
@@ -501,9 +501,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                 [Page 9]
+Busi, et al.             Expires August 5, 2022                 [Page 9]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
                   ........................
@@ -557,9 +557,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 10]
+Busi, et al.             Expires August 5, 2022                [Page 10]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    Different transmission technologies can be used on the access links
@@ -613,9 +613,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 11]
+Busi, et al.             Expires August 5, 2022                [Page 11]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
                               --------------
@@ -669,9 +669,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 12]
+Busi, et al.             Expires August 5, 2022                [Page 12]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The control interfaces within the scope of this document are the
@@ -725,9 +725,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 13]
+Busi, et al.             Expires August 5, 2022                [Page 13]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
       domain.  Thus, abstraction does not necessarily offer all possible
@@ -781,9 +781,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 14]
+Busi, et al.             Expires August 5, 2022                [Page 14]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The MDSC should be capable of stitching together the abstracted
@@ -837,9 +837,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 15]
+Busi, et al.             Expires August 5, 2022                [Page 15]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    nodes S3, S1, S2, S31, S33, S34, S15 and S18 which belong to
@@ -893,9 +893,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 16]
+Busi, et al.             Expires August 5, 2022                [Page 16]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
@@ -949,9 +949,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 17]
+Busi, et al.             Expires August 5, 2022                [Page 17]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
          R1 [(PKT) -> STM-64], S3 [STM-64 -> (ODU2)], S1 [(ODU2)],
@@ -1005,9 +1005,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 18]
+Busi, et al.             Expires August 5, 2022                [Page 18]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    It is worth noting that the first EVPL service is required between
@@ -1061,9 +1061,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 19]
+Busi, et al.             Expires August 5, 2022                [Page 19]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
@@ -1117,9 +1117,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 20]
+Busi, et al.             Expires August 5, 2022                [Page 20]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    In the service examples described in Section 4.3, switching within
@@ -1173,9 +1173,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 21]
+Busi, et al.             Expires August 5, 2022                [Page 21]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The PNCs should be capable of reporting to the MDSC which is the
@@ -1229,9 +1229,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 22]
+Busi, et al.             Expires August 5, 2022                [Page 22]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    3.  Object state change
@@ -1285,9 +1285,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 23]
+Busi, et al.             Expires August 5, 2022                [Page 23]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 5.  YANG Model Analysis
@@ -1341,9 +1341,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 24]
+Busi, et al.             Expires August 5, 2022                [Page 24]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    In order to support the EPL and EVPL services, described in
@@ -1397,9 +1397,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 25]
+Busi, et al.             Expires August 5, 2022                [Page 25]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
                       ...................................
@@ -1453,9 +1453,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 26]
+Busi, et al.             Expires August 5, 2022                [Page 26]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The OTU4 trails on the inter-domain physical links (e.g., the link
@@ -1509,9 +1509,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 27]
+Busi, et al.             Expires August 5, 2022                [Page 27]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The PNC1 native topology would represent the physical network
@@ -1565,9 +1565,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 28]
+Busi, et al.             Expires August 5, 2022                [Page 28]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
       Physical Interface     OTN Topology LTP     ETH Topology LTP
@@ -1621,9 +1621,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 29]
+Busi, et al.             Expires August 5, 2022                [Page 29]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    o  the instance reports the domain 2 Ethernet abstract topology view
@@ -1677,9 +1677,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 30]
+Busi, et al.             Expires August 5, 2022                [Page 30]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    The topology of each domain may be in an abstracted shape (refer to
@@ -1733,9 +1733,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 31]
+Busi, et al.             Expires August 5, 2022                [Page 31]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
            Inter-Domain Link     Plug-ID Value
@@ -1789,9 +1789,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 32]
+Busi, et al.             Expires August 5, 2022                [Page 32]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 5.2.  YANG Models for Service Configuration
@@ -1845,9 +1845,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 33]
+Busi, et al.             Expires August 5, 2022                [Page 33]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
                                     |
@@ -1901,9 +1901,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 34]
+Busi, et al.             Expires August 5, 2022                [Page 34]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    After receiving such request, MDSC determines the domain sequence,
@@ -1957,9 +1957,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 35]
+Busi, et al.             Expires August 5, 2022                [Page 35]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    nodes terminating the inter-domain links (e.g., S2 and S31) from the
@@ -2013,9 +2013,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 36]
+Busi, et al.             Expires August 5, 2022                [Page 36]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    o  Ingress and egress points are indicated in the route-object-
@@ -2069,9 +2069,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 37]
+Busi, et al.             Expires August 5, 2022                [Page 37]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    access links terminating on AN-1 and AN1-2 LTPs within the MPI1
@@ -2125,9 +2125,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 38]
+Busi, et al.             Expires August 5, 2022                [Page 38]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    o  PNC3, at MPI3, to setup an ODU2 (Transit Segment) Tunnel within
@@ -2181,9 +2181,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 39]
+Busi, et al.             Expires August 5, 2022                [Page 39]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    native topology, and sets up the ODU2 cross-connections within the
@@ -2237,9 +2237,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 40]
+Busi, et al.             Expires August 5, 2022                [Page 40]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 5.2.3.  Other OTN Client Services
@@ -2293,9 +2293,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 41]
+Busi, et al.             Expires August 5, 2022                [Page 41]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    configure the STM-64 links on the R1-S3 and R8-S18 multi-function
@@ -2349,9 +2349,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 42]
+Busi, et al.             Expires August 5, 2022                [Page 42]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    functions, in nodes S3 and S6, as shown in Section 4.3.2.  PNC1 also
@@ -2405,9 +2405,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 43]
+Busi, et al.             Expires August 5, 2022                [Page 43]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    MDSC requests at the MPI1, PNC1 to setup an ODU2 (Head Segment)
@@ -2461,9 +2461,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 44]
+Busi, et al.             Expires August 5, 2022                [Page 44]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    segmented protection can be divided into a few steps, considering the
@@ -2517,9 +2517,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 45]
+Busi, et al.             Expires August 5, 2022                [Page 45]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    Following similar requests from MDSC to setup ODU2 (Segment) Tunnels,
@@ -2573,9 +2573,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 46]
+Busi, et al.             Expires August 5, 2022                [Page 46]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 6.  Security Considerations
@@ -2629,16 +2629,16 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 47]
+Busi, et al.             Expires August 5, 2022                [Page 47]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    [CLIENT-SIGNAL]
-              Zheng, H., Guo, A., Busi, I., Snitser, A., Lazzeri, F.,
-              Xu, Y., Zhao, Y., Liu, X., and G. Fioccola, "A YANG Data
-              Model for Transport Network Client Signals", draft-ietf-
-              ccamp-client-signal-yang-05 (work in progress), July 2021.
+              Zheng, H., Guo, A., Busi, I., Snitser, A., and F. Lazzeri,
+              "A YANG Data Model for Transport Network Client Signals",
+              draft-ietf-ccamp-client-signal-yang-06 (work in progress),
+              January 2022.
 
    [CLIENT-TOPO]
               Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y., and X.
@@ -2685,9 +2685,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 48]
+Busi, et al.             Expires August 5, 2022                [Page 48]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    [RFC4655]  Farrel, A., Vasseur, J., and J. Ash, "A Path Computation
@@ -2722,7 +2722,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., Bryskin, I.,
               and O. G. D. Dios, "A YANG Data Model for Traffic
               Engineering Tunnels, Label Switched Paths and Interfaces",
-              draft-ietf-teas-yang-te-27 (work in progress), July 2021.
+              draft-ietf-teas-yang-te-28 (work in progress), October
+              2021.
 
 8.2.  Informative References
 
@@ -2740,10 +2741,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-
-Busi, et al.              Expires April 2, 2022                [Page 49]
+Busi, et al.             Expires August 5, 2022                [Page 49]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    [ONF_TR-527]
@@ -2797,9 +2797,9 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 50]
+Busi, et al.             Expires August 5, 2022                [Page 50]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 Appendix A.  Validating a JSON fragment against a YANG Model
@@ -2853,9 +2853,9 @@ A.1.  Manipulation of JSON fragments
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 51]
+Busi, et al.             Expires August 5, 2022                [Page 51]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
    relevant YANG modules using available open-source tools.  It can be
@@ -2909,9 +2909,9 @@ A.3.  Validation of JSON fragments: DSDL-based approach
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 52]
+Busi, et al.             Expires August 5, 2022                [Page 52]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
 A.4.  Validation of JSON fragments: why not using an XSD-based approach
@@ -2945,31 +2945,33 @@ B.1.1.  JSON Code: mpi1-otn-topology.json
 
    This is the JSON code reporting the OTN Topology @ MPI1:
 
-   ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+   =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
    {
-     "// __LAST_UPDATE__": "October 21, 2019",
-     "// __TITLE__": "ODU Black Topology @ MPI1",
-     "// __REFERENCE_DRAFTS__": {
-       "ietf-routing-types@2017-12-04": "rfc8294",
-       "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-       "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-0\
-   \2",
-       "ietf-network@2018-02-26": "rfc8345",
-       "ietf-network-topology@2018-02-26": "rfc8345",
-       "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
-       "ietf-otn-topology@2019-07-07": "draft-ietf-ccamp-otn-topo-yang-\
-   \08"
-     },
-     "// __MISSING_ATTRIBUTES__": true,
+     "// header": {
+       "last-update": "February 1, 2022",
+       "title": "ODU Black Topology @ MPI1",
+       "missing-attributes": true,
+       "reference-drafts": {
+         "ietf-routing-types@2017-12-04": "rfc8294",
+         "ietf-te-types@2020-06-10": "rfc8776",
+         "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types\
+   \-10",
+         "ietf-network@2018-02-26": "rfc8345",
+         "ietf-network-topology@2018-02-26": "rfc8345",
+         "ietf-te-topology@2020-08-06": "rfc8795",
+         "ietf-otn-topology@2021-07-08": "draft-ietf-ccamp-otn-topo-yan\
+   \g-13"
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 53]
+Busi, et al.             Expires August 5, 2022                [Page 53]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
+       }
+     },
      "ietf-network:networks": {
        "network": [
          {
@@ -2985,14 +2987,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
              "client-id": 300,
              "topology-id": "otn-black-topology"
            },
-           "// __COMMENT__ ietf-te-topology:te": "presence container re\
-   \quires: provider-id, client-id and te-topology-id",
+           "// comment ietf-te-topology:te": "presence container requir\
+   \es: provider-id, client-id and te-topology-id",
            "ietf-te-topology:te": {
              "name": "OTN Black Topology @ MPI1"
            },
            "ietf-network:node": [
              {
-               "// __NODE__:__DESCRIPTION__": {
+               "// node description": {
                  "name": "AN1",
                  "identifier": "10.0.0.1",
                  "type": "Abstract Node",
@@ -3003,31 +3005,33 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "ietf-te-topology:te": {
                  "te-node-attributes": {
                    "name": "AN11",
-                   "is-abstract": "",
+                   "is-abstract": [
+                     null
+                   ],
                    "admin-status": "up"
                  },
                  "oper-status": "up",
                  "tunnel-termination-point": [
                    {
-                     "// __COMMENT__ tunnel-tp-id": "AN1-1 TTP-ID (1 ->\
-   \ 0x01 -> 'AQ==')",
+                     "// comment tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x0\
+   \1 -> 'AQ==' in base64)",
                      "tunnel-tp-id": "AQ==",
                      "name": "AN1-1 OTN TTP",
-                     "// __COMMENT__ encoding and switching-capability"\
-   \: "OTN (ODU)",
+                     "// comment encoding and switching-capability": "O\
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 54]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+   \TN (ODU)",
                      "switching-capability": "ietf-te-types:switching-o\
    \tn",
                      "encoding": "ietf-te-types:lsp-encoding-oduk",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 54]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL\
-   \-ID (1) }",
+                     "// comment inter-layer-lock-id": "{ AN1-1 ILL-ID \
+   \(1) }",
                      "inter-layer-lock-id": [
                        1
                      ],
@@ -3035,17 +3039,17 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "oper-status": "up"
                    },
                    {
-                     "// __COMMENT__ tunnel-tp-id": "AN1-2 TTP-ID (2 ->\
-   \ 0x02 -> 'Ag==')",
+                     "// comment tunnel-tp-id": "AN1-2 TTP-ID (2 -> 0x0\
+   \2 -> 'Ag==' in base64)",
                      "tunnel-tp-id": "Ag==",
                      "name": "AN1-2 OTN TTP",
-                     "// __COMMENT__ encoding and switching-capability"\
-   \: "OTN (ODU)",
+                     "// comment encoding and switching-capability": "O\
+   \TN (ODU)",
                      "switching-capability": "ietf-te-types:switching-o\
    \tn",
                      "encoding": "ietf-te-types:lsp-encoding-oduk",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-2 ILL\
-   \-ID (2) }",
+                     "// comment inter-layer-lock-id": "{ AN1-2 ILL-ID \
+   \(2) }",
                      "inter-layer-lock-id": [
                        2
                      ],
@@ -3053,43 +3057,43 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "oper-status": "up"
                    },
                    {
-                     "// __COMMENT__ tunnel-tp-id": "AN1-3 TTP-ID (3 ->\
-   \ 0x03 -> 'Awo=')",
+                     "// comment tunnel-tp-id": "AN1-3 TTP-ID (3 -> 0x0\
+   \3 -> 'Awo=' in base64)",
                      "tunnel-tp-id": "Awo=",
                      "name": "AN1-3 OTN TTP",
-                     "// __COMMENT__ encoding and switching-capability"\
-   \: "OTN (ODU)",
+                     "// comment encoding and switching-capability": "O\
+   \TN (ODU)",
                      "switching-capability": "ietf-te-types:switching-o\
    \tn",
                      "encoding": "ietf-te-types:lsp-encoding-oduk",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-3 ILL\
-   \-ID (3) }",
+                     "// comment inter-layer-lock-id": "{ AN1-3 ILL-ID \
+   \(3) }",
                      "inter-layer-lock-id": [
                        3
                      ],
                      "admin-status": "up",
                      "oper-status": "up"
                    },
-                   {
-                     "// __COMMENT__ tunnel-tp-id": "AN1-8 TTP-ID (8 ->\
-   \ 0x08 -> 'CA==')",
-                     "tunnel-tp-id": "CA==",
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 55]
+Busi, et al.             Expires August 5, 2022                [Page 55]
 
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
 
 
+                   {
+                     "// comment tunnel-tp-id": "AN1-8 TTP-ID (8 -> 0x0\
+   \8 -> 'CA==' in base64)",
+                     "tunnel-tp-id": "CA==",
                      "name": "AN1-8 OTN TTP",
-                     "// __COMMENT__ encoding and switching-capability"\
-   \: "OTN (ODU)",
+                     "// comment encoding and switching-capability": "O\
+   \TN (ODU)",
                      "switching-capability": "ietf-te-types:switching-o\
    \tn",
                      "encoding": "ietf-te-types:lsp-encoding-oduk",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-8 ILL\
-   \-ID (1) }",
+                     "// comment inter-layer-lock-id": "{ AN1-8 ILL-ID \
+   \(1) }",
                      "inter-layer-lock-id": [
                        8
                      ],
@@ -3100,7 +3104,7 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                },
                "ietf-network-topology:termination-point": [
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-1 LTP",
                      "link type(s)": "Multi-function (OTU2, STM-64 and \
    \10GE)",
@@ -3115,8 +3119,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "name": "AN1-1 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3124,25 +3128,26 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU2"
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU2"
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 56]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                               }
                              }
                            }
                          ]
                        }
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 56]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                      ],
-                     "// __NOT-PRESENT__ inter-domain-plug-id": "Use of\
-   \ plug-id for access Link is outside the scope of this document",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL\
-   \-ID (1) }",
+                     "// not-present inter-domain-plug-id": "Use of plu\
+   \g-id for access Link is outside the scope of this document",
+                     "// comment inter-layer-lock-id": "{ AN1-1 ILL-ID \
+   \(1) }",
                      "inter-layer-lock-id": [
                        1
                      ],
@@ -3157,9 +3162,10 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-2 LTP",
-                     "link type(s)": "Multi-function (OTU2 and STM-64)",
+                     "link type(s)": "Multi-function (OTU2 and STM-64)"\
+   \,
                      "physical node": "S6",
                      "unnumberd/ifIndex": 2,
                      "port type": "tributary port",
@@ -3171,8 +3177,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "name": "AN1-2 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3180,25 +3186,26 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU2"
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 57]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU2"
+                               }
                              }
                            }
                          ]
                        }
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 57]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                      ],
-                     "// __NOT-PRESENT__ inter-domain-plug-id": "Use of\
-   \ plug-id for access Link is outside the scope of this document",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-2 ILL\
-   \-ID (2) }",
+                     "// not-present inter-domain-plug-id": "Use of plu\
+   \g-id for access Link is outside the scope of this document",
+                     "// comment inter-layer-lock-id": "{ AN1-2 ILL-ID \
+   \(2) }",
                      "inter-layer-lock-id": [
                        2
                      ],
@@ -3213,7 +3220,7 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-3 LTP",
                      "link type(s)": "STM-64",
                      "physical node": "S6",
@@ -3225,16 +3232,24 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "ietf-te-topology:te-tp-id": 3,
                    "ietf-te-topology:te": {
                      "name": "AN1-3 LTP",
-                     "// __NOT-PRESENT__ interface-switching-capability\
-   \": "STM-64 Access Link only (no ODU switching)",
-                     "// __NOT-PRESENT__ inter-domain-plug-id": "Use of\
-   \ plug-id for access Link is outside the scope of this document",
-                     "// __COMMENT__ inter-layer-lock-id": "{ AN1-3 ILL\
-   \-ID (3) }",
+                     "// not-present interface-switching-capability": "\
+   \STM-64 Access Link only (no ODU switching)",
+                     "// not-present inter-domain-plug-id": "Use of plu\
+   \g-id for access Link is outside the scope of this document",
+                     "// comment inter-layer-lock-id": "{ AN1-3 ILL-ID \
+   \(3) }",
                      "inter-layer-lock-id": [
                        3
                      ],
                      "admin-status": "up",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 58]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                      "oper-status": "up",
                      "ietf-otn-topology:client-svc": {
                        "client-facing": true,
@@ -3242,18 +3257,10 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          "ietf-layer1-types:STM-64"
                        ]
                      }
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 58]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-4 LTP",
                      "link type(s)": "OTU4",
                      "physical node": "S7",
@@ -3267,8 +3274,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "name": "AN1-4 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3276,36 +3283,37 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU4"
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU4"
+                               }
                              }
                            }
                          ]
                        }
                      ],
-                     "// __COMMENT__ inter-domain-plug-id": "S7-S11 Plu\
-   \g-id (0x000711 -> AAcR)",
+                     "// comment inter-domain-plug-id": "S7-S11 Plug-id\
+   \ (0x000711 -> AAcR)",
                      "inter-domain-plug-id": "AAcR",
-                     "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
-   \ver Layer topology not exposed",
+                     "// not-present inter-layer-lock-id": "ODU Server \
+   \Layer topology not exposed",
                      "admin-status": "up",
                      "oper-status": "up",
-                     "// __NOT-PRESENT__ ietf-otn-topology:client-svc":\
-   \ "OTN inter-domain link"
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 59]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                     "// not-present ietf-otn-topology:client-svc": "OT\
+   \N inter-domain link"
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-5 LTP",
                      "link type(s)": "OTU4",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 59]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                      "physical node": "S8",
                      "unnumberd/ifIndex": 4,
                      "port type": "inter-domain port",
@@ -3317,8 +3325,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "name": "AN1-5 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3326,26 +3334,35 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU4"
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU4"
+                               }
                              }
                            }
                          ]
                        }
                      ],
-                     "// __COMMENT__ inter-domain-plug-id": "S8-S12 Plu\
-   \g-id (0x000812 -> AAgS)",
+                     "// comment inter-domain-plug-id": "S8-S12 Plug-id\
+   \ (0x000812 -> AAgS)",
                      "inter-domain-plug-id": "AAgS",
-                     "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
-   \ver Layer topology not exposed",
+                     "// not-present inter-layer-lock-id": "ODU Server \
+   \Layer topology not exposed",
                      "admin-status": "up",
                      "oper-status": "up",
-                     "// __NOT-PRESENT__ ietf-otn-topology:client-svc":\
-   \ "OTN inter-domain link"
+                     "// not-present ietf-otn-topology:client-svc": "OT\
+   \N inter-domain link"
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 60]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                   "// ltp description": {
                      "name": "AN1-6 LTP",
                      "link type(s)": "OTU4",
                      "physical node": "S8",
@@ -3354,21 +3371,13 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "connected to": "S32"
                    },
                    "tp-id": "6",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 60]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                    "ietf-te-topology:te-tp-id": 6,
                    "ietf-te-topology:te": {
                      "name": "AN1-6 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3376,30 +3385,39 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU4"
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU4"
+                               }
                              }
                            }
                          ]
                        }
                      ],
-                     "// __COMMENT__ inter-domain-plug-id": "S8-S32 Plu\
-   \g-id (0x000832 -> AAgy)",
+                     "// comment inter-domain-plug-id": "S8-S32 Plug-id\
+   \ (0x000832 -> AAgy)",
                      "inter-domain-plug-id": "AAgy",
-                     "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
-   \ver Layer topology not exposed",
+                     "// not-present inter-layer-lock-id": "ODU Server \
+   \Layer topology not exposed",
                      "admin-status": "up",
                      "oper-status": "up",
-                     "// __NOT-PRESENT__ ietf-otn-topology:client-svc":\
-   \ "OTN inter-domain link"
+                     "// not-present ietf-otn-topology:client-svc": "OT\
+   \N inter-domain link"
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-7 LTP",
                      "link type(s)": "OTU4",
                      "physical node": "S2",
                      "unnumberd/ifIndex": 3,
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 61]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                      "port type": "inter-domain port",
                      "connected to": "S31"
                    },
@@ -3409,16 +3427,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "name": "AN1-7 LTP",
                      "interface-switching-capability": [
                        {
-                         "// __COMMENT__ encoding and switching-capabil\
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 61]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-   \ity": "OTN (ODU)",
+                         "// comment encoding and switching-capability"\
+   \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3426,22 +3436,23 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            {
                              "priority": 0,
                              "te-bandwidth": {
-                               "ietf-otn-topology:odu-type": "ietf-laye\
-   \r1-types:ODU4"
+                               "ietf-otn-topology:otn": {
+                                 "odu-type": "ietf-layer1-types:ODU4"
+                               }
                              }
                            }
                          ]
                        }
                      ],
-                     "// __COMMENT__ inter-domain-plug-id": "S2-S31 Plu\
-   \g-id (0x000231 -> AAIx)",
+                     "// comment inter-domain-plug-id": "S2-S31 Plug-id\
+   \ (0x000231 -> AAIx)",
                      "inter-domain-plug-id": "AAIx",
-                     "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Ser\
-   \ver Layer topology not exposed",
+                     "// not-present inter-layer-lock-id": "ODU Server \
+   \Layer topology not exposed",
                      "admin-status": "up",
                      "oper-status": "up",
-                     "// __NOT-PRESENT__ ietf-otn-topology:client-svc":\
-   \ "OTN inter-domain link"
+                     "// not-present ietf-otn-topology:client-svc": "OT\
+   \N inter-domain link"
                    }
                  }
                ]
@@ -3449,37 +3460,37 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
            ],
            "ietf-network-topology:link": [
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Access Link from AN1-1",
                  "type": "Multi-function access link (OTU2, STM-64 and \
    \10GE)",
                  "physical link": "Link from S3-1 to R1"
                },
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 62]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                "link-id": "teNodeId/10.0.0.1/teLinkId/1",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 1
+                 "source-tp": "1"
                },
-               "// __NOT-PRESENT__ destination": "access link",
+               "// not-present destination": "access link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-1",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 62]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3487,15 +3498,16 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU2"
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU4"
+                             }
                            }
                          }
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
@@ -3510,6 +3522,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
                          {
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 63]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                            "odu-type": "ietf-layer1-types:ODU2",
                            "number": 1
                          }
@@ -3522,14 +3542,6 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                        "te-bandwidth": {
                          "ietf-otn-topology:odulist": [
                            {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 63]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                              "odu-type": "ietf-layer1-types:ODU2",
                              "number": 1
                            }
@@ -3537,38 +3549,47 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                        }
                      }
                    ],
-                   "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access \
-   \Link with no HO-ODU termination and LO-ODU switching",
+                   "// not-present ietf-otn-topology:tsg": "Access Link\
+   \ with no HO-ODU termination and LO-ODU switching",
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Access Link from AN1-2",
-                 "type": "Multi-function access link (OTU2 and STM-64)",
+                 "type": "Multi-function access link (OTU2 and STM-64)"\
+   \,
                  "physical link": "Link from S6-2 to R3"
                },
                "link-id": "teNodeId/10.0.0.1/teLinkId/2",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 2
+                 "source-tp": "2"
                },
-               "// __NOT-PRESENT__ destination": "access link",
+               "// not-present destination": "access link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-2",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 64]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3576,23 +3597,16 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU2"
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 64]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU2"
+                             }
                            }
                          }
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
@@ -3620,31 +3634,31 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          "ietf-otn-topology:odulist": [
                            {
                              "odu-type": "ietf-layer1-types:ODU2",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 65]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                              "number": 1
                            }
                          ]
                        }
                      }
                    ],
-                   "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access \
-   \Link with no HO-ODU termination and LO-ODU switching",
+                   "// not-present ietf-otn-topology:tsg": "Access Link\
+   \ with no HO-ODU termination and LO-ODU switching",
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 65]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Access Link from AN1-3",
                  "type": "STM-64 Access link",
                  "physical link": "Link from S6-3 to R4"
@@ -3652,35 +3666,43 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/3",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 3
+                 "source-tp": "3"
                },
-               "// __NOT-PRESENT__ destination": "access link",
+               "// not-present destination": "access link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-3",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
-                   "// __NOT-PRESENT__ interface-switching-capability":\
-   \ "STM-64 Access Link only (no ODU switching)",
-                   "// __NOT-PRESENT__ max-link-bandwidth": "STM-64 Acc\
-   \ess Link only (no ODU switching)",
-                   "// __NOT-PRESENT__ max-resv-link-bandwidth": "STM-6\
-   \4 Access Link only (no ODU switching)",
-                   "// __NOT-PRESENT__ unreserved-bandwidth": "STM-64 A\
-   \ccess Link only (no ODU switching)",
-                   "// __NOT-PRESENT__ ietf-otn-topology:tsg": "STM-64 \
-   \Access Link only (no HO-ODU termination and LO-ODU switching)",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
+                   "// not-present interface-switching-capability": "ST\
+   \M-64 Access Link only (no ODU switching)",
+                   "// not-present max-link-bandwidth": "STM-64 Access \
+   \Link only (no ODU switching)",
+                   "// not-present max-resv-link-bandwidth": "STM-64 Ac\
+   \cess Link only (no ODU switching)",
+                   "// not-present unreserved-bandwidth": "STM-64 Acces\
+   \s Link only (no ODU switching)",
+                   "// not-present ietf-otn-topology:tsg": "STM-64 Acce\
+   \ss Link only (no HO-ODU termination and LO-ODU switching)",
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 66]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Inter-domain Link from AN1-4",
                  "type": "OTU4 inter-domain link",
                  "physical link": "Link from S7-3 to S11"
@@ -3688,28 +3710,20 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/4",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 4
+                 "source-tp": "4"
                },
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 66]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-               "// __NOT-PRESENT__ destination": "inter-domain link",
+               "// not-present destination": "inter-domain link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Inter-domain Link from AN1-4",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3717,20 +3731,29 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU4"
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU2"
+                             }
                            }
                          }
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 67]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                            "number": 1
                          },
                          {
@@ -3746,14 +3769,6 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    },
                    "max-resv-link-bandwidth": {
                      "te-bandwidth": {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 67]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
@@ -3787,6 +3802,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                              "odu-type": "ietf-layer1-types:ODU0",
                              "number": 80
                            }
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 68]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                          ]
                        }
                      }
@@ -3796,20 +3819,12 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 68]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
+               "// link description": {
                  "name": "Inter-domain Link from AN1-5",
                  "type": "OTU4 inter-domain link",
                  "physical link": "Link from S8-4 to S12"
@@ -3817,20 +3832,20 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/5",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 5
+                 "source-tp": "5"
                },
-               "// __NOT-PRESENT__ destination": "inter-domain link",
+               "// not-present destination": "inter-domain link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Inter-domain Link from AN1-5",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -3838,15 +3853,24 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU4"
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU4"
+                             }
                            }
                          }
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 69]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
@@ -3858,14 +3882,6 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            "odu-type": "ietf-layer1-types:ODU2",
                            "number": 10
                          },
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 69]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                          {
                            "odu-type": "ietf-layer1-types:ODU0",
                            "number": 80
@@ -3898,6 +3914,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          "ietf-otn-topology:odulist": [
                            {
                              "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 70]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                              "number": 1
                            },
                            {
@@ -3914,23 +3938,15 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    ],
                    "ietf-otn-topology:tsg": "ietf-layer1-types:tsg-1.25\
    \G",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 70]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Inter-domain Link from AN1-6",
                  "type": "OTU4 inter-domain link",
                  "physical link": "Link from S8-5 to S32"
@@ -3938,46 +3954,47 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/6",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 6
+                 "source-tp": "6"
                },
-               "// __NOT-PRESENT__ destination": "inter-domain link",
+               "// not-present destination": "inter-domain link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Inter-domain Link from AN1-6",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 71]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
                        "max-lsp-bandwidth": [
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU4"
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU4"
+                             }
                            }
                          }
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 71]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
@@ -4009,6 +4026,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                            "odu-type": "ietf-layer1-types:ODU0",
                            "number": 80
                          }
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 72]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                        ]
                      }
                    },
@@ -4026,14 +4051,6 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                              "number": 10
                            },
                            {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 72]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                              "odu-type": "ietf-layer1-types:ODU0",
                              "number": 80
                            }
@@ -4046,12 +4063,12 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Inter-domain Link from AN1-7",
                  "type": "OTU4 inter-domain link",
                  "physical link": "Link from S2-3 to S31"
@@ -4059,20 +4076,28 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1teLinkId/7",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 7
+                 "source-tp": "7"
                },
-               "// __NOT-PRESENT__ destination": "inter-domain link",
+               "// not-present destination": "inter-domain link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Inter-domain Link from AN1-7",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 73]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
                    "interface-switching-capability": [
                      {
-                       "// __COMMENT__ encoding and switching-capabilit\
-   \y": "OTN (ODU)",
+                       "// comment encoding and switching-capability": \
+   \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
@@ -4080,23 +4105,16 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                          {
                            "priority": 0,
                            "te-bandwidth": {
-                             "ietf-otn-topology:odu-type": "ietf-layer1\
-   \-types:ODU4"
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 73]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
+                             "ietf-otn-topology:otn": {
+                               "odu-type": "ietf-layer1-types:ODU4"
+                             }
                            }
                          }
                        ]
                      }
                    ],
-                   "// __COMMENT__ label-restrictions": "Outside the sc\
-   \ope of this JSON example",
+                   "// comment label-restrictions": "Outside the scope \
+   \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
@@ -4120,6 +4138,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 74]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                            "number": 1
                          },
                          {
@@ -4138,14 +4164,6 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                        "priority": 0,
                        "te-bandwidth": {
                          "ietf-otn-topology:odulist": [
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 74]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                            {
                              "odu-type": "ietf-layer1-types:ODU4",
                              "number": 1
@@ -4167,8 +4185,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              }
            ]
@@ -4177,35 +4195,35 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
      }
    }
 
+
+
+Busi, et al.             Expires August 5, 2022                [Page 75]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
 B.1.2.  JSON Code: mpi1-eth-topology.json
 
    This is the JSON code reporting the ETH Topology @ MPI1:
 
-   ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+   =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
    {
-     "// __LAST_UPDATE__": "November 19, 2019",
-     "// __TITLE__": "ETH Black Topology @ MPI1",
-     "// __REFERENCE_DRAFTS__": {
-       "ietf-routing-types@2017-12-04": "rfc8294",
-       "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-       "ietf-network@2018-02-26": "rfc8345",
-       "ietf-network-topology@2018-02-26": "rfc8345",
-       "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
-       "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signa\
-   \l-yang-00",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 75]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-       "ietf-eth-te-topology@2019-11-18": "draft-zheng-ccamp-client-top\
-   \o-yang-08"
+     "// header": {
+       "last-update": "February 1, 2022",
+       "title": "ETH Black Topology @ MPI1",
+       "reference-drafts": {
+         "ietf-routing-types@2017-12-04": "rfc8294",
+         "ietf-te-types@2020-06-10": "rfc8776",
+         "ietf-network@2018-02-26": "rfc8345",
+         "ietf-network-topology@2018-02-26": "rfc8345",
+         "ietf-te-topology@2020-08-06": "rfc8795",
+         "ietf-eth-tran-types@2021-07-07": "draft-ietf-ccamp-client-sig\
+   \nal-yang-05",
+         "ietf-eth-te-topology@2019-11-18": "draft-ietf-ccamp-eth-clien\
+   \t-te-topo-yang-00"
+       }
      },
-     "// __MISSING_ATTRIBUTES__": true,
      "ietf-network:networks": {
        "network": [
          {
@@ -4221,44 +4239,46 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
              "client-id": 300,
              "topology-id": "eth-black-topology"
            },
-           "// __COMMENT__ ietf-te-topology:te": "presence container re\
-   \quires: provider-id, client-id and te-topology-id",
+           "// comment ietf-te-topology:te": "presence container requir\
+   \es: provider-id, client-id and te-topology-id",
            "ietf-te-topology:te": {
              "name": "ETH Black Topology @ MPI1"
            },
            "ietf-network:node": [
              {
-               "// __NODE__:__DESCRIPTION__": {
+               "// node description": {
                  "name": "AN1",
                  "identifier": "10.0.0.1",
                  "type": "Abstract Node",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 76]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                  "physical node(s)": "The whole network domain 1"
                },
                "node-id": "10.0.0.1",
                "ietf-te-topology:te-node-id": "10.0.0.1",
-               "// __COMMENT__ supporting-node": "Not used because topo\
-   \logy hierarchy is outside the scope of this JSON example",
+               "// comment supporting-node": "Not used because topology\
+   \ hierarchy is outside the scope of this JSON example",
                "ietf-te-topology:te": {
                  "te-node-attributes": {
                    "name": "AN11",
-                   "is-abstract": "",
+                   "is-abstract": [
+                     null
+                   ],
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ tunnel-termination-point": "ETH Ac\
-   \cess Links only (no ETH TE switching)"
+                 "// not-present tunnel-termination-point": "ETH Access\
+   \ Links only (no ETH TE switching)"
                },
                "ietf-network-topology:termination-point": [
                  {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 76]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-                   "// __DESCRIPTION__:__LTP__": {
+                   "// ltp description": {
                      "name": "AN1-1 LTP",
                      "link type(s)": "Multi-function (OTU2, STM-64 and \
    \10GE)",
@@ -4271,21 +4291,29 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "ietf-te-topology:te-tp-id": 1,
                    "ietf-te-topology:te": {
                      "name": "AN1-1 LTP",
-                     "// __NOT-PRESENT__ interface-switching-capability\
-   \": "ETH Access Link only (no ETH TE switching)",
-                     "// __COMMENT__ inter-domain-plug-id": "Use of plu\
-   \g-id for access Link is outside the scope of this document",
-                     "// __COMMENT__ inter-layer-lock-id": "AN1-1 ILL-I\
-   \D (1)",
+                     "// not-present interface-switching-capability": "\
+   \ETH Access Link only (no ETH TE switching)",
+                     "// comment inter-domain-plug-id": "Use of plug-id\
+   \ for access Link is outside the scope of this document",
+                     "// comment inter-layer-lock-id": "AN1-1 ILL-ID (1\
+   \)",
                      "inter-layer-lock-id": [
                        1
                      ],
                      "admin-status": "up",
                      "oper-status": "up"
                    },
-                   "// __COMMENT__ ingress-bandwidth-profile": "Outside\
-   \ the scope of this JSON example",
+                   "// comment ietf-eth-te-topology:ingress-bandwidth-p\
+   \rofile": "Outside the scope of this JSON example",
                    "ietf-eth-te-topology:eth-svc": {
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 77]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                      "client-facing": true,
                      "supported-classification": {
                        "port-classification": true,
@@ -4305,15 +4333,7 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    }
                  },
                  {
-                   "// __DESCRIPTION__:__LTP__": {
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 77]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
+                   "// ltp description": {
                      "name": "AN1-8 LTP",
                      "link type(s)": "10GE",
                      "physical node": "S6",
@@ -4325,23 +4345,31 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    "ietf-te-topology:te-tp-id": 8,
                    "ietf-te-topology:te": {
                      "name": "AN1-8 LTP",
-                     "// __COMMENT__ inter-layer-lock-id": "AN1-8 ILL-I\
-   \D (8)",
-                     "// __NOT-PRESENT__ interface-switching-capability\
-   \": "ETH Access Link only (no ETH TE switching)",
-                     "// __COMMENT__ inter-domain-plug-id": "Use of plu\
-   \g-id for access Link is outside the scope of this document",
+                     "// comment inter-layer-lock-id": "AN1-8 ILL-ID (8\
+   \)",
+                     "// not-present interface-switching-capability": "\
+   \ETH Access Link only (no ETH TE switching)",
+                     "// comment inter-domain-plug-id": "Use of plug-id\
+   \ for access Link is outside the scope of this document",
                      "inter-layer-lock-id": [
                        8
                      ],
                      "admin-status": "up",
                      "oper-status": "up"
                    },
-                   "// __COMMENT__ ingress-bandwidth-profile": "Outside\
-   \ the scope of this JSON example",
+                   "// comment ingress-bandwidth-profile": "Outside the\
+   \ scope of this JSON example",
                    "ietf-eth-te-topology:eth-svc": {
                      "client-facing": true,
                      "supported-classification": {
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 78]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                        "port-classification": true,
                        "vlan-classification": {
                          "vlan-tag-classification": true,
@@ -4362,16 +4390,8 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
              }
            ],
            "ietf-network-topology:link": [
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 78]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Access Link from AN1-1",
                  "type": "Multi-function access link (OTU2, STM-64 and \
    \10GE)",
@@ -4380,35 +4400,43 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/1",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 1
+                 "source-tp": "1"
                },
-               "// __NOT-PRESENT__ destination": "access link",
+               "// not-present destination": "access link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-1",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
-                   "// __NOT-PRESENT__ interface-switching-capability":\
-   \ "ETH Access Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ label-restrictions": "ETH Access\
-   \ Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ max-link-bandwidth": "ETH Access\
-   \ Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ max-resv-link-bandwidth": "ETH A\
-   \ccess Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ unreserved-bandwidth": "ETH Acce\
-   \ss Link only (no ETH TE switching)",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
+                   "// not-present interface-switching-capability": "ET\
+   \H Access Link only (no ETH TE switching)",
+                   "// not-present label-restrictions": "ETH Access Lin\
+   \k only (no ETH TE switching)",
+                   "// not-present max-link-bandwidth": "ETH Access Lin\
+   \k only (no ETH TE switching)",
+                   "// not-present max-resv-link-bandwidth": "ETH Acces\
+   \s Link only (no ETH TE switching)",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 79]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                   "// not-present unreserved-bandwidth": "ETH Access L\
+   \ink only (no ETH TE switching)",
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              },
              {
-               "// __DESCRIPTION__:__LINK__": {
+               "// link description": {
                  "name": "Access Link from AN1-8",
                  "type": "10GE access link",
                  "physical link": "Link from S6-1 to R2"
@@ -4416,44 +4444,44 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                "link-id": "teNodeId/10.0.0.1/teLinkId/8",
                "source": {
                  "source-node": "10.0.0.1",
-                 "source-tp": 8
+                 "source-tp": "8"
                },
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 79]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-               "// __NOT-PRESENT__ destination": "access link",
+               "// not-present destination": "access link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-8",
-                   "// __NOT-PRESENT__ external-domain": "The plug-id i\
-   \s used instead of this container",
-                   "// __NOT-PRESENT__ is-abstract": "The access link i\
-   \s not abstract",
-                   "// __NOT-PRESENT__ interface-switching-capability":\
-   \ "ETH Access Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ label-restrictions": "ETH Access\
-   \ Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ max-link-bandwidth": "ETH Access\
-   \ Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ max-resv-link-bandwidth": "ETH A\
-   \ccess Link only (no ETH TE switching)",
-                   "// __NOT-PRESENT__ unreserved-bandwidth": "ETH Acce\
-   \ss Link only (no ETH TE switching)",
+                   "// not-present external-domain": "The plug-id is us\
+   \ed instead of this container",
+                   "// not-present is-abstract": "The access link is no\
+   \t abstract",
+                   "// not-present interface-switching-capability": "ET\
+   \H Access Link only (no ETH TE switching)",
+                   "// not-present label-restrictions": "ETH Access Lin\
+   \k only (no ETH TE switching)",
+                   "// not-present max-link-bandwidth": "ETH Access Lin\
+   \k only (no ETH TE switching)",
+                   "// not-present max-resv-link-bandwidth": "ETH Acces\
+   \s Link only (no ETH TE switching)",
+                   "// not-present unreserved-bandwidth": "ETH Access L\
+   \ink only (no ETH TE switching)",
                    "admin-status": "up"
                  },
                  "oper-status": "up",
-                 "// __NOT-PRESENT__ is-transitional": "It is not a tra\
-   \nsitional link"
+                 "// not-present is-transitional": "It is not a transit\
+   \ional link"
                }
              }
            ]
          }
        ]
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 80]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
      }
    }
 
@@ -4464,30 +4492,24 @@ B.2.1.  JSON Code: mpi1-odu2-service-config.json
    This is the JSON code reporting the ODU2 transit service
    configuration @ MPI1:
 
-   ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+   =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
    {
-     "// __LAST_UPDATE__": "October 23, 2019",
-     "// __TITLE__": "ODU2 Service Configuration @ MPI1",
-     "// __REFERENCE_DRAFTS__": {
+     "// header": {
+       "// last-update": "February 1, 2022",
+       "// title": "ODU2 Service Configuration @ MPI1",
+       "reference-drafts": {
        "ietf-routing-types@2017-12-04": "rfc8294",
-       "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-       "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-0\
-   \2",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 80]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-       "ietf-te@2019-04-09": "draft-ietf-teas-yang-te-21",
-       "ietf-otn-tunnel@2019-10-23": "draft-ietf-ccamp-otn-tunnel-model\
-   \-08"
+       "ietf-te-types@2020-06-10": "rfc8776",
+       "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types-1\
+   \0",
+       "ietf-te@2021-02-20": "draft-ietf-teas-yang-te-26",
+       "ietf-otn-tunnel@2021-06-25": "draft-ietf-ccamp-otn-tunnel-model\
+   \-14"
+       }
      },
-     "// __MISSING_ATTRIBUTES__": true,
-     "// __RESTCONF_OPERATION__": {
+     "// missing-attributes": true,
+     "// restconf_operation": {
        "operation": "POST",
        "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te/tunnels"
      },
@@ -4496,120 +4518,123 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
          "tunnel": [
            {
              "name": "mpi1-odu2-service",
-             "// __COMMENT__ identifier": "ODU2-SERVICE-TUNNEL-ID @ MPI\
-   \1",
+             "// comment identifier": "ODU2-SERVICE-TUNNEL-ID @ MPI1",
              "identifier": 1,
              "description": "ODU2 Service implemented by ODU2 OTN Tunne\
    \l Segment @ MPI1",
-             "// __COMMENT__ encoding and switching-type": "OTN (ODU)",
+             "// comment encoding and switching-type": "OTN (ODU)",
              "encoding": "ietf-te-types:lsp-encoding-oduk",
              "switching-type": "ietf-te-types:switching-otn",
-             "// __NOT-PRESENT__ source": "Transit tunnel segment",
-             "// __NOT-PRESENT__ src-tp-id": "Transit tunnel segment",
-             "// __NOT-PRESENT__ destination": "Transit tunnel segment",
-             "// __NOT-PRESENT__ dst-tp-id": "Transit tunnel segment",
+             "// not-present source": "Transit tunnel segment",
+             "// not-present src-tunnel-tp-id": "Transit tunnel segment\
+   \",
+             "// not-present destination": "Transit tunnel segment",
+             "// not-present dst-tunnel-tp-id": "Transit tunnel segment\
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 81]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+   \",
              "bidirectional": true,
-             "// __ DEFAULT __ protection": {
-               "// __ DEFAULT __ enable": false
+             "// default protection": {
+               "// default enable": false
              },
-             "// __ DEFAULT __ restoration": {
-               "// __ DEFAULT __ enable": false
+             "// default restoration": {
+               "// default enable": false
              },
-             "// __COMMENT__ te-topology-identifier": "ODU Black Topolo\
-   \gy @ MPI1",
+             "// comment te-topology-identifier": "ODU Black Topology @\
+   \ MPI1",
              "te-topology-identifier": {
                "provider-id": 201,
                "client-id": 300,
                "topology-id": "otn-black-topology"
              },
              "te-bandwidth": {
-               "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+               "ietf-otn-tunnel:otn": {
+                 "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+               }
              },
-             "provisioning-state": "ietf-te-types:tunnel-state-up",
-             "p2p-primary-paths": {
-               "p2p-primary-path": [
+             "admin-state": "ietf-te-types:tunnel-admin-state-up",
+             "primary-paths": {
+               "primary-path": [
                  {
                    "name": "mpi1-odu2-service-primary-path",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 81]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-                   "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandw\
-   \idth is used",
+                   "// not-present te-bandwidth": "The tunnel bandwidth\
+   \ is used",
                    "explicit-route-objects-always": {
                      "route-object-include-exclude": [
                        {
-                         "// __COMMENT__": "Tunnel hand-off OTU2 ingres\
-   \s interface (S3-1 -> AN1-1)",
+                         "// comment": "Tunnel hand-off OTU2 ingress in\
+   \terface (S3-1 -> AN1-1)",
                          "index": 1,
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "unnumbered-link-hop": {
-                           "// __COMMENT__ node-id": "AN1 NODE-ID",
+                           "// comment node-id": "AN1 NODE-ID",
                            "node-id": "10.0.0.1",
-                           "// __COMMENT__ link-tp-id": "AN1-1 LTP",
+                           "// comment link-tp-id": "AN1-1 LTP",
                            "link-tp-id": 1,
-                           "// __DEFAULT__ hop-type": "strict",
-                           "// __DEFAULT__ direction": "outgoing"
+                           "// default hop-type": "strict",
+                           "// default direction": "outgoing"
                          }
                        },
                        {
-                         "// __COMMENT__": "Tunnel hand-off ODU2 ingres\
-   \s label (ODU2 over OTU2) at S3-1 (AN1-1)",
+                         "// comment": "Tunnel hand-off ODU2 ingress la\
+   \bel (ODU2 over OTU2) at S3-1 (AN1-1)",
                          "index": 2,
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 82]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "label-hop": {
                            "te-label": {
-                             "ietf-otn-tunnel:tpn": 1,
-                             "// __NOT-PRESENT__ ietf-otn-tunnel:tsg": \
+                             "ietf-otn-tunnel:otn-tpn": 1,
+                             "// not-present ietf-otn-tunnel:tsg": "Not\
+   \ applicable for ODUk over OTUk",
+                             "// not-present ietf-otn-tunnel:ts-list": \
    \"Not applicable for ODUk over OTUk",
-                             "// __NOT-PRESENT__ ietf-otn-tunnel:ts-lis\
-   \t": "Not applicable for ODUk over OTUk",
-                             "// __DEFAULT__ direction": "forward"
+                             "// default direction": "forward"
                            }
                          }
                        },
                        {
-                         "// __COMMENT__": "Tunnel hand-off OTU4 egress\
-   \ interface (S2-3 -> AN1-7)",
+                         "// comment": "Tunnel hand-off OTU4 egress int\
+   \erface (S2-3 -> AN1-7)",
                          "index": 3,
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "unnumbered-link-hop": {
-                           "// __COMMENT__ node-id": "AN1 Node",
+                           "// comment node-id": "AN1 Node",
                            "node-id": "10.0.0.1",
-                           "// __COMMENT__ link-tp-id": "AN1-7 LTP",
+                           "// comment link-tp-id": "AN1-7 LTP",
                            "link-tp-id": 7,
-                           "// __DEFAULT__ hop-type": "strict",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 82]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-                           "// __DEFAULT__ direction": "outgoing"
+                           "// default hop-type": "strict",
+                           "// default direction": "outgoing"
                          }
                        },
                        {
-                         "// __COMMENT__": "Tunnel hand-off ODU2 egress\
-   \ label (ODU2 over OTU4) at S2-3 (AN1-7)",
+                         "// comment": "Tunnel hand-off ODU2 egress lab\
+   \el (ODU2 over OTU4) at S2-3 (AN1-7)",
                          "index": 4,
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "label-hop": {
                            "te-label": {
-                             "ietf-otn-tunnel:tpn": 1,
+                             "ietf-otn-tunnel:otn-tpn": 1,
                              "ietf-otn-tunnel:tsg": "ietf-layer1-types:\
    \tsg-1.25G",
                              "ietf-otn-tunnel:ts-list": "1-8",
-                             "// __DEFAULT__ direction": "forward"
+                             "// default direction": "forward"
                            }
                          }
                        }
@@ -4617,6 +4642,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
                    }
                  }
                ]
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 83]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
              }
            }
          ]
@@ -4629,114 +4662,118 @@ B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json
    This is the JSON code reporting the ODU2 head tunnel segment
    configuration @ MPI1:
 
-   ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+   =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
    {
-     "// __LAST_UPDATE__": "October 23, 2019",
-     "// __TITLE__": "ODU2 Tunnel Configuration @ MPI1",
-     "// __REFERENCE_DRAFTS__": {
-       "ietf-routing-types@2017-12-04": "rfc8294",
-       "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-       "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-0\
-   \2",
-       "ietf-te@2019-04-09": "draft-ietf-teas-yang-te-21",
-       "ietf-otn-tunnel@2019-10-23": "draft-ietf-ccamp-otn-tunnel-model\
-   \-08"
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 83]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
+     "// header": {
+       "last-update": "February 1, 2022",
+       "title": "ODU2 Tunnel Configuration @ MPI1",
+       "reference-drafts": {
+         "ietf-routing-types@2017-12-04": "rfc8294",
+         "ietf-te-types@2020-06-10": "rfc8776",
+         "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types\
+   \-10",
+         "ietf-te@2021-02-20": "draft-ietf-teas-yang-te-26",
+         "ietf-otn-tunnel@2021-06-25": "draft-ietf-ccamp-otn-tunnel-mod\
+   \el-14"
      },
-     "// __MISSING_ATTRIBUTES__": true,
-     "// __RESTCONF_OPERATION__": {
-       "operation": "POST",
-       "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te/tunnels"
+       "// missing-attributes": true,
+       "// restconf-operation": {
+         "operation": "POST",
+         "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-te:te/tunnels"
+       }
      },
      "ietf-te:te": {
        "tunnels": {
          "tunnel": [
            {
              "name": "mpi1-odu2-tunnel",
-             "// __COMMENT__ identifier": "ODU2-TUNNEL-ID @ MPI1",
+             "// comment identifier": "ODU2-TUNNEL-ID @ MPI1",
              "identifier": 2,
              "description": "TNBI Example for an ODU2 Head Tunnel Segme\
    \nt @ MPI1",
-             "// __COMMENT__ encoding and switching-type": "OTN (ODU)",
+             "// comment encoding and switching-type": "OTN (ODU)",
              "encoding": "ietf-te-types:lsp-encoding-oduk",
              "switching-type": "ietf-te-types:switching-otn",
-             "// __COMMENT__ source": "AN1 Node-ID",
+             "// comment source": "AN1 Node-ID",
              "source": "10.0.0.1",
-             "// __COMMENT__ src-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> '0\
-   \1')",
-             "src-tp-id": "01",
-             "// __NOT-PRESENT__ destination": "Head tunnel segment",
-             "// __NOT-PRESENT__ dst-tp-id": "Head tunnel segment",
+             "// comment src-tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 ->\
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 84]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+   \ 'AQ==' in base64)",
+             "src-tunnel-tp-id": "AQ==",
+             "// not-present destination": "Head tunnel segment",
+             "// not-present dst-tunnel-tp-id": "Head tunnel segment",
              "bidirectional": true,
-             "// __ DEFAULT __ protection": {
-               "// __ DEFAULT __ enable": false
+             "// default protection": {
+               "// default enable": false
              },
-             "// __ DEFAULT __ restoration": {
-               "// __ DEFAULT __ enable": false
+             "// default restoration": {
+               "// default enable": false
              },
-             "// __COMMENT__ te-topology-identifier": "ODU Black Topolo\
-   \gy @ MPI1",
+             "// comment te-topology-identifier": "ODU Black Topology @\
+   \ MPI1",
              "te-topology-identifier": {
                "provider-id": 201,
                "client-id": 300,
                "topology-id": "otn-black-topology"
              },
              "te-bandwidth": {
-               "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+               "ietf-otn-tunnel:otn": {
+                 "ietf-otn-tunnel:odu-type": "ietf-layer1-types:ODU2"
+               }
              },
-             "provisioning-state": "ietf-te-types:tunnel-state-down",
-             "p2p-primary-paths": {
-               "p2p-primary-path": [
+             "admin-state": "ietf-te:tunnel-admin-auto",
+             "primary-paths": {
+               "primary-path": [
                  {
                    "name": "mpi1-odu2-tunnel-primary-path",
-                   "// __NOT-PRESENT__ te-bandwidth": "The tunnel bandw\
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 84]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
-   \idth is used",
+                   "// not-present te-bandwidth": "The tunnel bandwidth\
+   \ is used",
                    "explicit-route-objects-always": {
                      "route-object-include-exclude": [
                        {
-                         "// __COMMENT__": "Tunnel hand-off OTU4 egress\
-   \ interface (AN1-7 LTP)",
+                         "// comment": "Tunnel hand-off OTU4 egress int\
+   \erface (AN1-7 LTP)",
                          "index": 1,
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "unnumbered-link-hop": {
-                           "// __COMMENT__ node-id": "AN1 NODE-ID",
+                           "// comment node-id": "AN1 NODE-ID",
                            "node-id": "10.0.0.1",
-                           "// __COMMENT__ link-tp-id": "AN1-7 LTP-ID",
+                           "// comment link-tp-id": "AN1-7 LTP-ID",
                            "link-tp-id": 7,
-                           "// __DEFAULT__ hop-type": "strict",
-                           "// __DEFAULT__ direction": "outgoing"
+                           "// default hop-type": "strict",
+                           "// default direction": "outgoing"
                          }
                        },
                        {
-                         "// __COMMENT__": "Tunnel hand-off ODU2 egress\
-   \ label (ODU2 over OTU4)",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 85]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+                         "// comment": "Tunnel hand-off ODU2 egress lab\
+   \el (ODU2 over OTU4)",
                          "index": 2,
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "label-hop": {
                            "te-label": {
-                             "ietf-otn-tunnel:tpn": 2,
+                             "ietf-otn-tunnel:otn-tpn": 2,
                              "ietf-otn-tunnel:tsg": "ietf-layer1-types:\
    \tsg-1.25G",
                              "ietf-otn-tunnel:ts-list": "9-16",
-                             "// __DEFAULT__ direction": "forward"
+                             "// default direction": "forward"
                            }
                          }
                        }
@@ -4751,39 +4788,39 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
      }
    }
 
-
-
-
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 85]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
 B.2.3.  JSON Code: mpi1-epl-service-config.json
 
    This is the JSON code reporting the EPL service configuration @ MPI:
 
-   ========== NOTE: '\\' line wrapping per BCP XXX (RFC XXXX) ==========
+   =============== NOTE: '\\' line wrapping per RFC 8792 ===============
 
    {
-     "// __LAST_UPDATE__": "November 19, 2019",
-     "// __TITLE__": "EPL Configuration @ MPI1",
-     "// __REFERENCE_DRAFTS__": {
-       "ietf-routing-types@2017-12-04": "rfc8294",
-       "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-       "ietf-eth-tran-types@2019-03-27": "draft-ietf-ccamp-client-signa\
-   \l-yang-00",
-       "ietf-eth-tran-service@2019-03-27": "draft-ietf-ccamp-client-sig\
-   \nal-yang-00"
-     },
-     "// __MISSING_ATTRIBUTES__": true,
-     "// __RESTCONF_OPERATION__": {
-       "operation": "POST",
-       "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-eth-tran-service\
-   \:etht-svc/etht-svc-instances"
+     "// header": {
+       "last-update": "January 29, 2022",
+       "title": "EPL Configuration @ MPI1",
+       "reference-drafts": {
+         "ietf-routing-types@2017-12-04": "rfc8294",
+         "ietf-te@2021-05-16": "draft-ietf-teas-yang-te-27",
+         "ietf-te-types@2020-06-10": "rfc8776",
+         "ietf-eth-tran-types@2021-07-07": "draft-ietf-ccamp-client-sig\
+   \nal-yang-05",
+         "ietf-eth-tran-service@2021-01-11": "draft-ietf-ccamp-client-s\
+   \ignal-yang-05"
+       },
+       "missing-attributes": true,
+       "restconf-operation": {
+         "operation": "POST",
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 86]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+         "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-eth-tran-servi\
+   \ce:etht-svc/etht-svc-instances"
+       }
      },
      "ietf-eth-tran-service:etht-svc": {
        "etht-svc-instances": [
@@ -4791,10 +4828,9 @@ B.2.3.  JSON Code: mpi1-epl-service-config.json
            "etht-svc-name": "mpi1-epl-service",
            "etht-svc-descr": "TNBI Example for an EPL over ODU2 Service\
    \ @ MPI1",
-           "// __DEFAULT__ etht-svc-type": "ietf-eth-tran-types:p2p-svc\
-   \",
-           "// __COMMENT__ te-topology-identifier": "ETH Black Topology\
-   \ @ MPI1",
+           "// default etht-svc-type": "ietf-eth-tran-types:p2p-svc",
+           "// comment te-topology-identifier": "ETH Black Topology @ M\
+   \PI1",
            "te-topology-identifier": {
              "provider-id": 201,
              "client-id": 300,
@@ -4802,47 +4838,49 @@ B.2.3.  JSON Code: mpi1-epl-service-config.json
            },
            "etht-svc-end-points": [
              {
-               "// __COMMENT__": "10GE Service End-Point at the access \
-   \interface (S3-1 -> AN1-1)",
+               "// comment": "10GE Service End-Point at the access inte\
+   \rface (S3-1 -> AN1-1)",
                "etht-svc-end-point-name": "mpi1-epl-an1-1-service-end-p\
    \oint",
                "etht-svc-end-point-descr": "Ethernet Service End-Point \
    \at S3-1 (AN1-1) access link",
-               "service-classification-type": "ietf-eth-tran-types:port\
-   \-classification",
-
-
-
-Busi, et al.              Expires April 2, 2022                [Page 86]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
                "etht-svc-access-points": [
                  {
-                   "// __COMMENT__": "10GE Service Access Point at the \
-   \access interface (S3-1 -> AN1-1)",
+                   "// comment": "10GE Service Access Point at the acce\
+   \ss interface (S3-1 -> AN1-1)",
                    "access-point-id": "mpi-epl-an1-1-service-access-poi\
    \nt",
-                   "// __COMMENT__ access-node-id": "AN1 NODE-ID",
+                   "// comment access-node-id": "AN1 NODE-ID",
                    "access-node-id": "10.0.0.1",
-                   "// __COMMENT__ access-ltp-id": "AN1-1 LTP-ID",
+                   "// comment access-ltp-id": "AN1-1 LTP-ID",
                    "access-ltp-id": 1
                  }
-               ]
-             }
-           ],
-           "// __COMMENT__ ingress-egress-bandwidth-profile": "Outside \
+               ],
+               "service-classification-type": "ietf-eth-tran-types:port\
+   \-classification",
+               "// comment ingress-egress-bandwidth-profile": "Outside \
    \the scope of this JSON example",
-           "// __NOT-PRESENT__ vlan-operations": "Transparent VLAN oper\
-   \ations",
-           "etht-svc-tunnels": [
-             {
-               "// __COMMENT__ tunnel-name": "ODU2 Head Tunnel Segment \
-   \@ MPI1",
-               "tunnel-name": "mpi1-odu2-tunnel"
+               "// comment not present vlan-operations": "Transparent V\
+   \LAN operations"
              }
            ],
+           "underlay": {
+             "otn-tunnels": [
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 87]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
+
+               {
+                 "// comment tunnel-name": "ODU2 Head Tunnel Segment @ \
+   \MPI1",
+                 "name": "mpi1-odu2-tunnel"
+               }
+             ]
+           },
            "admin-status": "ietf-te-types:tunnel-admin-state-up"
          }
        ]
@@ -4867,13 +4905,6 @@ Acknowledgments
    Bryskin, Vishnu Pavan Beeram, Tarek Saad and Xufeng Liu, for their
    support in addressing any gap identified during the analysis work.
 
-
-
-Busi, et al.              Expires April 2, 2022                [Page 87]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
    The authors would like to thank Henry Yu and Aihua Guo for their
    input and review of the URIs structures used within the JSON code
    examples.
@@ -4890,6 +4921,14 @@ Additional Authors' Addresses
 
    Yang Zhao
    China Mobile
+
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 88]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
 
    Email: zhaoyangyjy@chinamobile.com
 
@@ -4924,12 +4963,6 @@ Additional Authors' Addresses
    Email: carlo.perocchio@ericsson.com
 
 
-
-Busi, et al.              Expires April 2, 2022                [Page 88]
-
-Internet-Draft    Transport NBI Applicability-Statement   September 2021
-
-
    Ricard Vilalta
    CTTC
 
@@ -4944,6 +4977,14 @@ Internet-Draft    Transport NBI Applicability-Statement   September 2021
 
    Dieter Beller
    Nokia
+
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 89]
+
+Internet-Draft    Transport NBI Applicability-Statement    February 2022
+
 
    Email: dieter.beller@nokia.com
 
@@ -4981,4 +5022,19 @@ Authors' Addresses
 
 
 
-Busi, et al.              Expires April 2, 2022                [Page 89]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Busi, et al.             Expires August 5, 2022                [Page 90]

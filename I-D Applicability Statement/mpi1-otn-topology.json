@@ -1,16 +1,18 @@
 {
-  "// __LAST_UPDATE__": "October 21, 2019",
-  "// __TITLE__": "ODU Black Topology @ MPI1",
-  "// __REFERENCE_DRAFTS__": {
-    "ietf-routing-types@2017-12-04": "rfc8294",
-    "ietf-te-types@2019-07-05": "draft-ietf-teas-yang-te-types-10",
-    "ietf-layer1-types@2019-09-09": "draft-ietf-ccamp-layer1-types-02",
-    "ietf-network@2018-02-26": "rfc8345",
-    "ietf-network-topology@2018-02-26": "rfc8345",
-    "ietf-te-topology@2019-02-07": "draft-ietf-teas-yang-te-topo-22",
-    "ietf-otn-topology@2019-07-07": "draft-ietf-ccamp-otn-topo-yang-08"
+  "// header": {
+    "last-update": "February 1, 2022",
+    "title": "ODU Black Topology @ MPI1",
+    "missing-attributes": true,
+    "reference-drafts": {
+      "ietf-routing-types@2017-12-04": "rfc8294",
+      "ietf-te-types@2020-06-10": "rfc8776",
+      "ietf-layer1-types@2021-02-19": "draft-ietf-ccamp-layer1-types-10",
+      "ietf-network@2018-02-26": "rfc8345",
+      "ietf-network-topology@2018-02-26": "rfc8345",
+      "ietf-te-topology@2020-08-06": "rfc8795",
+      "ietf-otn-topology@2021-07-08": "draft-ietf-ccamp-otn-topo-yang-13"
+    }
   },
-  "// __MISSING_ATTRIBUTES__": true,
   "ietf-network:networks": {
     "network": [
       {
@@ -25,13 +27,13 @@
           "client-id": 300,
           "topology-id": "otn-black-topology"
         },
-        "// __COMMENT__ ietf-te-topology:te": "presence container requires: provider-id, client-id and te-topology-id",
+        "// comment ietf-te-topology:te": "presence container requires: provider-id, client-id and te-topology-id",
         "ietf-te-topology:te": {
           "name": "OTN Black Topology @ MPI1"
         },
         "ietf-network:node": [
           {
-            "// __NODE__:__DESCRIPTION__": {
+            "// node description": {
               "name": "AN1",
               "identifier": "10.0.0.1",
               "type": "Abstract Node",
@@ -42,19 +44,21 @@
             "ietf-te-topology:te": {
               "te-node-attributes": {
                 "name": "AN11",
-                "is-abstract": "",
+                "is-abstract": [
+                  null
+                ],
                 "admin-status": "up"
               },
               "oper-status": "up",
               "tunnel-termination-point": [
                 {
-                  "// __COMMENT__ tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> 'AQ==')",
+                  "// comment tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 -> 'AQ==' in base64)",
                   "tunnel-tp-id": "AQ==",
                   "name": "AN1-1 OTN TTP",
-                  "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                  "// comment encoding and switching-capability": "OTN (ODU)",
                   "switching-capability": "ietf-te-types:switching-otn",
                   "encoding": "ietf-te-types:lsp-encoding-oduk",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL-ID (1) }",
+                  "// comment inter-layer-lock-id": "{ AN1-1 ILL-ID (1) }",
                   "inter-layer-lock-id": [
                     1
                   ],
@@ -62,13 +66,13 @@
                   "oper-status": "up"
                 },
                 {
-                  "// __COMMENT__ tunnel-tp-id": "AN1-2 TTP-ID (2 -> 0x02 -> 'Ag==')",
+                  "// comment tunnel-tp-id": "AN1-2 TTP-ID (2 -> 0x02 -> 'Ag==' in base64)",
                   "tunnel-tp-id": "Ag==",
                   "name": "AN1-2 OTN TTP",
-                  "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                  "// comment encoding and switching-capability": "OTN (ODU)",
                   "switching-capability": "ietf-te-types:switching-otn",
                   "encoding": "ietf-te-types:lsp-encoding-oduk",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-2 ILL-ID (2) }",
+                  "// comment inter-layer-lock-id": "{ AN1-2 ILL-ID (2) }",
                   "inter-layer-lock-id": [
                     2
                   ],
@@ -76,13 +80,13 @@
                   "oper-status": "up"
                 },
                 {
-                  "// __COMMENT__ tunnel-tp-id": "AN1-3 TTP-ID (3 -> 0x03 -> 'Awo=')",
+                  "// comment tunnel-tp-id": "AN1-3 TTP-ID (3 -> 0x03 -> 'Awo=' in base64)",
                   "tunnel-tp-id": "Awo=",
                   "name": "AN1-3 OTN TTP",
-                  "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                  "// comment encoding and switching-capability": "OTN (ODU)",
                   "switching-capability": "ietf-te-types:switching-otn",
                   "encoding": "ietf-te-types:lsp-encoding-oduk",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-3 ILL-ID (3) }",
+                  "// comment inter-layer-lock-id": "{ AN1-3 ILL-ID (3) }",
                   "inter-layer-lock-id": [
                     3
                   ],
@@ -90,13 +94,13 @@
                   "oper-status": "up"
                 },
                 {
-                  "// __COMMENT__ tunnel-tp-id": "AN1-8 TTP-ID (8 -> 0x08 -> 'CA==')",
+                  "// comment tunnel-tp-id": "AN1-8 TTP-ID (8 -> 0x08 -> 'CA==' in base64)",
                   "tunnel-tp-id": "CA==",
                   "name": "AN1-8 OTN TTP",
-                  "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                  "// comment encoding and switching-capability": "OTN (ODU)",
                   "switching-capability": "ietf-te-types:switching-otn",
                   "encoding": "ietf-te-types:lsp-encoding-oduk",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-8 ILL-ID (1) }",
+                  "// comment inter-layer-lock-id": "{ AN1-8 ILL-ID (1) }",
                   "inter-layer-lock-id": [
                     8
                   ],
@@ -107,7 +111,7 @@
             },
             "ietf-network-topology:termination-point": [
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-1 LTP",
                   "link type(s)": "Multi-function (OTU2, STM-64 and 10GE)",
                   "physical node": "S3",
@@ -121,21 +125,23 @@
                   "name": "AN1-1 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU2"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-1 ILL-ID (1) }",
+                  "// not-present inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// comment inter-layer-lock-id": "{ AN1-1 ILL-ID (1) }",
                   "inter-layer-lock-id": [
                     1
                   ],
@@ -150,7 +156,7 @@
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-2 LTP",
                   "link type(s)": "Multi-function (OTU2 and STM-64)",
                   "physical node": "S6",
@@ -164,21 +170,23 @@
                   "name": "AN1-2 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU2"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-2 ILL-ID (2) }",
+                  "// not-present inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// comment inter-layer-lock-id": "{ AN1-2 ILL-ID (2) }",
                   "inter-layer-lock-id": [
                     2
                   ],
@@ -193,7 +201,7 @@
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-3 LTP",
                   "link type(s)": "STM-64",
                   "physical node": "S6",
@@ -205,9 +213,9 @@
                 "ietf-te-topology:te-tp-id": 3,
                 "ietf-te-topology:te": {
                   "name": "AN1-3 LTP",
-                  "// __NOT-PRESENT__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
-                  "// __NOT-PRESENT__ inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
-                  "// __COMMENT__ inter-layer-lock-id": "{ AN1-3 ILL-ID (3) }",
+                  "// not-present interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
+                  "// not-present inter-domain-plug-id": "Use of plug-id for access Link is outside the scope of this document",
+                  "// comment inter-layer-lock-id": "{ AN1-3 ILL-ID (3) }",
                   "inter-layer-lock-id": [
                     3
                   ],
@@ -222,7 +230,7 @@
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-4 LTP",
                   "link type(s)": "OTU4",
                   "physical node": "S7",
@@ -236,29 +244,31 @@
                   "name": "AN1-4 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S7-S11 Plug-id (0x000711 -> AAcR)",
+                  "// comment inter-domain-plug-id": "S7-S11 Plug-id (0x000711 -> AAcR)",
                   "inter-domain-plug-id": "AAcR",
-                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// not-present inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// not-present ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-5 LTP",
                   "link type(s)": "OTU4",
                   "physical node": "S8",
@@ -272,29 +282,31 @@
                   "name": "AN1-5 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S8‑S12 Plug-id (0x000812 -> AAgS)",
+                  "// comment inter-domain-plug-id": "S8-S12 Plug-id (0x000812 -> AAgS)",
                   "inter-domain-plug-id": "AAgS",
-                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// not-present inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// not-present ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-6 LTP",
                   "link type(s)": "OTU4",
                   "physical node": "S8",
@@ -308,29 +320,31 @@
                   "name": "AN1-6 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S8‑S32 Plug-id (0x000832 -> AAgy)",
+                  "// comment inter-domain-plug-id": "S8-S32 Plug-id (0x000832 -> AAgy)",
                   "inter-domain-plug-id": "AAgy",
-                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// not-present inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// not-present ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               },
               {
-                "// __DESCRIPTION__:__LTP__": {
+                "// ltp description": {
                   "name": "AN1-7 LTP",
                   "link type(s)": "OTU4",
                   "physical node": "S2",
@@ -344,25 +358,27 @@
                   "name": "AN1-7 LTP",
                   "interface-switching-capability": [
                     {
-                      "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                      "// comment encoding and switching-capability": "OTN (ODU)",
                       "switching-capability": "ietf-te-types:switching-otn",
                       "encoding": "ietf-te-types:lsp-encoding-oduk",
                       "max-lsp-bandwidth": [
                         {
                           "priority": 0,
                           "te-bandwidth": {
-                            "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                            "ietf-otn-topology:otn": {
+                              "odu-type": "ietf-layer1-types:ODU4"
+                            }
                           }
                         }
                       ]
                     }
                   ],
-                  "// __COMMENT__ inter-domain-plug-id": "S2-S31 Plug-id (0x000231 -> AAIx)",
+                  "// comment inter-domain-plug-id": "S2-S31 Plug-id (0x000231 -> AAIx)",
                   "inter-domain-plug-id": "AAIx",
-                  "// __NOT-PRESENT__ inter-layer-lock-id": "ODU Server Layer topology not exposed",
+                  "// not-present inter-layer-lock-id": "ODU Server Layer topology not exposed",
                   "admin-status": "up",
                   "oper-status": "up",
-                  "// __NOT-PRESENT__ ietf-otn-topology:client-svc": "OTN inter-domain link"
+                  "// not-present ietf-otn-topology:client-svc": "OTN inter-domain link"
                 }
               }
             ]
@@ -370,7 +386,7 @@
         ],
         "ietf-network-topology:link": [
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Access Link from AN1-1",
               "type": "Multi-function access link (OTU2, STM-64 and 10GE)",
               "physical link": "Link from S3-1 to R1"
@@ -378,30 +394,32 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/1",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 1
+              "source-tp": "1"
             },
-            "// __NOT-PRESENT__ destination": "access link",
+            "// not-present destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-1",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -435,15 +453,15 @@
                     }
                   }
                 ],
-                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
+                "// not-present ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Access Link from AN1-2",
               "type": "Multi-function access link (OTU2 and STM-64)",
               "physical link": "Link from S6-2 to R3"
@@ -451,30 +469,32 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/2",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 2
+              "source-tp": "2"
             },
-            "// __NOT-PRESENT__ destination": "access link",
+            "// not-present destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-2",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU2"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU2"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -508,15 +528,15 @@
                     }
                   }
                 ],
-                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
+                "// not-present ietf-otn-topology:tsg": "Access Link with no HO-ODU termination and LO-ODU switching",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Access Link from AN1-3",
               "type": "STM-64 Access link",
               "physical link": "Link from S6-3 to R4"
@@ -524,27 +544,27 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/3",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 3
+              "source-tp": "3"
             },
-            "// __NOT-PRESENT__ destination": "access link",
+            "// not-present destination": "access link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Access Link from AN1-3",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
-                "// __NOT-PRESENT__ interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
-                "// __NOT-PRESENT__ max-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __NOT-PRESENT__ max-resv-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __NOT-PRESENT__ unreserved-bandwidth": "STM-64 Access Link only (no ODU switching)",
-                "// __NOT-PRESENT__ ietf-otn-topology:tsg": "STM-64 Access Link only (no HO-ODU termination and LO-ODU switching)",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
+                "// not-present interface-switching-capability": "STM-64 Access Link only (no ODU switching)",
+                "// not-present max-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// not-present max-resv-link-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// not-present unreserved-bandwidth": "STM-64 Access Link only (no ODU switching)",
+                "// not-present ietf-otn-topology:tsg": "STM-64 Access Link only (no HO-ODU termination and LO-ODU switching)",
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Inter-domain Link from AN1-4",
               "type": "OTU4 inter-domain link",
               "physical link": "Link from S7-3 to S11"
@@ -552,30 +572,32 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/4",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 4
+              "source-tp": "4"
             },
-            "// __NOT-PRESENT__ destination": "inter-domain link",
+            "// not-present destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-4",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU2"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -637,11 +659,11 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Inter-domain Link from AN1-5",
               "type": "OTU4 inter-domain link",
               "physical link": "Link from S8-4 to S12"
@@ -649,30 +671,32 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/5",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 5
+              "source-tp": "5"
             },
-            "// __NOT-PRESENT__ destination": "inter-domain link",
+            "// not-present destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-5",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -734,11 +758,11 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Inter-domain Link from AN1-6",
               "type": "OTU4 inter-domain link",
               "physical link": "Link from S8-5 to S32"
@@ -746,30 +770,32 @@
             "link-id": "teNodeId/10.0.0.1/teLinkId/6",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 6
+              "source-tp": "6"
             },
-            "// __NOT-PRESENT__ destination": "inter-domain link",
+            "// not-present destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-6",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -831,11 +857,11 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           },
           {
-            "// __DESCRIPTION__:__LINK__": {
+            "// link description": {
               "name": "Inter-domain Link from AN1-7",
               "type": "OTU4 inter-domain link",
               "physical link": "Link from S2-3 to S31"
@@ -843,30 +869,32 @@
             "link-id": "teNodeId/10.0.0.1teLinkId/7",
             "source": {
               "source-node": "10.0.0.1",
-              "source-tp": 7
+              "source-tp": "7"
             },
-            "// __NOT-PRESENT__ destination": "inter-domain link",
+            "// not-present destination": "inter-domain link",
             "ietf-te-topology:te": {
               "te-link-attributes": {
                 "name": "Inter-domain Link from AN1-7",
-                "// __NOT-PRESENT__ external-domain": "The plug-id is used instead of this container",
-                "// __NOT-PRESENT__ is-abstract": "The access link is not abstract",
+                "// not-present external-domain": "The plug-id is used instead of this container",
+                "// not-present is-abstract": "The access link is not abstract",
                 "interface-switching-capability": [
                   {
-                    "// __COMMENT__ encoding and switching-capability": "OTN (ODU)",
+                    "// comment encoding and switching-capability": "OTN (ODU)",
                     "switching-capability": "ietf-te-types:switching-otn",
                     "encoding": "ietf-te-types:lsp-encoding-oduk",
                     "max-lsp-bandwidth": [
                       {
                         "priority": 0,
                         "te-bandwidth": {
-                          "ietf-otn-topology:odu-type": "ietf-layer1-types:ODU4"
+                          "ietf-otn-topology:otn": {
+                            "odu-type": "ietf-layer1-types:ODU4"
+                          }
                         }
                       }
                     ]
                   }
                 ],
-                "// __COMMENT__ label-restrictions": "Outside the scope of this JSON example",
+                "// comment label-restrictions": "Outside the scope of this JSON example",
                 "max-link-bandwidth": {
                   "te-bandwidth": {
                     "ietf-otn-topology:odulist": [
@@ -928,7 +956,7 @@
                 "admin-status": "up"
               },
               "oper-status": "up",
-              "// __NOT-PRESENT__ is-transitional": "It is not a transitional link"
+              "// not-present is-transitional": "It is not a transitional link"
             }
           }
         ]
