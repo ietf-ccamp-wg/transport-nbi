@@ -4,7 +4,7 @@ coding: utf-8
 title: Transport Northbound Interface Applicability Statement
 
 abbrev: Transport NBI Applicability-Statement
-docname: draft-ietf-ccamp-transport-nbi-app-statement-13
+docname: draft-ietf-ccamp-transport-nbi-app-statement-14
 workgroup: CCAMP Working Group
 category: info
 ipr: trust200902
@@ -298,7 +298,7 @@ informative:
    Protection Switching
    : Protection switching, as defined in {{ITU-T_G.808.1}}
    and {{!RFC4427}}, provides the capability to swith the traffic
-   in case of network failurs over pre-allocated networks resourse.
+   in case of network failures over pre-allocated networks resourse.
    Typically linear protection methods would be used and configured to
    operate as 1+1 unidirectional, 1+1 bidirectional or 1:n
    bidirectional. This ensures fast and simple service survivability.
