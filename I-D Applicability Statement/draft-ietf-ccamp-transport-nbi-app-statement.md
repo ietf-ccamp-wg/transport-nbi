@@ -1093,7 +1093,7 @@ informative:
 
 {: #notification-description}
 
-## Notification
+## Event Notifications and Alarms
 
    To realize the three functions of topology update, service update,
    and restoration, the following notification types need to be
