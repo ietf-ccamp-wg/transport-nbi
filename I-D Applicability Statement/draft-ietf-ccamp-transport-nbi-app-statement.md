@@ -341,7 +341,7 @@ informative:
    TE Tunnel Hand-off
    : It is an access or inter-domain LTP by
    which a multi-domain TE tunnel enters or exits a given network
-   domain. See also [TE-TUTORIAL.
+   domain. See also {{TE-TUTORIAL}}.
    
    Note - The three definitions above are currently in {{TE-TUTORIAL}}
    but it is expected that they will be moved to {{TE-TUNNEL}}. When this
