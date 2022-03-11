@@ -2515,9 +2515,10 @@ informative:
 
 This is the JSON code reporting the OTN Topology @ MPI1:
 
+~~~~ ascii-art
+{::include ./mpi1-otn-topology.txt}
 ~~~~
-{::include ./mpi1-otn-topology.json-folded}
-~~~~
+{: artwork-name="mpi1-otn-topology.txt"}
 
 {: #json-mpi1-eth-topo}
 
@@ -2525,9 +2526,10 @@ This is the JSON code reporting the OTN Topology @ MPI1:
 
 This is the JSON code reporting the ETH Topology @ MPI1:
 
+~~~~ ascii-art
+{::include ./mpi1-eth-topology.txt}
 ~~~~
-{::include ./mpi1-eth-topology.json-folded}
-~~~~
+{: artwork-name="mpi1-eth-topology.txt"}
 
 {: #json-svc}
 
@@ -2539,9 +2541,10 @@ This is the JSON code reporting the ETH Topology @ MPI1:
 
 This is the JSON code reporting the ODU2 transit service configuration @ MPI1:
 
+~~~~ ascii-art
+{::include ./mpi1-odu2-service-config.txt}
 ~~~~
-{::include ./mpi1-odu2-service-config.json-folded}
-~~~~
+{: artwork-name="mpi1-odu2-service-config.txt"}
 
 {: #json-mpi1-odu2-tnl}
 
@@ -2550,9 +2553,10 @@ This is the JSON code reporting the ODU2 transit service configuration @ MPI1:
    This is the JSON code reporting the ODU2 head tunnel segment
    configuration @ MPI1:
 
+~~~~ ascii-art
+{::include ./mpi1-odu2-tunnel-config.txt}
 ~~~~
-{::include ./mpi1-odu2-tunnel-config.json-folded}
-~~~~
+{: artwork-name="mpi1-odu2-tunnel-config.txt"}
 
 {: #json-mpi1-epl-svc}
 
@@ -2560,9 +2564,10 @@ This is the JSON code reporting the ODU2 transit service configuration @ MPI1:
 
 This is the JSON code reporting the EPL service configuration @ MPI:
 
+~~~~ ascii-art
+{::include ./mpi1-epl-service-config.txt}
 ~~~~
-{::include ./mpi1-epl-service-config.json-folded}
-~~~~
+{: artwork-name="mpi1-epl-service-config.txt"}
 
 {: numbered="false"}
 
