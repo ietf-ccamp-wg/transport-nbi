@@ -2347,8 +2347,8 @@ informative:
    Different objects need to have an identifier. The convention used to
    create mnemonic identifiers is to use the object name (e.g., S3 for
    node S3), followed by its type (e.g., NODE), separated by a "-",
-   followed by "-ID". For example, the mnemonic identifier for node S3
-   would be S3-NODE-ID.
+   followed by "-ID". For example, the mnemonic identifier for AN1
+   would be AN1-NODE-ID.
 
    The JSON language does not support the insertion of comments that
    have been instead found to be useful when writing the examples. This
@@ -2371,14 +2371,14 @@ informative:
    which would pass the syntax checks. In that case, to simplify the
    reading, another JSON name/value pair formatted as a comment and
    using the mnemonic identifiers is also provided. For example, the
-   identifier of node S3 (S3-NODE-ID) has been assumed to be "10.0.0.3"
+   identifier of AN1 (AN1-NODE-ID) has been assumed to be "192.0.2.1"
    and would be shown in the JSON code example using the two JSON
    name/value pair:
 
 ~~~~
-      "// te-node-id": "S3-NODE-ID",
+      "// te-node-id": "AN1-NODE-ID",
 
-      "te-node-id": "10.0.0.3",
+      "te-node-id": "192.0.2.1",
 ~~~~
 
    The first JSON name/value pair will be automatically removed in the
