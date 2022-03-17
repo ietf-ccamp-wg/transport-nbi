@@ -1903,6 +1903,11 @@ informative:
           (i.e., the list of timeslots and the TPN) used by the ODU2
           connection over that link.
 
+   Since there is not enough information about which client traffic
+   should be steered to the OTN Tunnel, the ODU2 (Head Segment)
+   Tunnel is setup with the administrative auto state, as defined in
+   {{TE-TUNNEL}}.
+
    {{json-mpi1-odu2-tnl}}
    provides the detailed JSON code ("mpi1-odu2-tunnel-
    config.json") describing how the setup of this ODU2 (Head Segment)
@@ -2427,10 +2432,12 @@ informative:
    of YANG data?   may              may                     must
 ~~~~
 
-   Our validation toolchain has been designed to take a JSON in any of
+   The validation toolchain has been designed to take a JSON in any of
    the three formats and validate it automatically against a set of
-   relevant YANG modules using available open-source tools. It can be
-   found at: https://github.com/GianmarcoBruno/json-yang/
+   relevant YANG modules using available open-source tools.
+   
+   The tool used to validate the JSON examples in this document can be
+   found at: https://github.com/ietf-ccamp-wg/json-yang/tree/2.2
 
 ##  Comments in JSON fragments
 
