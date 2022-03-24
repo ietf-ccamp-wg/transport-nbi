@@ -156,7 +156,7 @@ informative:
 
    Transport network domains, including Optical Transport Network (OTN)
    and Wavelength Division Multiplexing (WDM) networks are typically
-   deployed based on a single vendor, or a single technology platform.  
+   deployed based on a single vendor or a single technology platform.  
    They are often managed using proprietary interfaces to dedicated 
    Element Management Systems (EMS), Network Management Systems (NMS) and
    increasingly Software Defined Network (SDN) controllers.
@@ -179,7 +179,7 @@ informative:
    This document examines the applicability of the YANG models defined
    by the IETF (in particular in the Traffic Engineering Architecture
    and Signaling (TEAS) and Common Control and Measurement Plane (CCAMP)
-   working groups) to support OTN in single and multi-domain network
+   working groups) to support OTN in a single and multi-domain network
    scenarios.
 
 {: #scope}
@@ -201,7 +201,7 @@ informative:
 
    A detailed analysis of the interface between the Customer Network
    Controller (CNC) and the MDSC, called CNC-MDSC Interface (CMI) in
-   {{!RFC8453}}, as well as of the interface between service and network
+   {{!RFC8453}}, as well as the interface between service and network
    orchestrators are outside the scope of this document.  However, when
    needed, this document describes some considerations and assumptions
    about the information which needs to be provided at these interfaces.
@@ -248,7 +248,7 @@ informative:
    the end-to-end connection.
 
    Connectivity Service
-   : A connectivity service, in the context of this document can be 
+   : A connectivity service, in the context of this document, can be 
    considered as a connection between customer sites, across the network
    operator's network {{?RFC8309}}.
 
@@ -297,8 +297,8 @@ informative:
 
    Protection Switching
    : Protection switching, as defined in {{ITU-T_G.808.1}}
-   and {{!RFC4427}}, provides the capability to swith the traffic
-   in case of network failures over pre-allocated networks resourse.
+   and {{!RFC4427}}, provides the capability to switch the traffic
+   in case of network failures over pre-allocated networks resources.
    Typically linear protection methods would be used and configured to
    operate as 1+1 unidirectional, 1+1 bidirectional or 1:n
    bidirectional. This ensures fast and simple service survivability.
@@ -325,12 +325,12 @@ informative:
    environment.
 
    TE Link
-   : As defined in {{!RFC8795}}, it is an element of a TE topology,
+   : As defined in {{!RFC8795}}, is an element of a TE topology,
    presented as an edge on TE graph.
 
    TE Tunnel
    :  As defined in {{TE-TUNNEL}}, it is a connection-oriented
-   service provided by a layer network of delivery of a client's data
+   service provided by a layered network of delivery of a client's data
    between source and destination tunnel termination points. See also
    {{TE-TUTORIAL}}.
 
@@ -441,7 +441,7 @@ informative:
    The physical topology of the reference network is shown in 
    {{fig-reference-network}}.
    It represents an OTN network composed of three transport network
-   domains which provide connectivity services to an IP customer
+   domains that provide connectivity services to an IP customer
    network through nine access links:
 
 ~~~~
@@ -490,7 +490,7 @@ informative:
 
    This document also assumes that within the transport network, the
    physical/optical connections supporting the Si-Sj OTN links (up to
-   the OTU4 trail), are pre-provisioned using mechanisms which are
+   the OTU4 trail), are pre-provisioned using mechanisms that are
    outside the scope of this document and are not exposed at the MPIs
    to the MDSC.
 
@@ -499,18 +499,18 @@ informative:
    {{service-description}} provides more details
    about the different assumptions on the access links for different
    types of connectivity services, and {{multi-function-access}} 
-   describes the control of access links which can support different technology
+   describes the control of access links that can support different technology
    configurations (e.g., STM-64, 10GE or OTU2) depending on the type of
    service being configured (multi-function access links).
 
    To carry client signals (e.g., Ethernet or STM-N) over OTN, some ODU
    termination and adaptation resources need to be available on the
    physical edge nodes (e.g., node S3 and S18). The location of these
-   resources within the physical node is implementation specific and
+   resources within the physical node is implementation-specific and
    outside the scope of standardization. This document assumes that
    these termination and adaptation resources are located on the
    physical interfaces of the edge nodes terminating the access links.
-   In other words, each physical access link has a set dedicated ODU
+   In other words, each physical access link has a set of dedicated ODU
    termination and adaptation resources.
 
    The transport network control architecture,
@@ -563,7 +563,7 @@ informative:
    MDSC control the end-to-end network through the MPIs toward the
    underlying PNCs.
 
-   The ACTN framework facilitates seperating the network and
+   The ACTN framework facilitates separating the network and
    service control from the underlying technology. It helps the
    customer to define the network as desired by business needs. The CMI
    is defined to keep a minimal level of dependency (or no dependency
@@ -617,7 +617,7 @@ informative:
    abstraction method defined in {{!RFC7926}}:
 
 >  Abstraction is the process of applying the policy to the
->  available TE information within a domain, to produce selective
+>  available TE information within a domain to produce selective
 >  information that represents the potential ability to connect
 >  across the domain.  Thus, abstraction does not necessarily offer
 >  all possible connectivity options, but presents a general view of
@@ -689,7 +689,7 @@ informative:
 ## Service Configuration
 
    In the following scenarios, it is assumed that the CNC is capable of
-   requesting connectivity services from the MDSC, for example to
+   requesting connectivity services from the MDSC, for example, to
    interconnect IP routers.
 
    The type of connectivity services depends on the type of physical
@@ -699,7 +699,7 @@ informative:
    The packet processing inside IP routers, including packet
    encapsualation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
    PKT), are assumed to be performed by means that are not under the
-   control of, and not visible to, the MDSC nor to the PNCs. Therefore,
+   control of, and not visible to, the MDSC or to the PNCs. Therefore,
    these mechanisms are outside the scope of this document.
 
 {: #odu-description}
@@ -718,9 +718,9 @@ informative:
    interfaces are not channelized (i.e., they can only support one
    ODU2).
 
-   When a 10Gb an IP connectivity service between R1 and R8 is needed, an ODU2 end-to-end
+   When a 10Gb IP connectivity service between R1 and R8 is needed, an ODU2 end-to-end
    connection needs to be created, passing through transport network
-   nodes S3, S1, S2, S31, S33, S34, S15 and S18 which belong to
+   nodes S3, S1, S2, S31, S33, S34, S15 and S18, which belong to
    different PNC domains (multi-domain service request):
 
 ~~~~
@@ -737,7 +737,7 @@ informative:
    domain ODU2 connection segment between the access links on S3 and
    S18.
 
-   When a 10Gb an IP connectivity service between R1 and R3 is needed, an ODU2 end-to-end
+   When a 10Gb IP connectivity service between R1 and R3 is needed, an ODU2 end-to-end
    connection needs to be created, passing through transport network
    nodes S3, S5 and S6 which belong to the same PNC domain (single-
    domain service request):
@@ -769,8 +769,8 @@ informative:
    outside the scope of this document and not exposed at the MPIs
    between the PNCs and the MDSC.
 
-   When a 10Gb an IP connectivity service between R1 and R8 is needed, an EPL
-   service needs to be created, supported by a ODU2 end-to-end
+   When a 10Gb IP connectivity service between R1 and R8 is needed, an EPL
+   service needs to be created, supported by an ODU2 end-to-end
    connection, between transport network nodes S3 and S18, passing
    through transport network nodes S1, S2, S31, S33, S34 and S15, which
    belong to different PNC domains (multi-domain service request):
@@ -790,7 +790,7 @@ informative:
    adaptation functions inside these edge nodes, such as S3 \[ETH ->
    (ODU2)] and S18 \[(ODU2) -> ETH].
 
-   When a 10Gb an IP connection between R1 and R2 is needed, an EPL service
+   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
    needs to be created, supported by a ODU2 end-to-end connection
    between transport network nodes S3 and S6, passing through the
    transport network node S5, which belong to the same PNC domain
@@ -807,7 +807,7 @@ informative:
 
    Based on the assumption above, in this case, the MDSC can figure out
    that it needs to setup an EPL service between the access links on S3
-   and S6, which belong to the same PNC domain (single-domain service
+   and S6, that belong to the same PNC domain (single-domain service
    request) and it decides the proper network configuration to request
    PNC1.
 
@@ -819,10 +819,10 @@ informative:
    layers into ODU. Most of them are used to provide Private Line
    services over an OTN transport network supporting a variety of types
    of physical access links (e.g., Ethernet, SDH STM-N, Fibre Channel,
-   InfiniBand, etc.) interconnecting the IP routers and the transport
+   InfiniBand, etc.) interconnect the IP routers and the transport
    network.
 
-   When a 10Gb an IP connectivity service between R1 and R8 is needed, using, for example
+   When a 10Gb IP connectivity service between R1 and R8 is needed, using, for example
    SDH physical links between the IP routers and the transport network,
    an STM-64 Private Line service needs to be created, supported by a
    ODU2 end-to-end connection, between transport network nodes S3 and
@@ -844,7 +844,7 @@ informative:
    functions inside these edge nodes, such as S3 \[STM-64 -> (ODU2)] and
    S18 \[(ODU2) -> STM-64].
 
-   When a 10Gb an IP connectivity service between R1 and R3 is needed, an STM-64 Private
+   When a 10Gb IP connectivity service between R1 and R3 is needed, an STM-64 Private
    Line service needs to be created between R1 and R3 (single-domain
    service request):
 
@@ -858,7 +858,7 @@ informative:
    Based on the assumption above, in this case, the MDSC can figure out
    that it needs to setup an STM-64 Private Line service between the
    access links on S3 and S6, which belong to the same PNC domain
-   (single-domain service request) and it decides the proper network
+   (single-domain service request), and it decides the proper network
    configuration to request PNC1.
 
 {: #evpl-description}
@@ -892,13 +892,13 @@ informative:
    access links which belong to different PNC domains (multi-domain
    service request).
 
-   Since the two EVPL services are sharing the same Ethernet physical
+   Since the two EVPL services share the same Ethernet physical
    link between R1 and S3, different VLAN IDs are associated with
    different EVPL services: for example, VLAN IDs 10 and 20
    respectively.
 
    Based on the assumptions described in {{epl-description}}, the CNC sends a
-   request to the MDSC, at the CMI, to setup these EVPL services. The
+   request to the MDSC, at the CMI, to set up these EVPL services. The
    MDSC will determine the network configurations to request to the
    underlying PNCs, as described in {{epl-description}}.
 
@@ -946,7 +946,7 @@ informative:
       S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
 ~~~~
 
-   The CNC is capable of requesting, via the CMI, the setup either an
+   The CNC is capable of requesting, via the CMI, the setup of either an
    STM-64 Private Line service, between R1 and R4, or an EPL service,
    between R1 and R8.
 
@@ -1115,7 +1115,7 @@ informative:
    it should provide notification of the service state change to the
    MDSC.
 
-   A detailed analysis and methods of how event alarms are triggered, managed and
+   Detailed analysis and methods of how event alarms are triggered, managed and
    propagated are outside the scope of this document.
 
 ## Path Computation with Constraints
@@ -1144,7 +1144,7 @@ informative:
       (PKT)]
 ~~~~
 
-   The mechanisms, used by the CNC to provide path constraints at the
+   The mechanisms used by the CNC to provide path constraints at the
    CMI, are outside the scope of this document. It is assumed that the
    MDSC can satisfy these constraints and take them into account in its
    path computation procedures (which would decide at least which
@@ -1190,7 +1190,7 @@ informative:
    {{CLIENT-TOPO}}.
 
    As described in {{reference-network}}, the OTU4 trails on inter-domain and
-   intra-domain physical links are pre-provisioned and therefore not
+   intra-domain physical links are pre-provisioned and, therefore, not
    exposed at the MPIs. Only the TE Links they support can be exposed
    at the MPI, depending on the topology abstraction performed by the
    PNC.
@@ -1205,7 +1205,7 @@ informative:
    topology also the access links which are capable of supporting the
    transparent client layers, defined in {{client-description}} and in
    {{CLIENT-SIGNAL}}. These links can also be multi-function access links
-   that can be configured as a transparent client physical links (e.g.,
+   that can be configured as transparent client physical links (e.g.,
    STM-64 physical link) or as an OTUk trail.
 
    In order to support the EPL and EVPL services, described in
@@ -1232,7 +1232,7 @@ informative:
    Ethernet abstract topologies reported by the PNCs describes only the
    Ethernet client access links: no Ethernet TE switching capabilities
    are reported in these Ethernet abstract topologies, to report that
-   the underlying networt domain is not capable to support Ethernet TE
+   the underlying networt domain is not capable supporting Ethernet TE
    Tunnels/LSPs.
 
 {: #domain1-topo}
@@ -1248,7 +1248,7 @@ informative:
    augmentations {{OTN-TOPO}}, with only one abstract TE node (i.e., AN1)
    moreover, only inter-domain and access abstract TE links (which
    represent the inter-domain physical links and the access physical
-   links which can support ODU, or transparent client layers, both), as
+   links that can support ODU, or transparent client layers, both), as
    shown in {{fig-mpi1-otn-topo}} below.
 
 ~~~~
@@ -1335,7 +1335,7 @@ informative:
    classifications.
 
    PNC1 should expose at MPI1 also the ODU termination and adaptation
-   resources which are available to carry client signals (e.g.,
+   resources that are available to carry client signals (e.g.,
    Ethernet or STM-N) over OTN. This information is reported by the
    Tunnel Termination Points (TTPs) within the MPI1 OTN Topology.
 
@@ -1392,7 +1392,7 @@ informative:
 ~~~~
 {: #fig-pnc1-topology title="Physical Topology controlled by PNC1"}
 
-   The PNC1 native topology is not exposed and therefore it is the PNC's
+   The PNC1 native topology is not exposed, and therefore it is the PNC's
    responsibility to abstract the whole domain physical topology as a
    single TE node and to maintain a mapping between the LTPs exposed at
    MPI abstract topologies and the associated physical interfaces
@@ -1426,7 +1426,7 @@ informative:
    It is worth noting that this JSON code example does not provide all
    the attributes defined in the relevant YANG models, including:
 
-   -  YANG attributes which are outside the scope of this document are
+   -  YANG attributes that are outside the scope of this document are
       not shown;
 
    -  The attributes describing the set of label values that are
@@ -1451,7 +1451,7 @@ informative:
       view (MPI2 OTN Topology), with only one abstract node (i.e., AN2)
       and only inter-domain and access abstract TE links (which
       represent the inter-domain physical links and the access physical
-      links which can support ODU, or transparent client layers or
+      links that can support ODU, transparent client layers, or
       both);
 
    -  the instance reports the domain 2 Ethernet abstract topology view
@@ -1464,9 +1464,9 @@ informative:
    OTN in the TTPs within the MPI2 OTN Topology.
 
    In particular, PNC2 reports in both the MPI2 OTN Topology and MPI2
-   ETH Topology an access link which abstracts the multi-function
+   ETH Topology an access link that abstracts the multi-function
    physical access link between S18 and R8, and terminates on the
-   AN2-1 LTP which corresponds to the S18-3 physical interface,
+   AN2-1 LTP that corresponds to the S18-3 physical interface,
    within the PNC2 native topology.  It also reports in the MPI2 ODU 
    Topology an AN2-1 TTP which abstracts the ODU termination and
    adaptation resources dedicated to this physical access link and
@@ -1502,9 +1502,9 @@ informative:
 ### Multi-domain Topology Merging
 
    MDSC does not have any knowledge of the topologies of each domain
-   until each PNC reports its own abstract topologies, so the MDSC
+   until each PNC reports its abstract topologies, so the MDSC
    needs to merge these abstract topologies, provided by different
-   PNCs, to build its own topology view of the multi-domain network
+   PNCs, to build its topology view of the multi-domain network
    (MDSC multi-domain native topology), as described in section 4.3 of
    {{!RFC8795}}.
 
@@ -1529,7 +1529,7 @@ informative:
    discovery mechanisms (e.g., LMP-based, as defined in {{?RFC6898}}).
 
    In case the plug-id values are assigned by a central authority, it
-   is under the central authority responsibility to assign unique
+   is under the central authority's responsibility to assign unique
    values.
 
    In case the plug-id values are automatically discovered, the
@@ -1544,7 +1544,7 @@ informative:
    the plug-id namespace is partitioned to avoid that different sources
    assign the same plug-id value to different inter-domain links. Also,
    the encoding of the plug-id namespace within the plug-id value is
-   implementation specific and will need to be consistent across all
+   implementation-specific and will need to be consistent across all
    the PNCs.
 
    This document assumes that the plug-id is assigned by a central
@@ -1620,7 +1620,7 @@ informative:
 
    The service configuration procedure is assumed to be initiated (step
    1 in {{fig-svc-setup}}) at the CMI from CNC to MDSC. Analysis of the CMI
-   models is (e.g., L1CSM, L2SM, VN) is outside the scope of this
+   models (e.g., L1CSM, L2SM, VN) are outside the scope of this
    document, but it is assumed that the CMI YANG models provide all the
    information that allows the MDSC to understand that it needs to
    coordinate the setup of a multi-domain ODU data plane connection
@@ -1688,7 +1688,7 @@ informative:
    has enough topology information. Otherwise, the MDSC can send path
    computation requests to the different PNCs (steps 2.1, 2.2 and 2.3
    in {{fig-svc-setup}}) and use this information to determine the optimal path
-   on its internal topology and therefore the domain sequence.
+   on its internal topology and, therefore, the domain sequence.
 
    The MDSC will then decompose the tunnel request into a few TE tunnel
    segments and request different PNCs to setup each intra-domain TE
@@ -1730,7 +1730,7 @@ informative:
    nodes terminating the inter-domain links (e.g., S2 and S31) from the
    OTN Topology information exposed, at the MPIs, by the PNCs
    controlling the OTN physical nodes (e.g., PNC1 and PNC3 controlling
-   the physical nodes S2 and S31 respectively).
+   the physical nodes S2 and S31, respectively).
 
    In any case, the access link configuration is done only on the PNCs
    that control the access links (e.g., PNC-1 and PNC-3) and not on the
@@ -1766,7 +1766,7 @@ informative:
    Abstract Topologies they expose (MPI1 OTN Abstract Topology, MPI2
    OTN Abstract Topology and MPI3 OTN Abstract Topology, respectively).
 
-   MDSC requests, at MPI1, PNC1 to setup an ODU2 (Transit Segment)
+   The MDSC requests, at MPI1, PNC1 to setup an ODU2 (Transit Segment)
    Tunnel with one primary path between AN-1 and AN1-7 LTPs, within the
    MPI1 OTN Abstract Topology ({{fig-mpi1-otn-topo}}), using the TE Tunnel YANG
    model, defined in {{TE-TUNNEL}}, with the OTN technology-specific
@@ -1797,7 +1797,7 @@ informative:
    PNC1 knows, as described in the mapping table in {{domain1-topo}}, that
    AN-1 and AN1-7 LTPs within the MPI1 OTN Abstract Topology it exposes
    at MPI1 correspond to the S3-1 and S2-3 LTPs, respectively, within
-   its native topology. Therefore it performs path computation, for an
+   its native topology. Therefore it performs path computation for an
    ODU2 connection between these LTPs within its native topology, and
    sets up the ODU2 cross-connections within the physical nodes S3, S1
    and S2.
@@ -1946,7 +1946,7 @@ informative:
    also configures the 10GE link before this step.
 
    Following similar requests from MDSC to setup ODU2 (Segment) Tunnels
-   within the OTN Abstract Topologies they expose as well as the
+   within the OTN Abstract Topologies, they expose as well as the
    steering of the Ethernet client traffic, PNC3 then sets up ODU2
    cross-connections on nodes S31 and S33 while PNC2 sets up ODU2
    cross-connections on nodes S15 and S18 as well as the \[ETH ->
@@ -2084,7 +2084,7 @@ informative:
 
    As part of the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation
    functions configurations in nodes S2 and S6, PNC1 configures also
-   the classification rules required to associated only the Ethernet
+   the classification rules required to associate only the Ethernet
    client traffic received with VLAN ID 10 on the R1-S3 and R2-S6
    access links with this EVPL service. The MDSC provides this
    information to PNC1 using the {{CLIENT-SIGNAL}} model.
@@ -2124,7 +2124,7 @@ informative:
 
    MDSC performs path computation, as described in {{service-analysis}}, to
    compute both the paths for working and protection transport
-   entities: the computed paths can pass through these same PNC domains
+   entities: the computed paths can pass through these exact PNC domains
    or through different transit PNC domains.
 
    Considering the case, described in {{linear-protection-description}}, where the working
@@ -2174,7 +2174,7 @@ informative:
    the end-point of the protection group while the other end-point is
    outside of its control domain.
 
-   PNC1 can performs path computation within its native topology and
+   PNC1 can perform path computation within its native topology and
    setup the ODU connections in nodes S3, S1, S2, S4 and S8 as well as
    configure the protection group in node S3.
 
@@ -2189,7 +2189,7 @@ informative:
    the following steps would be used.
 
    MDSC performs path computation, as described in {{service-analysis}}, to
-   compute all the paths for working and protection transport entities,
+   compute all the paths for working and protected transport entities,
    which pass through the same PNC domains and inter-domain links: the
    MDSC would perform the same steps described in {{service-analysis}} to setup
    the ODU Tunnel and to configure the steering of the client traffic
@@ -2246,13 +2246,13 @@ informative:
 
    Given the configuration above, the protection capability has been
    deployed on the tunnels. The head-end node of each domain can do the
-   switching once there is a failure on one the tunnel segment. For
+   switching once there is a failure on one of the tunnel segments. For
    example, in Network domain 1, when there is a failure on the S1-S2
    lin, the head-end nodes S2 and S3 will automatically do the
    switching to S3-S4-S8-S2. This switching will be reported to the
    corresponding PNC (PNC1 in this example) and then MDSC. Other PNCs
    (PNC2 and PNC3 in this example) will not be aware of the failure and
-   switching, nor do the nodes in Network domain 2 and 3.
+   switching, nor do the nodes in network domains 2 and 3.
 
 {: #notification-analysis}
 
@@ -2265,7 +2265,7 @@ informative:
    that the RESTCONF protocol, defined in {{?RFC8040}} is optional, 
    and may be used at the MPIs mentioned in this document.
 
-   On the perspective of MPI, the MDSC is the client while the PNC is
+   From the perspective of MPI, the MDSC is the client while the PNC is
    acting as the server of the notification. The essential event
    streams, subscription and processing rules after receiving
    notification can be found in section 6 of {{?RFC8040}}.
@@ -2299,7 +2299,7 @@ informative:
 
    When deploying ACTN functional components the securing of external
    interfaces and hardening of resource datastores, the protection of
-   confidential information, and limiting the access of function,
+   confidential information, and limit the access of function,
    should all be carefully considered.  Section 9 of {{!RFC8453}}
    highlights that implementations should consider encrypting data that
    flows between key components, especially when they are implemented
@@ -2323,7 +2323,7 @@ informative:
    network traffic makes it difficult to intercept data transferred
    between nodes over OTN-channelized links.
 
-   In OTN the (General Communication Channel) GCC is used for OAM
+   Within OTN environments, the (General Communication Channel) GCC is used for OAM
    functions such as performance monitoring, fault detection, and
    signaling. The GCC control channel should be secured using a
    suitable mechanism.
@@ -2355,9 +2355,8 @@ informative:
    followed by "-ID". For example, the mnemonic identifier for AN1
    would be AN1-NODE-ID.
 
-   The JSON language does not support the insertion of comments that
-   have been instead found to be useful when writing the examples. This
-   document will insert comments into the JSON code as JSON name/value
+   The JSON language does not inherently support the insertion of comments. 
+   This document will insert comments into the JSON code as JSON name/value
    pair with the JSON name string starting with the "//" characters.
    For example, when describing the example of a TE Topology instance
    representing the ODU Abstract Topology exposed by the Transport PNC,
@@ -2441,7 +2440,7 @@ informative:
 
 ##  Comments in JSON fragments
 
-   We found useful to introduce two kinds of comments, both defined as
+   We found it useful to introduce two kinds of comments, both defined as
    key-value pairs where the key starts with "//":
 
    - free-form descriptive comments, e.g."// comment" : "refine this"
@@ -2480,7 +2479,7 @@ informative:
    In order to allow the use of comments following the convention
    defined in {{conventions}}, without impacting the validation process,
    these comments will be automatically removed from the JSON-file that
-   will be validate.
+   will be validated.
 
 ##  Validation of JSON fragments: why not using an XSD-based approach
 
@@ -2500,7 +2499,7 @@ informative:
 {: #fig-xsd-approach title="XSD-based approach for JSON code validation"}
 
    The pyang support for the XSD output format was deprecated in 1.5
-   and removed in 1.7.1. However pyang 1.7.1 is necessary to work with
+   and removed in 1.7.1. However, pyang 1.7.1 is necessary to work with
    YANG 1.1 so the process shown in {{fig-xsd-approach}}
    will stop just at step (1).
 
