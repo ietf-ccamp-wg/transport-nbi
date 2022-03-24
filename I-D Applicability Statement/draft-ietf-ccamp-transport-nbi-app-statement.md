@@ -616,14 +616,13 @@ informative:
    to abstract a network topology. This document assumes the
    abstraction method defined in {{!RFC7926}}:
 
->  Abstraction is the process of applying the policy to the
->  available TE information within a domain to produce selective
->  information that represents the potential ability to connect
->  across the domain.  Thus, abstraction does not necessarily offer
->  all possible connectivity options, but presents a general view of
->  potential connectivity according to the policies that determine
->  how the domain's administrator wants to allow the domain resources
->  to be used.
+>   Abstraction is the process of applying policy to the available TE
+>   information within a domain, to produce selective information that
+>   represents the potential ability to connect across the domain.  Thus,
+>   abstraction does not necessarily offer all possible connectivity
+>   options, but it presents a general view of potential connectivity
+>   according to the policies that determine how the domain's
+>   administrator wants to allow the domain resources to be used.
 
    {{!RFC8453}} Provides the context of topology abstraction in the ACTN
    architecture and discusses a few alternatives for the abstraction
@@ -2189,7 +2188,7 @@ informative:
    the following steps would be used.
 
    MDSC performs path computation, as described in {{service-analysis}}, to
-   compute all the paths for working and protected transport entities,
+   compute all the paths for working and protection transport entities,
    which pass through the same PNC domains and inter-domain links: the
    MDSC would perform the same steps described in {{service-analysis}} to setup
    the ODU Tunnel and to configure the steering of the client traffic
