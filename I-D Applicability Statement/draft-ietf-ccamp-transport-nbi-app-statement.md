@@ -104,8 +104,8 @@ informative:
   TE-TUTORIAL: I-D.ietf-teas-te-topo-and-tunnel-modeling
   ITU-T_X.733:
     title: >
-        Information technology – 
-        Open Systems Interconnection – 
+        Information technology - 
+        Open Systems Interconnection - 
         Systems Management: Alarm reporting function
     author:
       org: International Telecommunication Union
@@ -113,8 +113,8 @@ informative:
     seriesinfo: ITU-T Recommendation X.733
   ITU-T_X.734:
     title: >
-        Information technology – 
-        Open Systems Interconnection – 
+        Information technology - 
+        Open Systems Interconnection - 
         Systems Management: Event report management function
     author:
       org: International Telecommunication Union
