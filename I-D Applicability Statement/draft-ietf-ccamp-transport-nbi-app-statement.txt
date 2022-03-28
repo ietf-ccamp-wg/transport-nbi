@@ -14,7 +14,7 @@ Expires: 26 September 2022                            Old Dog Consulting
 
 
          Transport Northbound Interface Applicability Statement
-            draft-ietf-ccamp-transport-nbi-app-statement-14
+            draft-ietf-ccamp-transport-nbi-app-statement-15
 
 Abstract
 
@@ -1185,12 +1185,11 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
    4.  Alarm
 
    There are three types of topology abstraction types defined in
-   Section 4.1, Paragraph 16, and the notifications should also be
-   abstracted.  The PNC and MDSC should coordinate together to determine
-   the notification policy.  This will include information such as when
-   an intra-domain alarm occurred.  The PNC may not report the alarm,
-   but it should provide notification of the service state change to the
-   MDSC.
+   Section 4.2, and the notifications should also be abstracted.  The
+   PNC and MDSC should coordinate together to determine the notification
+   policy.  This will include information such as when an intra-domain
+   alarm occurred.  The PNC may not report the alarm, but it should
+   provide notification of the service state change to the MDSC.
 
    Detailed analysis and methods of how event alarms are triggered,
    managed and propagated are outside the scope of this document.
@@ -1229,6 +1228,7 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 
 
 
+
 Busi, et al.            Expires 26 September 2022              [Page 22]
 
 Internet-Draft    Transport NBI Applicability-Statement       March 2022
@@ -1259,12 +1259,11 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 5.1.  YANG Models for Topology Abstraction
 
    This section analyses how each PNC can report its respective abstract
-   topology to the MDSC, as described in Section 4.1, Paragraph 16,
-   using the Topology YANG models, defined in [RFC8345], with the TE
-   Topology YANG augmentations, provided in [RFC8795], and the OTN
-   technology-specific YANG augmentations, defined in [OTN-TOPO] or the
-   Ethernet client technology-specific YANG augmentations, defined in
-   [CLIENT-TOPO].
+   topology to the MDSC, as described in Section 4.2, using the Topology
+   YANG models, defined in [RFC8345], with the TE Topology YANG
+   augmentations, provided in [RFC8795], and the OTN technology-specific
+   YANG augmentations, defined in [OTN-TOPO] or the Ethernet client
+   technology-specific YANG augmentations, defined in [CLIENT-TOPO].
 
    As described in Section 4.1, the OTU4 trails on inter-domain and
    intra-domain physical links are pre-provisioned and, therefore, not
@@ -1277,6 +1276,7 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 
    As described in Section 4.1, each physical access link has a
    dedicated set of ODU termination and adaptation resources.
+
 
 
 
@@ -1326,8 +1326,8 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 5.1.1.  Domain 1 Black Topology Abstraction
 
    PNC1 provides the required black topology abstraction, as described
-   in Section 4.1, Paragraph 16.  It exposes at MPI1 to the MDSC, two TE
-   Topology instances with only one TE node each.
+   in Section 4.2.  It exposes at MPI1 to the MDSC, two TE Topology
+   instances with only one TE node each.
 
    The first TE Topology instance reports the domain 1 OTN abstract
    topology view (MPI1 OTN Topology), using the OTN technology-specific
@@ -1554,8 +1554,8 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 5.1.2.  Domain 2 Black Topology Abstraction
 
    PNC2 provides the required black topology abstraction, as described
-   in Section 4.1, Paragraph 16, to expose to the MDSC, at MPI2, two TE
-   Topology instances with only one TE node each:
+   in Section 4.2, to expose to the MDSC, at MPI2, two TE Topology
+   instances with only one TE node each:
 
    *  the first instance reports the domain 2 OTN abstract topology view
       (MPI2 OTN Topology), with only one abstract node (i.e., AN2) and
@@ -1592,9 +1592,8 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
 5.1.3.  Domain 3 White Topology Abstraction
 
    PNC3 provides the required white topology abstraction, as described
-   in Section 4.1, Paragraph 16, to expose to the MDSC, at MPI3, two TE
-   Topology instances with multiple TE nodes, one for each physical
-   node:
+   in Section 4.2, to expose to the MDSC, at MPI3, two TE Topology
+   instances with multiple TE nodes, one for each physical node:
 
    *  the first instance reports the domain 3 OTN topology view (MPI3
       OTN Topology), with four TE nodes, which represent the four
@@ -1618,6 +1617,7 @@ Internet-Draft    Transport NBI Applicability-Statement       March 2022
    merge these abstract topologies, provided by different PNCs, to build
    its topology view of the multi-domain network (MDSC multi-domain
    native topology), as described in section 4.3 of [RFC8795].
+
 
 
 

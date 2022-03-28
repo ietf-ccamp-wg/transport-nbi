@@ -4,7 +4,7 @@ coding: utf-8
 title: Transport Northbound Interface Applicability Statement
 
 abbrev: Transport NBI Applicability-Statement
-docname: draft-ietf-ccamp-transport-nbi-app-statement-14
+docname: draft-ietf-ccamp-transport-nbi-app-statement-15
 workgroup: CCAMP Working Group
 category: info
 ipr: trust200902
@@ -607,6 +607,7 @@ informative:
    the same procedures, described above for the multi-domain service,
    and decide the network configuration to request only at the MPI of
    the PNC controlling that domain (e.g., MPI1 of PNC1 in {{fig-control-hierarchy}}).
+
 {: #topology-description}
 
 ## Topology Abstractions
