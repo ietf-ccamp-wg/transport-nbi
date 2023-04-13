@@ -5,12 +5,12 @@
 CCAMP Working Group                                         I. Busi, Ed.
 Internet-Draft                                                    Huawei
 Intended status: Informational                              D. King, Ed.
-Expires: 5 January 2023                               Old Dog Consulting
+Expires: 14 October 2023                              Old Dog Consulting
                                                            H. Zheng, Ed.
                                                                   Huawei
                                                               Y. Xu, Ed.
                                                                    CAICT
-                                                             4 July 2022
+                                                           12 April 2023
 
 
          Transport Northbound Interface Applicability Statement
@@ -79,9 +79,8 @@ Table of Contents
      4.2.  Topology Abstractions . . . . . . . . . . . . . . . . . .  12
      4.3.  Service Configuration . . . . . . . . . . . . . . . . . .  14
        4.3.1.  ODU Transit . . . . . . . . . . . . . . . . . . . . .  14
-       4.3.2.  EPL over ODU  . . . . . . . . . . . . . . . . . . . .  15
-       4.3.3.  Transparent Client Services . . . . . . . . . . . . .  16
-       4.3.4.  EVPL over ODU . . . . . . . . . . . . . . . . . . . .  17
+       4.3.2.  Transparent Client Services . . . . . . . . . . . . .  16
+       4.3.3.  EPL and EVPL over ODU . . . . . . . . . . . . . . . .  17
      4.4.  Multi-Function Access Links . . . . . . . . . . . . . . .  18
      4.5.  Protection and Restoration Configuration  . . . . . . . .  19
        4.5.1.  Linear Protection (End-to-End)  . . . . . . . . . . .  20
@@ -212,7 +211,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    different types of multi-domain services, such as Optical Data Unit
    (ODU) transit services, Transparent client services and EPL/EVPL
    Ethernet Private Line/Ethernet Virtual Private Line (EPL/EVPL)
-   services, over a multi-domain OTN connection, satisfying also the
+   services, over a multi-domain OTN connection, also satisfying the
    requirements in [ONF_TR-527].
 
 2.  Terminology
@@ -316,19 +315,16 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    TE Tunnel  As defined in [TE-TUNNEL], it is a connection-oriented
       service provided by a layered network of delivery of a client's
       data between source and destination tunnel termination points.
-      See also [TE-TUTORIAL].
+      
 
    TE Tunnel Segment  As defined in [TE-TUNNEL], it is a part of a
-      multi-domain TE tunnel that spans.  See also [TE-TUTORIAL].
+      multi-domain TE tunnel that spans.
 
    TE Tunnel Hand-off  It is an access or inter-domain LTP by which a
       multi-domain TE tunnel enters or exits a given network domain.
-      See also [TE-TUTORIAL].
+      
 
-   Note - The three definitions above are currently in [TE-TUTORIAL] but
-   it is expected that they will be moved to [TE-TUNNEL].  When this
-   happens, the reference will be updated and the [TE-TUTORIAL]
-   reference will be downgraded to Informative.
+
 
 
 
@@ -394,7 +390,7 @@ Busi, et al.             Expires 5 January 2023                 [Page 7]
 Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
-   which then sends it to S6 which finally sends to R3.  Node R3
+   which then sends it to S6, which finally sends to R3.  Node R3
    terminates the ODU2 from S6 before switching at the packet (PKT)
    layer.
 
@@ -488,7 +484,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    This document assumes that all the Si transport network switching
    nodes are capable of switching in the electrical domain (ODU
    switching) moreover, all the Si-Sj OTN links within the transport
-   network (intra-domain or inter-domain) are 100G links while the
+   network (intra-domain or inter-domain) are 100G links, while the
    access Ri-Sj links are 10G links.
 
    This document also assumes that within the transport network, the
@@ -518,7 +514,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    To carry client signals (e.g., Ethernet or STM-N) over OTN, some ODU
    termination and adaptation resources need to be available on the
    physical edge nodes (e.g., node S3 and S18).  The location of these
-   resources within the physical node is implementation-specific and
+   resources within the physical node are implementation-specific and
    outside the scope of standardization.  This document assumes that
    these termination and adaptation resources are located on the
    physical interfaces of the edge nodes terminating the access links.
@@ -600,7 +596,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      Figure 2: Controlling Hierarchies
 
    The NEs within network domains 1, 2 and 3 of Figure 1 are controlled,
-   respectively, by PNC1, PNC2 and PNC3 of Figure 2.  The MDSC control
+   respectively, by PNC1, PNC2 and PNC3 of Figure 2.  The MDSC controls
    the end-to-end network through the MPIs toward the underlying PNCs.
 
    The ACTN framework facilitates separating the network and service
@@ -699,7 +695,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    *  Grey topology: This abstraction level is between black topology
       and white topology from a granularity point of view.
 
-   Each PNC should provide the MDSC a network topology abstraction
+   Each PNC should provide the MDSC with a network topology abstraction
    hiding the internal details of the physical domain network topology
    controlled by the PNC.  As described in section 3 of [RFC8453], the
    level of abstraction provided by each PNC is based on the PNC
@@ -736,7 +732,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    oversight, including the application of local policy, configuration
    methods, and the application of a trust model.  Methods of how to
    manage these aspects are out of scope for this document, but
-   recomandations are provided in the Security section of this document.
+   recommendations are provided in the Security section of this document.
 
    The MDSC can also provide topology abstraction of its view of the
    multi-domain network topology at its CMIs depending on the customers'
@@ -755,9 +751,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    transport network.
 
    The packet processing inside IP routers, including packet
-   encapsualation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
+   encapsulation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
    PKT), are assumed to be performed by means that are not under the
-   control of, and not visible to, the MDSC or to the PNCs.  Therefore,
+   control of, and not visible to, the MDSC or the PNCs.  Therefore,
    these mechanisms are outside the scope of this document.
 
 4.3.1.  ODU Transit
@@ -815,62 +811,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    same PNC domain (single-domain service request) and it decides the
    proper network configuration to request PNC1.
 
-4.3.2.  EPL over ODU
-
-   The physical links interconnecting the IP routers and the transport
-   network can be 10G Ethernet physical links (10GE).
-
-   In this case, it is assumed that the Ethernet physical interfaces (up
-   to the MAC layer) are pre-provisioned using mechanisms which are
-   outside the scope of this document and not exposed at the MPIs
-   between the PNCs and the MDSC.
-
-   When a 10Gb IP connectivity service between R1 and R8 is needed, an
-   EPL service needs to be created, supported by an ODU2 end-to-end
-   connection, between transport network nodes S3 and S18, passing
-   through transport network nodes S1, S2, S31, S33, S34 and S15, which
-   belong to different PNC domains (multi-domain service request):
-
-         R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
-         S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
-         S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 15]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
-   The MDSC receives, at the CMI, the request to create an EPL service
-   between the access links on S3 and S18, which belong to different PNC
-   domains (multi-domain service request).  The MDSC determines the
-   network configurations to request, at the MPIs, to its underlying
-   PNCs, to coordinate the setup of an end-to-end ODU2 connection
-   between the nodes S3 and S8, including the configuration of the
-   adaptation functions inside these edge nodes, such as S3 [ETH ->
-   (ODU2)] and S18 [(ODU2) -> ETH].
-
-   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
-   needs to be created, supported by a ODU2 end-to-end connection
-   between transport network nodes S3 and S6, passing through the
-   transport network node S5, which belong to the same PNC domain
-   (single-domain service request):
-
-         R1 [(PKT) -> ETH], S3 [ETH -> (PKT)] S5 [(ODU2)],
-         S6 [(ODU2) -> ETH], R2 [ETH -> (PKT)]
-
-   As described in Section 4.1, the mechanisms used by the CNC at the
-   CMI are independent on whether the service request is single-domain
-   service or multi-domain.
-
-   Based on the assumption above, in this case, the MDSC can figure out
-   that it needs to setup an EPL service between the access links on S3
-   and S6, that belong to the same PNC domain (single-domain service
-   request) and it decides the proper network configuration to request
-   PNC1.
-
-4.3.3.  Transparent Client Services
+4.3.2.  Transparent Client Services
 
    [ITU-T_G.709] defines mappings of different Transparent Client layers
    into ODU.  Most of them are used to provide Private Line services
@@ -922,15 +863,53 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    (single-domain service request), and it decides the proper network
    configuration to request PNC1.
 
-4.3.4.  EVPL over ODU
+4.3.3.  EPL and EVPL over ODU
 
-   When the physical links interconnecting the IP routers and the
-   transport network are Ethernet physical links, it is also possible
-   that different Ethernet services (e.g., EVPL) can share the same
-   physical access link using different VLANs.
+   The physical links interconnecting the IP routers and the transport
+   network can be 10G Ethernet physical links (10GE).
 
-   As described in Section 4.3.2, it is assumed that the Ethernet
-   physical interfaces (up to the MAC layer) are pre-provisioned.
+   In this case, it is assumed that the Ethernet physical interfaces (up
+   to the MAC layer) are pre-provisioned using mechanisms which are
+   outside the scope of this document and not exposed at the MPIs
+   between the PNCs and the MDSC.
+
+   When a 10Gb IP connectivity service between R1 and R8 is needed, an
+   EPL service needs to be created, supported by an ODU2 end-to-end
+   connection, between transport network nodes S3 and S18, passing
+   through transport network nodes S1, S2, S31, S33, S34 and S15, which
+   belong to different PNC domains (multi-domain service request):
+
+         R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
+         S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
+         S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
+
+   The MDSC receives, at the CMI, the request to create an EPL service
+   between the access links on S3 and S18, which belong to different PNC
+   domains (multi-domain service request).  The MDSC determines the
+   network configurations to request, at the MPIs, to its underlying
+   PNCs, to coordinate the setup of an end-to-end ODU2 connection
+   between the nodes S3 and S8, including the configuration of the
+   adaptation functions inside these edge nodes, such as S3 [ETH ->
+   (ODU2)] and S18 [(ODU2) -> ETH].
+
+   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
+   needs to be created, supported by a ODU2 end-to-end connection
+   between transport network nodes S3 and S6, passing through the
+   transport network node S5, which belong to the same PNC domain
+   (single-domain service request):
+
+         R1 [(PKT) -> ETH], S3 [ETH -> (PKT)] S5 [(ODU2)],
+         S6 [(ODU2) -> ETH], R2 [ETH -> (PKT)]
+
+   As described in Section 4.1, the mechanisms used by the CNC at the
+   CMI are independent on whether the service request is single-domain
+   service or multi-domain.
+
+   Based on the assumption above, in this case, the MDSC can figure out
+   that it needs to setup an EPL service between the access links on S3
+   and S6, which belong to the same PNC domain (single-domain service
+   request) and it decides the proper network configuration to request
+   PNC1.
 
    When two 1Gb IP links between R1 to R2 and between R1 and R8 are
    needed, two EVPL services need to be created, supported by two ODU0
@@ -943,17 +922,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
          S2 [(ODU0)], S31 [(ODU0)], S33 [(ODU0)], S34 [(ODU0)],
          S15 [(ODU0)], S18 [(ODU0) -> VLAN], R8[VLAN -> (PKT)]
 
-
-
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 17]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    It is worth noting that the first EVPL service is required between
    access links which belong to the same PNC domain (single-domain
    service request) while the second EVPL service is required between
@@ -964,10 +932,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    between R1 and S3, different VLAN IDs are associated with different
    EVPL services: for example, VLAN IDs 10 and 20 respectively.
 
-   Based on the assumptions described in Section 4.3.2, the CNC sends a
-   request to the MDSC, at the CMI, to set up these EVPL services.  The
-   MDSC will determine the network configurations to request to the
-   underlying PNCs, as described in Section 4.3.2.
+   The CNC sends a request to the MDSC, at the CMI, to set up these 
+   EVPL services.  The MDSC will determine the network configurations
+   to request to the underlying PNCs.
 
 4.4.  Multi-Function Access Links
 
@@ -1317,7 +1284,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    It is worth noting that in the network scenarios analyzed in this
    document (where switching is performed only at the ODU layer), the
-   Ethernet abstract topologies reported by the PNCs describes only the
+   Ethernet abstract topologies reported by the PNCs describe only the
    Ethernet client access links: no Ethernet TE switching capabilities
    are reported in these Ethernet abstract topologies, to report that
    the underlying networt domain is not capable supporting Ethernet TE
@@ -1646,7 +1613,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    domains.  Alternatively, it may be discovered using an automatic
    discovery mechanisms (e.g., LMP-based, as defined in [RFC6898]).
 
-   In case the plug-id values are assigned by a central authority, it is
+   In the case a central authority assigns the plug-id values, it is
    under the central authority's responsibility to assign unique values.
 
    In case the plug-id values are automatically discovered, the
@@ -1892,7 +1859,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    YANG model and OTN Topology augmentation.  The TE Topology YANG model
    in [RFC8795] is being updated to report the label set information.
-   See section 1.7 of [TE-TUTORIAL] for more details.
+   See [OTN-TOPOLOGY] for more details.
 
    The MDSC, when coordinating the setup of a multi-domain ODU
    connection, also configures the data plane resources (i.e., the list
@@ -2807,13 +2774,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
               RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
               <https://www.rfc-editor.org/info/rfc8792>.
 
-   [TE-TUTORIAL]
-              Bryskin, I., Beeram, V. P., Saad, T., and X. Liu, "TE
-              Topology and Tunnel Modeling for Transport Networks", Work
-              in Progress, Internet-Draft, draft-ietf-teas-te-topo-and-
-              tunnel-modeling-06, 12 July 2020,
-              <https://www.ietf.org/archive/id/draft-ietf-teas-te-topo-
-              and-tunnel-modeling-06.txt>.
 
 Appendix A.  Validating a JSON fragment against a YANG Model
 
