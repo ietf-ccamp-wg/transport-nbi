@@ -4,7 +4,7 @@ coding: utf-8
 title: Transport Northbound Interface Applicability Statement
 
 abbrev: Transport NBI Applicability-Statement
-docname: draft-ietf-ccamp-transport-nbi-app-statement-15
+docname: draft-ietf-ccamp-transport-nbi-app-statement-16
 workgroup: CCAMP Working Group
 category: info
 ipr: trust200902
@@ -101,7 +101,6 @@ normative:
 
 informative:
   ACTN-YANG: I-D.ietf-teas-actn-yang
-  TE-TUTORIAL: I-D.ietf-teas-te-topo-and-tunnel-modeling
   ITU-T_X.733:
     title: >
         Information technology - 
@@ -220,159 +219,184 @@ informative:
    different types of multi-domain services, such as Optical Data Unit 
    (ODU) transit services, Transparent client services and EPL/EVPL 
    Ethernet Private Line/Ethernet Virtual Private Line (EPL/EVPL)    
-   services, over a multi-domain OTN connection, satisfying also 
+   services, over a multi-domain OTN connection, also satisfying 
    the requirements in {{ONF_TR-527}}.
 
 {: #terminology}
 
 # Terminology
 
-   Domain
-   : A domain, as defined in {{!RFC4655}}, is "any collection of
-   network elements within a common sphere of address management or
-   path computation responsibility".  Specifically, within this
-   document, we mean a part of an operator's network that is under
-   common management (i.e., under shared operational management using
-   the same instances of a tool and the same policies).  Network
-   elements will often be grouped into domains based on technologies,
-   vendor profiles, or geographic proximity.
+Domain:
 
-   CNC
-   : Customer Network Controller
+> A domain, as defined in {{!RFC4655}}, is "any collection of
+network elements within a common sphere of address management or
+path computation responsibility".  Specifically, within this
+document, we mean a part of an operator's network that is under
+common management (i.e., under shared operational management using
+the same instances of a tool and the same policies).  Network
+elements will often be grouped into domains based on technologies,
+vendor profiles, or geographic proximity.
 
-   Connection
-   : The data plane configuration of an LSP: within this
-   document it is typically an ODU LSP.  An end-to-end connection/LSP
-   represents an entire connection between the connection
-   node end-points.  A connection/LSP segment represents a portion of
-   the end-to-end connection.
+CNC:
 
-   Connectivity Service
-   : A connectivity service, in the context of this document, can be 
-   considered as a connection between customer sites, across the network
-   operator's network {{?RFC8309}}.
+> Customer Network Controller
 
-   E-LINE
-   : Ethernet Line
+Connection:
 
-   EPL
-   : Ethernet Private Line
+> The data plane configuration of an LSP: within this
+document it is typically an ODU LSP.  An end-to-end connection/LSP
+represents an entire connection between the connection
+node end-points.  A connection/LSP segment represents a portion of
+the end-to-end connection.
 
-   EVPL
-   : Ethernet Virtual Private Line
+Connectivity Service:
 
-   ILL
-   : Inter-Layer Lock
+> A connectivity service, in the context of this document, can be 
+considered as a connection between customer sites, across the network
+operator's network {{?RFC8309}}.
 
-   Link
-   : It is used to represent the adjacency between two nodes.  
-   The term physical link represents a link between two physical
-   nodes. The term OTN link represents a link between two OTN nodes. 
+E-LINE:
 
-   LSP
-   : Label Switched Path
+> Ethernet Line
 
-   LTP
-   : Link Termination Point
+EPL:
 
-   MDSC
-   : Multi-Domain Service Coordinator
+> Ethernet Private Line
 
-   Network Configuration
-   : As described in {{?RFC8309}} it describes the
-   instructions provided to a controller on how to configure parts of a
-   network.
+EVPL:
 
-   ODU
-   : Optical Channel Data Unit
+> Ethernet Virtual Private Line
 
-   OTU
-   : Optical Channel Transport Unit
+ILL:
 
-   OTN
-   : Optical Transport Network
+> Inter-Layer Lock
 
-   PNC
-   : Provisioning Network Controller
+Link:
 
-   Protection Switching
-   : Protection switching, as defined in {{ITU-T_G.808.1}}
-   and {{!RFC4427}}, provides the capability to switch the traffic
-   in case of network failures over pre-allocated networks resources.
-   Typically linear protection methods would be used and configured to
-   operate as 1+1 unidirectional, 1+1 bidirectional or 1:n
-   bidirectional. This ensures fast and simple service survivability.
+> It is used to represent the adjacency between two nodes.  
+The term physical link represents a link between two physical
+nodes. The term OTN link represents a link between two OTN nodes. 
 
-   Protection Transport Entity/LSP
-   : A protection transport entity/LSP,
-   as defined in {{ITU-T_G.808.1}} and {{!RFC4427}}, represents the path
-   where the "normal" user traffic is transported during protection
-   switching events (e.g., when the working transport entity/LSP
-   fails).
+LSP:
 
-   Restoration
-   : Restoration methods, as defined in {{!RFC4427}}, provide
-   the capability to reroute and restore traffic around network
-   failures without the necessity to allocate network resources as
-   required for dedicated 1+1 protection schemes. On the other hand,
-   restoration times are typically longer than protection switching
-   times.
+> Label Switched Path
 
-   Service Model
-   : As described in {{?RFC8309}} it describes a service and
-   the parameters of the service in a portable way that can be used
-   uniformly and independent of the equipment and operating
-   environment.
+LTP:
 
-   TE Link
-   : As defined in {{!RFC8795}}, is an element of a TE topology,
-   presented as an edge on TE graph.
+> Link Termination Point
 
-   TE Tunnel
-   :  As defined in {{TE-TUNNEL}}, it is a connection-oriented
-   service provided by a layered network of delivery of a client's data
-   between source and destination tunnel termination points. See also
-   {{TE-TUTORIAL}}.
+MDSC:
 
-   TE Tunnel Segment
-   : As defined in {{TE-TUNNEL}}, it is a part of a
-   multi-domain TE tunnel that spans. See also {{TE-TUTORIAL}}.
+> Multi-Domain Service Coordinator
 
-   TE Tunnel Hand-off
-   : It is an access or inter-domain LTP by
-   which a multi-domain TE tunnel enters or exits a given network
-   domain. See also {{TE-TUTORIAL}}.
-   
-   Note - The three definitions above are currently in {{TE-TUTORIAL}}
-   but it is expected that they will be moved to {{TE-TUNNEL}}. When this
-   happens, the reference will be updated and the {{TE-TUTORIAL}}
-   reference will be downgraded to Informative.
+Network Configuration:
 
-   TPN
-   : Tributary Port Number
+> As described in {{?RFC8309}} it describes the
+instructions provided to a controller on how to configure parts of a
+network.
 
-   TTP
-   : Tunnel Termination Point
+ODU:
 
-   Termination and Adaptation
-   : It represents the termination of a
-   server-layer connection at the node edge-point and the
-   adaptation/mapping of the client layer traffic over the terminated
-   server-layer connection.
+> Optical Channel Data Unit
 
-   Transparent Client
-   : As defined in {{CLIENT-SIGNAL}}, it represents a
-   client-layer signal, such as Ethernet physical interfaces, FC, STM-
-   n, that cannot be switched but only mapped over a server-layer TE
-   Tunnel.
+OTU:
 
-   Working Transport Entity/LSP
-   : A working transport entity/LSP, as
-   defined in {{ITU-T_G.808.1}} and {{!RFC4427}}, represents the path where
-   the "normal" user traffic is transported.
+> Optical Channel Transport Unit
 
-   UNI
-   : User Network Interface
+OTN:
+
+> Optical Transport Network
+
+PNC:
+
+> Provisioning Network Controller
+
+Protection Switching:
+
+> Protection switching, as defined in {{ITU-T_G.808.1}}
+and {{!RFC4427}}, provides the capability to switch the traffic
+in case of network failures over pre-allocated networks resources.
+Typically linear protection methods would be used and configured to
+operate as 1+1 unidirectional, 1+1 bidirectional or 1:n
+bidirectional. This ensures fast and simple service survivability.
+
+Protection Transport Entity/LSP:
+
+> A protection transport entity/LSP,
+as defined in {{ITU-T_G.808.1}} and {{!RFC4427}}, represents the path
+where the "normal" user traffic is transported during protection
+switching events (e.g., when the working transport entity/LSP
+fails).
+
+Restoration:
+
+> Restoration methods, as defined in {{!RFC4427}}, provide
+the capability to reroute and restore traffic around network
+failures without the necessity to allocate network resources as
+required for dedicated 1+1 protection schemes. On the other hand,
+restoration times are typically longer than protection switching
+times.
+
+Service Model:
+
+> As described in {{?RFC8309}} it describes a service and
+the parameters of the service in a portable way that can be used
+uniformly and independent of the equipment and operating
+environment.
+
+TE Link:
+
+> As defined in {{!RFC8795}}, is an element of a TE topology,
+presented as an edge on TE graph.
+
+TE Tunnel:
+
+> As defined in {{TE-TUNNEL}}, it is a connection-oriented
+service provided by a layered network of delivery of a client's data
+between source and destination tunnel termination points.
+
+TE Tunnel Segment:
+
+> As defined in {{TE-TUNNEL}}, it is a part of a
+multi-domain TE tunnel that spans.
+
+TE Tunnel Hand-off:
+
+> It is an access or inter-domain LTP by
+which a multi-domain TE tunnel enters or exits a given network
+domain.
+
+TPN:
+
+> Tributary Port Number
+
+TTP:
+
+> Tunnel Termination Point
+
+Termination and Adaptation:
+
+> It represents the termination of a
+server-layer connection at the node edge-point and the
+adaptation/mapping of the client layer traffic over the terminated
+server-layer connection.
+
+Transparent Client:
+
+> As defined in {{CLIENT-SIGNAL}}, it represents a
+client-layer signal, such as Ethernet physical interfaces, FC, STM-
+n, that cannot be switched but only mapped over a server-layer TE
+Tunnel.
+
+Working Transport Entity/LSP:
+
+> A working transport entity/LSP, as
+defined in {{ITU-T_G.808.1}} and {{!RFC4427}}, represents the path where
+the "normal" user traffic is transported.
+
+UNI:
+
+> User Network Interface
 
 {: #conventions}
 
@@ -411,7 +435,7 @@ informative:
    Node R1 is switching at the packet (PKT) layer and mapping packets
    into an ODU2 before transmission to node S3. Nodes S3, S5 and S6,
    are switching at the ODU2 layer: S3 sends the ODU2 traffic to S5,
-   which then sends it to S6 which finally sends to R3. Node R3
+   which then sends it to S6, which finally sends to R3. Node R3
    terminates the ODU2 from S6 before switching at the packet (PKT)
    layer.
 
@@ -485,7 +509,7 @@ informative:
    This document assumes that all the Si transport network switching
    nodes are capable of switching in the electrical domain (ODU
    switching) moreover, all the Si-Sj OTN links within the
-   transport network (intra-domain or inter-domain) are 100G links
+   transport network (intra-domain or inter-domain) are 100G links,
    while the access Ri-Sj links are 10G links.
 
    This document also assumes that within the transport network, the
@@ -506,7 +530,7 @@ informative:
    To carry client signals (e.g., Ethernet or STM-N) over OTN, some ODU
    termination and adaptation resources need to be available on the
    physical edge nodes (e.g., node S3 and S18). The location of these
-   resources within the physical node is implementation-specific and
+   resources within the physical node are implementation-specific and
    outside the scope of standardization. This document assumes that
    these termination and adaptation resources are located on the
    physical interfaces of the edge nodes terminating the access links.
@@ -560,7 +584,7 @@ informative:
 
    The NEs within network domains 1, 2 and 3 of {{fig-reference-network}} are
    controlled, respectively, by PNC1, PNC2 and PNC3 of {{fig-control-hierarchy}}. The
-   MDSC control the end-to-end network through the MPIs toward the
+   MDSC controls the end-to-end network through the MPIs toward the
    underlying PNCs.
 
    The ACTN framework facilitates separating the network and
@@ -644,7 +668,7 @@ informative:
    -  Grey topology: This abstraction level is between black topology
       and white topology from a granularity point of view.
 
-   Each PNC should provide the MDSC a network topology abstraction
+   Each PNC should provide the MDSC with a network topology abstraction
    hiding the internal details of the physical domain network topology
    controlled by the PNC. As described in section 3 of {{!RFC8453}}, the
    level of abstraction provided by each PNC is based on the PNC
@@ -674,7 +698,7 @@ informative:
    oversight, including the application of local policy, configuration
    methods, and the application of a trust model. Methods of how to
    manage these aspects are out of scope for this document, but
-   recomandations are provided in the Security section of this
+   recommendations are provided in the Security section of this
    document.
 
    The MDSC can also provide topology abstraction of its view of the
@@ -697,9 +721,9 @@ informative:
    transport network.
 
    The packet processing inside IP routers, including packet
-   encapsualation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
+   encapsulation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
    PKT), are assumed to be performed by means that are not under the
-   control of, and not visible to, the MDSC or to the PNCs. Therefore,
+   control of, and not visible to, the MDSC or the PNCs. Therefore,
    these mechanisms are outside the scope of this document.
 
 {: #odu-description}
@@ -757,60 +781,6 @@ informative:
    same PNC domain (single-domain service request) and it decides the
    proper network configuration to request PNC1.
 
-{: #epl-description}
-
-### EPL over ODU
-
-   The physical links interconnecting the IP routers and the transport
-   network can be 10G Ethernet physical links (10GE).
-
-   In this case, it is assumed that the Ethernet physical interfaces
-   (up to the MAC layer) are pre-provisioned using mechanisms which are
-   outside the scope of this document and not exposed at the MPIs
-   between the PNCs and the MDSC.
-
-   When a 10Gb IP connectivity service between R1 and R8 is needed, an EPL
-   service needs to be created, supported by an ODU2 end-to-end
-   connection, between transport network nodes S3 and S18, passing
-   through transport network nodes S1, S2, S31, S33, S34 and S15, which
-   belong to different PNC domains (multi-domain service request):
-
-~~~~
-      R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
-      S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
-      S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
-~~~~
-
-   The MDSC receives, at the CMI, the request to create an EPL service
-   between the access links on S3 and S18, which belong to different
-   PNC domains (multi-domain service request). The MDSC determines the
-   network configurations to request, at the MPIs, to its underlying
-   PNCs, to coordinate the setup of an end-to-end ODU2 connection
-   between the nodes S3 and S8, including the configuration of the
-   adaptation functions inside these edge nodes, such as S3 \[ETH ->
-   (ODU2)] and S18 \[(ODU2) -> ETH].
-
-   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
-   needs to be created, supported by a ODU2 end-to-end connection
-   between transport network nodes S3 and S6, passing through the
-   transport network node S5, which belong to the same PNC domain
-   (single-domain service request):
-
-~~~~
-      R1 [(PKT) -> ETH], S3 [ETH -> (PKT)] S5 [(ODU2)],
-      S6 [(ODU2) -> ETH], R2 [ETH -> (PKT)]
-~~~~
-
-   As described in {{reference-network}}, the mechanisms used by the CNC at the
-   CMI are independent on whether the service request is single-domain
-   service or multi-domain.
-
-   Based on the assumption above, in this case, the MDSC can figure out
-   that it needs to setup an EPL service between the access links on S3
-   and S6, that belong to the same PNC domain (single-domain service
-   request) and it decides the proper network configuration to request
-   PNC1.
-
 {: #client-description}
 
 ### Transparent Client Services
@@ -863,15 +833,57 @@ informative:
 
 {: #evpl-description}
 
-### EVPL over ODU
+### EPL and EVPL over ODU
 
-   When the physical links interconnecting the IP routers and the
-   transport network are Ethernet physical links, it is also possible
-   that different Ethernet services (e.g., EVPL) can share the same
-   physical access link using different VLANs.
+   The physical links interconnecting the IP routers and the transport
+   network can be 10G Ethernet physical links (10GE).
 
-   As described in {{epl-description}}, it is assumed that the Ethernet
-   physical interfaces (up to the MAC layer) are pre-provisioned.
+   In this case, it is assumed that the Ethernet physical interfaces
+   (up to the MAC layer) are pre-provisioned using mechanisms which are
+   outside the scope of this document and not exposed at the MPIs
+   between the PNCs and the MDSC.
+
+   When a 10Gb IP connectivity service between R1 and R8 is needed, an EPL
+   service needs to be created, supported by an ODU2 end-to-end
+   connection, between transport network nodes S3 and S18, passing
+   through transport network nodes S1, S2, S31, S33, S34 and S15, which
+   belong to different PNC domains (multi-domain service request):
+
+~~~~
+      R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
+      S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
+      S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
+~~~~
+
+   The MDSC receives, at the CMI, the request to create an EPL service
+   between the access links on S3 and S18, which belong to different
+   PNC domains (multi-domain service request). The MDSC determines the
+   network configurations to request, at the MPIs, to its underlying
+   PNCs, to coordinate the setup of an end-to-end ODU2 connection
+   between the nodes S3 and S8, including the configuration of the
+   adaptation functions inside these edge nodes, such as S3 \[ETH ->
+   (ODU2)] and S18 \[(ODU2) -> ETH].
+
+   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
+   needs to be created, supported by a ODU2 end-to-end connection
+   between transport network nodes S3 and S6, passing through the
+   transport network node S5, which belong to the same PNC domain
+   (single-domain service request):
+
+~~~~
+      R1 [(PKT) -> ETH], S3 [ETH -> (PKT)] S5 [(ODU2)],
+      S6 [(ODU2) -> ETH], R2 [ETH -> (PKT)]
+~~~~
+
+   As described in {{reference-network}}, the mechanisms used by the CNC at the
+   CMI are independent on whether the service request is single-domain
+   service or multi-domain.
+
+   Based on the assumption above, in this case, the MDSC can figure out
+   that it needs to setup an EPL service between the access links on S3
+   and S6, that belong to the same PNC domain (single-domain service
+   request) and it decides the proper network configuration to request
+   PNC1.
 
    When two 1Gb IP links between R1 to R2 and between R1 and R8 are
    needed, two EVPL services need to be created, supported by two ODU0
@@ -897,10 +909,10 @@ informative:
    different EVPL services: for example, VLAN IDs 10 and 20
    respectively.
 
-   Based on the assumptions described in {{epl-description}}, the CNC sends a
+   The CNC sends a
    request to the MDSC, at the CMI, to set up these EVPL services. The
    MDSC will determine the network configurations to request to the
-   underlying PNCs, as described in {{epl-description}}.
+   underlying PNCs.
 
 {: #multi-function-access}
 
@@ -917,7 +929,7 @@ informative:
    discussed in {{service-description}}:
    for example, a 10G multi-function access
    link can be pre-provisioned as an OTU2 trail ({{odu-description}}), a 10GE
-   physical link ({{epl-description}}) or an STM-64 physical link
+   physical link ({{evpl-description}}) or an STM-64 physical link
    ({{client-description}}).
 
    It is also possible not to configure these links a-priori and let
@@ -1209,7 +1221,7 @@ informative:
    STM-64 physical link) or as an OTUk trail.
 
    In order to support the EPL and EVPL services, described in
-   {{epl-description}} and {{evpl-description}},
+   {{evpl-description}},
    the access links, which are capable of being
    configured as Ethernet physical links, are reported by each PNC
    within its respective Ethernet abstract topology, using the Topology
@@ -1229,10 +1241,10 @@ informative:
 
    It is worth noting that in the network scenarios analyzed in this
    document (where switching is performed only at the ODU layer), the
-   Ethernet abstract topologies reported by the PNCs describes only the
+   Ethernet abstract topologies reported by the PNCs describe only the
    Ethernet client access links: no Ethernet TE switching capabilities
    are reported in these Ethernet abstract topologies, to report that
-   the underlying networt domain is not capable supporting Ethernet TE
+   the underlying network domain is not capable supporting Ethernet TE
    Tunnels/LSPs.
 
 {: #domain1-topo}
@@ -1528,7 +1540,7 @@ informative:
    domains. Alternatively, it may be discovered using an automatic
    discovery mechanisms (e.g., LMP-based, as defined in {{?RFC6898}}).
 
-   In case the plug-id values are assigned by a central authority, it
+   In the case a central authority assigns the plug-id values, it
    is under the central authority's responsibility to assign unique
    values.
 
@@ -1721,7 +1733,7 @@ informative:
 
    YANG model and OTN Topology augmentation. The TE Topology YANG model
    in {{!RFC8795}} is being updated to report the label set information.
-   See section 1.7 of {{TE-TUTORIAL}} for more details.
+   See {{OTN-TOPO}} for more details.
 
    The MDSC, when coordinating the setup of a multi-domain ODU
    connection, also configures the data plane resources (i.e., the list
@@ -1834,7 +1846,7 @@ informative:
 
 ### EPL over ODU Service
 
-   In this scenario, described in {{epl-description}}, the access links are
+   In this scenario, described in {{evpl-description}}, the access links are
    configured as 10GE Links and, as described in {{topology-analysis}}, reported
    by each PNC as TE Links within the ETH abstract topologies they
    expose to the MDSC.
@@ -1931,7 +1943,7 @@ informative:
    respectively, within its native topology. Therefore it performs path
    computation, for an ODU2 connection between S3-1 TTP and S2-3 LTP
    within its native topology, and sets up the ODU2 cross-connections
-   within the physical nodes S3, S1 and S2, as shown in {{epl-description}}.
+   within the physical nodes S3, S1 and S2, as shown in {{evpl-description}}.
 
    As part of the OUD2 cross-connection configuration in node S2, PNC1
    configures the data plane resources (i.e., the list of timeslots and
@@ -1940,7 +1952,7 @@ informative:
 
    After the configuration of the ODU2 cross-connection in node S3,
    PNC1 also configures the \[ETH -> (ODU)] and \[(ODU2) -> ETH]
-   adaptation functions, within node S3, as shown in {{epl-description}}.
+   adaptation functions, within node S3, as shown in {{evpl-description}}.
 
    Since the R1-S3 access link is a multi-function access link, PNC1
    also configures the 10GE link before this step.
@@ -1951,7 +1963,7 @@ informative:
    cross-connections on nodes S31 and S33 while PNC2 sets up ODU2
    cross-connections on nodes S15 and S18 as well as the \[ETH ->
    (ODU2)] and \[(ODU2) -> ETH] adaptation functions in node S18, as
-   shown in {{epl-description}}. PNC2 also configures the 10GE link on the
+   shown in {{evpl-description}}. PNC2 also configures the 10GE link on the
    S18-R8 multi-function access link.
 
 {: #epl-domain1-analysis}
@@ -1974,7 +1986,7 @@ informative:
 
    Then PNC1 sets up ODU2 cross-connections on nodes S3, S5 and S6 as
    well as the \[ETH -> (ODU)] and \[(ODU2) -> ETH] adaptation functions
-   in nodes S3 and S6, as shown in {{epl-description}}. PNC1 also configures
+   in nodes S3 and S6, as shown in {{evpl-description}}. PNC1 also configures
    the 10GE link on the R1-S3 multi-function access link (the R2-S6
    access link has been pre-provisioned as a 10GE link, as described in
    {{multi-function-access}}).
@@ -2048,7 +2060,7 @@ informative:
 
 ### EVPL over ODU Service
 
-   In this scenario, described in {{epl-description}}, the access links are
+   In this scenario, described in {{evpl-description}}, the access links are
    configured as 10GE links, as described in {{epl-analysis}} above.
 
    The CNC requests, at the CMI, the MDSC to setup two EVPL services:
@@ -2079,7 +2091,7 @@ informative:
    the MDSC and PNC1 follows similar procedures as described in
    {{epl-domain1-analysis}} to set up ODU0 cross-connections on nodes S3, S5 and S6 as
    well as the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation
-   functions, in nodes S3 and S6, as shown in {{epl-description}}. PNC1 also
+   functions, in nodes S3 and S6, as shown in {{evpl-description}}. PNC1 also
    configures the 10GE link on the R1-S3 multi-function access link.
 
    As part of the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation
@@ -2094,7 +2106,7 @@ informative:
    described in {{epl-analysis}} to setup the ODU0 cross-connections
    within the physical nodes S3, S1, S2, S31, S33, S15 and S18 as well
    as the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation functions in
-   nodes S3 and S18, as shown in {{epl-description}}. PNC2 also configures
+   nodes S3 and S18, as shown in {{evpl-description}}. PNC2 also configures
    the 10GE link on the R8-S18 multi-function access link (the R1-S3
    10GE link has been already configured when the first EVPL service
    has been setup).

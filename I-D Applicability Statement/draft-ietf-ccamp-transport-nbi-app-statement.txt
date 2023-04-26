@@ -5,16 +5,16 @@
 CCAMP Working Group                                         I. Busi, Ed.
 Internet-Draft                                                    Huawei
 Intended status: Informational                              D. King, Ed.
-Expires: 5 January 2023                               Old Dog Consulting
+Expires: 28 October 2023                              Old Dog Consulting
                                                            H. Zheng, Ed.
                                                                   Huawei
                                                               Y. Xu, Ed.
                                                                    CAICT
-                                                             4 July 2022
+                                                           26 April 2023
 
 
          Transport Northbound Interface Applicability Statement
-            draft-ietf-ccamp-transport-nbi-app-statement-15
+            draft-ietf-ccamp-transport-nbi-app-statement-16
 
 Abstract
 
@@ -44,18 +44,18 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 January 2023.
+   This Internet-Draft will expire on 28 October 2023.
 
 Copyright Notice
 
-   Copyright (c) 2022 IETF Trust and the persons identified as the
+   Copyright (c) 2023 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 1]
+Busi, et al.             Expires 28 October 2023                [Page 1]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -71,69 +71,68 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
      1.1.  The Scope of this Document  . . . . . . . . . . . . . . .   4
-   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   3.  Conventions Used in this Document . . . . . . . . . . . . . .   7
-     3.1.  Topology and Traffic Flow Processing  . . . . . . . . . .   7
-   4.  Scenarios Description . . . . . . . . . . . . . . . . . . . .   8
-     4.1.  Reference Network . . . . . . . . . . . . . . . . . . . .   8
-     4.2.  Topology Abstractions . . . . . . . . . . . . . . . . . .  12
-     4.3.  Service Configuration . . . . . . . . . . . . . . . . . .  14
-       4.3.1.  ODU Transit . . . . . . . . . . . . . . . . . . . . .  14
-       4.3.2.  EPL over ODU  . . . . . . . . . . . . . . . . . . . .  15
-       4.3.3.  Transparent Client Services . . . . . . . . . . . . .  16
-       4.3.4.  EVPL over ODU . . . . . . . . . . . . . . . . . . . .  17
-     4.4.  Multi-Function Access Links . . . . . . . . . . . . . . .  18
-     4.5.  Protection and Restoration Configuration  . . . . . . . .  19
-       4.5.1.  Linear Protection (End-to-End)  . . . . . . . . . . .  20
-       4.5.2.  Segmented Protection  . . . . . . . . . . . . . . . .  21
-     4.6.  Event Notifications and Alarms  . . . . . . . . . . . . .  21
-     4.7.  Path Computation with Constraints . . . . . . . . . . . .  22
-   5.  YANG Model Analysis . . . . . . . . . . . . . . . . . . . . .  23
-     5.1.  YANG Models for Topology Abstraction  . . . . . . . . . .  23
-       5.1.1.  Domain 1 Black Topology Abstraction . . . . . . . . .  24
-       5.1.2.  Domain 2 Black Topology Abstraction . . . . . . . . .  28
-       5.1.3.  Domain 3 White Topology Abstraction . . . . . . . . .  29
-       5.1.4.  Multi-domain Topology Merging . . . . . . . . . . . .  29
-     5.2.  YANG Models for Service Configuration . . . . . . . . . .  32
-       5.2.1.  ODU Transit Service . . . . . . . . . . . . . . . . .  35
-       5.2.2.  EPL over ODU Service  . . . . . . . . . . . . . . . .  37
-       5.2.3.  Other OTN Client Services . . . . . . . . . . . . . .  40
-       5.2.4.  EVPL over ODU Service . . . . . . . . . . . . . . . .  41
-     5.3.  YANG Models for Protection Configuration  . . . . . . . .  42
-       5.3.1.  Linear Protection (end-to-end)  . . . . . . . . . . .  42
-       5.3.2.  Segmented Protection  . . . . . . . . . . . . . . . .  44
-     5.4.  Notifications . . . . . . . . . . . . . . . . . . . . . .  45
-     5.5.  Path Computation with Constraints . . . . . . . . . . . .  46
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  46
-     6.1.  OTN Security  . . . . . . . . . . . . . . . . . . . . . .  47
+   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   5
+   3.  Conventions Used in this Document . . . . . . . . . . . . . .   8
+     3.1.  Topology and Traffic Flow Processing  . . . . . . . . . .   8
+   4.  Scenarios Description . . . . . . . . . . . . . . . . . . . .   9
+     4.1.  Reference Network . . . . . . . . . . . . . . . . . . . .   9
+     4.2.  Topology Abstractions . . . . . . . . . . . . . . . . . .  13
+     4.3.  Service Configuration . . . . . . . . . . . . . . . . . .  15
+       4.3.1.  ODU Transit . . . . . . . . . . . . . . . . . . . . .  15
+       4.3.2.  Transparent Client Services . . . . . . . . . . . . .  16
+       4.3.3.  EPL and EVPL over ODU . . . . . . . . . . . . . . . .  17
+     4.4.  Multi-Function Access Links . . . . . . . . . . . . . . .  19
+     4.5.  Protection and Restoration Configuration  . . . . . . . .  20
+       4.5.1.  Linear Protection (End-to-End)  . . . . . . . . . . .  21
+       4.5.2.  Segmented Protection  . . . . . . . . . . . . . . . .  22
+     4.6.  Event Notifications and Alarms  . . . . . . . . . . . . .  22
+     4.7.  Path Computation with Constraints . . . . . . . . . . . .  23
+   5.  YANG Model Analysis . . . . . . . . . . . . . . . . . . . . .  24
+     5.1.  YANG Models for Topology Abstraction  . . . . . . . . . .  24
+       5.1.1.  Domain 1 Black Topology Abstraction . . . . . . . . .  25
+       5.1.2.  Domain 2 Black Topology Abstraction . . . . . . . . .  29
+       5.1.3.  Domain 3 White Topology Abstraction . . . . . . . . .  30
+       5.1.4.  Multi-domain Topology Merging . . . . . . . . . . . .  30
+     5.2.  YANG Models for Service Configuration . . . . . . . . . .  33
+       5.2.1.  ODU Transit Service . . . . . . . . . . . . . . . . .  36
+       5.2.2.  EPL over ODU Service  . . . . . . . . . . . . . . . .  38
+       5.2.3.  Other OTN Client Services . . . . . . . . . . . . . .  41
+       5.2.4.  EVPL over ODU Service . . . . . . . . . . . . . . . .  42
+     5.3.  YANG Models for Protection Configuration  . . . . . . . .  43
+       5.3.1.  Linear Protection (end-to-end)  . . . . . . . . . . .  43
+       5.3.2.  Segmented Protection  . . . . . . . . . . . . . . . .  45
+     5.4.  Notifications . . . . . . . . . . . . . . . . . . . . . .  46
+     5.5.  Path Computation with Constraints . . . . . . . . . . . .  47
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  47
+     6.1.  OTN Security  . . . . . . . . . . . . . . . . . . . . . .  48
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  48
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 2]
+Busi, et al.             Expires 28 October 2023                [Page 2]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  47
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  47
-     8.1.  Normative References  . . . . . . . . . . . . . . . . . .  47
-     8.2.  Informative References  . . . . . . . . . . . . . . . . .  49
-   Appendix A.  Validating a JSON fragment against a YANG Model  . .  51
-     A.1.  JSON CODE . . . . . . . . . . . . . . . . . . . . . . . .  51
-     A.2.  Manipulation of JSON fragments  . . . . . . . . . . . . .  52
-     A.3.  Comments in JSON fragments  . . . . . . . . . . . . . . .  53
-     A.4.  Validation of JSON fragments: DSDL-based approach . . . .  53
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  48
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .  48
+     8.2.  Informative References  . . . . . . . . . . . . . . . . .  50
+   Appendix A.  Validating a JSON fragment against a YANG Model  . .  52
+     A.1.  JSON CODE . . . . . . . . . . . . . . . . . . . . . . . .  52
+     A.2.  Manipulation of JSON fragments  . . . . . . . . . . . . .  53
+     A.3.  Comments in JSON fragments  . . . . . . . . . . . . . . .  54
+     A.4.  Validation of JSON fragments: DSDL-based approach . . . .  54
      A.5.  Validation of JSON fragments: why not using an XSD-based
-           approach  . . . . . . . . . . . . . . . . . . . . . . . .  54
-   Appendix B.  Detailed JSON Examples . . . . . . . . . . . . . . .  54
-     B.1.  JSON Examples for Topology Abstractions . . . . . . . . .  54
+           approach  . . . . . . . . . . . . . . . . . . . . . . . .  55
+   Appendix B.  Detailed JSON Examples . . . . . . . . . . . . . . .  55
+     B.1.  JSON Examples for Topology Abstractions . . . . . . . . .  55
        B.1.1.  JSON Code: mpi1-otn-topology.json . . . . . . . . . .  55
-       B.1.2.  JSON Code: mpi1-eth-topology.json . . . . . . . . . .  77
-     B.2.  JSON Examples for Service Configuration . . . . . . . . .  82
-       B.2.1.  JSON Code: mpi1-odu2-service-config.json  . . . . . .  82
-       B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json . . . . . . .  85
+       B.1.2.  JSON Code: mpi1-eth-topology.json . . . . . . . . . .  78
+     B.2.  JSON Examples for Service Configuration . . . . . . . . .  83
+       B.2.1.  JSON Code: mpi1-odu2-service-config.json  . . . . . .  83
+       B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json . . . . . . .  86
        B.2.3.  JSON Code: mpi1-epl-service-config.json . . . . . . .  88
-   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  89
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  90
    Contributors  . . . . . . . . . . . . . . . . . . . . . . . . . .  90
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  91
 
@@ -165,9 +164,10 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 3]
+
+Busi, et al.             Expires 28 October 2023                [Page 3]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    This document examines the applicability of the YANG models defined
@@ -212,151 +212,211 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    different types of multi-domain services, such as Optical Data Unit
    (ODU) transit services, Transparent client services and EPL/EVPL
    Ethernet Private Line/Ethernet Virtual Private Line (EPL/EVPL)
-   services, over a multi-domain OTN connection, satisfying also the
+   services, over a multi-domain OTN connection, also satisfying the
    requirements in [ONF_TR-527].
+
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023                [Page 4]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
 2.  Terminology
 
-   Domain  A domain, as defined in [RFC4655], is "any collection of
+   Domain:
+
+      A domain, as defined in [RFC4655], is "any collection of network
+      elements within a common sphere of address management or path
+      computation responsibility".  Specifically, within this document,
+      we mean a part of an operator's network that is under common
+      management (i.e., under shared operational management using the
+      same instances of a tool and the same policies).  Network elements
+      will often be grouped into domains based on technologies, vendor
+      profiles, or geographic proximity.
+
+   CNC:
+
+      Customer Network Controller
+
+   Connection:
+
+      The data plane configuration of an LSP: within this document it is
+      typically an ODU LSP.  An end-to-end connection/LSP represents an
+      entire connection between the connection node end-points.  A
+      connection/LSP segment represents a portion of the end-to-end
+      connection.
+
+   Connectivity Service:
+
+      A connectivity service, in the context of this document, can be
+      considered as a connection between customer sites, across the
+      network operator's network [RFC8309].
+
+   E-LINE:
+
+      Ethernet Line
+
+   EPL:
+
+      Ethernet Private Line
+
+   EVPL:
+
+      Ethernet Virtual Private Line
+
+   ILL:
+
+      Inter-Layer Lock
+
+   Link:
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 4]
+Busi, et al.             Expires 28 October 2023                [Page 5]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
-      network elements within a common sphere of address management or
-      path computation responsibility".  Specifically, within this
-      document, we mean a part of an operator's network that is under
-      common management (i.e., under shared operational management using
-      the same instances of a tool and the same policies).  Network
-      elements will often be grouped into domains based on technologies,
-      vendor profiles, or geographic proximity.
-
-   CNC  Customer Network Controller
-
-   Connection  The data plane configuration of an LSP: within this
-      document it is typically an ODU LSP.  An end-to-end connection/LSP
-      represents an entire connection between the connection node end-
-      points.  A connection/LSP segment represents a portion of the end-
-      to-end connection.
-
-   Connectivity Service  A connectivity service, in the context of this
-      document, can be considered as a connection between customer
-      sites, across the network operator's network [RFC8309].
-
-   E-LINE  Ethernet Line
-
-   EPL  Ethernet Private Line
-
-   EVPL  Ethernet Virtual Private Line
-
-   ILL  Inter-Layer Lock
-
-   Link  It is used to represent the adjacency between two nodes.
+      It is used to represent the adjacency between two nodes.
       The term physical link represents a link between two physical
       nodes.  The term OTN link represents a link between two OTN nodes.
 
-   LSP  Label Switched Path
+   LSP:
 
-   LTP  Link Termination Point
+      Label Switched Path
 
-   MDSC  Multi-Domain Service Coordinator
+   LTP:
 
-   Network Configuration  As described in [RFC8309] it describes the
-      instructions provided to a controller on how to configure parts of
-      a network.
+      Link Termination Point
 
-   ODU  Optical Channel Data Unit
+   MDSC:
 
-   OTU  Optical Channel Transport Unit
+      Multi-Domain Service Coordinator
 
-   OTN  Optical Transport Network
+   Network Configuration:
+
+      As described in [RFC8309] it describes the instructions provided
+      to a controller on how to configure parts of a network.
+
+   ODU:
+
+      Optical Channel Data Unit
+
+   OTU:
+
+      Optical Channel Transport Unit
+
+   OTN:
+
+      Optical Transport Network
+
+   PNC:
+
+      Provisioning Network Controller
+
+   Protection Switching:
+
+      Protection switching, as defined in [ITU-T_G.808.1] and [RFC4427],
+      provides the capability to switch the traffic in case of network
+      failures over pre-allocated networks resources.  Typically linear
+      protection methods would be used and configured to operate as 1+1
+      unidirectional, 1+1 bidirectional or 1:n bidirectional.  This
+      ensures fast and simple service survivability.
+
+   Protection Transport Entity/LSP:
 
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 5]
+Busi, et al.             Expires 28 October 2023                [Page 6]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
-   PNC  Provisioning Network Controller
+      A protection transport entity/LSP, as defined in [ITU-T_G.808.1]
+      and [RFC4427], represents the path where the "normal" user traffic
+      is transported during protection switching events (e.g., when the
+      working transport entity/LSP fails).
 
-   Protection Switching  Protection switching, as defined in
-      [ITU-T_G.808.1] and [RFC4427], provides the capability to switch
-      the traffic in case of network failures over pre-allocated
-      networks resources.  Typically linear protection methods would be
-      used and configured to operate as 1+1 unidirectional, 1+1
-      bidirectional or 1:n bidirectional.  This ensures fast and simple
-      service survivability.
+   Restoration:
 
-   Protection Transport Entity/LSP  A protection transport entity/LSP,
-      as defined in [ITU-T_G.808.1] and [RFC4427], represents the path
-      where the "normal" user traffic is transported during protection
-      switching events (e.g., when the working transport entity/LSP
-      fails).
-
-   Restoration  Restoration methods, as defined in [RFC4427], provide
-      the capability to reroute and restore traffic around network
-      failures without the necessity to allocate network resources as
-      required for dedicated 1+1 protection schemes.  On the other hand,
+      Restoration methods, as defined in [RFC4427], provide the
+      capability to reroute and restore traffic around network failures
+      without the necessity to allocate network resources as required
+      for dedicated 1+1 protection schemes.  On the other hand,
       restoration times are typically longer than protection switching
       times.
 
-   Service Model  As described in [RFC8309] it describes a service and
-      the parameters of the service in a portable way that can be used
+   Service Model:
+
+      As described in [RFC8309] it describes a service and the
+      parameters of the service in a portable way that can be used
       uniformly and independent of the equipment and operating
       environment.
 
-   TE Link  As defined in [RFC8795], is an element of a TE topology,
-      presented as an edge on TE graph.
+   TE Link:
 
-   TE Tunnel  As defined in [TE-TUNNEL], it is a connection-oriented
-      service provided by a layered network of delivery of a client's
-      data between source and destination tunnel termination points.
-      See also [TE-TUTORIAL].
+      As defined in [RFC8795], is an element of a TE topology, presented
+      as an edge on TE graph.
 
-   TE Tunnel Segment  As defined in [TE-TUNNEL], it is a part of a
-      multi-domain TE tunnel that spans.  See also [TE-TUTORIAL].
+   TE Tunnel:
 
-   TE Tunnel Hand-off  It is an access or inter-domain LTP by which a
-      multi-domain TE tunnel enters or exits a given network domain.
-      See also [TE-TUTORIAL].
+      As defined in [TE-TUNNEL], it is a connection-oriented service
+      provided by a layered network of delivery of a client's data
+      between source and destination tunnel termination points.
 
-   Note - The three definitions above are currently in [TE-TUTORIAL] but
-   it is expected that they will be moved to [TE-TUNNEL].  When this
-   happens, the reference will be updated and the [TE-TUTORIAL]
-   reference will be downgraded to Informative.
+   TE Tunnel Segment:
+
+      As defined in [TE-TUNNEL], it is a part of a multi-domain TE
+      tunnel that spans.
+
+   TE Tunnel Hand-off:
+
+      It is an access or inter-domain LTP by which a multi-domain TE
+      tunnel enters or exits a given network domain.
+
+   TPN:
+
+      Tributary Port Number
+
+   TTP:
 
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 6]
+Busi, et al.             Expires 28 October 2023                [Page 7]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
-   TPN  Tributary Port Number
+      Tunnel Termination Point
 
-   TTP  Tunnel Termination Point
+   Termination and Adaptation:
 
-   Termination and Adaptation  It represents the termination of a
-      server-layer connection at the node edge-point and the adaptation/
-      mapping of the client layer traffic over the terminated server-
-      layer connection.
+      It represents the termination of a server-layer connection at the
+      node edge-point and the adaptation/mapping of the client layer
+      traffic over the terminated server-layer connection.
 
-   Transparent Client  As defined in [CLIENT-SIGNAL], it represents a
-      client-layer signal, such as Ethernet physical interfaces, FC,
-      STM- n, that cannot be switched but only mapped over a server-
-      layer TE Tunnel.
+   Transparent Client:
 
-   Working Transport Entity/LSP  A working transport entity/LSP, as
-      defined in [ITU-T_G.808.1] and [RFC4427], represents the path
-      where the "normal" user traffic is transported.
+      As defined in [CLIENT-SIGNAL], it represents a client-layer
+      signal, such as Ethernet physical interfaces, FC, STM- n, that
+      cannot be switched but only mapped over a server-layer TE Tunnel.
 
-   UNI  User Network Interface
+   Working Transport Entity/LSP:
+
+      A working transport entity/LSP, as defined in [ITU-T_G.808.1] and
+      [RFC4427], represents the path where the "normal" user traffic is
+      transported.
+
+   UNI:
+
+      User Network Interface
 
 3.  Conventions Used in this Document
 
@@ -383,18 +443,17 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
          R1 [(PKT) -> ODU2], S3 [(ODU2)], S5 [(ODU2)], S6 [(ODU2)],
          R3 [ODU2 -> (PKT)]
 
+
+
+Busi, et al.             Expires 28 October 2023                [Page 8]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    Node R1 is switching at the packet (PKT) layer and mapping packets
    into an ODU2 before transmission to node S3.  Nodes S3, S5 and S6,
    are switching at the ODU2 layer: S3 sends the ODU2 traffic to S5,
-
-
-
-Busi, et al.             Expires 5 January 2023                 [Page 7]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
-   which then sends it to S6 which finally sends to R3.  Node R3
+   which then sends it to S6, which finally sends to R3.  Node R3
    terminates the ODU2 from S6 before switching at the packet (PKT)
    layer.
 
@@ -442,12 +501,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-
-
-
-Busi, et al.             Expires 5 January 2023                 [Page 8]
+Busi, et al.             Expires 28 October 2023                [Page 9]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
                   ........................
@@ -488,7 +544,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    This document assumes that all the Si transport network switching
    nodes are capable of switching in the electrical domain (ODU
    switching) moreover, all the Si-Sj OTN links within the transport
-   network (intra-domain or inter-domain) are 100G links while the
+   network (intra-domain or inter-domain) are 100G links, while the
    access Ri-Sj links are 10G links.
 
    This document also assumes that within the transport network, the
@@ -501,9 +557,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                 [Page 9]
+Busi, et al.             Expires 28 October 2023               [Page 10]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Different transmission technologies can be used on the access links
@@ -518,7 +574,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    To carry client signals (e.g., Ethernet or STM-N) over OTN, some ODU
    termination and adaptation resources need to be available on the
    physical edge nodes (e.g., node S3 and S18).  The location of these
-   resources within the physical node is implementation-specific and
+   resources within the physical node are implementation-specific and
    outside the scope of standardization.  This document assumes that
    these termination and adaptation resources are located on the
    physical interfaces of the edge nodes terminating the access links.
@@ -557,9 +613,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 10]
+Busi, et al.             Expires 28 October 2023               [Page 11]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
                               --------------
@@ -600,7 +656,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      Figure 2: Controlling Hierarchies
 
    The NEs within network domains 1, 2 and 3 of Figure 1 are controlled,
-   respectively, by PNC1, PNC2 and PNC3 of Figure 2.  The MDSC control
+   respectively, by PNC1, PNC2 and PNC3 of Figure 2.  The MDSC controls
    the end-to-end network through the MPIs toward the underlying PNCs.
 
    The ACTN framework facilitates separating the network and service
@@ -613,9 +669,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 11]
+Busi, et al.             Expires 28 October 2023               [Page 12]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The control interfaces within the scope of this document are the
@@ -669,9 +725,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 12]
+Busi, et al.             Expires 28 October 2023               [Page 13]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
       Thus, abstraction does not necessarily offer all possible
@@ -699,7 +755,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    *  Grey topology: This abstraction level is between black topology
       and white topology from a granularity point of view.
 
-   Each PNC should provide the MDSC a network topology abstraction
+   Each PNC should provide the MDSC with a network topology abstraction
    hiding the internal details of the physical domain network topology
    controlled by the PNC.  As described in section 3 of [RFC8453], the
    level of abstraction provided by each PNC is based on the PNC
@@ -725,9 +781,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 13]
+Busi, et al.             Expires 28 October 2023               [Page 14]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The MDSC should be capable of stitching together the abstracted
@@ -736,7 +792,8 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    oversight, including the application of local policy, configuration
    methods, and the application of a trust model.  Methods of how to
    manage these aspects are out of scope for this document, but
-   recomandations are provided in the Security section of this document.
+   recommendations are provided in the Security section of this
+   document.
 
    The MDSC can also provide topology abstraction of its view of the
    multi-domain network topology at its CMIs depending on the customers'
@@ -755,10 +812,10 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    transport network.
 
    The packet processing inside IP routers, including packet
-   encapsualation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
-   PKT), are assumed to be performed by means that are not under the
-   control of, and not visible to, the MDSC or to the PNCs.  Therefore,
-   these mechanisms are outside the scope of this document.
+   encapsulation and decapsulation, Ri (PKT -> foo) and Rj (foo -> PKT),
+   are assumed to be performed by means that are not under the control
+   of, and not visible to, the MDSC or the PNCs.  Therefore, these
+   mechanisms are outside the scope of this document.
 
 4.3.1.  ODU Transit
 
@@ -774,17 +831,21 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    interfaces are not channelized (i.e., they can only support one
    ODU2).
 
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 15]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    When a 10Gb IP connectivity service between R1 and R8 is needed, an
    ODU2 end-to-end connection needs to be created, passing through
    transport network nodes S3, S1, S2, S31, S33, S34, S15 and S18, which
    belong to different PNC domains (multi-domain service request):
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 14]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
 
          R1 [(PKT) -> ODU2], S3 [(ODU2]), S1 [(ODU2]), S2 [(ODU2]),
          S31 [(ODU2)], S33 [(ODU2)], S34 [(ODU2)],
@@ -815,7 +876,65 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    same PNC domain (single-domain service request) and it decides the
    proper network configuration to request PNC1.
 
-4.3.2.  EPL over ODU
+4.3.2.  Transparent Client Services
+
+   [ITU-T_G.709] defines mappings of different Transparent Client layers
+   into ODU.  Most of them are used to provide Private Line services
+   over an OTN transport network supporting a variety of types of
+   physical access links (e.g., Ethernet, SDH STM-N, Fibre Channel,
+   InfiniBand, etc.) interconnect the IP routers and the transport
+   network.
+
+
+
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 16]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
+   When a 10Gb IP connectivity service between R1 and R8 is needed,
+   using, for example SDH physical links between the IP routers and the
+   transport network, an STM-64 Private Line service needs to be
+   created, supported by a ODU2 end-to-end connection, between transport
+   network nodes S3 and S18, passing through transport network nodes S1,
+   S2, S31, S33, S34 and S15, which belong to different PNC domains
+   (multi-domain service request):
+
+         R1 [(PKT) -> STM-64], S3 [STM-64 -> (ODU2)], S1 [(ODU2)],
+         S2 [(ODU2)], S31 [(ODU2)], S33 [(ODU2)], S34[(ODU2)],
+         S15 [(ODU2)], S18 [(ODU2) -> STM-64], R8 [STM-64 -> (PKT)]
+
+   As described (Section 4.1) the CNC provides the essential information
+   to permit the MDSC to compute which type of service is needed, in
+   this case, an STM-64 Private Line Service between the access links on
+   S3 and S8, and it also decides the network configurations, including
+   the configuration of the adaptation functions inside these edge
+   nodes, such as S3 [STM-64 -> (ODU2)] and S18 [(ODU2) -> STM-64].
+
+   When a 10Gb IP connectivity service between R1 and R3 is needed, an
+   STM-64 Private Line service needs to be created between R1 and R3
+   (single-domain service request):
+
+     R1 [(PKT) -> STM-64], S3[STM-64 -> (ODU2)], S5 [(ODU2)],
+     S6 [(ODU2) -> STM-64], R3[STM-64 -> (PKT)]
+
+   As described in Section 4.1, the mechanisms, used by the CNC at the
+   CMI, are independent on whether the service request is single-domain
+   service or multi-domain.
+
+   Based on the assumption above, in this case, the MDSC can figure out
+   that it needs to setup an STM-64 Private Line service between the
+   access links on S3 and S6, which belong to the same PNC domain
+   (single-domain service request), and it decides the proper network
+   configuration to request PNC1.
+
+4.3.3.  EPL and EVPL over ODU
 
    The physical links interconnecting the IP routers and the transport
    network can be 10G Ethernet physical links (10GE).
@@ -824,6 +943,16 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    to the MAC layer) are pre-provisioned using mechanisms which are
    outside the scope of this document and not exposed at the MPIs
    between the PNCs and the MDSC.
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 17]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
    When a 10Gb IP connectivity service between R1 and R8 is needed, an
    EPL service needs to be created, supported by an ODU2 end-to-end
@@ -834,13 +963,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
          S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
          S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 15]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
 
    The MDSC receives, at the CMI, the request to create an EPL service
    between the access links on S3 and S18, which belong to different PNC
@@ -870,68 +992,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    request) and it decides the proper network configuration to request
    PNC1.
 
-4.3.3.  Transparent Client Services
-
-   [ITU-T_G.709] defines mappings of different Transparent Client layers
-   into ODU.  Most of them are used to provide Private Line services
-   over an OTN transport network supporting a variety of types of
-   physical access links (e.g., Ethernet, SDH STM-N, Fibre Channel,
-   InfiniBand, etc.) interconnect the IP routers and the transport
-   network.
-
-   When a 10Gb IP connectivity service between R1 and R8 is needed,
-   using, for example SDH physical links between the IP routers and the
-   transport network, an STM-64 Private Line service needs to be
-   created, supported by a ODU2 end-to-end connection, between transport
-   network nodes S3 and S18, passing through transport network nodes S1,
-   S2, S31, S33, S34 and S15, which belong to different PNC domains
-   (multi-domain service request):
-
-         R1 [(PKT) -> STM-64], S3 [STM-64 -> (ODU2)], S1 [(ODU2)],
-         S2 [(ODU2)], S31 [(ODU2)], S33 [(ODU2)], S34[(ODU2)],
-         S15 [(ODU2)], S18 [(ODU2) -> STM-64], R8 [STM-64 -> (PKT)]
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 16]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
-   As described (Section 4.1) the CNC provides the essential information
-   to permit the MDSC to compute which type of service is needed, in
-   this case, an STM-64 Private Line Service between the access links on
-   S3 and S8, and it also decides the network configurations, including
-   the configuration of the adaptation functions inside these edge
-   nodes, such as S3 [STM-64 -> (ODU2)] and S18 [(ODU2) -> STM-64].
-
-   When a 10Gb IP connectivity service between R1 and R3 is needed, an
-   STM-64 Private Line service needs to be created between R1 and R3
-   (single-domain service request):
-
-     R1 [(PKT) -> STM-64], S3[STM-64 -> (ODU2)], S5 [(ODU2)],
-     S6 [(ODU2) -> STM-64], R3[STM-64 -> (PKT)]
-
-   As described in Section 4.1, the mechanisms, used by the CNC at the
-   CMI, are independent on whether the service request is single-domain
-   service or multi-domain.
-
-   Based on the assumption above, in this case, the MDSC can figure out
-   that it needs to setup an STM-64 Private Line service between the
-   access links on S3 and S6, which belong to the same PNC domain
-   (single-domain service request), and it decides the proper network
-   configuration to request PNC1.
-
-4.3.4.  EVPL over ODU
-
-   When the physical links interconnecting the IP routers and the
-   transport network are Ethernet physical links, it is also possible
-   that different Ethernet services (e.g., EVPL) can share the same
-   physical access link using different VLANs.
-
-   As described in Section 4.3.2, it is assumed that the Ethernet
-   physical interfaces (up to the MAC layer) are pre-provisioned.
-
    When two 1Gb IP links between R1 to R2 and between R1 and R8 are
    needed, two EVPL services need to be created, supported by two ODU0
    end-to-end connections:
@@ -945,13 +1005,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 17]
+Busi, et al.             Expires 28 October 2023               [Page 18]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    It is worth noting that the first EVPL service is required between
@@ -964,10 +1020,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    between R1 and S3, different VLAN IDs are associated with different
    EVPL services: for example, VLAN IDs 10 and 20 respectively.
 
-   Based on the assumptions described in Section 4.3.2, the CNC sends a
-   request to the MDSC, at the CMI, to set up these EVPL services.  The
-   MDSC will determine the network configurations to request to the
-   underlying PNCs, as described in Section 4.3.2.
+   The CNC sends a request to the MDSC, at the CMI, to set up these EVPL
+   services.  The MDSC will determine the network configurations to
+   request to the underlying PNCs.
 
 4.4.  Multi-Function Access Links
 
@@ -981,8 +1036,8 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    has been pre-provisioned) and will be controlled at the MPI as
    discussed in Section 4.3: for example, a 10G multi-function access
    link can be pre-provisioned as an OTU2 trail (Section 4.3.1), a 10GE
-   physical link (Section 4.3.2) or an STM-64 physical link
-   (Section 4.3.3).
+   physical link (Section 4.3.3) or an STM-64 physical link
+   (Section 4.3.2).
 
    It is also possible not to configure these links a-priori and let the
    MDSC (or, in case of a single-domain service request, the PNC) decide
@@ -1005,9 +1060,10 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 18]
+
+Busi, et al.             Expires 28 October 2023               [Page 19]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
          R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
@@ -1061,9 +1117,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 19]
+Busi, et al.             Expires 28 October 2023               [Page 20]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    In the service examples described in Section 4.3, switching within
@@ -1117,9 +1173,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 20]
+Busi, et al.             Expires 28 October 2023               [Page 21]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The PNCs should be capable of reporting to the MDSC which, is the
@@ -1173,9 +1229,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 21]
+Busi, et al.             Expires 28 October 2023               [Page 22]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    2.  Object delete
@@ -1229,9 +1285,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 22]
+Busi, et al.             Expires 28 October 2023               [Page 23]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Further detailed analysis is outside the scope of this document.
@@ -1285,23 +1341,23 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 23]
+Busi, et al.             Expires 28 October 2023               [Page 24]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The [OTN-TOPO] model allows reporting within the OTN abstract
    topology also the access links which are capable of supporting the
-   transparent client layers, defined in Section 4.3.3 and in
+   transparent client layers, defined in Section 4.3.2 and in
    [CLIENT-SIGNAL].  These links can also be multi-function access links
    that can be configured as transparent client physical links (e.g.,
    STM-64 physical link) or as an OTUk trail.
 
    In order to support the EPL and EVPL services, described in
-   Section 4.3.2 and Section 4.3.4, the access links, which are capable
-   of being configured as Ethernet physical links, are reported by each
-   PNC within its respective Ethernet abstract topology, using the
-   Topology YANG models, defined in [RFC8345], with the TE Topology YANG
+   Section 4.3.3, the access links, which are capable of being
+   configured as Ethernet physical links, are reported by each PNC
+   within its respective Ethernet abstract topology, using the Topology
+   YANG models, defined in [RFC8345], with the TE Topology YANG
    augmentations, defined in [RFC8795], and the Ethernet client
    technology-specific YANG augmentations, defined in [CLIENT-TOPO].
    These links can also be multi-function access links that can be
@@ -1317,10 +1373,10 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    It is worth noting that in the network scenarios analyzed in this
    document (where switching is performed only at the ODU layer), the
-   Ethernet abstract topologies reported by the PNCs describes only the
+   Ethernet abstract topologies reported by the PNCs describe only the
    Ethernet client access links: no Ethernet TE switching capabilities
    are reported in these Ethernet abstract topologies, to report that
-   the underlying networt domain is not capable supporting Ethernet TE
+   the underlying network domain is not capable supporting Ethernet TE
    Tunnels/LSPs.
 
 5.1.1.  Domain 1 Black Topology Abstraction
@@ -1341,9 +1397,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 24]
+Busi, et al.             Expires 28 October 2023               [Page 25]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
                       ...................................
@@ -1397,9 +1453,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 25]
+Busi, et al.             Expires 28 October 2023               [Page 26]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The OTU4 trails on the inter-domain physical links (e.g., the link
@@ -1453,9 +1509,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 26]
+Busi, et al.             Expires 28 October 2023               [Page 27]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The PNC1 native topology would represent the physical network
@@ -1509,9 +1565,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 27]
+Busi, et al.             Expires 28 October 2023               [Page 28]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
       Physical Interface     OTN Topology LTP     ETH Topology LTP
@@ -1565,9 +1621,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 28]
+Busi, et al.             Expires 28 October 2023               [Page 29]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  the instance reports the domain 2 Ethernet abstract topology view
@@ -1621,9 +1677,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 29]
+Busi, et al.             Expires 28 October 2023               [Page 30]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    The topology of each domain may be in an abstracted shape (refer to
@@ -1646,7 +1702,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    domains.  Alternatively, it may be discovered using an automatic
    discovery mechanisms (e.g., LMP-based, as defined in [RFC6898]).
 
-   In case the plug-id values are assigned by a central authority, it is
+   In the case a central authority assigns the plug-id values, it is
    under the central authority's responsibility to assign unique values.
 
    In case the plug-id values are automatically discovered, the
@@ -1677,9 +1733,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 30]
+Busi, et al.             Expires 28 October 2023               [Page 31]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
            Inter-Domain Link     Plug-ID Value
@@ -1733,9 +1789,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 31]
+Busi, et al.             Expires 28 October 2023               [Page 32]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
 5.2.  YANG Models for Service Configuration
@@ -1789,9 +1845,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 32]
+Busi, et al.             Expires 28 October 2023               [Page 33]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
                                     |
@@ -1845,9 +1901,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 33]
+Busi, et al.             Expires 28 October 2023               [Page 34]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    After receiving such request, MDSC determines the domain sequence,
@@ -1892,7 +1948,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    YANG model and OTN Topology augmentation.  The TE Topology YANG model
    in [RFC8795] is being updated to report the label set information.
-   See section 1.7 of [TE-TUTORIAL] for more details.
+   See [OTN-TOPO] for more details.
 
    The MDSC, when coordinating the setup of a multi-domain ODU
    connection, also configures the data plane resources (i.e., the list
@@ -1901,9 +1957,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 34]
+Busi, et al.             Expires 28 October 2023               [Page 35]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    nodes terminating the inter-domain links (e.g., S2 and S31) from the
@@ -1957,9 +2013,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 35]
+Busi, et al.             Expires 28 October 2023               [Page 36]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  Ingress and egress points are indicated in the route-object-
@@ -2013,9 +2069,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 36]
+Busi, et al.             Expires 28 October 2023               [Page 37]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Following the procedures described in Section 5.2.1, MDSC requests
@@ -2027,7 +2083,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 5.2.2.  EPL over ODU Service
 
-   In this scenario, described in Section 4.3.2, the access links are
+   In this scenario, described in Section 4.3.3, the access links are
    configured as 10GE Links and, as described in Section 5.1, reported
    by each PNC as TE Links within the ETH abstract topologies they
    expose to the MDSC.
@@ -2069,9 +2125,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 37]
+Busi, et al.             Expires 28 October 2023               [Page 38]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  PNC1, at MPI1, to steer the Ethernet client traffic from/to AN1-1
@@ -2125,9 +2181,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 38]
+Busi, et al.             Expires 28 October 2023               [Page 39]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Appendix B.2.3 provides the detailed JSON code ("mpi1-epl-service-
@@ -2141,7 +2197,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    within its native topology.  Therefore it performs path computation,
    for an ODU2 connection between S3-1 TTP and S2-3 LTP within its
    native topology, and sets up the ODU2 cross-connections within the
-   physical nodes S3, S1 and S2, as shown in Section 4.3.2.
+   physical nodes S3, S1 and S2, as shown in Section 4.3.3.
 
    As part of the OUD2 cross-connection configuration in node S2, PNC1
    configures the data plane resources (i.e., the list of timeslots and
@@ -2150,7 +2206,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    After the configuration of the ODU2 cross-connection in node S3, PNC1
    also configures the [ETH -> (ODU)] and [(ODU2) -> ETH] adaptation
-   functions, within node S3, as shown in Section 4.3.2.
+   functions, within node S3, as shown in Section 4.3.3.
 
    Since the R1-S3 access link is a multi-function access link, PNC1
    also configures the 10GE link before this step.
@@ -2161,7 +2217,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    cross-connections on nodes S31 and S33 while PNC2 sets up ODU2 cross-
    connections on nodes S15 and S18 as well as the [ETH -> (ODU2)] and
    [(ODU2) -> ETH] adaptation functions in node S18, as shown in
-   Section 4.3.2.  PNC2 also configures the 10GE link on the S18-R8
+   Section 4.3.3.  PNC2 also configures the 10GE link on the S18-R8
    multi-function access link.
 
 5.2.2.1.  Single Domain Example
@@ -2181,9 +2237,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 39]
+Busi, et al.             Expires 28 October 2023               [Page 40]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  Steer the Ethernet client traffic between the AN1-1 and AN1-8
@@ -2192,14 +2248,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    Then PNC1 sets up ODU2 cross-connections on nodes S3, S5 and S6 as
    well as the [ETH -> (ODU)] and [(ODU2) -> ETH] adaptation functions
-   in nodes S3 and S6, as shown in Section 4.3.2.  PNC1 also configures
+   in nodes S3 and S6, as shown in Section 4.3.3.  PNC1 also configures
    the 10GE link on the R1-S3 multi-function access link (the R2-S6
    access link has been pre-provisioned as a 10GE link, as described in
    Section 4.4).
 
 5.2.3.  Other OTN Client Services
 
-   In this scenario, described in Section 4.3.3, the access links are
+   In this scenario, described in Section 4.3.2, the access links are
    configured as STM-64 links and, as described in Section 5.1, reported
    by each PNC as TE Links within the OTN Abstract Topologies they
    expose to the MDSC.
@@ -2237,9 +2293,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 40]
+Busi, et al.             Expires 28 October 2023               [Page 41]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  PNC2, at MPI2, to setup ODU2 (Tail Segment) Tunnel within the MPI2
@@ -2252,7 +2308,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    PNC1, PNC2 and PNC3 then sets up the ODU2 cross-connections within
    the physical nodes S3, S1, S2, S31, S33, S15 and S18 as well as the
    [STM-64 -> (ODU)] and [(ODU2) -> STM-64] adaptation functions in
-   nodes S3 and S18, as shown in Section 4.3.3.  PNC1 and PNC2 also
+   nodes S3 and S18, as shown in Section 4.3.2.  PNC1 and PNC2 also
    configure the STM-64 links on the R1-S3 and R8-S18 multi-function
    access links, respectively.
 
@@ -2264,13 +2320,13 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    The MDSC and PNC1 follows similar procedures as described in
    Section 5.2.2.1 to set up ODU2 cross-connections on nodes S3, S5 and
    S6 as well as the [STM-64 -> (ODU)] and [(ODU2) -> STM-64] adaptation
-   functions in nodes S3 and S6, as shown in Section 4.3.3.  PNC1 also
+   functions in nodes S3 and S6, as shown in Section 4.3.2.  PNC1 also
    configures the STM-64 links on the R1-S3 and R3-S6 multi-function
    access links.
 
 5.2.4.  EVPL over ODU Service
 
-   In this scenario, described in Section 4.3.2, the access links are
+   In this scenario, described in Section 4.3.3, the access links are
    configured as 10GE links, as described in Section 5.2.2 above.
 
    The CNC requests, at the CMI, the MDSC to setup two EVPL services:
@@ -2293,9 +2349,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 41]
+Busi, et al.             Expires 28 October 2023               [Page 42]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    *  To setup the second (multi-domain) EPVL service, between R1 and
@@ -2309,7 +2365,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    the MDSC and PNC1 follows similar procedures as described in
    Section 5.2.2.1 to set up ODU0 cross-connections on nodes S3, S5 and
    S6 as well as the [VLAN -> (ODU0)] and [(ODU0) -> VLAN] adaptation
-   functions, in nodes S3 and S6, as shown in Section 4.3.2.  PNC1 also
+   functions, in nodes S3 and S6, as shown in Section 4.3.3.  PNC1 also
    configures the 10GE link on the R1-S3 multi-function access link.
 
    As part of the [VLAN -> (ODU0)] and [(ODU0) -> VLAN] adaptation
@@ -2324,7 +2380,7 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    in Section 5.2.2 to setup the ODU0 cross-connections within the
    physical nodes S3, S1, S2, S31, S33, S15 and S18 as well as the [VLAN
    -> (ODU0)] and [(ODU0) -> VLAN] adaptation functions in nodes S3 and
-   S18, as shown in Section 4.3.2.  PNC2 also configures the 10GE link
+   S18, as shown in Section 4.3.3.  PNC2 also configures the 10GE link
    on the R8-S18 multi-function access link (the R1-S3 10GE link has
    been already configured when the first EVPL service has been setup).
 
@@ -2349,9 +2405,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 42]
+Busi, et al.             Expires 28 October 2023               [Page 43]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    MDSC performs path computation, as described in Section 5.2, to
@@ -2405,9 +2461,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 43]
+Busi, et al.             Expires 28 October 2023               [Page 44]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    PNC1 knows, as described in the table in Section 5.1.1, that the
@@ -2461,9 +2517,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 44]
+Busi, et al.             Expires 28 October 2023               [Page 45]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
       -  The last element references the TE-Node of the egress point
@@ -2517,9 +2573,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 45]
+Busi, et al.             Expires 28 October 2023               [Page 46]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    From the perspective of MPI, the MDSC is the client while the PNC is
@@ -2573,9 +2629,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 46]
+Busi, et al.             Expires 28 October 2023               [Page 47]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
 6.1.  OTN Security
@@ -2602,17 +2658,17 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
               Zheng, H., Guo, A., Busi, I., Snitser, A., and F. Lazzeri,
               "A YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-06, 5 January 2022,
-              <https://www.ietf.org/archive/id/draft-ietf-ccamp-client-
-              signal-yang-06.txt>.
+              signal-yang-08, 9 January 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              client-signal-yang-08>.
 
    [CLIENT-TOPO]
               Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y., and X.
               Liu, "A YANG Data Model for Ethernet TE Topology", Work in
               Progress, Internet-Draft, draft-ietf-ccamp-eth-client-te-
-              topo-yang-02, 7 March 2022,
-              <https://www.ietf.org/archive/id/draft-ietf-ccamp-eth-
-              client-te-topo-yang-02.txt>.
+              topo-yang-04, 6 March 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              eth-client-te-topo-yang-04>.
 
    [ITU-T_G.709]
               ITU-T Recommendation G.709, "Interfaces for the optical
@@ -2629,9 +2685,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 47]
+Busi, et al.             Expires 28 October 2023               [Page 48]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    [ITU-T_G.873.1]
@@ -2639,27 +2695,27 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
               network (OTN): Linear protection", ITU-T Recommendation
               G.873.1 , October 2017.
 
-   [OTN-TOPO] Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. D.
+   [OTN-TOPO] Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
               Dios, "A YANG Data Model for Optical Transport Network
               Topology", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-otn-topo-yang-14, 7 March 2022,
-              <https://www.ietf.org/archive/id/draft-ietf-ccamp-otn-
-              topo-yang-14.txt>.
+              ccamp-otn-topo-yang-16, 23 November 2022,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              otn-topo-yang-16>.
 
    [OTN-TUNNEL]
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
               "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
-              draft-ietf-ccamp-otn-tunnel-model-16, 8 April 2022,
-              <https://www.ietf.org/archive/id/draft-ietf-ccamp-otn-
-              tunnel-model-16.txt>.
+              draft-ietf-ccamp-otn-tunnel-model-18, 3 April 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
+              otn-tunnel-model-18>.
 
    [PATH-COMPUTE]
-              Busi, I., Belotti, S., Dios, O. G. D., Sharma, A., and D.
-              Ceccarelli, "A YANG Data Model for requesting path
-              computation", Work in Progress, Internet-Draft, draft-
-              ietf-teas-yang-path-computation-18, 22 March 2022,
-              <https://www.ietf.org/archive/id/draft-ietf-teas-yang-
-              path-computation-18.txt>.
+              Busi, I., Belotti, S., de Dios, O. G., Sharma, A., Shi,
+              Y., and D. Ceccarelli, "A YANG Data Model for requesting
+              path computation", Work in Progress, Internet-Draft,
+              draft-ietf-teas-yang-path-computation-20, 10 March 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
+              yang-path-computation-20>.
 
    [RFC4427]  Mannie, E., Ed. and D. Papadimitriou, Ed., "Recovery
               (Protection and Restoration) Terminology for Generalized
@@ -2685,9 +2741,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 48]
+Busi, et al.             Expires 28 October 2023               [Page 49]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    [RFC7926]  Farrel, A., Ed., Drake, J., Bitar, N., Swallow, G.,
@@ -2715,11 +2771,11 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
    [TE-TUNNEL]
               Saad, T., Gandhi, R., Liu, X., Beeram, V. P., Bryskin, I.,
-              and O. G. D. Dios, "A YANG Data Model for Traffic
+              and O. G. de Dios, "A YANG Data Model for Traffic
               Engineering Tunnels, Label Switched Paths and Interfaces",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-te-
-              29, 7 February 2022, <https://www.ietf.org/archive/id/
-              draft-ietf-teas-yang-te-29.txt>.
+              32, 12 March 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-teas-yang-te-32>.
 
 8.2.  Informative References
 
@@ -2727,9 +2783,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
               Lee, Y., Zheng, H., Ceccarelli, D., Yoon, B. Y., and S.
               Belotti, "Applicability of YANG models for Abstraction and
               Control of Traffic Engineered Networks", Work in Progress,
-              Internet-Draft, draft-ietf-teas-actn-yang-09, 7 March
-              2022, <https://www.ietf.org/archive/id/draft-ietf-teas-
-              actn-yang-09.txt>.
+              Internet-Draft, draft-ietf-teas-actn-yang-11, 7 March
+              2023, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              teas-actn-yang-11>.
 
    [ITU-T_X.733]
               International Telecommunication Union, "Information
@@ -2741,9 +2797,9 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 49]
+Busi, et al.             Expires 28 October 2023               [Page 50]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    [ITU-T_X.734]
@@ -2797,23 +2853,15 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 50]
+Busi, et al.             Expires 28 October 2023               [Page 51]
 
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    [RFC8792]  Watsen, K., Auerswald, E., Farrel, A., and Q. Wu,
               "Handling Long Lines in Content of Internet-Drafts and
               RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
               <https://www.rfc-editor.org/info/rfc8792>.
-
-   [TE-TUTORIAL]
-              Bryskin, I., Beeram, V. P., Saad, T., and X. Liu, "TE
-              Topology and Tunnel Modeling for Transport Networks", Work
-              in Progress, Internet-Draft, draft-ietf-teas-te-topo-and-
-              tunnel-modeling-06, 12 July 2020,
-              <https://www.ietf.org/archive/id/draft-ietf-teas-te-topo-
-              and-tunnel-modeling-06.txt>.
 
 Appendix A.  Validating a JSON fragment against a YANG Model
 
@@ -2848,16 +2896,6 @@ A.1.  JSON CODE
    against the YANG models following the validation process described in
    Appendix A, which would not consider the comments.
 
-
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 51]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    To have successful validation of the examples, some numbering scheme
    has been defined to assign identifiers to the different entities
    which would pass the syntax checks.  In that case, to simplify the
@@ -2866,6 +2904,15 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    identifier of AN1 (AN1-NODE-ID) has been assumed to be "192.0.2.1"
    and would be shown in the JSON code example using the two JSON name/
    value pair:
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 52]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
          "// te-node-id": "AN1-NODE-ID",
 
@@ -2901,19 +2948,6 @@ A.2.  Manipulation of JSON fragments
 
    The following schema resumes these definitions:
 
-
-
-
-
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 52]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                         unfold_it -->             stripper -->
 
               Folded-JSON           Unfolded-JSON             Naked JSON
@@ -2926,6 +2960,15 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
 
     JSON-encoding
     of YANG data?   may              may                     must
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 53]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
    The validation toolchain has been designed to take a JSON in any of
    the three formats and validate it automatically against a set of
@@ -2957,19 +3000,6 @@ A.4.  Validation of JSON fragments: DSDL-based approach
 
    Useful link: https://github.com/mbj4668/pyang/wiki/XmlJson
 
-
-
-
-
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 53]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                               (2)
                   YANG-module ---> DSDL-schemas (RNG,SCH,DSRL)
                          |                  |
@@ -2988,6 +3018,13 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    defined in Section 3, without impacting the validation process, these
    comments will be automatically removed from the JSON-file that will
    be validated.
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 54]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
 A.5.  Validation of JSON fragments: why not using an XSD-based approach
 
@@ -3016,16 +3053,6 @@ Appendix B.  Detailed JSON Examples
 
 B.1.  JSON Examples for Topology Abstractions
 
-
-
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 54]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
 B.1.1.  JSON Code: mpi1-otn-topology.json
 
    This is the JSON code reporting the OTN Topology @ MPI1:
@@ -3047,6 +3074,14 @@ B.1.1.  JSON Code: mpi1-otn-topology.json
          "ietf-te-topology@2020-08-06": "rfc8795",
          "ietf-otn-topology@2021-07-08": "draft-ietf-ccamp-otn-topo-yan\
    \g-13"
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 55]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
        }
      },
      "ietf-network:networks": {
@@ -3074,14 +3109,6 @@ B.1.1.  JSON Code: mpi1-otn-topology.json
                "// node description": {
                  "name": "AN1",
                  "identifier": "192.0.2.1",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 55]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                  "type": "Abstract Node",
                  "physical node(s)": "The whole network domain 1"
                },
@@ -3103,6 +3130,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "tunnel-tp-id": "AQ==",
                      "name": "AN1-1 OTN TTP",
                      "// comment encoding and switching-capability": "O\
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 56]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    \TN (ODU)",
                      "switching-capability": "ietf-te-types:switching-o\
    \tn",
@@ -3130,14 +3165,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "inter-layer-lock-id": [
                        2
                      ],
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 56]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                      "admin-status": "up",
                      "oper-status": "up"
                    },
@@ -3159,6 +3186,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "admin-status": "up",
                      "oper-status": "up"
                    },
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 57]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                    {
                      "// comment tunnel-tp-id": "AN1-8 TTP-ID (8 -> 0x0\
    \8 -> 'CA==' in base64)",
@@ -3186,14 +3221,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "link type(s)": "Multi-function (OTU2, STM-64 and \
    \10GE)",
                      "physical node": "S3",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 57]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                      "unnumberd/ifIndex": 1,
                      "port type": "tributary port",
                      "connected to": "R1"
@@ -3215,6 +3242,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                              "te-bandwidth": {
                                "ietf-otn-topology:otn": {
                                  "odu-type": "ietf-layer1-types:ODU2"
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 58]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                                }
                              }
                            }
@@ -3242,14 +3277,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    "// ltp description": {
                      "name": "AN1-2 LTP",
                      "link type(s)": "Multi-function (OTU2 and STM-64)"\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 58]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \,
                      "physical node": "S6",
                      "unnumberd/ifIndex": 2,
@@ -3271,6 +3298,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                            {
                              "priority": 0,
                              "te-bandwidth": {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 59]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                                "ietf-otn-topology:otn": {
                                  "odu-type": "ietf-layer1-types:ODU2"
                                }
@@ -3298,14 +3333,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  },
                  {
                    "// ltp description": {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 59]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                      "name": "AN1-3 LTP",
                      "link type(s)": "STM-64",
                      "physical node": "S6",
@@ -3327,6 +3354,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                        3
                      ],
                      "admin-status": "up",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 60]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                      "oper-status": "up",
                      "ietf-otn-topology:client-svc": {
                        "client-facing": true,
@@ -3354,14 +3389,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          "// comment encoding and switching-capability"\
    \: "OTN (ODU)",
                          "switching-capability": "ietf-te-types:switchi\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 60]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \ng-otn",
                          "encoding": "ietf-te-types:lsp-encoding-oduk",
                          "max-lsp-bandwidth": [
@@ -3383,6 +3410,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \Layer topology not exposed",
                      "admin-status": "up",
                      "oper-status": "up",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 61]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                      "// not-present ietf-otn-topology:client-svc": "OT\
    \N inter-domain link"
                    }
@@ -3410,14 +3445,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          "max-lsp-bandwidth": [
                            {
                              "priority": 0,
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 61]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                              "te-bandwidth": {
                                "ietf-otn-topology:otn": {
                                  "odu-type": "ietf-layer1-types:ODU4"
@@ -3439,6 +3466,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    }
                  },
                  {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 62]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                    "// ltp description": {
                      "name": "AN1-6 LTP",
                      "link type(s)": "OTU4",
@@ -3466,14 +3501,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                                  "odu-type": "ietf-layer1-types:ODU4"
                                }
                              }
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 62]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                            }
                          ]
                        }
@@ -3495,6 +3522,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "link type(s)": "OTU4",
                      "physical node": "S2",
                      "unnumberd/ifIndex": 3,
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 63]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                      "port type": "inter-domain port",
                      "connected to": "S31"
                    },
@@ -3522,14 +3557,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                        }
                      ],
                      "// comment inter-domain-plug-id": "S2-S31 Plug-id\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 63]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \ (0x000231 -> AAIx)",
                      "inter-domain-plug-id": "AAIx",
                      "// not-present inter-layer-lock-id": "ODU Server \
@@ -3551,6 +3578,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \10GE)",
                  "physical link": "Link from S3-1 to R1"
                },
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 64]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                "link-id": "teNodeId/192.0.2.1/teLinkId/1",
                "source": {
                  "source-node": "192.0.2.1",
@@ -3578,14 +3613,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                              "ietf-otn-topology:otn": {
                                "odu-type": "ietf-layer1-types:ODU4"
                              }
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 64]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                            }
                          }
                        ]
@@ -3607,6 +3634,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
                          {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 65]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                            "odu-type": "ietf-layer1-types:ODU2",
                            "number": 1
                          }
@@ -3634,14 +3669,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  "// not-present is-transitional": "It is not a transit\
    \ional link"
                }
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 65]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
              },
              {
                "// link description": {
@@ -3663,6 +3690,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \ed instead of this container",
                    "// not-present is-abstract": "The access link is no\
    \t abstract",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 66]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                    "interface-switching-capability": [
                      {
                        "// comment encoding and switching-capability": \
@@ -3690,14 +3725,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          {
                            "odu-type": "ietf-layer1-types:ODU2",
                            "number": 1
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 66]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                          }
                        ]
                      }
@@ -3719,6 +3746,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          "ietf-otn-topology:odulist": [
                            {
                              "odu-type": "ietf-layer1-types:ODU2",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 67]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                              "number": 1
                            }
                          ]
@@ -3746,14 +3781,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  "source-tp": "3"
                },
                "// not-present destination": "access link",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 67]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Access Link from AN1-3",
@@ -3775,6 +3802,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  },
                  "oper-status": "up",
                  "// not-present is-transitional": "It is not a transit\
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 68]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    \ional link"
                }
              },
@@ -3802,14 +3837,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                        "// comment encoding and switching-capability": \
    \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 68]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \-otn",
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
                        "max-lsp-bandwidth": [
@@ -3831,6 +3858,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 69]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                            "number": 1
                          },
                          {
@@ -3858,14 +3893,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          {
                            "odu-type": "ietf-layer1-types:ODU0",
                            "number": 80
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 69]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                          }
                        ]
                      }
@@ -3887,6 +3914,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                              "odu-type": "ietf-layer1-types:ODU0",
                              "number": 80
                            }
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 70]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                          ]
                        }
                      }
@@ -3914,14 +3949,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                "// not-present destination": "inter-domain link",
                "ietf-te-topology:te": {
                  "te-link-attributes": {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 70]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                    "name": "Inter-domain Link from AN1-5",
                    "// not-present external-domain": "The plug-id is us\
    \ed instead of this container",
@@ -3943,6 +3970,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                              }
                            }
                          }
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 71]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                        ]
                      }
                    ],
@@ -3970,14 +4005,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "te-bandwidth": {
                        "ietf-otn-topology:odulist": [
                          {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 71]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                            "odu-type": "ietf-layer1-types:ODU4",
                            "number": 1
                          },
@@ -3999,6 +4026,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          "ietf-otn-topology:odulist": [
                            {
                              "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 72]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                              "number": 1
                            },
                            {
@@ -4026,14 +4061,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                "// link description": {
                  "name": "Inter-domain Link from AN1-6",
                  "type": "OTU4 inter-domain link",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 72]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                  "physical link": "Link from S8-5 to S32"
                },
                "link-id": "teNodeId/192.0.2.1/teLinkId/6",
@@ -4055,6 +4082,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \"OTN (ODU)",
                        "switching-capability": "ietf-te-types:switching\
    \-otn",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 73]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                        "encoding": "ietf-te-types:lsp-encoding-oduk",
                        "max-lsp-bandwidth": [
                          {
@@ -4082,14 +4117,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                            "number": 10
                          },
                          {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 73]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                            "odu-type": "ietf-layer1-types:ODU0",
                            "number": 80
                          }
@@ -4111,6 +4138,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                            "odu-type": "ietf-layer1-types:ODU0",
                            "number": 80
                          }
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 74]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                        ]
                      }
                    },
@@ -4138,14 +4173,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    "ietf-otn-topology:tsg": "ietf-layer1-types:tsg-1.25\
    \G",
                    "admin-status": "up"
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 74]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                  },
                  "oper-status": "up",
                  "// not-present is-transitional": "It is not a transit\
@@ -4167,6 +4194,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                "ietf-te-topology:te": {
                  "te-link-attributes": {
                    "name": "Inter-domain Link from AN1-7",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 75]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                    "// not-present external-domain": "The plug-id is us\
    \ed instead of this container",
                    "// not-present is-abstract": "The access link is no\
@@ -4194,14 +4229,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \of this JSON example",
                    "max-link-bandwidth": {
                      "te-bandwidth": {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 75]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
@@ -4223,6 +4250,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                        "ietf-otn-topology:odulist": [
                          {
                            "odu-type": "ietf-layer1-types:ODU4",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 76]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                            "number": 1
                          },
                          {
@@ -4250,14 +4285,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                              "number": 10
                            },
                            {
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 76]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                              "odu-type": "ietf-layer1-types:ODU0",
                              "number": 80
                            }
@@ -4279,6 +4306,13 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
        ]
      }
    }
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 77]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
 
 B.1.2.  JSON Code: mpi1-eth-topology.json
 
@@ -4306,14 +4340,6 @@ B.1.2.  JSON Code: mpi1-eth-topology.json
        "network": [
          {
            "network-id": "providerId/201/clientId/300/topologyId/eth-bl\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 77]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \ack-topology",
            "network-types": {
              "ietf-te-topology:te-topology": {
@@ -4336,6 +4362,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  "name": "AN1",
                  "identifier": "192.0.2.1",
                  "type": "Abstract Node",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 78]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                  "physical node(s)": "The whole network domain 1"
                },
                "node-id": "192.0.2.1",
@@ -4362,14 +4396,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \10GE)",
                      "physical node": "S3",
                      "unnumberd/ifIndex": 1,
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 78]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                      "port type": "tributary port",
                      "connected to": "R1"
                    },
@@ -4392,6 +4418,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    "// comment ietf-eth-te-topology:ingress-bandwidth-p\
    \rofile": "Outside the scope of this JSON example",
                    "ietf-eth-te-topology:eth-svc": {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 79]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                      "client-facing": true,
                      "supported-classification": {
                        "port-classification": true,
@@ -4418,14 +4452,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                      "unnumberd/ifIndex": 1,
                      "port type": "tributary port",
                      "connected to": "R2"
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 79]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                    },
                    "tp-id": "8",
                    "ietf-te-topology:te-tp-id": 8,
@@ -4448,6 +4474,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    "ietf-eth-te-topology:eth-svc": {
                      "client-facing": true,
                      "supported-classification": {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 80]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                        "port-classification": true,
                        "vlan-classification": {
                          "vlan-tag-classification": true,
@@ -4474,14 +4508,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  "type": "Multi-function access link (OTU2, STM-64 and \
    \10GE)",
                  "physical link": "Link from S3-1 to R1"
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 80]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                },
                "link-id": "teNodeId/192.0.2.1/teLinkId/1",
                "source": {
@@ -4504,6 +4530,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \k only (no ETH TE switching)",
                    "// not-present max-resv-link-bandwidth": "ETH Acces\
    \s Link only (no ETH TE switching)",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 81]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                    "// not-present unreserved-bandwidth": "ETH Access L\
    \ink only (no ETH TE switching)",
                    "admin-status": "up"
@@ -4530,14 +4564,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    "name": "Access Link from AN1-8",
                    "// not-present external-domain": "The plug-id is us\
    \ed instead of this container",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 81]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                    "// not-present is-abstract": "The access link is no\
    \t abstract",
                    "// not-present interface-switching-capability": "ET\
@@ -4560,6 +4586,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
            ]
          }
        ]
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 82]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
      }
    }
 
@@ -4586,14 +4620,6 @@ B.2.1.  JSON Code: mpi1-odu2-service-config.json
    \-14"
        }
      },
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 82]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
      "// missing-attributes": true,
      "// restconf_operation": {
        "operation": "POST",
@@ -4616,6 +4642,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
    \",
              "// not-present destination": "Transit tunnel segment",
              "// not-present dst-tunnel-tp-id": "Transit tunnel segment\
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 83]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    \",
              "bidirectional": true,
              "// default protection": {
@@ -4642,14 +4676,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                  {
                    "name": "mpi1-odu2-service-primary-path",
                    "// not-present te-bandwidth": "The tunnel bandwidth\
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 83]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    \ is used",
                    "explicit-route-objects-always": {
                      "route-object-include-exclude": [
@@ -4672,6 +4698,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          "// comment": "Tunnel hand-off ODU2 ingress la\
    \bel (ODU2 over OTU2) at S3-1 (AN1-1)",
                          "index": 2,
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 84]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                          "explicit-route-usage": "ietf-te-types:route-i\
    \nclude-object",
                          "label-hop": {
@@ -4698,14 +4732,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                            "link-tp-id": 7,
                            "// default hop-type": "strict",
                            "// default direction": "outgoing"
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 84]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                          }
                        },
                        {
@@ -4728,6 +4754,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                    }
                  }
                ]
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 85]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
              }
            }
          ]
@@ -4754,14 +4788,6 @@ B.2.2.  JSON Code: mpi1-odu2-tunnel-config.json
          "ietf-te@2021-02-20": "draft-ietf-teas-yang-te-26",
          "ietf-otn-tunnel@2021-06-25": "draft-ietf-ccamp-otn-tunnel-mod\
    \el-14"
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 85]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
      },
        "// missing-attributes": true,
        "// restconf-operation": {
@@ -4784,6 +4810,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
              "// comment source": "AN1 Node-ID",
              "source": "192.0.2.1",
              "// comment src-tunnel-tp-id": "AN1-1 TTP-ID (1 -> 0x01 ->\
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 86]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
    \ 'AQ==' in base64)",
              "src-tunnel-tp-id": "AQ==",
              "// not-present destination": "Head tunnel segment",
@@ -4810,14 +4844,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
              "admin-state": "ietf-te:tunnel-admin-auto",
              "primary-paths": {
                "primary-path": [
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 86]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                  {
                    "name": "mpi1-odu2-tunnel-primary-path",
                    "// not-present te-bandwidth": "The tunnel bandwidth\
@@ -4840,6 +4866,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
                          }
                        },
                        {
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 87]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                          "// comment": "Tunnel hand-off ODU2 egress lab\
    \el (ODU2 over OTU4)",
                          "index": 2,
@@ -4866,14 +4900,6 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
      }
    }
 
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 87]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
 B.2.3.  JSON Code: mpi1-epl-service-config.json
 
    This is the JSON code reporting the EPL service configuration @ MPI:
@@ -4896,6 +4922,14 @@ B.2.3.  JSON Code: mpi1-epl-service-config.json
        "missing-attributes": true,
        "restconf-operation": {
          "operation": "POST",
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 88]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
          "url": "http://{{PNC1-ADDR}}/restconf/data/ietf-eth-tran-servi\
    \ce:etht-svc/etht-svc-instances"
        }
@@ -4922,14 +4956,6 @@ B.2.3.  JSON Code: mpi1-epl-service-config.json
    \oint",
                "etht-svc-end-point-descr": "Ethernet Service End-Point \
    \at S3-1 (AN1-1) access link",
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 88]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
                "etht-svc-access-points": [
                  {
                    "// comment": "10GE Service Access Point at the acce\
@@ -4952,6 +4978,14 @@ Internet-Draft    Transport NBI Applicability-Statement        July 2022
            ],
            "underlay": {
              "otn-tunnels": [
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 89]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
+
+
                {
                  "// comment tunnel-name": "ODU2 Head Tunnel Segment @ \
    \MPI1",
@@ -4978,14 +5012,6 @@ Acknowledgments
    gap analysis for transport NBI and having provided foundations work
    for the development of this document.
 
-
-
-
-Busi, et al.             Expires 5 January 2023                [Page 89]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    The authors would like to thank the authors of the TE Topology and
    Tunnel YANG models [RFC8795] and [TE-TUNNEL], in particular, Igor
    Bryskin, Vishnu Pavan Beeram, Tarek Saad and Xufeng Liu, for their
@@ -5008,6 +5034,12 @@ Contributors
    Yang Zhao
    China Mobile
    Email: zhaoyangyjy@chinamobile.com
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 90]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Sergio Belotti
@@ -5035,13 +5067,6 @@ Contributors
    Email: carlo.perocchio@ericsson.com
 
 
-
-
-Busi, et al.             Expires 5 January 2023                [Page 90]
-
-Internet-Draft    Transport NBI Applicability-Statement        July 2022
-
-
    Ricard Vilalta
    CTTC
    Email: ricard.vilalta@cttc.es
@@ -5062,6 +5087,15 @@ Authors' Addresses
    Italo Busi (editor)
    Huawei
    Email: italo.busi@huawei.com
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 91]
+
+Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
    Daniel King (editor)
@@ -5093,4 +5127,26 @@ Authors' Addresses
 
 
 
-Busi, et al.             Expires 5 January 2023                [Page 91]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Busi, et al.             Expires 28 October 2023               [Page 92]
