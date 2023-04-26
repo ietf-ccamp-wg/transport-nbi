@@ -5,12 +5,20 @@
 CCAMP Working Group                                         I. Busi, Ed.
 Internet-Draft                                                    Huawei
 Intended status: Informational                              D. King, Ed.
+<<<<<<< HEAD
 Expires: 28 October 2023                              Old Dog Consulting
+=======
+Expires: 14 October 2023                              Old Dog Consulting
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
                                                            H. Zheng, Ed.
                                                                   Huawei
                                                               Y. Xu, Ed.
                                                                    CAICT
+<<<<<<< HEAD
                                                            26 April 2023
+=======
+                                                           12 April 2023
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
 
          Transport Northbound Interface Applicability Statement
@@ -71,6 +79,7 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
      1.1.  The Scope of this Document  . . . . . . . . . . . . . . .   4
+<<<<<<< HEAD
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   5
    3.  Conventions Used in this Document . . . . . . . . . . . . . .   8
      3.1.  Topology and Traffic Flow Processing  . . . . . . . . . .   8
@@ -110,6 +119,46 @@ Table of Contents
 
 
 Busi, et al.             Expires 28 October 2023                [Page 2]
+=======
+   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   3.  Conventions Used in this Document . . . . . . . . . . . . . .   7
+     3.1.  Topology and Traffic Flow Processing  . . . . . . . . . .   7
+   4.  Scenarios Description . . . . . . . . . . . . . . . . . . . .   8
+     4.1.  Reference Network . . . . . . . . . . . . . . . . . . . .   8
+     4.2.  Topology Abstractions . . . . . . . . . . . . . . . . . .  12
+     4.3.  Service Configuration . . . . . . . . . . . . . . . . . .  14
+       4.3.1.  ODU Transit . . . . . . . . . . . . . . . . . . . . .  14
+       4.3.2.  Transparent Client Services . . . . . . . . . . . . .  16
+       4.3.3.  EPL and EVPL over ODU . . . . . . . . . . . . . . . .  17
+     4.4.  Multi-Function Access Links . . . . . . . . . . . . . . .  18
+     4.5.  Protection and Restoration Configuration  . . . . . . . .  19
+       4.5.1.  Linear Protection (End-to-End)  . . . . . . . . . . .  20
+       4.5.2.  Segmented Protection  . . . . . . . . . . . . . . . .  21
+     4.6.  Event Notifications and Alarms  . . . . . . . . . . . . .  21
+     4.7.  Path Computation with Constraints . . . . . . . . . . . .  22
+   5.  YANG Model Analysis . . . . . . . . . . . . . . . . . . . . .  23
+     5.1.  YANG Models for Topology Abstraction  . . . . . . . . . .  23
+       5.1.1.  Domain 1 Black Topology Abstraction . . . . . . . . .  24
+       5.1.2.  Domain 2 Black Topology Abstraction . . . . . . . . .  28
+       5.1.3.  Domain 3 White Topology Abstraction . . . . . . . . .  29
+       5.1.4.  Multi-domain Topology Merging . . . . . . . . . . . .  29
+     5.2.  YANG Models for Service Configuration . . . . . . . . . .  32
+       5.2.1.  ODU Transit Service . . . . . . . . . . . . . . . . .  35
+       5.2.2.  EPL over ODU Service  . . . . . . . . . . . . . . . .  37
+       5.2.3.  Other OTN Client Services . . . . . . . . . . . . . .  40
+       5.2.4.  EVPL over ODU Service . . . . . . . . . . . . . . . .  41
+     5.3.  YANG Models for Protection Configuration  . . . . . . . .  42
+       5.3.1.  Linear Protection (end-to-end)  . . . . . . . . . . .  42
+       5.3.2.  Segmented Protection  . . . . . . . . . . . . . . . .  44
+     5.4.  Notifications . . . . . . . . . . . . . . . . . . . . . .  45
+     5.5.  Path Computation with Constraints . . . . . . . . . . . .  46
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  46
+     6.1.  OTN Security  . . . . . . . . . . . . . . . . . . . . . .  47
+
+
+
+Busi, et al.             Expires 5 January 2023                 [Page 2]
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
 Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
@@ -372,6 +421,7 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
    TE Tunnel Segment:
 
+<<<<<<< HEAD
       As defined in [TE-TUNNEL], it is a part of a multi-domain TE
       tunnel that spans.
 
@@ -381,6 +431,21 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
       tunnel enters or exits a given network domain.
 
    TPN:
+=======
+   TE Tunnel  As defined in [TE-TUNNEL], it is a connection-oriented
+      service provided by a layered network of delivery of a client's
+      data between source and destination tunnel termination points.
+      
+
+   TE Tunnel Segment  As defined in [TE-TUNNEL], it is a part of a
+      multi-domain TE tunnel that spans.
+
+   TE Tunnel Hand-off  It is an access or inter-domain LTP by which a
+      multi-domain TE tunnel enters or exits a given network domain.
+      
+
+
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
       Tributary Port Number
 
@@ -450,9 +515,12 @@ Busi, et al.             Expires 28 October 2023                [Page 8]
 Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
+<<<<<<< HEAD
    Node R1 is switching at the packet (PKT) layer and mapping packets
    into an ODU2 before transmission to node S3.  Nodes S3, S5 and S6,
    are switching at the ODU2 layer: S3 sends the ODU2 traffic to S5,
+=======
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
    which then sends it to S6, which finally sends to R3.  Node R3
    terminates the ODU2 from S6 before switching at the packet (PKT)
    layer.
@@ -792,8 +860,12 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    oversight, including the application of local policy, configuration
    methods, and the application of a trust model.  Methods of how to
    manage these aspects are out of scope for this document, but
+<<<<<<< HEAD
    recommendations are provided in the Security section of this
    document.
+=======
+   recommendations are provided in the Security section of this document.
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
    The MDSC can also provide topology abstraction of its view of the
    multi-domain network topology at its CMIs depending on the customers'
@@ -812,10 +884,17 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    transport network.
 
    The packet processing inside IP routers, including packet
+<<<<<<< HEAD
    encapsulation and decapsulation, Ri (PKT -> foo) and Rj (foo -> PKT),
    are assumed to be performed by means that are not under the control
    of, and not visible to, the MDSC or the PNCs.  Therefore, these
    mechanisms are outside the scope of this document.
+=======
+   encapsulation and decapsulation, Ri (PKT -> foo) and Rj (foo ->
+   PKT), are assumed to be performed by means that are not under the
+   control of, and not visible to, the MDSC or the PNCs.  Therefore,
+   these mechanisms are outside the scope of this document.
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
 4.3.1.  ODU Transit
 
@@ -877,6 +956,7 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    proper network configuration to request PNC1.
 
 4.3.2.  Transparent Client Services
+<<<<<<< HEAD
 
    [ITU-T_G.709] defines mappings of different Transparent Client layers
    into ODU.  Most of them are used to provide Private Line services
@@ -896,6 +976,8 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
 Busi, et al.             Expires 28 October 2023               [Page 16]
 
 Internet-Draft    Transport NBI Applicability-Statement       April 2023
+=======
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
 
    When a 10Gb IP connectivity service between R1 and R8 is needed,
@@ -943,6 +1025,7 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    to the MAC layer) are pre-provisioned using mechanisms which are
    outside the scope of this document and not exposed at the MPIs
    between the PNCs and the MDSC.
+<<<<<<< HEAD
 
 
 
@@ -979,6 +1062,34 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    transport network node S5, which belong to the same PNC domain
    (single-domain service request):
 
+=======
+
+   When a 10Gb IP connectivity service between R1 and R8 is needed, an
+   EPL service needs to be created, supported by an ODU2 end-to-end
+   connection, between transport network nodes S3 and S18, passing
+   through transport network nodes S1, S2, S31, S33, S34 and S15, which
+   belong to different PNC domains (multi-domain service request):
+
+         R1 [(PKT) -> ETH], S3 [ETH -> (ODU2)], S1 [(ODU2)],
+         S2 [(ODU2)], S31 [(ODU2)), S33 [(ODU2)], S34 [(ODU2)],
+         S15 [(ODU2)], S18 [(ODU2) -> ETH], R8 [ETH -> (PKT)]
+
+   The MDSC receives, at the CMI, the request to create an EPL service
+   between the access links on S3 and S18, which belong to different PNC
+   domains (multi-domain service request).  The MDSC determines the
+   network configurations to request, at the MPIs, to its underlying
+   PNCs, to coordinate the setup of an end-to-end ODU2 connection
+   between the nodes S3 and S8, including the configuration of the
+   adaptation functions inside these edge nodes, such as S3 [ETH ->
+   (ODU2)] and S18 [(ODU2) -> ETH].
+
+   When a 10Gb IP connection between R1 and R2 is needed, an EPL service
+   needs to be created, supported by a ODU2 end-to-end connection
+   between transport network nodes S3 and S6, passing through the
+   transport network node S5, which belong to the same PNC domain
+   (single-domain service request):
+
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
          R1 [(PKT) -> ETH], S3 [ETH -> (PKT)] S5 [(ODU2)],
          S6 [(ODU2) -> ETH], R2 [ETH -> (PKT)]
 
@@ -988,7 +1099,11 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
    Based on the assumption above, in this case, the MDSC can figure out
    that it needs to setup an EPL service between the access links on S3
+<<<<<<< HEAD
    and S6, that belong to the same PNC domain (single-domain service
+=======
+   and S6, which belong to the same PNC domain (single-domain service
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
    request) and it decides the proper network configuration to request
    PNC1.
 
@@ -1003,6 +1118,7 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
          S2 [(ODU0)], S31 [(ODU0)], S33 [(ODU0)], S34 [(ODU0)],
          S15 [(ODU0)], S18 [(ODU0) -> VLAN], R8[VLAN -> (PKT)]
 
+<<<<<<< HEAD
 
 
 Busi, et al.             Expires 28 October 2023               [Page 18]
@@ -1010,6 +1126,8 @@ Busi, et al.             Expires 28 October 2023               [Page 18]
 Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
 
+=======
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
    It is worth noting that the first EVPL service is required between
    access links which belong to the same PNC domain (single-domain
    service request) while the second EVPL service is required between
@@ -1020,9 +1138,15 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
    between R1 and S3, different VLAN IDs are associated with different
    EVPL services: for example, VLAN IDs 10 and 20 respectively.
 
+<<<<<<< HEAD
    The CNC sends a request to the MDSC, at the CMI, to set up these EVPL
    services.  The MDSC will determine the network configurations to
    request to the underlying PNCs.
+=======
+   The CNC sends a request to the MDSC, at the CMI, to set up these 
+   EVPL services.  The MDSC will determine the network configurations
+   to request to the underlying PNCs.
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
 4.4.  Multi-Function Access Links
 
@@ -1948,7 +2072,11 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
 
    YANG model and OTN Topology augmentation.  The TE Topology YANG model
    in [RFC8795] is being updated to report the label set information.
+<<<<<<< HEAD
    See [OTN-TOPO] for more details.
+=======
+   See [OTN-TOPOLOGY] for more details.
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 
    The MDSC, when coordinating the setup of a multi-domain ODU
    connection, also configures the data plane resources (i.e., the list
@@ -2863,6 +2991,10 @@ Internet-Draft    Transport NBI Applicability-Statement       April 2023
               RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
               <https://www.rfc-editor.org/info/rfc8792>.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a41b7662d15b564f5e9f13eaecd5cad84423409
 Appendix A.  Validating a JSON fragment against a YANG Model
 
    The objective is to have a tool that allows validating whether a
