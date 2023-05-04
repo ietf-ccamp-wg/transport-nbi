@@ -197,13 +197,13 @@ informative:
    It is worth noting that the same MPI analyzed in this document could
    be used between hierarchical MDSC controllers, as shown in Figure 4
    of {{!RFC8453}}.
-
+   
    A detailed analysis of the interface between the Customer Network
-   Controller (CNC) and the MDSC, called CNC-MDSC Interface (CMI) in
-   {{!RFC8453}}, as well as the interface between service and network
+   Controller (CNC) and the MDSC, called CNC-MDSC Interface (CMI), in
+   {{!RFC8453}}, as well as the interface between service and network,
    orchestrators are outside the scope of this document.  However, when
    needed, this document describes some considerations and assumptions
-   about the information which needs to be provided at these interfaces.
+   about the information that must be provided at these interfaces.
    The list of the IETF YANG models which apply to the ACTN MPI
    can be found in {{ACTN-YANG}}.
 
@@ -231,10 +231,10 @@ Domain:
 > A domain, as defined in {{!RFC4655}}, is "any collection of
 network elements within a common sphere of address management or
 path computation responsibility".  Specifically, within this
-document, we mean a part of an operator's network that is under
+document, we mean a part of an operator's network under
 common management (i.e., under shared operational management using
 the same instances of a tool and the same policies).  Network
-elements will often be grouped into domains based on technologies,
+elements are often grouped into domains based on technologies,
 vendor profiles, or geographic proximity.
 
 CNC:
@@ -351,18 +351,18 @@ presented as an edge on TE graph.
 
 TE Tunnel:
 
-> As defined in {{TE-TUNNEL}}, it is a connection-oriented
+> As defined in {{TE-TUNNEL}}, is a connection-oriented
 service provided by a layered network of delivery of a client's data
 between source and destination tunnel termination points.
 
 TE Tunnel Segment:
 
-> As defined in {{TE-TUNNEL}}, it is a part of a
+> As defined in {{TE-TUNNEL}}, is a part of a
 multi-domain TE tunnel that spans.
 
 TE Tunnel Hand-off:
 
-> It is an access or inter-domain LTP by
+> Is an access or inter-domain LTP by
 which a multi-domain TE tunnel enters or exits a given network
 domain.
 
@@ -530,7 +530,7 @@ UNI:
    To carry client signals (e.g., Ethernet or STM-N) over OTN, some ODU
    termination and adaptation resources need to be available on the
    physical edge nodes (e.g., node S3 and S18). The location of these
-   resources within the physical node are implementation-specific and
+   resources within the physical node is implementation-specific and
    outside the scope of standardization. This document assumes that
    these termination and adaptation resources are located on the
    physical interfaces of the edge nodes terminating the access links.
@@ -658,11 +658,11 @@ UNI:
 
    -  White topology: This is a case where the PNC provides the actual
       network topology to the MDSC without any hiding or filtering. In
-      this case, the MDSC has the full knowledge of the underlying
+      this case, the MDSC has full knowledge of the underlying
       network topology;
 
    -  Black topology: The entire domain network is abstracted as a
-      single virtual node with the access links and inter-domain links
+      single virtual node with access links and inter-domain links
       without disclosing any node internal connectivity information;
 
    -  Grey topology: This abstraction level is between black topology
@@ -672,9 +672,9 @@ UNI:
    hiding the internal details of the physical domain network topology
    controlled by the PNC. As described in section 3 of {{!RFC8453}}, the
    level of abstraction provided by each PNC is based on the PNC
-   configuration parameters and it is independent of the abstractions
+   configuration parameters, and it is independent of the abstractions
    provided by other PNCs. Therefore, it is possible that different
-   PNCs provides different topology abstractions. The MDSC can
+   PNCs provide different topology abstractions. The MDSC can
    operate on each MPI abstract topology regardless of, and
    independently from, the type of abstraction provided by its
    underlying PNC.
@@ -687,7 +687,7 @@ UNI:
 
    -  PNC1 and PNC2 provide black topology abstractions which expose at
       MPI1, and MPI2 respectively, a single virtual node (representing
-      the whole network domain 1, and domain 2 respectively).
+      the whole network domain 1, and domain 2, respectively).
 
    -  PNC3 provides a white topology abstraction which exposes at MPI3
       all the physical nodes and links within network domain 3.
@@ -697,7 +697,7 @@ UNI:
    domain network topology. This topology knowledge may require proper
    oversight, including the application of local policy, configuration
    methods, and the application of a trust model. Methods of how to
-   manage these aspects are out of scope for this document, but
+   manage these aspects are out of the scope for this document, but
    recommendations are provided in the Security section of this
    document.
 
@@ -773,7 +773,7 @@ UNI:
 
    As described in {{reference-network}},
    the mechanisms, used by the CNC at the
-   CMI, are independent on whether the service request is single-domain
+   CMI, are independent of whether the service request is single-domain
    service or multi-domain.
 
    The MDSC can figure out that it needs to setup an ODU2 transit
@@ -822,7 +822,7 @@ UNI:
       S6 [(ODU2) -> STM-64], R3[STM-64 -> (PKT)]
 
    As described in {{reference-network}}, the mechanisms, used by the CNC at the
-   CMI, are independent on whether the service request is single-domain
+   CMI, are independent of whether the service request is single-domain
    service or multi-domain.
 
    Based on the assumption above, in this case, the MDSC can figure out
@@ -865,9 +865,9 @@ UNI:
    (ODU2)] and S18 \[(ODU2) -> ETH].
 
    When a 10Gb IP connection between R1 and R2 is needed, an EPL service
-   needs to be created, supported by a ODU2 end-to-end connection
+   needs to be created, supported by an ODU2 end-to-end connection
    between transport network nodes S3 and S6, passing through the
-   transport network node S5, which belong to the same PNC domain
+   transport network node S5, which belongs to the same PNC domain
    (single-domain service request):
 
 ~~~~
@@ -876,12 +876,12 @@ UNI:
 ~~~~
 
    As described in {{reference-network}}, the mechanisms used by the CNC at the
-   CMI are independent on whether the service request is single-domain
+   CMI are independent of whether the service request is single-domain
    service or multi-domain.
 
    Based on the assumption above, in this case, the MDSC can figure out
    that it needs to setup an EPL service between the access links on S3
-   and S6, that belong to the same PNC domain (single-domain service
+   and S6, that belongs to the same PNC domain (single-domain service
    request) and it decides the proper network configuration to request
    PNC1.
 
@@ -967,7 +967,7 @@ UNI:
    coordinate the setup of an end-to-end ODU2 connection, either
    between nodes S3 and S6, or between nodes S3 and S18, including the
    configuration of the adaptation functions on these edge nodes, and
-   in particular whether the multi-function access link between R1 and
+   in particularly whether the multi-function access link between R1 and
    S3 should operate as an STM-64 or as a 10GE physical link.
 
    Assumptions used in this example, as well as the service scenarios
@@ -1187,7 +1187,7 @@ UNI:
 
   {{protection-analysis}} describes how the protection scenarios can be deployed,
   including end-to-end protection and segment protection, for both
-  intra-domain and inter-domain scenario.
+  intra-domain and inter-domain scenarios.
 
 {: #topology-analysis}
 
@@ -1244,7 +1244,7 @@ UNI:
    Ethernet abstract topologies reported by the PNCs describe only the
    Ethernet client access links: no Ethernet TE switching capabilities
    are reported in these Ethernet abstract topologies, to report that
-   the underlying network domain is not capable supporting Ethernet TE
+   the underlying network domain is not capable of supporting Ethernet TE
    Tunnels/LSPs.
 
 {: #domain1-topo}
@@ -2049,7 +2049,7 @@ UNI:
    When an IP link, between R1 and R3, is needed, the CNC requests,
    at the CMI, the MDSC to setup an STM-64 Private Line service.
 
-   The MDSC and PNC1 follows similar procedures as described in
+   The MDSC and PNC1 follow similar procedures as described in
    {{epl-domain1-analysis}} to set up ODU2 cross-connections on nodes S3, S5 and S6 as
    well as the \[STM-64 -> (ODU)] and \[(ODU2) -> STM-64] adaptation
    functions in nodes S3 and S6, as shown in {{client-description}}. PNC1 also
@@ -2088,7 +2088,7 @@ UNI:
       respectively.
 
    To setup the first (single-domain) EVPL service between R1 and R2,
-   the MDSC and PNC1 follows similar procedures as described in
+   the MDSC and PNC1 follow similar procedures as described in
    {{epl-domain1-analysis}} to set up ODU0 cross-connections on nodes S3, S5 and S6 as
    well as the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation
    functions, in nodes S3 and S6, as shown in {{evpl-description}}. PNC1 also
@@ -2113,7 +2113,7 @@ UNI:
 
    As part of the \[VLAN -> (ODU0)] and \[(ODU0) -> VLAN] adaptation
    functions configurations in nodes S3 and S18, PNC1 and,
-   respectively, PNC2 configure also the classification rules required
+   respectively, PNC2 also configures the classification rules required
    to associated only the Ethernet client traffic received with VLAN ID
    20 on the R1-S3 and R8-S18 access links with this EVPL service. The
    MDSC provides this information to PNC1 and PNC2 using the
@@ -2238,7 +2238,7 @@ UNI:
    native topology. It also understands, from the route-object-include-
    exclude list of the explicit-route-objects of the secondary path
 
-   configuration (whole last element represent an abstract node
+   configuration (the entire last element represent an abstract node
    terminating the inter-domain link used for the primary path), that
    the protection group should be terminated in nodes S3 and S2.
 
@@ -2280,7 +2280,7 @@ UNI:
    From the perspective of MPI, the MDSC is the client while the PNC is
    acting as the server of the notification. The essential event
    streams, subscription and processing rules after receiving
-   notification can be found in section 6 of {{?RFC8040}}.
+   the notification can be found in section 6 of {{?RFC8040}}.
    
    Additional alarm reporting functions and alarm report management may
    be found in {{ITU-T_X.733}} and {{ITU-T_X.734}}
@@ -2309,14 +2309,14 @@ UNI:
    defined by the IETF to support OTN single and multi-domain
    scenarios.
 
-   When deploying ACTN functional components the securing of external
+   When deploying ACTN functional components, the securing of external
    interfaces and hardening of resource datastores, the protection of
-   confidential information, and limit the access of function,
+   confidential information, and limit the access to function,
    should all be carefully considered.  Section 9 of {{!RFC8453}}
    highlights that implementations should consider encrypting data that
    flows between key components, especially when they are implemented
    at remote nodes. Further discussion on securing the interface between
-   the MDSC and PNCs via the MDSC-PNC Interface (MPI) is discussed in
+   the MDSC and PNCs via the MDSC-PNC Interface (MPI) are discussed in
    section 9.2 of {{!RFC8453}}.
 
    The YANG modules highlighted in this document are designed to be
