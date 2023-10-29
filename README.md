@@ -11,6 +11,7 @@ Design Team Members
 - Gianmarco Bruno
 - Haomian Zheng
 - Italo Busi
+- Chaode Yu
 - Monali Chakrabarty
 - Oscar Dios Gonzalez
 - Scott Mansfield
