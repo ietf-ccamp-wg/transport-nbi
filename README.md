@@ -1,14 +1,24 @@
 # transport-nbi
 
-From: CCAMP [mailto:ccamp-bounces@ietf.org] On Behalf Of Daniele Ceccarelli
-Sent: 25 October 2016 13:50
-To: CCAMP (ccamp@ietf.org) <ccamp@ietf.org>
-Cc: ccamp-chairs@ietf.org
-Subject: [CCAMP] Transport NBI - Design Team
+Google Group List: https://groups.google.com/g/transport-nbi-dt
 
-Dear CCAMP,
+Active survey to establish next design team milestones: https://23jmszz1fks.typeform.com/to/qv6zuPTW
 
-We (chair and AD) decided to create a design team with the aim to work on the definition of technology specific extensions to the NBI of Transport controller.
+Design Team Members
+- Aihua Guo
+- Nigel Davis
+- Dieter Beller
+- Gianmarco Bruno
+- Haomian Zheng
+- Italo Busi
+- Monali Chakrabarty
+- Oscar Dios Gonzalez
+- Scott Mansfield
+- Sergio Belotti
+- Luis Miguel Contreras Murillo
+- Julien Meuric
+- Prasenjit Manna
+- Daniel King
 
 Problem Statement:
 Transport networks, such as Optical Transport Network (OTN) and Wavelength Division Multiplexing (WDM) networks, are built using equipment from a single vendor and are managed using proprietary interfaces to dedicated Element Management Systems (EMS) / Network Management Systems (NMS). A common open interface to each domain controller/management system is pre-requisite for network operators to control multi-vendor/multi-domain networks and enable also service provisioning coordination/automation.
@@ -24,10 +34,14 @@ Relationship with other work:
 The control of transport networks in general is covered by mechanisms defined in the TEAS WG. That WG is expected to produce base models that may require technology specific augmentations.
 The Transport NBI is applicable to the ACTN (Abstraction and Control of TE Networks) architecture defined in the TEAS WG, and the scope of the DT may be applicable to the technology specific extensions of the ACTN MPI interface (MDSC-PNC interface).
 
-If you are willing to candidate yourself as a member of the Transport NBI DT please send an email to the CCAMP chairs and secretary within Friday November 4th.
+## Output 
 
-Daniele & Fatai
+The first document from the Design Team was:
 
+Transport Northbound Interface Applicability Statement
+https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-transport-nbi-app-statement-17
+
+It is anticipated that future output from the design team will be in the form of Wiki documentation and GitHub code/examples. 
 
 ## Contributing
 
