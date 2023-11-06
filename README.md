@@ -4,6 +4,8 @@ Google Group List: https://groups.google.com/g/transport-nbi-dt
 
 Active survey to establish next design team milestones: https://23jmszz1fks.typeform.com/to/qv6zuPTW
 
+Proposed Time (bi-weekly) 9:00-10:00 am (EST) 15:00 to 16:00 (CET) 22:00 to 23:00 pm (Beijing)
+
 Design Team Members
 - Aihua Guo
 - Nigel Davis
