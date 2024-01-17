@@ -1,0 +1,305 @@
+{
+  "ietf-network-inventory:network-elements": {
+    "network-element": [
+      {
+        "ne-id": "Ne(115-50)",
+        "name": "Ne(115-50)",
+        "components": {
+          "component": [
+            {
+              "component-id": "A1-101-1-1-2",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 1,
+              "tba:location": "r=1, sh=1"
+            },
+            {
+              "component-id": "A1-101-1-1-3",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 2,
+              "tba:location": "r=1, sh=2"
+            },
+            {
+              "component-id": "A1-101-1-1-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 3,
+              "tba:location": "r=1, sh=3"
+            }
+          ]
+        }
+      },
+      {
+        "ne-id": "Ne(115-51)",
+        "name": "Ne(115-51)",
+        "components": {
+          "component": [
+            {
+              "component-id": "A1-101-1-2-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 1,
+              "tba:location": "sh=1"
+            },
+            {
+              "component-id": "A1-101-1-2-2",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 2,
+              "tba:location": "sh=2"
+            },
+            {
+              "component-id": "A1-101-1-3-4",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 3,
+              "tba:location": "sh=3"
+            },
+            {
+              "component-id": "A1-101-1-4-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 4,
+              "tba:location": "sh=4"
+            }
+          ]
+        }
+      },
+      {
+        "ne-id": "Ne(115-52)",
+        "name": "Ne(115-52)",
+        "components": {
+          "component": [
+            {
+              "component-id": "A1-101-1-3-2",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 1,
+              "tba:location": "sh=1"
+            },
+            {
+              "component-id": "A1-101-1-3-3",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 2,
+              "tba:location": "sh=2"
+            },
+            {
+              "component-id": "A1-102-1-1-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 3,
+              "tba:location": "sh=3"
+            },
+            {
+              "component-id": "A1-102-1-2-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 4,
+              "tba:location": "sh=4"
+            }
+          ]
+        }
+      },
+      {
+        "ne-id": "Ne(115-53)",
+        "name": "Ne(115-53)",
+        "components": {
+          "component": [
+            {
+              "component-id": "A1-102-1-1-2",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 1,
+              "tba:location": "sh=1"
+            },
+            {
+              "component-id": "A1-102-1-2-2",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 2,
+              "tba:location": "sh=2"
+            },
+            {
+              "component-id": "A2-101-1-1-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 3,
+              "tba:location": "sh=3"
+            },
+            {
+              "component-id": "A2-101-1-2-1",
+              "class": "ianahw:chassis",
+              "parent-rel-pos": 4,
+              "tba:location": "sh=4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tba:equipment-rooms": {
+    "equipment-room": [
+      {
+        "room-id": "Wuhan-C-A1-NO.101",
+        "name": "Wuhan-C-A1-NO.101",
+        "racks": {
+          "rack": [
+            {
+              "rack-id": "rack-1-1",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 1
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-50)",
+                  "component-ref": "A1-101-1-1-2"
+                },
+                {
+                  "relative-position": 2,
+                  "ne-ref": "Ne(115-50)",
+                  "component-ref": "A1-101-1-1-3"
+                },
+                {
+                  "relative-position": 3,
+                  "ne-ref": "Ne(115-50)",
+                  "component-ref": "A1-101-1-1-1"
+                }
+              ]
+            },
+            {
+              "rack-id": "rack-1-2",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 2
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-51)",
+                  "component-ref": "A1-101-1-2-1"
+                },
+                {
+                  "relative-position": 2,
+                  "ne-ref": "Ne(115-51)",
+                  "component-ref": "A1-101-1-2-2"
+                }
+              ]
+            },
+            {
+              "rack-id": "rack-1-3",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 3
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1
+                },
+                {
+                  "relative-position": 2,
+                  "ne-ref": "Ne(115-52)",
+                  "component-ref": "A1-101-1-3-2"
+                },
+                {
+                  "relative-position": 3,
+                  "ne-ref": "Ne(115-52)",
+                  "component-ref": "A1-101-1-3-3"
+                },
+                {
+                  "relative-position": 4,
+                  "ne-ref": "Ne(115-51)",
+                  "component-ref": "A1-101-1-3-4"
+                }
+              ]
+            },
+            {
+              "rack-id": "rack-1-4",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 4
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-51)",
+                  "component-ref": "A1-101-1-4-1"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "room-id": "Wuhan-C-A1-NO.102",
+        "name": "Wuhan-C-A1-NO.102",
+        "racks": {
+          "rack": [
+            {
+              "rack-id": "rack-1-1",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 1
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-52)",
+                  "component-ref": "A1-102-1-1-1"
+                },
+                {
+                  "relative-position": 2,
+                  "ne-ref": "Ne(115-53)",
+                  "component-ref": "A1-102-1-1-2"
+                }
+              ]
+            },
+            {
+              "rack-id": "rack-1-2",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 2
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-52)",
+                  "component-ref": "A1-102-1-2-1"
+                },
+                {
+                  "relative-position": 2,
+                  "ne-ref": "Ne(115-53)",
+                  "component-ref": "A1-102-1-2-2"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "room-id": "Wuhan-C-A2-NO.101",
+        "name": "Wuhan-C-A2-NO.101",
+        "racks": {
+          "rack": [
+            {
+              "rack-id": "rack-1-1",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 1
+              },
+              "contained-chassis": [
+                {
+                  "relative-position": 1,
+                  "ne-ref": "Ne(115-53)",
+                  "component-ref": "A2-101-1-1-1"
+                }
+              ]
+            },
+            {
+              "rack-id": "rack-1-2",
+              "rack-location": {
+                "row-number": 1,
+                "column-number": 2
+              },
+              "contained-chassis": [
+                {
+                  "ne-ref": "Ne(115-53)",
+                  "component-ref": "A2-101-1-4-1"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
