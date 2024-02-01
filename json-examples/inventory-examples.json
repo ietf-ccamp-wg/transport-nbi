@@ -21,7 +21,7 @@
               "description": "Chassis 3 of rack 1 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 2,
-              "tba:location": "r=1, sh=2"
+              "tba:location": "/ne=Ne(115-50)/r=1/sh=2"
             },
             {
               "component-id": "97d68274-0337-45c7-834c-4f11c886238d",
@@ -29,7 +29,7 @@
               "description": "Chassis 1 of rack 1 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 3,
-              "tba:location": "r=1, sh=3"
+              "tba:location": "/ne=Ne(115-50)/r=1/sh=3"
             }
           ]
         }
@@ -46,7 +46,7 @@
               "description": "Chassis 1 of rack 2 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 1,
-              "tba:location": "sh=1"
+              "tba:location": "/ne=Ne(115-51)/sh=1"
             },
             {
               "component-id": "5a62eb6c-551f-41c7-9c60-f84bb3d7490c",
@@ -54,7 +54,7 @@
               "description": "Chassis 2 of rack 2 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 2,
-              "tba:location": "sh=2"
+              "tba:location": "/ne=Ne(115-51)/sh=2"
             },
             {
               "component-id": "26fbd332-a24a-4f3c-9bf2-2654e58a316b",
@@ -62,7 +62,7 @@
               "description": "Chassis 4 of rack 3 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 3,
-              "tba:location": "sh=3"
+              "tba:location": "/ne=Ne(115-51)/sh=3"
             },
             {
               "component-id": "e38e5bad-460a-4c50-8576-0bf3fe3ffb5a",
@@ -70,7 +70,7 @@
               "description": "Chassis 1 of rack 4 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 4,
-              "tba:location": "sh=4"
+              "tba:location": "/ne=Ne(115-51)/sh=4"
             }
           ]
         }
@@ -87,7 +87,7 @@
               "description": "Chassis 2 of rack 3 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 1,
-              "tba:location": "sh=1"
+              "tba:location": "/ne=Ne(115-52)/sh=1"
             },
             {
               "component-id": "5c962949-08d0-4530-bde9-59190ebe8ee1",
@@ -95,7 +95,7 @@
               "description": "Chassis 3 of rack 3 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 2,
-              "tba:location": "sh=2"
+              "tba:location": "/ne=Ne(115-52)/sh=2"
             },
             {
               "component-id": "fe2b7887-cd85-4fb2-b4b1-3c1cad767b7b",
@@ -103,7 +103,7 @@
               "description": "Chassis 1 of rack 1 in row 1 of room Wuhan-C-A1-NO.102",
               "class": "ianahw:chassis",
               "parent-rel-pos": 3,
-              "tba:location": "sh=3"
+              "tba:location": "/ne=Ne(115-52)/sh=3"
             },
             {
               "component-id": "e8b3cd3c-c9ae-4fc0-a2ed-d3120f67b2ef",
@@ -111,7 +111,7 @@
               "description": "Chassis 1 of rack 2 in row 1 of room Wuhan-C-A1-NO.102",
               "class": "ianahw:chassis",
               "parent-rel-pos": 4,
-              "tba:location": "sh=4"
+              "tba:location": "/ne=Ne(115-52)/sh=4"
             }
           ]
         }
@@ -128,7 +128,7 @@
               "description": "Chassis 2 of rack 1 in row 1 of room Wuhan-C-A1-NO.102",
               "class": "ianahw:chassis",
               "parent-rel-pos": 1,
-              "tba:location": "sh=1"
+              "tba:location": "/ne=Ne(115-53)/sh=1"
             },
             {
               "component-id": "bc2b2bc4-4f95-4c54-96bf-64a252dcfd8e",
@@ -136,7 +136,7 @@
               "description": "Chassis 2 of rack 2 in row 1 of room Wuhan-C-A1-NO.102",
               "class": "ianahw:chassis",
               "parent-rel-pos": 2,
-              "tba:location": "sh=2"
+              "tba:location": "/ne=Ne(115-53)/sh=2"
             },
             {
               "component-id": "3ac9719e-ae1a-4821-bd0b-7b33c00ccf81",
@@ -144,7 +144,7 @@
               "description": "Chassis 1 of rack 1 in row 1 of room Wuhan-C-A2-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 3,
-              "tba:location": "sh=3"
+              "tba:location": "/ne=Ne(115-53)/sh=3"
             },
             {
               "component-id": "f128b31d-76d6-4fff-8ced-5a2cca59e439",
@@ -152,7 +152,7 @@
               "description": "Chassis 1 of rack 2 in row 1 of room Wuhan-C-A2-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 4,
-              "tba:location": "sh=4"
+              "tba:location": "/ne=Ne(115-53)/sh=4"
             }
           ]
         }
@@ -181,12 +181,12 @@
                   "component-ref": "97d68274-0337-45c7-834c-4f11c886238d"
                 },
                 {
-                  "relative-position": 2,
+                  "rack-relative-position": 2,
                   "ne-ref": "08763e00-8006-455f-816e-ecd4d086bdba",
                   "component-ref": "5d3bbcba-ad7a-4e55-bf0d-003bb23562c8"
                 },
                 {
-                  "relative-position": 3,
+                  "rack-relative-position": 3,
                   "ne-ref": "08763e00-8006-455f-816e-ecd4d086bdba",
                   "component-ref": "0071f989-0b87-4807-bd0b-e4d7b829c06e"
                 }
@@ -202,12 +202,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
                   "component-ref": "4bc89372-c779-40ff-8cb3-098dad1e90e4"
                 },
                 {
-                  "relative-position": 2,
+                  "rack-relative-position": 2,
                   "ne-ref": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
                   "component-ref": "5a62eb6c-551f-41c7-9c60-f84bb3d7490c"
                 }
@@ -223,20 +223,20 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1
+                  "rack-relative-position": 1
                 },
                 {
-                  "relative-position": 2,
+                  "rack-relative-position": 2,
                   "ne-ref": "6f7eda54-c216-4445-be1c-e46209b53227",
                   "component-ref": "902f02d6-ac17-4a42-a1df-dcc33415e9ca"
                 },
                 {
-                  "relative-position": 3,
+                  "rack-relative-position": 3,
                   "ne-ref": "6f7eda54-c216-4445-be1c-e46209b53227",
                   "component-ref": "5c962949-08d0-4530-bde9-59190ebe8ee1"
                 },
                 {
-                  "relative-position": 4,
+                  "rack-relative-position": 4,
                   "ne-ref": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
                   "component-ref": "26fbd332-a24a-4f3c-9bf2-2654e58a316b"
                 }
@@ -252,12 +252,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
                   "component-ref": "e38e5bad-460a-4c50-8576-0bf3fe3ffb5a"
                 },
                 {
-                  "relative-position": 2
+                  "rack-relative-position": 2
                 }
               ]
             }
@@ -279,12 +279,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "6f7eda54-c216-4445-be1c-e46209b53227",
                   "component-ref": "fe2b7887-cd85-4fb2-b4b1-3c1cad767b7b"
                 },
                 {
-                  "relative-position": 2,
+                  "rack-relative-position": 2,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "d636d68b-2055-4615-a7b1-5bb956d866c4"
                 }
@@ -300,12 +300,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "6f7eda54-c216-4445-be1c-e46209b53227",
                   "component-ref": "e8b3cd3c-c9ae-4fc0-a2ed-d3120f67b2ef"
                 },
                 {
-                  "relative-position": 2,
+                  "rack-relative-position": 2,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "bc2b2bc4-4f95-4c54-96bf-64a252dcfd8e"
                 }
@@ -329,12 +329,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "3ac9719e-ae1a-4821-bd0b-7b33c00ccf81"
                 },
                 {
-                  "relative-position": 2
+                  "rack-relative-position": 2
                 }
               ]
             },
@@ -348,12 +348,12 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "f128b31d-76d6-4fff-8ced-5a2cca59e439"
                 },
                 {
-                  "relative-position": 2
+                  "rack-relative-position": 2
                 }
               ]
             }
