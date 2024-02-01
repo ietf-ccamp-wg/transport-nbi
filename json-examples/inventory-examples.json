@@ -4,6 +4,7 @@
       {
         "ne-id": "08763e00-8006-455f-816e-ecd4d086bdba",
         "name": "Ne(115-50)",
+        "description": "NE with multiple shelves occupying a full rack",
         "components": {
           "component": [
             {
@@ -36,6 +37,7 @@
       {
         "ne-id": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
         "name": "Ne(115-51)",
+        "description": "NE with multiple shelves on different racks within the same equipment room",
         "components": {
           "component": [
             {
@@ -76,6 +78,7 @@
       {
         "ne-id": "6f7eda54-c216-4445-be1c-e46209b53227",
         "name": "Ne(115-52)",
+        "description": "NE with multiple shelves in different equipment rooms in the same site",
         "components": {
           "component": [
             {
@@ -116,6 +119,7 @@
       {
         "ne-id": "5247e66a-58fb-462b-8341-98c5ff705dc6",
         "name": "Ne(115-53)",
+        "description": "NE with multiple shelves in different sites",
         "components": {
           "component": [
             {
@@ -165,7 +169,7 @@
             {
               "rack-id": "e7769bf4-3334-4506-9ea6-da9104e82675",
               "name": "rack-1-1",
-              "description": "Rack 1 in row 1 of room Wuhan-C-A1-NO.101",
+              "description": "Rack 1 in row 1 of room Wuhan-C-A1-NO.101. Fully occupied by Ne(115-50).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 1
@@ -191,7 +195,7 @@
             {
               "rack-id": "e09139ec-69bc-408e-b7c3-9b38cb3696be",
               "name": "rack-1-2",
-              "description": "Rack 2 in row 1 of room Wuhan-C-A1-NO.101",
+              "description": "Rack 2 in row 1 of room Wuhan-C-A1-NO.101. Fully occupied by Ne(115-51).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 2
@@ -212,7 +216,7 @@
             {
               "rack-id": "992e3bfd-9f13-486a-b135-3d362d03bd63",
               "name": "rack-1-3",
-              "description": "Rack 3 in row 1 of room Wuhan-C-A1-NO.101",
+              "description": "Rack 3 in row 1 of room Wuhan-C-A1-NO.101. Partially occupied by Ne(115-51) and Ne(115-52).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 3
@@ -241,7 +245,7 @@
             {
               "rack-id": "9d55d769-c3cf-4b36-b581-b532e2f18b0b",
               "name": "rack-1-4",
-              "description": "Rack 4 in row 1 of room Wuhan-C-A1-NO.101",
+              "description": "Rack 4 in row 1 of room Wuhan-C-A1-NO.101. Partially occupied by Ne(115-51).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 4
@@ -251,6 +255,9 @@
                   "relative-position": 1,
                   "ne-ref": "1dc11057-3e7c-4b98-a418-e9d7a7002106",
                   "component-ref": "e38e5bad-460a-4c50-8576-0bf3fe3ffb5a"
+                },
+                {
+                  "relative-position": 2
                 }
               ]
             }
@@ -265,7 +272,7 @@
             {
               "rack-id": "3301c2fa-3fd9-47ce-a143-0b0c789d14e5",
               "name": "rack-1-1",
-              "description": "Rack 1 in row 1 of room Wuhan-C-A1-NO.102",
+              "description": "Rack 1 in row 1 of room Wuhan-C-A1-NO.102. Fully occupied by Ne(115-52) and Ne(115-53).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 1
@@ -286,7 +293,7 @@
             {
               "rack-id": "bf78d81c-ac13-4302-a0cc-21b3d5507c8c",
               "name": "rack-1-2",
-              "description": "Rack 2 in row 1 of room Wuhan-C-A1-NO.102",
+              "description": "Rack 2 in row 1 of room Wuhan-C-A1-NO.102. Fully occupied by Ne(115-52) and Ne(115-53).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 2
@@ -315,7 +322,7 @@
             {
               "rack-id": "76dd9cb5-5649-4531-a56f-dbb6d333a6b3",
               "name": "rack-1-1",
-              "description": "Rack 1 in row 1 of room Wuhan-C-A2-NO.101",
+              "description": "Rack 1 in row 1 of room Wuhan-C-A2-NO.101. Partially occupied by Ne(115-53).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 1
@@ -325,13 +332,16 @@
                   "relative-position": 1,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "3ac9719e-ae1a-4821-bd0b-7b33c00ccf81"
+                },
+                {
+                  "relative-position": 2
                 }
               ]
             },
             {
               "rack-id": "8813f6ca-b5f7-4bd2-b648-942353ddad14",
               "name": "rack-1-2",
-              "description": "Rack 2 in row 1 of room Wuhan-C-A2-NO.101",
+              "description": "Rack 2 in row 1 of room Wuhan-C-A2-NO.101. Partially occupied by Ne(115-53).",
               "rack-location": {
                 "row-number": 1,
                 "column-number": 2
@@ -341,6 +351,9 @@
                   "relative-position": 1,
                   "ne-ref": "5247e66a-58fb-462b-8341-98c5ff705dc6",
                   "component-ref": "f128b31d-76d6-4fff-8ced-5a2cca59e439"
+                },
+                {
+                  "relative-position": 2
                 }
               ]
             }
