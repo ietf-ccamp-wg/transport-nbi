@@ -13,7 +13,7 @@
               "description": "Chassis 2 of rack 1 in row 1 of room Wuhan-C-A1-NO.101",
               "class": "ianahw:chassis",
               "parent-rel-pos": 1,
-              "tba:location": "r=1, sh=1"
+              "tba:location": "/ne=Ne(115-50)/r=1/sh=1"
             },
             {
               "component-id": "0071f989-0b87-4807-bd0b-e4d7b829c06e",
@@ -176,7 +176,7 @@
               },
               "contained-chassis": [
                 {
-                  "relative-position": 1,
+                  "rack-relative-position": 1,
                   "ne-ref": "08763e00-8006-455f-816e-ecd4d086bdba",
                   "component-ref": "97d68274-0337-45c7-834c-4f11c886238d"
                 },
