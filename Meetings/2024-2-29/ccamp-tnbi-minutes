@@ -1,0 +1,38 @@
+CCAMP Transport NBI Design Team Meeting
+29 February 2024
+
+Attendees
+Prasenjit Manna
+Daniel King
+Aihua Guo
+Nigel Davis
+Julien Meuric
+
+Join from  the meeting link
+https://ietf.webex.com/ietf/j.php?MTID=m85a651f333f09a09a4e202ea65e83260
+   
+Minutes
+1. Planning for IETF 119 
+o Nigel (and team) to present an update to the CCAMP WG
+o Plan for T-NBI Side Meeting, ideally evening Brisbane 
+
+2. Example for Multi-layer Topology Management
+o Need to synchronise TAPI terms with IETF
+- RFC8345 (Network Topology)
+- https://datatracker.ietf.org/doc/draft-ietf-ccamp-l1csm-yang/
+- https://datatracker.ietf.org/doc/draft-ietf-ccamp-layer1-types/
+- https://datatracker.ietf.org/doc/draft-ietf-ccamp-optical-impairment-topology-yang/
+
+3. Reviewed T-NBI Defintion 
+o https://github.com/ietf-ccamp-wg/transport-nbi/issues/115
+- Some further updates/refinement is needed. 
+
+Actions
+o Nigel to look through IETF documents to synch TAPI/OIF terminology 
+o IETF 119: Dan to prepare first set of slides for Nigel and co to review.
+o IETF 119: Agree time/day for the T-NBI Meeting during the week (9hr Time Difference from EU) 
+o IETF 119: Dan to request 15 minute WG slot to present 
+o Dan to update T-NBI definition text
+
+Next call
+To be decided, post IETF-119
