@@ -105,13 +105,19 @@ A multi-layer link can also support a mix of TE and non-TE layers.
 
 ## LTP Type
 
-To be added
+A multi-layer topology instance can contains link termination points (LTPs) which support one or multiple layers.
+
+When an LTP terminates one or more links, it is implicitly assumed that the LTP can support all the layers of the links it terminates.
+
+In this case there is no need to provide any additional information about which layer(s) an LTP can support.
+
+However, when an LTP does not terminate any link, there is a need to report which layer(s) an LTP can support. In this case, the same rules defined for the link applies:
 
 ~~~~
     +--rw nt:termination-point* [tp-id]
        +--rw tp-id                           tp-id
        ....................................................
-       +--rw foo-tp!
+       +--rw ex:foo-tp!
        +--rw tet:te-tp-id?   te-types:te-tp-id
        +--rw tet:te!
           +--rw interface-switching-capability*
@@ -120,12 +126,35 @@ To be added
           |  +--rw encoding                identityref
           .................................................
           +--rw ex:baz-tp
-             ..............................................
+          |  ...........................................
+          +--rw ex:baz-tp!
 ~~~~
+
+~~~~
+    +--rw nt:link* [link-id]
+       +--rw link-id            link-id
+       ....................................................
+       +--rw ex:foo-link!
+       +--rw tet:te!
+          +--rw te-link-attributes
+             +--rw interface-switching-capability*
+             |       [switching-capability encoding]
+             |  +--rw switching-capability    identityref
+             |  +--rw encoding                identityref
+             ..............................................
+             +--rw ex:bar-link
+             |  ...........................................
+             +--rw ex:baz-link!
+~~~~
+
 
 ## Label Range
 
-To be added
+A multi-layer link supports different technology-specific label ranges for different layers.
+
+While each entry in the label-restriction list specify a label range for a single layer, multiple entries in the label-restriction list can specify label ranges for multiple layers.
+
+A presence container can be define to indicate to which layer a given label range entry applies.
 
 ~~~~
     +--rw tet:label-restrictions
@@ -174,7 +203,9 @@ Note 2: the use of the (technology) choice with the when statements should be re
 
 ## Bandwidth
 
-To be added
+A multi-layer link supports different technology-specific bandwidth definitions for different layers.
+
+Different containers, one for each layer, can be defined under the te-bandwidth container to represent the bandwidth for each layer supported by the link:
 
 ~~~~
        +--rw tet:te-bandwidth
