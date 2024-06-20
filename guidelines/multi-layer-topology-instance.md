@@ -108,7 +108,6 @@ A multi-layer link can also support a mix of TE and non-TE layers.
 A multi-layer topology instance can contains link termination points (LTPs) which support one or multiple layers.
 
 When an LTP terminates one or more links, it is implicitly assumed that the LTP can support all the layers of the links it terminates.
-
 In this case there is no need to provide any additional information about which layer(s) an LTP can support.
 
 However, when an LTP does not terminate any link, there is a need to report which layer(s) an LTP can support. In this case, the same rules defined for the link applies:
@@ -129,24 +128,6 @@ However, when an LTP does not terminate any link, there is a need to report whic
           |  ...........................................
           +--rw ex:baz-tp!
 ~~~~
-
-~~~~
-    +--rw nt:link* [link-id]
-       +--rw link-id            link-id
-       ....................................................
-       +--rw ex:foo-link!
-       +--rw tet:te!
-          +--rw te-link-attributes
-             +--rw interface-switching-capability*
-             |       [switching-capability encoding]
-             |  +--rw switching-capability    identityref
-             |  +--rw encoding                identityref
-             ..............................................
-             +--rw ex:bar-link
-             |  ...........................................
-             +--rw ex:baz-link!
-~~~~
-
 
 ## Label Range
 
