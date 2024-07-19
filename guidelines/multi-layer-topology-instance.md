@@ -131,7 +131,7 @@ However, when an LTP does not terminate any link, there is a need to report whic
 
 ## Label Range
 
-A multi-layer link supports different technology-specific label ranges for different layers.
+A multi-layer link accommodates different technology-specific label ranges for different layers.
 
 While each entry in the label-restriction list specify a label range for a single layer, multiple entries in the label-restriction list can specify label ranges for multiple layers.
 
