@@ -1,5 +1,9 @@
 # Examples of inventory model for transport networks
 
+The inventory examples are described in [Inventory Example Slides](inventory-examples.pptx)
+
+The corresponding JSON code is provided in [Inventory Example JSON code](inventory-examples.json)
+
 ## Equipment Sites
 
 Two equipment sites are described:
