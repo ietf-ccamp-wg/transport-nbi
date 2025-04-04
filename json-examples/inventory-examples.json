@@ -151,17 +151,17 @@
       {
         "id": "e0949aa0-3ad7-4d89-8eed-55a5e0390a3a",
         "name": "Wuhan-C-A1-NO.101",
-        "location-type": "ietf-ni-location:room"
+        "type": "ietf-ni-location:room"
       },
       {
         "id": "2daf1ecc-ffd6-483b-8e5e-6ab39699ef2f",
         "name": "Wuhan-C-A1-NO.102",
-        "location-type": "ietf-ni-location:room"
+        "type": "ietf-ni-location:room"
       },
       {
         "id": "f21da01d-b16b-45f1-8629-dda221b93c9d",
         "name": "Wuhan-C-A2-NO.101",
-        "location-type": "ietf-ni-location:room"
+        "type": "ietf-ni-location:room"
       }
     ],
     "racks": {
